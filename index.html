@@ -51,9 +51,9 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      padding: 70px 80px 48px 80px;
+      padding: 70px 6% 48px 8%;
       position: relative;
-      gap: 48px;
+      gap: 32px;
     }
     .hero-gr{position:absolute;top:-20%;right:-10%;width:65%;height:130%;background:radial-gradient(ellipse,rgba(46,166,212,.07) 0%,transparent 68%);pointer-events:none}
     .hero-gl{position:absolute;bottom:-20%;left:-10%;width:55%;height:90%;background:radial-gradient(ellipse,rgba(249,115,22,.04) 0%,transparent 60%);pointer-events:none}
@@ -61,8 +61,7 @@
     .hero-left {
       position: relative;
       z-index: 2;
-      max-width: 520px;
-      margin-left: auto;
+      max-width: 560px;
     }
     .hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;animation:fadeUp .7s .2s both}
     .hero-tag-pulse{width:7px;height:7px;border-radius:50%;background:var(--grad);flex-shrink:0;animation:pulseGlow 2.4s ease-in-out infinite}
@@ -89,8 +88,10 @@
     .hero-right {
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding-right: 0;
+      justify-content: flex-start;
+      padding-left: 40px;
+      position: relative;
+      z-index: 2;
     }
     .logo-stage {
       position: relative;
