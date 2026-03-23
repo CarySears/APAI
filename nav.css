@@ -1,0 +1,36 @@
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:background .4s,border-color .4s;gap:32px}
+#nav.scrolled{background:rgba(7,12,17,.92);backdrop-filter:blur(20px);border-bottom-color:rgba(255,255,255,.05)}
+.nav-logo img{height:30px;width:auto;display:block}
+.nav-menu{display:flex;align-items:center;gap:4px;flex:1;justify-content:center}
+.nav-item{position:relative}
+.nav-link{font-family:'Cabinet Grotesk',-apple-system,sans-serif;font-size:13px;font-weight:400;color:rgba(255,255,255,.68);background:none;border:none;cursor:pointer;padding:8px 14px;display:flex;align-items:center;gap:6px;transition:color .2s;white-space:nowrap}
+.nav-link:hover{color:white}
+.nav-chev{font-size:8px;transition:transform .22s}
+.nav-item.open .nav-chev{transform:rotate(180deg)}
+.nav-btn{font-size:13px;font-weight:500;color:#79C5C7;padding:9px 20px;border:1px solid rgba(121,197,199,.35);border-radius:50px;transition:background .2s,border-color .2s,color .2s;white-space:nowrap;flex-shrink:0}
+.nav-btn:hover{background:rgba(121,197,199,.08);border-color:#79C5C7;color:white}
+.nav-mob-btn{display:none;font-size:20px;color:rgba(255,255,255,.68);background:none;border:none;cursor:pointer;padding:8px}
+
+/* MEGA PANEL */
+.mega-panel{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:rgba(11,18,27,.97);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:28px;display:none;gap:32px;min-width:580px;box-shadow:0 24px 64px rgba(0,0,0,.4)}
+.mega-panel-sm{min-width:200px}
+.nav-item.open .mega-panel{display:flex}
+.mega-col{display:flex;flex-direction:column;gap:4px;min-width:160px}
+.mega-head{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#79C5C7;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.06)}
+.mega-panel a{font-size:13px;font-weight:300;color:rgba(255,255,255,.6);padding:5px 8px;border-radius:6px;transition:background .15s,color .15s}
+.mega-panel a:hover{background:rgba(121,197,199,.07);color:white}
+
+/* MOBILE */
+@media(max-width:768px){
+  #nav{padding:0 20px}
+  .nav-menu{display:none;position:fixed;top:70px;left:0;right:0;bottom:0;background:rgba(7,12,17,.98);flex-direction:column;align-items:flex-start;padding:24px 20px;overflow-y:auto;gap:0}
+  .nav-menu.mob-open{display:flex}
+  .nav-item{width:100%}
+  .nav-link{width:100%;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:15px}
+  .mega-panel{position:static;transform:none;background:transparent;border:none;padding:8px 0 8px 16px;box-shadow:none;backdrop-filter:none;min-width:unset;flex-direction:column;gap:0}
+  .nav-item.open .mega-panel{display:flex}
+  .mega-head{font-size:10px;margin-top:12px}
+  .mega-panel a{font-size:14px;padding:8px 0}
+  .nav-btn{display:none}
+  .nav-mob-btn{display:block}
+}

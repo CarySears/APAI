@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cabinet+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/nav.css" />
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -30,18 +31,6 @@
     /* CURSOR */
     .cur{width:10px;height:10px;background:var(--t1);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform .1s}
 
-    /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:background .4s,border-color .4s}
-    nav.scrolled{background:rgba(7,12,17,.9);backdrop-filter:blur(20px);border-bottom-color:rgba(255,255,255,.05)}
-    .nav-logo{display:flex;align-items:center;gap:10px}
-    .nav-logo img{height:30px;width:auto}
-    .nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-    .nav-links a{font-size:13px;color:var(--w7);transition:color .2s;position:relative}
-    .nav-links a::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:1px;background:var(--t1);transform:scaleX(0);transition:transform .25s;transform-origin:left}
-    .nav-links a:hover{color:white}
-    .nav-links a:hover::after{transform:scaleX(1)}
-    .nav-btn{font-size:13px;font-weight:500;color:var(--t1);padding:9px 20px;border:1px solid rgba(121,197,199,.35);border-radius:50px;transition:background .2s,border-color .2s,color .2s}
-    .nav-btn:hover{background:rgba(121,197,199,.08);border-color:var(--t1);color:white}
 
     /* HERO */
     .hero {
@@ -437,19 +426,7 @@
 <div class="cur" id="cur"></div>
 
 <!-- NAV -->
-<nav id="nav">
-  <a href="#" class="nav-logo">
-    <img src="https://actionpotential.ai/logo-web-v2.png" alt="ActionPotential.AI" />
-  </a>
-  <ul class="nav-links">
-    <li><a href="#what-we-are">What We Are</a></li>
-    <li><a href="#system">The System</a></li>
-    <li><a href="#how">How We Work</a></li>
-    <li><a href="#results">Results</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
-  <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="nav-btn">Book a Free AI Audit</a>
-</nav>
+<div id="nav-placeholder"></div>
 
 <!-- HERO -->
 <section class="hero">
@@ -903,19 +880,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-tag">From potential... <em>to action.</em></div>
-    <div class="footer-nav">
-      <a href="/solutions">Solutions</a><span>&#183;</span>
-      <a href="/who-we-empower/locations">Locations</a><span>&#183;</span>
-      <a href="/privacy">Privacy</a><span>&#183;</span>
-      <a href="/terms">Terms</a><span>&#183;</span>
-      <a href="mailto:hello@actionpotential.ai">hello@actionpotential.ai</a>
-    </div>
-    <p class="footer-copy">ActionPotential.AI &nbsp;&#183;&nbsp; Behavioral AI &nbsp;&#183;&nbsp; Human-Centered AI &nbsp;&#183;&nbsp; Conversational Design</p>
-  </div>
-</footer>
+<div id="footer-placeholder"></div>
 
 <script>
   // CURSOR
@@ -926,10 +891,6 @@
   });
   document.querySelectorAll('a,button,.relate-card,.drw-hd,.test-card,.def-card,.fw-lbl').forEach(function(el){
   });
-
-  // NAV SCROLL
-  var nav=document.getElementById('nav');
-  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>60)});
 
   // DRAWER
   function tog(hd){
@@ -983,5 +944,6 @@
     });
   });
 </script>
+<script src="/includes.js"></script>
 </body>
 </html>

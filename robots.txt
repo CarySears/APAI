@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://actionpotential.ai/sitemap.xml
