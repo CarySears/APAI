@@ -934,12 +934,12 @@
 
 <script>
   // CURSOR
-  var cur=document.getElementById('cur'),ring=document.getElementById('curRing'),mx=0,my=0,rx=0,ry=0;
-  document.addEventListener('mousemove', function(e) {
-    mx = e.clientX; my = e.clientY;
-    cur.style.transform = 'translate(' + (mx-5) + 'px,' + (my-5) + 'px)';
-    ring.style.opacity = '1';
-  }, { once: false });
+  var cur=document.getElementById('cur'),ring=document.getElementById('curRing'),mx=window.innerWidth/2,my=window.innerHeight/2,rx=window.innerWidth/2,ry=window.innerHeight/2,moved=false;
+  document.addEventListener('mousemove',function(e){
+    mx=e.clientX;my=e.clientY;
+    cur.style.transform='translate('+(mx-5)+'px,'+(my-5)+'px)';
+    if(!moved){moved=true;ring.style.opacity='1';}
+  });
   (function anim(){rx+=(mx-rx-17)*.11;ry+=(my-ry-17)*.11;ring.style.transform='translate('+rx+'px,'+ry+'px)';requestAnimationFrame(anim)})();
   document.querySelectorAll('a,button,.relate-card,.drw-hd,.test-card,.def-card,.fw-lbl').forEach(function(el){
     el.addEventListener('mouseenter',function(){ring.classList.add('on')});
