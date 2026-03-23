@@ -383,6 +383,48 @@
       .conv-grid{grid-template-columns:1fr}
       .cta-card{padding:48px 32px}
     }
+.drw-learn{display:inline-block;font-size:11px;font-weight:500;padding:0 15px 12px;transition:opacity .15s}
+.drw-dark .drw-learn{color:var(--t2)}
+.drw-light .drw-learn{color:var(--bl)}
+.drw-teal .drw-learn{color:var(--t3)}
+.drw-learn:hover{opacity:.65}
+.svc-overview{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.svc-block{background:var(--lc);border:1px solid var(--lbr);border-radius:var(--rlg);padding:32px;transition:background .2s,transform .2s,box-shadow .2s;cursor:pointer}
+.svc-block:hover{background:var(--ls);transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.09)}
+.svc-block-num{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:12px}
+.svc-block h3{font-family:var(--fd);font-size:28px;font-weight:400;color:var(--td);margin-bottom:12px}
+.svc-block p{font-size:13px;font-weight:300;color:var(--mu);line-height:1.65;margin-bottom:20px}
+.svc-block-cta{font-size:13px;font-weight:500;color:var(--t2);display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
+.svc-block:hover .svc-block-cta{gap:10px}
+.svc-header{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:48px}
+.svc-badge{display:inline-block;font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:4px 14px;border-radius:50px;margin-bottom:12px}
+.badge-blue{background:rgba(27,117,187,.18);color:var(--t2);border:1px solid rgba(27,117,187,.28)}
+.badge-teal{background:rgba(0,167,157,.18);color:var(--t3);border:1px solid rgba(0,167,157,.28)}
+.badge-grad{background:rgba(168,85,247,.12);color:#c084fc;border:1px solid rgba(168,85,247,.2)}
+.svc-title{font-family:var(--fd);font-size:42px;font-weight:300;margin-bottom:8px}
+.sd .svc-title{color:white}
+.sl .svc-title{color:var(--td)}
+.svc-sub{font-size:16px;font-weight:300;line-height:1.65;margin-bottom:20px}
+.sd .svc-sub{color:var(--w7)}
+.sl .svc-sub{color:var(--tm)}
+.svc-body{font-size:15px;font-weight:300;line-height:1.75}
+.sd .svc-body{color:var(--w7)}
+.sl .svc-body{color:var(--tm)}
+.svc-strip{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;padding-top:24px;border-top:1px solid}
+.sd .svc-strip{border-color:rgba(255,255,255,.07)}
+.sl .svc-strip{border-color:var(--lbr)}
+.svc-strip-item{font-size:11px;font-weight:500;padding:5px 14px;border-radius:50px}
+.sd .svc-strip-item{color:var(--t1);background:rgba(121,197,199,.08);border:1px solid rgba(121,197,199,.15)}
+.sl .svc-strip-item{color:var(--t2);background:rgba(46,166,212,.08);border:1px solid rgba(46,166,212,.15)}
+.svc-learn{display:inline-flex;align-items:center;gap:8px;margin-top:28px;font-size:14px;font-weight:500;color:var(--t2);transition:gap .2s}
+.svc-learn:hover{gap:12px}
+.def-callout{max-width:1200px;margin:40px auto 0;padding:32px 40px;background:rgba(46,166,212,.06);border:1px solid rgba(46,166,212,.15);border-radius:var(--rmd)}
+.def-callout p{font-size:16px;font-weight:300;line-height:1.75;color:var(--w7);font-style:italic}
+.fw-headline{font-family:var(--fd);font-size:36px;font-weight:300;color:white;margin-bottom:12px}
+.fw-headline em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.fw-body{font-size:15px;font-weight:300;color:var(--w7);line-height:1.7;max-width:640px;margin:0 auto 36px}
+@media(max-width:1024px){.svc-overview{grid-template-columns:1fr}.svc-header{grid-template-columns:1fr;gap:32px}}
+@media(max-width:640px){.svc-overview{grid-template-columns:1fr}}
     @media(max-width:640px){
       nav{padding:0 20px}
       .nav-links{display:none}
@@ -433,16 +475,16 @@
   <div class="hero-left">
     <div class="hero-tag">
       <div class="hero-tag-pulse"></div>
-      <span class="hero-tag-txt">Behavioral AI &nbsp;·&nbsp; Human-Centered AI &nbsp;·&nbsp; Conversational Design</span>
+      <span class="hero-tag-txt">Behavioral Science + Human-Centered AI</span>
     </div>
     <h1 class="hero-h1">Your business has<br>more potential<br>than it's <em>converting.</em></h1>
     <div class="hero-echo">We fix that.</div>
     <div class="hero-pillars">
-      <div class="hero-pillar"><div class="hero-pillar-line"></div>AI systems grounded in the science of how people actually decide</div>
-      <div class="hero-pillar"><div class="hero-pillar-line"></div>Conversational design that turns interest into commitment</div>
-      <div class="hero-pillar"><div class="hero-pillar-line"></div>Visibility everywhere your people are searching, including AI</div>
+      <div class="hero-pillar"><div class="hero-pillar-line"></div>Be found everywhere your people are searching, including AI</div>
+      <div class="hero-pillar"><div class="hero-pillar-line"></div>Be chosen when they find you, with systems built around how people actually decide</div>
+      <div class="hero-pillar"><div class="hero-pillar-line"></div>Be remembered through experiences that build loyalty, reviews, and referrals</div>
     </div>
-    <p class="hero-p">Your work is excellent. <strong>Your system for capturing and converting the people who want to hire you probably isn't.</strong> We build Behavioral AI that works twice as hard for you, on autopilot, and stays in the system with you.</p>
+    <p class="hero-p">Your work is excellent. <strong>Your system for capturing and converting the people who want to hire you probably isn't.</strong> We combine behavioral science, Human-Centered AI, conversational design, and marketing to build systems that work twice as hard for you, on autopilot, while staying in the system with you.</p>
     <div class="hero-ctas">
       <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-primary">
         <img src="https://actionpotential.ai/CaryProfilePic.jpeg" alt="Cary" class="av" />
@@ -482,44 +524,24 @@
 <!-- MARQUEE -->
 <div class="mq-strip">
   <div class="mq-track">
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Response time</span><span class="mq-val">Instant</span></div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Be found</span><span class="mq-val">Traditional search + AI engines</span></div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Be chosen</span><span class="mq-val">Human-Centered AI systems</span></div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Be remembered</span><span class="mq-val">Reviews, referrals, retention</span></div>
     <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Foundation</span><span class="mq-val">Behavioral Science</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Availability</span><span class="mq-val">24 / 7 / 365</span></div>
     <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Approach</span><span class="mq-val">Human-Centered AI</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Technical knowledge needed</span><span class="mq-val">Zero</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Optimized for</span><span class="mq-val">AI Search + Traditional SEO</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Setup</span><span class="mq-val">Days, not months</span></div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Availability</span><span class="mq-val">24 / 7 / 365</span></div>
     <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Response time</span><span class="mq-val">Instant</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Foundation</span><span class="mq-val">Behavioral Science</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Availability</span><span class="mq-val">24 / 7 / 365</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Approach</span><span class="mq-val">Human-Centered AI</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Technical knowledge needed</span><span class="mq-val">Zero</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Optimized for</span><span class="mq-val">AI Search + Traditional SEO</span></div>
     <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Setup</span><span class="mq-val">Days, not months</span></div>
-  </div>
-</div>
-
-<!-- BEHAVIORAL AI DEFINITION -->
-<div class="def-band" id="what-we-are">
-  <div class="def-inner">
-    <div class="def-left rv">
-      <h2>This is what we mean<br>by <em>Behavioral AI.</em></h2>
-      <p>Behavioral AI, as we practice it, means building AI systems designed around the science of how people actually think, feel, and decide. Not surveillance. Not automation for its own sake. Systems that make every interaction your business has with a potential client feel natural, build trust, and move them gently toward a decision that is right for them. That is Human-Centered AI. And it is the ethical way to build.</p>
-    </div>
-    <div class="def-right rv rv-d1">
-      <div class="def-card">
-        <div class="def-card-lbl">Behavioral Science</div>
-        <p>Decades of research into how people make decisions, form habits, experience hesitation, and build trust, baked into every message, every follow-up sequence, every interaction your AI has on your behalf.</p>
-      </div>
-      <div class="def-card">
-        <div class="def-card-lbl">Human-Centered AI</div>
-        <p>The AI equivalent of Human-Centered Design. Systems built around the needs, values, and wellbeing of both the person you serve and the business you run. Not just conversion optimization. Healthier relationships.</p>
-      </div>
-      <div class="def-card">
-        <div class="def-card-lbl">Conversational Design</div>
-        <p>The craft of designing conversations that feel natural and human. Voice AI that sounds like your best team member. Website chat that answers real questions. Follow-up that reads the moment rather than just the calendar.</p>
-      </div>
-    </div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Technical knowledge needed</span><span class="mq-val">Zero</span></div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Be found</span><span class="mq-val">Traditional search + AI engines</span></div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Be chosen</span><span class="mq-val">Human-Centered AI systems</span></div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Be remembered</span><span class="mq-val">Reviews, referrals, retention</span></div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Foundation</span><span class="mq-val">Behavioral Science</span></div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Approach</span><span class="mq-val">Human-Centered AI</span></div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Availability</span><span class="mq-val">24 / 7 / 365</span></div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Response time</span><span class="mq-val">Instant</span></div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Setup</span><span class="mq-val">Days, not months</span></div>
+    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Technical knowledge needed</span><span class="mq-val">Zero</span></div>
   </div>
 </div>
 
@@ -532,84 +554,177 @@
         <h2 class="sh2 sh2-xl">Something's not<br>working and you<br>can <em>feel</em> it.</h2>
       </div>
       <div class="rv rv-d1">
-        <p class="ssub">You are exceptional at what you do. But between the calls you missed, the leads that went quiet, and the follow-up that never quite happened, you know there is revenue slipping through that you will never even know about.</p>
+        <p class="ssub">You are exceptional at what you do. But between the calls you missed, the leads that went quiet, and the follow-up that never quite happened, revenue is slipping through that you will never even know about. Any of this sound familiar?</p>
       </div>
     </div>
     <div class="relate-grid rv">
       <div class="relate-card">
         <div class="relate-num">01 &mdash;</div>
         <h3>"I know I'm losing leads. I just don't know where or how many."</h3>
-        <p>The phone rang while you were with a client. Someone texted and never heard back. A form came in on a Friday. By Monday they had already chosen someone else.</p>
+        <p>The phone rang while you were with a client. Someone texted and never heard back. A form came in on Friday. By Monday they had already chosen someone else.</p>
       </div>
       <div class="relate-card">
         <div class="relate-num">02 &mdash;</div>
-        <h3>"I'm already doing SEO and running ads. The results just don't match the spend."</h3>
-        <p>You are getting traffic and generating leads. But without behavioral science and AI working on the conversion side, too much of that investment is quietly evaporating.</p>
+        <h3>"I'm running ads and doing SEO but the results don't match the spend."</h3>
+        <p>You are generating traffic and leads. But without behavioral science and Human-Centered AI working on the conversion side, too much of that investment is quietly evaporating. The visibility is there. The system to capture it isn't.</p>
       </div>
       <div class="relate-card">
         <div class="relate-num">03 &mdash;</div>
         <h3>"Someone reaches out and by the time I get back to them, they're gone."</h3>
-        <p>Decisions happen fast. The moment someone reaches out is when their intent is highest. Every hour of delay is a percentage point of probability lost.</p>
+        <p>The window of intent is short. The moment someone reaches out is when their motivation is highest. Every hour of delay is a percentage point of connection lost.</p>
       </div>
       <div class="relate-card">
         <div class="relate-num">04 &mdash;</div>
         <h3>"My follow-up is inconsistent. I know I should do more but there aren't enough hours."</h3>
-        <p>You know the fortune is in the follow-up. You just do not have a system that does it for you, at the right moment, on the right channel, in your voice.</p>
+        <p>You know the fortune is in the follow-up. You just do not have a system that does it for you, at the right moment, on the right channel, in your voice, without it ever feeling pushy.</p>
       </div>
       <div class="relate-card">
         <div class="relate-num">05 &mdash;</div>
-        <h3>"People are asking ChatGPT for recommendations in my field. I'm not in the answer."</h3>
+        <h3>"People are asking ChatGPT and Google AI for recommendations in my field. I'm not in the answer."</h3>
         <p>AI search is not coming. It is here. The businesses being recommended by ChatGPT, Perplexity, and Google AI Overviews right now are building a visibility advantage that will compound for years.</p>
       </div>
       <div class="relate-card">
         <div class="relate-num">06 &mdash;</div>
-        <h3>"The people I already serve are my best source of growth. I'm just not nurturing them."</h3>
-        <p>Your existing clients and past leads are the warmest audience you have. Reviews, referrals, reactivation, and retention are all hiding in relationships you already own.</p>
+        <h3>"When my phone rings more and my website gets more traffic, I don't have the systems to handle it without burning out."</h3>
+        <p>Growth without infrastructure is just stress with better numbers. The missed calls, the overwhelmed team, the dropped balls. Scaling requires systems, not just more effort.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- THE SYSTEM -->
-<section class="sd" id="system">
-  <div class="si">
-    <div class="sys-header">
-      <div class="rv">
-        <div class="eyebrow"><div class="eyebrow-line"></div>The ActionPotential.AI System</div>
-        <h2 class="sh2 sh2-xl">One machine.<br>Two engines.<br><em>Built for where you are.</em></h2>
+<!-- WHAT WE ARE -->
+<div class="def-band" id="what-we-are">
+  <div class="def-inner">
+    <div class="def-left rv">
+      <h2>Software with a Service,<br>built for the <em>human and AI future.</em></h2>
+      <p>We are not a traditional marketing agency. We are not a software vendor. We are something genuinely new. A company that combines behavioral science, Human-Centered AI, conversational design, and marketing to help service businesses get found, get chosen, and build the kind of reputation that compounds over time. Every system we build is grounded in the science of how people actually think, feel, and decide. Not just what they click. Why they choose.</p>
+    </div>
+    <div class="def-right rv rv-d1">
+      <div class="def-card">
+        <div class="def-card-lbl">Behavioral Science</div>
+        <p>Understanding why people make decisions, form trust, experience hesitation, and take action is the foundation of everything we build. Not as a marketing claim. As a genuine scientific practice that Cary has spent his career studying and applying.</p>
       </div>
-      <div class="rv rv-d1">
-        <div class="sys-note"><p>We do not sell you everything upfront. We diagnose where your business is and what it actually needs, then build exactly that. Some clients start with Core. Some need both. A healthy, growing business runs both engines together.</p></div>
-        <div class="sys-warn"><p><strong>Already running ads or SEO?</strong> Without Behavioral AI working on the conversion side, too much of that spend is evaporating. We fix the system first, then make your existing investment work twice as hard for you, on autopilot.</p></div>
+      <div class="def-card">
+        <div class="def-card-lbl">Human-Centered AI</div>
+        <p>AI designed around the needs of both the person you serve and the business you run. Not just automation. Genuinely better experiences for everyone involved. The AI equivalent of Human-Centered Design.</p>
+      </div>
+      <div class="def-card">
+        <div class="def-card-lbl">Conversational Design</div>
+        <p>The craft of designing interactions that feel natural, build trust, and move people gently toward a decision they already want to make. Voice AI that sounds human. Follow-up that reads the moment. Systems that deepen connection rather than replace it.</p>
       </div>
     </div>
-    <div class="engines rv">
-      <div class="eng core">
-        <span class="eng-badge">Core System</span>
-        <div class="eng-title">Behavioral Engine</div>
-        <div class="eng-sub">Convert demand into revenue</div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Voice AI agent</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Answers every call 24/7, books appointments, qualifies leads, and handles common questions in a natural, human-sounding conversation. No missed calls, no lost voicemails, no after-hours gaps.</p><a href="/services/behavioral-engine">Learn more &#8594;</a></div></div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Conversational AI</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Handles texts, website chat, Facebook Messenger, and Instagram DMs like a trained team member. Responds instantly at any hour on every channel, qualifies leads, and books appointments without your team lifting a finger.</p><a href="/services/behavioral-engine">Learn more &#8594;</a></div></div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Intelligent website</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Turns your static brochure into a live conversational conversion tool, trained on your brand, tone, and services. Visitors can talk with your website, get their questions answered, and get booked 24/7.</p><a href="/services/smart-websites">Learn more &#8594;</a></div></div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Reviews AI</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Automates asking for reviews to build a steady stream of 5-star signals, responds to feedback automatically, and generates the trust that converts new prospects and feeds your AI search visibility.</p><a href="/services/behavioral-engine">Learn more &#8594;</a></div></div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Behavioral AI follow-up</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Nurture sequences built on how people actually make decisions, not just drip timing. The right message, the right channel, at the right moment in the buying journey. Decision science on autopilot.</p><a href="/services/marketing-automation">Learn more &#8594;</a></div></div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Database reactivation</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Your fastest revenue win. Automated outreach to cold leads, past clients, and missed opportunities already in your pipeline, reactivating them before you spend a dollar on new traffic.</p><a href="/services/behavioral-engine">Learn more &#8594;</a></div></div>
+  </div>
+  <div class="def-callout rv">
+    <p>Any AI can answer a call or send a follow-up message. What it cannot do on its own is understand why someone hesitates, what builds their trust, or how to design the moment that turns curiosity into commitment. That understanding is what we build into every system.</p>
+  </div>
+</div>
+
+<!-- SERVICES OVERVIEW -->
+<section class="sl" id="services">
+  <div class="si">
+    <div class="eyebrow rv"><div class="eyebrow-line"></div>What We Do</div>
+    <h2 class="sh2 sh2-lg rv">Three ways we help<br>your business grow.</h2>
+    <p class="ssub rv">Not necessarily in this order. We start with a free audit and build a plan around where you actually are.</p>
+    <div class="svc-overview rv">
+      <div class="svc-block" onclick="document.getElementById('svc-found').scrollIntoView({behavior:'smooth'})">
+        <div class="svc-block-num">01</div>
+        <h3>Be Found</h3>
+        <p>Get discovered in traditional search, AI engines, Google Ads, and Meta. SEO is owned real estate. Ads are faster wins on rented property. Together they compound.</p>
+        <span class="svc-block-cta">See how it works &#8595;</span>
       </div>
-      <div class="eng-bridge"><p>Once your system is built to convert, we scale what's working.</p></div>
-      <div class="eng scale">
-        <span class="eng-badge">Scale System</span>
-        <div class="eng-title">Visibility Engine</div>
-        <div class="eng-sub">Get found everywhere your people are searching</div>
-        <div class="eng-div"><div class="eng-div-line"></div><span class="eng-div-lbl">AI search + organic visibility</span><div class="eng-div-line"></div></div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">AI search optimization</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>When someone asks ChatGPT, Perplexity, or Google AI Overviews for a recommendation in your field, are you in the answer? We optimize your entire digital presence to be found by AI engines, not just search engines. This is where the next decade of discovery is heading.</p><a href="/services/ai-search">Learn more &#8594;</a></div></div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">SEO foundation</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Traditional search is still the foundation. We build it right, with content structured around how people actually search when they are ready to hire, optimizing for both Google rankings and the signals that AI engines use to make recommendations.</p><a href="/services/ai-search">Learn more &#8594;</a></div></div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">AI-optimized social profiles</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Your social profiles are a visibility asset. We update every relevant platform with content structured for AI visibility, so your brand shows up consistently wherever AI search engines are looking for signals about businesses like yours.</p><a href="/services/ai-search">Learn more &#8594;</a></div></div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">AI-authority social posting</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Consistent, on-brand content that builds AI authority. Two high-quality posts per week for each platform, written in your voice and structured to signal credibility to both your audience and the engines recommending businesses like yours.</p><a href="/services/ai-search">Learn more &#8594;</a></div></div>
-        <div class="eng-div"><div class="eng-div-line"></div><span class="eng-div-lbl">Paid channels</span><div class="eng-div-line"></div></div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Google ads</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Paid search puts you in front of high-intent buyers at the exact moment they are looking. Every click feeds into a Behavioral AI system built to capture, nurture, and convert, so your ad spend works twice as hard on autopilot.</p><a href="/services/paid-media">Learn more &#8594;</a></div></div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Meta ads</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Facebook and Instagram campaigns that build awareness before your ideal clients even start searching. Better ROI because the behavioral AI follow-up system actually works this time.</p><a href="/services/paid-media">Learn more &#8594;</a></div></div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Retargeting</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Re-engages people who showed interest but did not convert. Behavioral messaging brings them back at exactly the right moment, turning warm maybes into booked appointments.</p><a href="/services/paid-media">Learn more &#8594;</a></div></div>
-        <div class="drw"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Social media automation</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Turn engagement into pipeline automatically. When someone comments on your posts, an AI-powered message triggers instantly, qualifying the lead and booking appointments without you lifting a finger.</p><a href="/services/behavioral-engine">Learn more &#8594;</a></div></div>
+      <div class="svc-block" onclick="document.getElementById('svc-chosen').scrollIntoView({behavior:'smooth'})">
+        <div class="svc-block-num">02</div>
+        <h3>Be Chosen</h3>
+        <p>AI Agents that answer every call, respond to every message, and book every appointment. Built, trained, and maintained for you with white-glove service.</p>
+        <span class="svc-block-cta">See how it works &#8595;</span>
+      </div>
+      <div class="svc-block" onclick="document.getElementById('svc-remembered').scrollIntoView({behavior:'smooth'})">
+        <div class="svc-block-num">03</div>
+        <h3>Be Remembered</h3>
+        <p>Behavioral nurture sequences that turn leads into clients and clients into advocates. Decision science on autopilot, with human strategy behind it.</p>
+        <span class="svc-block-cta">See how it works &#8595;</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 1 — BE FOUND -->
+<section class="sd" id="svc-found">
+  <div class="si">
+    <div class="svc-header">
+      <div class="rv">
+        <span class="svc-badge badge-grad">Owned Real Estate + Faster Wins</span>
+        <div class="svc-title">Be Found</div>
+        <div class="svc-sub">Get discovered everywhere your prospective clients are searching, in traditional search engines, in AI engines, and everywhere in between.</div>
+        <p class="svc-body">SEO and AI Search are long-term owned real estate. You build it once and it pays dividends for years. Paid ads are faster wins on rented property. They work brilliantly in combination. And increasingly, the search engines your prospective clients are using are AI engines. When someone asks ChatGPT or Perplexity for a recommendation in your field, are you in the answer? We make sure you are.</p>
+        <div class="svc-strip">
+          <span class="svc-strip-item">Onboarding call</span>
+          <span class="svc-strip-item">Monthly reporting call</span>
+          <span class="svc-strip-item">Dedicated CSM</span>
+          <span class="svc-strip-item">Weekly reporting</span>
+          <span class="svc-strip-item">Dashboard access</span>
+        </div>
+        <a href="/services/visibility" class="svc-learn">Learn more about Visibility &#8594;</a>
+      </div>
+      <div class="drawers rv rv-d1">
+        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">AI search optimization</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Optimized to appear in ChatGPT, Perplexity, Google AI Overviews, and other AI answer engines. The businesses investing in AI search visibility now will have a compounding advantage over those who wait.</p><a href="/services/ai-search-optimization" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">SEO foundation</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Traditional search is still the foundation. We build it right, with content structured around how people actually search when they are ready to take action, optimizing for both Google rankings and the signals AI engines use to make recommendations.</p><a href="/services/seo" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Google ads</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Paid search puts you in front of high-intent people at the exact moment they are looking. Every click feeds into a behavioral system built to capture, nurture, and convert.</p><a href="/services/google-ads" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Meta ads</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Facebook and Instagram campaigns that build awareness before your ideal clients even start searching. Better ROI because the behavioral nurture system actually works this time.</p><a href="/services/meta-ads" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Retargeting</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Gently re-engages people who showed interest but did not take action. Behavioral messaging brings them back at the right moment, without pressure.</p><a href="/services/retargeting" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">AI-optimized social profiles</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Your social profiles are a visibility asset. We structure every relevant platform for AI visibility so your brand shows up consistently wherever AI search engines are looking for signals about businesses like yours.</p><a href="/services/social-profiles" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">AI-authority social posting</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Consistent, on-brand content that builds AI authority. Written in your voice and structured to signal credibility to both your audience and the engines recommending businesses like yours.</p><a href="/services/social-posting" class="drw-learn">Learn more &#8594;</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 2 — BE CHOSEN -->
+<section class="sl" id="svc-chosen">
+  <div class="si">
+    <div class="svc-header">
+      <div class="rv">
+        <span class="svc-badge badge-blue">Software with a Service</span>
+        <div class="svc-title">Be Chosen</div>
+        <div class="svc-sub">Always-on AI that captures every lead, books every appointment, and handles the admin that used to eat your day.</div>
+        <p class="svc-body">Most AI tools give you a login and walk away. We build, train, and maintain your AI agents for you. White-glove onboarding, team training, quarterly optimization, and 24/7/365 support. Not software. A managed system with humans behind it.</p>
+        <div class="svc-strip">
+          <span class="svc-strip-item">Tech setup call</span>
+          <span class="svc-strip-item">Team training</span>
+          <span class="svc-strip-item">AI launch and training call</span>
+          <span class="svc-strip-item">Quarterly optimization calls</span>
+          <span class="svc-strip-item">24/7/365 support</span>
+        </div>
+        <a href="/services/ai-agents" class="svc-learn">Learn more about AI Agents &#8594;</a>
+      </div>
+      <div class="drawers rv rv-d1">
+        <div class="drw drw-light"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Voice AI agent</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Answers every call 24/7, books appointments, qualifies inquiries, and handles common questions in a natural, human-sounding conversation. No missed calls. No lost voicemails. No after-hours gaps.</p><a href="/services/voice-ai" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-light"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Conversational AI</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Handles texts, website chat, Facebook Messenger, and Instagram DMs like a trained team member. Responds instantly at any hour, qualifies leads, and books appointments without your team lifting a finger.</p><a href="/services/conversational-ai" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-light"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Intelligent website</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Turns your static brochure into a live conversational experience, trained on your brand, tone, and services. Visitors can get their questions answered and take the next step 24/7.</p><a href="/services/intelligent-website" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-light"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Reviews AI</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Automates asking for reviews, responds to feedback automatically, and builds the steady stream of 5-star signals that help new people feel confident choosing you.</p><a href="/services/reviews-ai" class="drw-learn">Learn more &#8594;</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 3 — BE REMEMBERED -->
+<section class="sd" id="svc-remembered">
+  <div class="si">
+    <div class="svc-header">
+      <div class="rv">
+        <span class="svc-badge badge-teal">Automated AI + Human Strategy</span>
+        <div class="svc-title">Be Remembered</div>
+        <div class="svc-sub">Most agencies generate leads and dump them in your lap. We build the behavioral system that turns those leads into booked appointments and those clients into advocates.</div>
+        <p class="svc-body">When you run ads or drive traffic, leads need more than a single touchpoint before they take action. Most businesses lose those leads not because they were not interested, but because the follow-up was too slow, too generic, or never happened at all. Our Behavioral Nurture System changes that. Automated AI with human strategy behind it, built around how people actually make decisions.</p>
+        <a href="/services/behavioral-nurture" class="svc-learn">Learn more about Behavioral Nurture &#8594;</a>
+      </div>
+      <div class="drawers rv rv-d1">
+        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Behavioral follow-up sequences</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Email and SMS sequences designed around decision science, not just drip timing. The right message, the right channel, at the right moment in someone's journey toward taking action.</p><a href="/services/behavioral-followup" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">AI agent text and voice follow-up</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Automated AI that reaches out, answers questions, and guides leads toward booking, without it ever feeling robotic or pushy.</p><a href="/services/ai-followup" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Voicemail drops</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Personalized voicemail outreach that feels human and lands at exactly the right moment.</p><a href="/services/voicemail-drops" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Lead scoring</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Intelligent prioritization so your team focuses on the leads most likely to convert, not whoever happens to be at the top of the list.</p><a href="/services/lead-scoring" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Behavioral funnel design</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Funnels built around how your specific audience makes decisions. Not generic templates. Strategy grounded in the psychology of your buyers.</p><a href="/services/funnel-design" class="drw-learn">Learn more &#8594;</a></div></div>
+        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Re-engagement</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>A gentle, empathetic outreach to people who expressed interest but never took the first step. Not pressure. Just a well-timed reminder that you are still there.</p><a href="/services/re-engagement" class="drw-learn">Learn more &#8594;</a></div></div>
       </div>
     </div>
   </div>
@@ -617,10 +732,13 @@
 
 <!-- FLYWHEEL -->
 <div class="fw-band">
-  <div style="max-width:1200px;margin:0 auto;" class="rv">
-    <h3>The system compounds over time.</h3>
+  <div class="si rv" style="text-align:center;">
+    <div class="eyebrow" style="justify-content:center;margin-bottom:16px;"><div class="eyebrow-line" style="background:var(--t1)"></div><span style="color:var(--t1)">The system compounds over time</span></div>
+    <div class="fw-headline">Be found. Be chosen. <em>Be remembered.</em></div>
+    <p class="fw-body">Every part of the system feeds the next. AI agents capture more leads. Behavioral nurture converts more of them. Happy clients leave reviews. Reviews feed AI search visibility. Better visibility brings more of the right people. The flywheel turns faster over time.</p>
     <div class="fw-nodes">
-      <div class="fw-node"><span class="fw-lbl">Capture</span><span class="fw-arr">&#8594;</span></div>
+      <div class="fw-node"><span class="fw-lbl">Be Found</span><span class="fw-arr">&#8594;</span></div>
+      <div class="fw-node"><span class="fw-lbl">Be Chosen</span><span class="fw-arr">&#8594;</span></div>
       <div class="fw-node"><span class="fw-lbl">Convert</span><span class="fw-arr">&#8594;</span></div>
       <div class="fw-node"><span class="fw-lbl">Nurture</span><span class="fw-arr">&#8594;</span></div>
       <div class="fw-node"><span class="fw-lbl">Retain</span><span class="fw-arr">&#8594;</span></div>
@@ -647,7 +765,7 @@
       <div class="step"><div class="step-num">Ongoing</div><h3>We stay with you</h3><p>24/7 AI and human support. Proactive backend optimization. You never manage this alone.</p></div>
     </div>
     <div class="how-note rv">
-      <p>Most marketing agencies dump leads in your lap. Most AI agencies hand you a login and disappear. <strong>We are behavioral AI architects. We build the system, run it, and stay in it with you.</strong> The AI gets smarter over time. Your business compounds. No technical knowledge required on your end. Ever.</p>
+      <p>Most marketing agencies generate leads and walk away. Most AI companies hand you a login and disappear. <strong>We are behavioral AI architects. We build the system, run it, and stay in it with you.</strong> No technical knowledge required on your end. Ever.</p>
     </div>
   </div>
 </section>
@@ -655,15 +773,14 @@
 <!-- CONVERSION -->
 <section class="sd" id="demo">
   <div class="si">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>Find Your Revenue Leaks</div>
+    <div class="eyebrow rv"><div class="eyebrow-line"></div>Find Your Friction. Free It.</div>
     <h2 class="sh2 sh2-lg rv">Free. 45 minutes.<br><em>No pitch deck. No pressure.</em></h2>
     <div class="conv-grid">
       <div class="rv">
         <div class="conv-vid">
-          <!-- PLACEHOLDER: <video src="/cary-intro.mp4" poster="/cary-poster.jpg" controls></video> -->
-          <div class="conv-vid-lbl">Watch</div>
+          <div class="conv-vid-lbl">Coming Soon</div>
           <div class="conv-vid-title">A message from Cary</div>
-          <p class="conv-vid-hint">PLACEHOLDER: Add Cary's 90-second intro video here</p>
+          <p class="conv-vid-hint">Video coming soon.</p>
         </div>
       </div>
       <div class="form-card rv rv-d1">
@@ -772,8 +889,8 @@
 <section class="sl">
   <div class="si">
     <div class="cta-card rv">
-      <h2>Find your revenue leaks.<br><em>Free. 45 minutes.</em></h2>
-      <p>We audit your current funnel and deliver a prioritized 90-day action plan. No pitch deck. No pressure. Just a clear picture of where you are losing revenue and exactly what to do about it.</p>
+      <h2>Find your friction.<br><em>Free your revenue.</em></h2>
+      <p>We audit your current system and deliver a prioritized 90-day action plan. No pitch deck. No pressure. Just a clear picture of where you are losing people and revenue, and exactly what to do about it.</p>
       <ul class="cta-list">
         <li>Your top 3 conversion leaks and their likely revenue impact</li>
         <li>Database reactivation opportunity, revenue from what you already own</li>
