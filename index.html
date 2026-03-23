@@ -29,20 +29,6 @@
 
     /* CURSOR */
     .cur{width:10px;height:10px;background:var(--t1);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform .1s}
-    .cur-ring {
-      width: 34px;
-      height: 34px;
-      border: 1px solid rgba(121,197,199,.35);
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 9998;
-      transition: width .25s, height .25s, border-color .25s, opacity .3s;
-      opacity: 0;
-      top: -100px;
-      left: -100px;
-    }
-    .cur-ring.on{width:56px;height:56px;border-color:rgba(121,197,199,.6)}
 
     /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:background .4s,border-color .4s}
@@ -449,7 +435,6 @@
 <body>
 
 <div class="cur" id="cur"></div>
-<div class="cur-ring" id="curRing"></div>
 
 <!-- NAV -->
 <nav id="nav">
@@ -934,16 +919,12 @@
 
 <script>
   // CURSOR
-  var cur=document.getElementById('cur'),ring=document.getElementById('curRing'),mx=window.innerWidth/2,my=window.innerHeight/2,rx=window.innerWidth/2,ry=window.innerHeight/2,moved=false;
+  var cur=document.getElementById('cur'),mx=0,my=0;
   document.addEventListener('mousemove',function(e){
     mx=e.clientX;my=e.clientY;
     cur.style.transform='translate('+(mx-5)+'px,'+(my-5)+'px)';
-    if(!moved){moved=true;ring.style.opacity='1';}
   });
-  (function anim(){rx+=(mx-rx-17)*.11;ry+=(my-ry-17)*.11;ring.style.transform='translate('+rx+'px,'+ry+'px)';requestAnimationFrame(anim)})();
   document.querySelectorAll('a,button,.relate-card,.drw-hd,.test-card,.def-card,.fw-lbl').forEach(function(el){
-    el.addEventListener('mouseenter',function(){ring.classList.add('on')});
-    el.addEventListener('mouseleave',function(){ring.classList.remove('on')});
   });
 
   // NAV SCROLL
