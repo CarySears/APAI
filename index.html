@@ -198,14 +198,13 @@
 
     /* RELATE SECTION */
     .relate-intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:56px}
-    .relate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--lbr);border:1px solid var(--lbr);border-radius:var(--rlg);overflow:hidden}
-    .relate-card{background:var(--lc);padding:36px 30px;position:relative;transition:background .2s}
-    .relate-card:hover{background:var(--ls)}
-    .relate-card::after{content:'';position:absolute;bottom:0;left:30px;right:30px;height:2px;background:var(--grad);transform:scaleX(0);transition:transform .3s;transform-origin:left}
-    .relate-card:hover::after{transform:scaleX(1)}
-    .relate-num{font-family:var(--fd);font-size:12px;font-weight:400;color:var(--t2);letter-spacing:.05em;margin-bottom:14px}
-    .relate-card h3{font-family:var(--fd);font-size:20px;font-weight:400;font-style:italic;color:var(--td);margin-bottom:12px;line-height:1.3}
-    .relate-card p{font-size:13px;font-weight:300;color:var(--mu);line-height:1.65}
+    .relate-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--lbr);border:1px solid var(--lbr);border-radius:var(--rlg);overflow:hidden}
+    .relate-card{background:var(--lc);padding:32px 28px;position:relative;cursor:default;transition:background .25s}
+    .relate-card:hover{background:var(--d9)}
+    .relate-card h3{font-family:var(--fd);font-size:19px;font-weight:400;font-style:italic;color:var(--td);line-height:1.35;transition:color .25s}
+    .relate-card:hover h3{color:white}
+    .relate-hover{position:absolute;inset:0;padding:28px;background:var(--d9);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:300;color:var(--t1);line-height:1.6;text-align:center;opacity:0;transition:opacity .25s}
+    .relate-card:hover .relate-hover{opacity:1}
 
     /* SYSTEM ENGINES */
     .sys-header{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:56px}
@@ -372,7 +371,6 @@
       .logo-stage{width:300px;height:300px;margin:0 auto}
       .hero-h1,.hero-echo{font-size:48px}
       .def-inner{grid-template-columns:1fr;gap:40px}
-      .relate-intro{grid-template-columns:1fr;gap:24px;margin-bottom:40px}
       .relate-grid{grid-template-columns:repeat(2,1fr)}
       .sys-header{grid-template-columns:1fr;gap:32px}
       .steps{grid-template-columns:repeat(2,1fr)}
@@ -393,6 +391,7 @@
       .logo-bar{padding:22px 20px}
       footer{padding:36px 20px 24px}
       .relate-grid{grid-template-columns:1fr}
+      .relate-intro{grid-template-columns:1fr;gap:24px;margin-bottom:40px}
       .test-grid{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto}
       .steps{grid-template-columns:1fr}
       .step{border-right:none !important;border-bottom:1px solid var(--lbr)}
@@ -560,34 +559,44 @@
     </div>
     <div class="relate-grid rv">
       <div class="relate-card">
-        <div class="relate-num">01 &mdash;</div>
-        <h3>"I know I'm losing leads. I just don't know where or how many."</h3>
-        <p>The phone rang while you were with a client. Someone texted and never heard back. A form came in on Friday. By Monday they had already chosen someone else.</p>
+        <h3>"I'm drowning in admin."</h3>
+        <div class="relate-hover">AI Agents handle the admin. You handle the work.</div>
       </div>
       <div class="relate-card">
-        <div class="relate-num">02 &mdash;</div>
-        <h3>"I'm running ads and doing SEO but the results don't match the spend."</h3>
-        <p>You are generating traffic and leads. But without behavioral science and Human-Centered AI working on the conversion side, too much of that investment is quietly evaporating. The visibility is there. The system to capture it isn't.</p>
+        <h3>"I can't get to all the calls and messages."</h3>
+        <div class="relate-hover">Voice AI and Conversational AI answer everything, instantly, 24/7.</div>
       </div>
       <div class="relate-card">
-        <div class="relate-num">03 &mdash;</div>
-        <h3>"Someone reaches out and by the time I get back to them, they're gone."</h3>
-        <p>The window of intent is short. The moment someone reaches out is when their motivation is highest. Every hour of delay is a percentage point of connection lost.</p>
+        <h3>"I can't scale. I'm already at capacity."</h3>
+        <div class="relate-hover">Systems create capacity. We build them for you.</div>
       </div>
       <div class="relate-card">
-        <div class="relate-num">04 &mdash;</div>
-        <h3>"My follow-up is inconsistent. I know I should do more but there aren't enough hours."</h3>
-        <p>You know the fortune is in the follow-up. You just do not have a system that does it for you, at the right moment, on the right channel, in your voice, without it ever feeling pushy.</p>
+        <h3>"I can't afford more staff. But I need more help."</h3>
+        <div class="relate-hover">AI Agents cost a fraction of a hire and work around the clock.</div>
       </div>
       <div class="relate-card">
-        <div class="relate-num">05 &mdash;</div>
-        <h3>"People are asking ChatGPT and Google AI for recommendations in my field. I'm not in the answer."</h3>
-        <p>AI search is not coming. It is here. The businesses being recommended by ChatGPT, Perplexity, and Google AI Overviews right now are building a visibility advantage that will compound for years.</p>
+        <h3>"My business is a best kept secret."</h3>
+        <div class="relate-hover">We put you everywhere your people are searching. SEO, AI Search, and Ads.</div>
       </div>
       <div class="relate-card">
-        <div class="relate-num">06 &mdash;</div>
-        <h3>"When my phone rings more and my website gets more traffic, I don't have the systems to handle it without burning out."</h3>
-        <p>Growth without infrastructure is just stress with better numbers. The missed calls, the overwhelmed team, the dropped balls. Scaling requires systems, not just more effort.</p>
+        <h3>"I rely almost entirely on referrals."</h3>
+        <div class="relate-hover">SEO and AI Search build a pipeline that doesn't depend on word of mouth. Reviews and referrals build visibility and trust.</div>
+      </div>
+      <div class="relate-card">
+        <h3>"My follow-up is inconsistent and I know it."</h3>
+        <div class="relate-hover">Behavioral Nurture follows up automatically, in your voice, at the right moment.</div>
+      </div>
+      <div class="relate-card">
+        <h3>"I don't stay in touch with people the way I should."</h3>
+        <div class="relate-hover">Re-engagement sequences keep the relationship warm without any effort from you.</div>
+      </div>
+      <div class="relate-card">
+        <h3>"I know I need AI to compete. I just don't understand it."</h3>
+        <div class="relate-hover">Human-Centered AI makes it non-threatening. We build it, train it, and run it for you. Zero technical knowledge required.</div>
+      </div>
+      <div class="relate-card">
+        <h3>"Things are changing so fast. I feel like I'm falling behind."</h3>
+        <div class="relate-hover">We stay ahead of it so you don't have to.</div>
       </div>
     </div>
   </div>
