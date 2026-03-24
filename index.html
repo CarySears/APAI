@@ -419,6 +419,68 @@
     @media(max-width:1024px){.svc-overview{grid-template-columns:1fr}.svc-header{grid-template-columns:1fr;gap:32px}}
     @media(max-width:640px){.svc-overview{grid-template-columns:1fr}}
 
+    /* STATS BAND */
+    .stats-band{background:var(--d9);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);padding:80px 48px}
+    .stats-inner{max-width:1200px;margin:0 auto}
+    .stats-eyebrow{text-align:center;margin-bottom:52px}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.05);border-radius:var(--rlg);overflow:hidden}
+    .stat-card{background:var(--d8);padding:40px 32px;text-align:center;transition:background .25s}
+    .stat-card:hover{background:var(--d7)}
+    .stat-num{font-family:var(--fd);font-size:64px;font-weight:300;line-height:1;margin-bottom:12px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .stat-label{font-size:13px;font-weight:500;color:white;margin-bottom:8px;letter-spacing:.02em}
+    .stat-sub{font-size:12px;font-weight:300;color:var(--w4);line-height:1.5}
+    @keyframes countUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .stat-num.counted{animation:countUp .6s ease both}
+
+    /* QUESTION BAND */
+    .q-band{background:var(--d9);padding:80px 48px;border-top:1px solid rgba(255,255,255,.05)}
+    .q-inner{max-width:1200px;margin:0 auto}
+    .q-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.05);border-radius:var(--rlg);overflow:hidden;margin-top:52px}
+    .q-card{background:var(--d8);padding:48px 36px;position:relative;overflow:hidden;cursor:default;transition:background .3s;min-height:280px;display:flex;flex-direction:column;justify-content:center}
+    .q-card::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity .4s}
+    .q-card:hover::before{opacity:.04}
+    .q-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--grad);transform:scaleX(0);transition:transform .4s;transform-origin:left}
+    .q-card:hover::after{transform:scaleX(1)}
+    .q-num{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t2);margin-bottom:20px;opacity:.6}
+    .q-question{font-family:var(--fd);font-size:22px;font-weight:300;font-style:italic;color:white;line-height:1.4;transition:opacity .3s,transform .3s}
+    .q-card:hover .q-question{opacity:0;transform:translateY(-8px)}
+    .q-answer{position:absolute;inset:0;padding:48px 36px;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(12px);transition:opacity .3s,transform .3s}
+    .q-card:hover .q-answer{opacity:1;transform:translateY(0)}
+    .q-service{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t2);margin-bottom:14px}
+    .q-solve{font-size:16px;font-weight:300;color:white;line-height:1.6;margin-bottom:20px}
+    .q-link{font-size:13px;font-weight:500;color:var(--t1);display:inline-flex;align-items:center;gap:8px;transition:gap .2s}
+    .q-link:hover{gap:12px}
+
+    /* STAT COUNT ANIMATION */
+    .stat-num[data-target]{opacity:0}
+    .stat-num[data-target].vis{opacity:1}
+
+    /* PLAYFUL CARD TILT */
+    .relate-card{transform-style:preserve-3d;transition:background .2s,transform .15s}
+    .relate-card:hover{transform:perspective(600px) rotateX(2deg) rotateY(-2deg) translateY(-2px)}
+
+    /* ENHANCED HOVER INTERACTIONS */
+    .def-card{transition:background .2s,border-color .2s,transform .15s}
+    .def-card:hover{transform:translateY(-2px)}
+    .svc-block{transition:background .2s,transform .2s,box-shadow .2s}
+    .fw-lbl{transition:border-color .2s,color .2s,background .2s,transform .15s}
+    .fw-lbl:hover{transform:translateY(-2px)}
+
+    @media(max-width:1024px){
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+      .q-grid{grid-template-columns:1fr}
+      .q-card{min-height:220px}
+      .q-card:hover .q-question{opacity:1;transform:none}
+      .q-answer{position:static;opacity:0;transform:none;padding:0;margin-top:16px;max-height:0;overflow:hidden;transition:max-height .3s,opacity .3s}
+      .q-card.tapped .q-answer{opacity:1;max-height:200px}
+    }
+    @media(max-width:640px){
+      .stats-band{padding:48px 20px}
+      .q-band{padding:48px 20px}
+      .stats-grid{grid-template-columns:1fr 1fr}
+      .stat-num{font-size:48px}
+    }
+
   </style>
 </head>
 <body>
@@ -564,6 +626,35 @@
   </div>
 </section>
 
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="stats-inner">
+    <div class="eyebrow stats-eyebrow rv"><div class="eyebrow-line" style="background:var(--t1)"></div><span style="color:var(--t1)">The Challenge</span></div>
+    <div class="stats-grid rv">
+      <div class="stat-card">
+        <div class="stat-num" data-target="62">0</div>
+        <div class="stat-label">Of service businesses miss at least one inbound inquiry every day.</div>
+        <div class="stat-sub">That is revenue you earned and never collected.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" data-target="78">0</div>
+        <div class="stat-label">Of leads go with the first business to respond.</div>
+        <div class="stat-sub">Speed is not just courtesy. It is competitive advantage.</div>
+      </div>
+      <div class="stat-num-wrap stat-card">
+        <div class="stat-num">5<span style="font-size:32px">min</span></div>
+        <div class="stat-label">Response window before conversion probability drops by half.</div>
+        <div class="stat-sub">The window of intent closes faster than most businesses realize.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">50<span style="font-size:32px">%+</span></div>
+        <div class="stat-label">Of people now use AI to find local service recommendations.</div>
+        <div class="stat-sub">If you are not in those answers, you are invisible to half the market.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- WHAT WE ARE -->
 <div class="def-band" id="what-we-are">
   <div class="def-inner">
@@ -619,6 +710,42 @@
     </div>
   </div>
 </section>
+
+<!-- QUESTION BAND -->
+<div class="q-band">
+  <div class="q-inner">
+    <div class="eyebrow rv"><div class="eyebrow-line" style="background:var(--t1)"></div><span style="color:var(--t1)">Three questions worth sitting with</span></div>
+    <div class="q-grid rv">
+      <div class="q-card">
+        <div class="q-num">Be Found</div>
+        <div class="q-question">"Right now, someone is searching for exactly what you do. Are you at the top of Google? In AI Overviews? Is ChatGPT recommending your competitor instead of you?"</div>
+        <div class="q-answer">
+          <div class="q-service">Be Found</div>
+          <div class="q-solve">We make sure you show up everywhere your people are searching. Google, AI Overviews, ChatGPT, and beyond.</div>
+          <a href="#svc-found" class="q-link">See how Be Found works &#8595;</a>
+        </div>
+      </div>
+      <div class="q-card">
+        <div class="q-num">Be Chosen</div>
+        <div class="q-question">"When someone reaches out, how long before they hear back?"</div>
+        <div class="q-answer">
+          <div class="q-service">Be Chosen</div>
+          <div class="q-solve">AI Agents answer every call, text, and message instantly. 24/7. In your voice.</div>
+          <a href="#svc-chosen" class="q-link">See how Be Chosen works &#8595;</a>
+        </div>
+      </div>
+      <div class="q-card">
+        <div class="q-num">Be Remembered</div>
+        <div class="q-question">"When did you last follow up with someone who never became a client?"</div>
+        <div class="q-answer">
+          <div class="q-service">Be Remembered</div>
+          <div class="q-solve">Behavioral Nurture does it for you. Automatically. At exactly the right moment.</div>
+          <a href="#svc-remembered" class="q-link">See how Be Remembered works &#8595;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- SERVICE 1 — BE FOUND -->
 <section class="sd" id="svc-found">
@@ -943,6 +1070,56 @@
       if(v){v.play();if(o)o.style.opacity='0'}
     });
   });
+  // Count-up animation for stats
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-target'));
+    if(!target) return;
+    var start = 0;
+    var duration = 1800;
+    var startTime = null;
+    function step(timestamp){
+      if(!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(ease * target) + '%';
+      if(progress < 1) requestAnimationFrame(step);
+      else el.textContent = target + '%';
+    }
+    requestAnimationFrame(step);
+  }
+
+  var statObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var el = e.target;
+        el.classList.add('counted');
+        animateCount(el);
+        statObs.unobserve(el);
+      }
+    });
+  },{threshold:0.5});
+
+  document.querySelectorAll('.stat-num[data-target]').forEach(function(el){
+    statObs.observe(el);
+  });
+
+  // Mobile tap for question cards
+  document.querySelectorAll('.q-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      if(window.innerWidth <= 1024){
+        card.classList.toggle('tapped');
+      }
+    });
+  });
+
+  // Return visitor greeting
+  var visited = localStorage.getItem('apai_visited');
+  var tagEl = document.querySelector('.hero-tag-txt');
+  if(visited && tagEl){
+    tagEl.textContent = 'Welcome back \uD83D\uDC4B';
+  } else {
+    localStorage.setItem('apai_visited', 'true');
+  }
 </script>
 <script src="/includes.js"></script>
 </body>
