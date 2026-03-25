@@ -41,7 +41,7 @@
       align-items: center;
       justify-content: center;
       padding: 0 48px;
-      padding-top: 70px;
+      box-sizing: border-box;
       position: relative;
       gap: 48px;
     }
@@ -51,9 +51,10 @@
     .hero-left {
       position: relative;
       z-index: 2;
-      max-width: 540px;
+      max-width: 560px;
       margin-left: auto;
       margin-right: auto;
+      padding-top: 70px;
     }
     .hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;animation:fadeUp .7s .2s both}
     .hero-tag-pulse{width:7px;height:7px;border-radius:50%;background:var(--grad);flex-shrink:0;animation:pulseGlow 2.4s ease-in-out infinite}
