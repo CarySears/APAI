@@ -36,14 +36,15 @@
   .nav-btn{display:none}
   .nav-mob-btn{display:block}
 }
-/* WHEN nav item */
-.when-link{color:var(--t1) !important;font-weight:500 !important;}
+/* WHEN nav item — highlighted */
+.when-item .nav-link{color:var(--t1) !important;font-weight:500 !important;}
+.when-item .nav-link:hover{color:white !important;}
 .mega-panel-when{min-width:480px;left:auto;right:0;transform:none;}
-.mega-head-when{font-family:'Cormorant Garamond',Georgia,serif;font-size:52px;font-weight:300;font-style:italic;color:white;line-height:1;margin-bottom:8px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.mega-head-when{font-family:'Cormorant Garamond',Georgia,serif;font-size:52px;font-weight:300;font-style:italic;line-height:1;margin-bottom:8px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .when-sub{font-size:13px;font-weight:300;color:var(--w7);margin-bottom:4px;}
 
 /* WHEN CTA button */
-.when-btn{font-size:13px;font-weight:500;color:white;padding:9px 20px;background:var(--gteal);border:none;border-radius:50px;transition:opacity .2s;white-space:nowrap;flex-shrink:0;}
+.when-btn{font-size:13px;font-weight:500;color:white;padding:9px 22px;background:var(--gteal);border:none;border-radius:50px;transition:opacity .2s;white-space:nowrap;flex-shrink:0;cursor:pointer;}
 .when-btn em{font-style:italic;font-weight:300;}
 .when-btn:hover{opacity:.88;}
 
