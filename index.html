@@ -33,18 +33,7 @@
 
 
     /* HERO */
-    .hero {
-      height: 100vh;
-      background: var(--d9);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      justify-content: center;
-      padding: 0 48px;
-      box-sizing: border-box;
-      position: relative;
-      gap: 48px;
-    }
+    .hero{min-height:100vh;background:var(--d9);display:flex;align-items:center;padding:0 48px;position:relative;gap:48px;}
     .hero-gr{position:absolute;top:-20%;right:-10%;width:65%;height:130%;background:radial-gradient(ellipse,rgba(46,166,212,.07) 0%,transparent 68%);pointer-events:none}
     .hero-gl{position:absolute;bottom:-20%;left:-10%;width:55%;height:90%;background:radial-gradient(ellipse,rgba(249,115,22,.04) 0%,transparent 60%);pointer-events:none}
     .hero-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(121,197,199,.07) 1px,transparent 1px);background-size:32px 32px;mask-image:radial-gradient(ellipse at 72% 50%,black 25%,transparent 68%);pointer-events:none}
@@ -488,7 +477,7 @@
 </head>
 <body>
 
-<div class="cur" id="cur"></div>
+<div class="cur" id="cur" style="opacity:0;transform:translate(-100px,-100px)"></div>
 
 <!-- NAV -->
 <div id="nav-placeholder"></div>
