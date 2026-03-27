@@ -34,7 +34,7 @@
 
     /* HERO */
     .hero {
-      min-height: 100vh;
+      height: 100vh;
       background: var(--d9);
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -90,8 +90,8 @@
     }
     .logo-stage {
       position: relative;
-      width: 360px;
-      height: 360px;
+      width: 400px;
+      height: 400px;
       overflow: visible;
       flex-shrink: 0;
     }
@@ -133,9 +133,7 @@
     .hero-scroll {
       position: absolute;
       bottom: 36px;
-      left: 0;
-      right: 0;
-      width: 100%;
+      left: 64px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1056,7 +1054,7 @@
     var w = stage.offsetWidth;
     var cx = w / 2;
     var cy = w / 2;
-    var r = w * 0.92;
+    var r = w * 0.85;
     pills.forEach(function(pill) {
       var deg = parseFloat(pill.getAttribute('data-angle')) - 90;
       var rad = deg * Math.PI / 180;
