@@ -34,7 +34,7 @@
 
     /* HERO */
     .hero {
-      height: 100vh;
+      min-height: 100vh;
       background: var(--d9);
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -130,7 +130,23 @@
     .orbit-pill:hover{background:rgba(121,197,199,.08);border-color:rgba(121,197,199,.28);color:var(--t1)}
 
     /* SCROLL HINT */
-    .hero-scroll{position:absolute;bottom:36px;left:0;right:0;display:flex;flex-direction:column;align-items:center;transform:none;gap:8px;color:var(--w4);font-size:9px;letter-spacing:.14em;text-transform:uppercase;z-index:2}
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: none;
+      z-index: 2;
+      gap: 8px;
+      color: var(--w4);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
     .scroll-line{width:1px;height:44px;background:linear-gradient(to bottom,transparent,rgba(121,197,199,.4));animation:scrollAnim 2.2s ease-in-out infinite}
     @keyframes scrollAnim{0%{height:0;opacity:0}50%{height:44px;opacity:1}100%{height:44px;opacity:0}}
     @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
@@ -527,18 +543,15 @@
       <div class="orb orb-3"><div class="orb-node"></div></div>
       <img src="https://assets.cdn.filesafe.space/yOkUSQmv7D3J1n6pmgAL/media/674632f08c90e99b82c653b9.webp" alt="ActionPotential.AI" class="logo-img" />
       <div class="orbit-pill" data-angle="0">SEO</div>
-      <div class="orbit-pill" data-angle="27.7">AI Visibility</div>
-      <div class="orbit-pill" data-angle="55.4">GEO</div>
-      <div class="orbit-pill" data-angle="83.1">AEO</div>
-      <div class="orbit-pill" data-angle="110.8">AI Agents</div>
-      <div class="orbit-pill" data-angle="138.5">AI Automation</div>
-      <div class="orbit-pill" data-angle="166.2">Meta Ads</div>
-      <div class="orbit-pill" data-angle="193.8">Google Ads</div>
-      <div class="orbit-pill" data-angle="221.5">Social Media</div>
-      <div class="orbit-pill" data-angle="249.2">Voice AI</div>
-      <div class="orbit-pill" data-angle="276.9">Conversational AI</div>
-      <div class="orbit-pill" data-angle="304.6">Reviews AI</div>
-      <div class="orbit-pill" data-angle="332.3">Behavioral Lead Nurture</div>
+      <div class="orbit-pill" data-angle="36">AI Search</div>
+      <div class="orbit-pill" data-angle="72">GEO</div>
+      <div class="orbit-pill" data-angle="108">AEO</div>
+      <div class="orbit-pill" data-angle="144">AI Agents</div>
+      <div class="orbit-pill" data-angle="180">AI Automation</div>
+      <div class="orbit-pill" data-angle="216">Google Ads</div>
+      <div class="orbit-pill" data-angle="252">Meta Ads</div>
+      <div class="orbit-pill" data-angle="288">Social Media</div>
+      <div class="orbit-pill" data-angle="324">Behavioral Lead Nurture</div>
     </div>
   </div>
 
@@ -1043,7 +1056,7 @@
     var w = stage.offsetWidth;
     var cx = w / 2;
     var cy = w / 2;
-    var r = w * 0.78;
+    var r = w * 0.92;
     pills.forEach(function(pill) {
       var deg = parseFloat(pill.getAttribute('data-angle')) - 90;
       var rad = deg * Math.PI / 180;
