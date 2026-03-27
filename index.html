@@ -43,7 +43,7 @@
       padding: 0 48px;
       box-sizing: border-box;
       position: relative;
-      gap: 48px;
+      gap: 0;
     }
     .hero-gr{position:absolute;top:-20%;right:-10%;width:65%;height:130%;background:radial-gradient(ellipse,rgba(46,166,212,.07) 0%,transparent 68%);pointer-events:none}
     .hero-gl{position:absolute;bottom:-20%;left:-10%;width:55%;height:90%;background:radial-gradient(ellipse,rgba(249,115,22,.04) 0%,transparent 60%);pointer-events:none}
@@ -54,7 +54,7 @@
       max-width: 560px;
       margin-left: auto;
       margin-right: auto;
-      padding-top: 0;
+      margin-top: -50px;
     }
     .hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;animation:fadeUp .7s .2s both}
     .hero-tag-pulse{width:7px;height:7px;border-radius:50%;background:var(--grad);flex-shrink:0;animation:pulseGlow 2.4s ease-in-out infinite}
@@ -79,11 +79,13 @@
 
     /* HERO RIGHT — LOGO STAGE */
     .hero-right {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       position: relative;
       z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      animation: fadeUp .8s .3s both;
+      padding-left: 24px;
     }
     .logo-stage {
       position: relative;
@@ -488,7 +490,7 @@
 </head>
 <body>
 
-<div class="cur" id="cur"></div>
+<div class="cur" id="cur" style="opacity:0;left:-100px;top:-100px;"></div>
 
 <!-- NAV -->
 <div id="nav-placeholder"></div>
@@ -1007,8 +1009,10 @@
   // CURSOR
   var cur=document.getElementById('cur'),mx=-100,my=-100;
   document.addEventListener('mousemove',function(e){
-    mx=e.clientX;my=e.clientY;
     cur.style.opacity='1';
+    cur.style.left='';
+    cur.style.top='';
+    mx=e.clientX;my=e.clientY;
     cur.style.transform='translate('+(mx-5)+'px,'+(my-5)+'px)';
   });
   document.querySelectorAll('a,button,.relate-card,.drw-hd,.test-card,.def-card,.fw-lbl').forEach(function(el){
