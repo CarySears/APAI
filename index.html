@@ -66,7 +66,7 @@
       max-width: 560px;
       margin-left: auto;
       margin-right: auto;
-      margin-top: -100px;
+      margin-top: -60px;
       padding-right: 24px;
     }
     .hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;animation:fadeUp .7s .2s both}
@@ -1025,6 +1025,18 @@
       cur.style.opacity = '1';
       cur.style.visibility = 'visible';
       curMoved = true;
+    }
+  });
+  document.addEventListener('mouseleave', function() {
+    cur.style.opacity = '0';
+    cur.style.visibility = 'hidden';
+    curMoved = false;
+  });
+
+  document.addEventListener('mouseenter', function() {
+    if (curMoved) {
+      cur.style.opacity = '1';
+      cur.style.visibility = 'visible';
     }
   });
   document.querySelectorAll('a,button,.relate-card,.drw-hd,.test-card,.def-card,.fw-lbl').forEach(function(el){
