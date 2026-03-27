@@ -1,7 +1,7 @@
 #nav{position:fixed;top:0;left:0;right:0;z-index:200;height:88px;padding:0 5% 0 5%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:background .4s,border-color .4s;gap:48px}
 #nav.scrolled{background:rgba(7,12,17,.92);backdrop-filter:blur(20px);border-bottom-color:rgba(255,255,255,.05)}
-.nav-logo{display:flex;align-items:center;height:88px;flex-shrink:0}
-.nav-logo img{height:64px;width:auto;vertical-align:middle;display:block;mix-blend-mode:screen}
+.nav-logo{display:flex;align-items:center;height:88px;flex-shrink:0;margin-top:0;padding-top:0}
+.nav-logo img{height:64px;width:auto;display:block;mix-blend-mode:screen;margin:auto 0}
 .nav-menu{display:flex;align-items:center;gap:4px;flex:1;justify-content:center}
 .nav-item{position:relative}
 .nav-link{font-family:'Cabinet Grotesk',-apple-system,sans-serif;font-size:13px;font-weight:400;color:rgba(255,255,255,.68);background:none;border:none;cursor:pointer;padding:8px 14px;display:flex;align-items:center;gap:6px;transition:color .2s;white-space:nowrap}
