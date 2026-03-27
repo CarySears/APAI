@@ -29,7 +29,7 @@
     body{font-family:var(--fb);background:var(--d9);color:var(--w1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
     /* CURSOR */
-    .cur{width:10px;height:10px;background:var(--t1);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform .1s;opacity:0}
+    .cur{width:10px;height:10px;background:var(--t1);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform .1s;opacity:0;visibility:hidden}
 
 
     /* HERO */
@@ -40,7 +40,7 @@
       grid-template-columns: 1fr 1fr;
       align-items: center;
       justify-content: center;
-      padding: 0 64px;
+      padding: 80px 64px 0;
       box-sizing: border-box;
       position: relative;
       gap: 64px;
@@ -87,6 +87,7 @@
       justify-content: flex-start;
       animation: fadeUp .8s .3s both;
       padding-left: 72px;
+      padding-top: 20px;
     }
     .logo-stage {
       position: relative;
@@ -132,7 +133,7 @@
     /* SCROLL HINT */
     .hero-scroll {
       position: absolute;
-      bottom: 36px;
+      bottom: 48px;
       left: 64px;
       display: flex;
       flex-direction: column;
@@ -1028,6 +1029,7 @@
   var cur=document.getElementById('cur'),mx=-100,my=-100;
   document.addEventListener('mousemove',function(e){
     cur.style.opacity='1';
+    cur.style.visibility='visible';
     cur.style.left='';
     cur.style.top='';
     mx=e.clientX;my=e.clientY;
@@ -1054,7 +1056,7 @@
     var w = stage.offsetWidth;
     var cx = w / 2;
     var cy = w / 2;
-    var r = w * 0.85;
+    var r = w * 0.80;
     pills.forEach(function(pill) {
       var deg = parseFloat(pill.getAttribute('data-angle')) - 90;
       var rad = deg * Math.PI / 180;
