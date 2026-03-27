@@ -66,7 +66,7 @@
       max-width: 560px;
       margin-left: auto;
       margin-right: auto;
-      margin-top: -60px;
+      margin-top: -100px;
       padding-right: 24px;
     }
     .hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;animation:fadeUp .7s .2s both}
@@ -1017,11 +1017,15 @@
 <script>
   // CURSOR
   var cur=document.getElementById('cur');
+  var curMoved = false;
   document.addEventListener('mousemove', function(e) {
     cur.style.left = e.clientX - 5 + 'px';
     cur.style.top = e.clientY - 5 + 'px';
-    cur.style.opacity = '1';
-    cur.style.visibility = 'visible';
+    if (!curMoved) {
+      cur.style.opacity = '1';
+      cur.style.visibility = 'visible';
+      curMoved = true;
+    }
   });
   document.querySelectorAll('a,button,.relate-card,.drw-hd,.test-card,.def-card,.fw-lbl').forEach(function(el){
   });
@@ -1044,7 +1048,7 @@
     var w = stage.offsetWidth;
     var cx = w / 2;
     var cy = w / 2;
-    var r = w * 0.80;
+    var r = w * 0.76;
     pills.forEach(function(pill) {
       var deg = parseFloat(pill.getAttribute('data-angle')) - 90;
       var rad = deg * Math.PI / 180;
