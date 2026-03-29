@@ -55,6 +55,7 @@
       gap: 64px;
       position: relative;
       box-sizing: border-box;
+      overflow: hidden;
     }
     .hero-gr{position:absolute;top:-20%;right:-10%;width:65%;height:130%;background:radial-gradient(ellipse,rgba(46,166,212,.07) 0%,transparent 68%);pointer-events:none}
     .hero-gl{position:absolute;bottom:-20%;left:-10%;width:55%;height:90%;background:radial-gradient(ellipse,rgba(249,115,22,.04) 0%,transparent 60%);pointer-events:none}
@@ -148,96 +149,37 @@
       overflow: hidden;
     }
 
-    .orb-transition {
-      position: relative;
-      height: 300vh;
-      background: var(--d9);
+    .hero-orb-wrap{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:320px;
+      position:relative;
+      z-index:2;
+      opacity:1;
+      will-change:opacity,transform;
     }
-
-    .orb-transition-sticky {
-      position: sticky;
-      top: 0;
-      height: 100vh;
+    .hero-orb-transition {
+      position: absolute;
+      inset: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
-      gap: 48px;
-      overflow: hidden;
+      pointer-events: none;
+      z-index: 3;
+      opacity: 0;
+      transform: scale(.78);
+      will-change: opacity, transform;
     }
-
-    .orb-transition-bg {
+    .hero-orb-bg {
       position: absolute;
       inset: 0;
       background: radial-gradient(ellipse at 50% 50%, rgba(46,166,212,.06) 0%, transparent 70%);
       pointer-events: none;
     }
-
-    .orb-transition-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 48px;
-      opacity: 0;
-      transform: scale(.92) translateY(32px);
-      transition: opacity 1.1s ease, transform 1.1s ease;
-      position: relative;
-      z-index: 2;
-    }
-
-    .orb-transition-inner.vis {
-      opacity: 1;
-      transform: scale(1) translateY(0);
-    }
-
-    .orb-transition-stage {
+    .hero-orb-stage {
       width: 320px;
       height: 320px;
-    }
-
-    .orb-transition-text {
-      text-align: center;
-    }
-
-    .orb-transition-tagline {
-      font-family: var(--fd);
-      font-size: 48px;
-      font-weight: 300;
-      color: white;
-      line-height: 1.1;
-      margin-bottom: 14px;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity .8s .4s ease, transform .8s .4s ease;
-    }
-
-    .orb-transition-inner.vis .orb-transition-tagline {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .orb-transition-tagline em {
-      font-style: italic;
-      background: var(--grad);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .orb-transition-sub {
-      font-size: 16px;
-      font-weight: 300;
-      color: var(--w7);
-      text-align: center;
-      opacity: 0;
-      transform: translateY(12px);
-      transition: opacity .8s .7s ease, transform .8s .7s ease;
-    }
-
-    .orb-transition-inner.vis .orb-transition-sub {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
@@ -461,12 +403,9 @@
       }
       .hero-left {padding-top: 40px}
       .hero-right {padding-top: 40px}
-      .orb-transition-stage {
+      .hero-orb-stage {
         width: 240px;
         height: 240px;
-      }
-      .orb-transition-tagline {
-        font-size: 36px;
       }
       .hero-h1,.hero-echo{font-size:48px}
       .def-inner{grid-template-columns:1fr;gap:40px}
@@ -484,12 +423,7 @@
       nav{padding:0 20px}
       .nav-links{display:none}
       .hero {padding: 80px 20px 48px}
-      .orb-transition-tagline {
-        font-size: 28px;
-      }
-      .orb-transition-sub {
-        font-size: 14px;
-      }
+      .hero-orb-stage {width: 200px; height: 200px}
       .hero-h1,.hero-echo{font-size:36px}
       .sl,.sd{padding:64px 20px}
       .def-band,.fw-band{padding:48px 20px}
@@ -646,6 +580,23 @@
   </div>
 
   <div class="hero-right">
+    <div class="hero-orb-transition" id="heroOrbTransition" aria-hidden="true">
+      <div class="hero-orb-bg"></div>
+      <div class="logo-stage hero-orb-stage" id="heroOrbStageOverlay">
+        <div class="orb orb-1"><div class="orb-node"></div></div>
+        <div class="orb orb-2"><div class="orb-node"></div></div>
+        <div class="orb orb-3"><div class="orb-node"></div></div>
+        <img src="https://assets.cdn.filesafe.space/yOkUSQmv7D3J1n6pmgAL/media/674632f08c90e99b82c653b9.webp" alt="" class="logo-img" />
+      </div>
+    </div>
+    <div class="hero-orb-wrap" aria-hidden="true">
+      <div class="logo-stage hero-orb-stage" id="heroOrbStage">
+        <div class="orb orb-1"><div class="orb-node"></div></div>
+        <div class="orb orb-2"><div class="orb-node"></div></div>
+        <div class="orb orb-3"><div class="orb-node"></div></div>
+        <img src="https://assets.cdn.filesafe.space/yOkUSQmv7D3J1n6pmgAL/media/674632f08c90e99b82c653b9.webp" alt="" class="logo-img" />
+      </div>
+    </div>
     <div class="hero-chat-label">
       <div class="hero-tag-pulse"></div>
       <span style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1)">Free AI Audit — Let's find your friction</span>
@@ -656,24 +607,6 @@
   </div>
 
 </section>
-
-<div class="orb-transition" id="orb-transition">
-  <div class="orb-transition-sticky">
-    <div class="orb-transition-bg"></div>
-    <div class="orb-transition-inner">
-      <div class="logo-stage orb-transition-stage" id="orbTransitionStage">
-        <div class="orb orb-1"><div class="orb-node"></div></div>
-        <div class="orb orb-2"><div class="orb-node"></div></div>
-        <div class="orb orb-3"><div class="orb-node"></div></div>
-        <img src="https://assets.cdn.filesafe.space/yOkUSQmv7D3J1n6pmgAL/media/674632f08c90e99b82c653b9.webp" alt="ActionPotential.AI" class="logo-img" />
-      </div>
-      <div class="orb-transition-text">
-        <div class="orb-transition-tagline">Be Found. Be Chosen. <em>Be Remembered.</em></div>
-        <p class="orb-transition-sub">The full-system agency that builds it, runs it, and stays with you.</p>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- MARQUEE -->
 <div class="mq-strip">
@@ -1180,9 +1113,54 @@
   var obs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}});
   },{threshold:0.05,rootMargin:'0px 0px -20px 0px'});
-  document.querySelectorAll('.rv, .orb-transition-inner').forEach(function(el){
+  document.querySelectorAll('.rv').forEach(function(el){
     obs.observe(el);
   });
+
+  // HERO ORB TRANSITION
+  var heroEl = document.querySelector('.hero');
+  var heroOrbOverlay = document.getElementById('heroOrbTransition');
+  var heroOrbWrap = document.querySelector('.hero-orb-wrap');
+  var heroOrbIntro = 1;
+
+  function clamp01(v){
+    return Math.max(0, Math.min(1, v));
+  }
+
+  function updateHeroOrbTransition(){
+    if(!heroEl || !heroOrbOverlay) return;
+    var rect = heroEl.getBoundingClientRect();
+    var heroHeight = heroEl.offsetHeight || window.innerHeight;
+    var heroScroll = Math.max(0, -rect.top);
+    var scrollProgress = clamp01(heroScroll / (heroHeight * 0.62));
+    var progress = Math.max(heroOrbIntro, scrollProgress);
+    var fadeOut = clamp01((heroScroll - heroHeight * 0.82) / (heroHeight * 0.22));
+    var overlayOpacity = Math.max(0, progress * (1 - fadeOut));
+    var overlayScale = 0.78 + progress * 0.9;
+
+    heroOrbOverlay.style.opacity = overlayOpacity.toFixed(3);
+    heroOrbOverlay.style.transform = 'scale(' + overlayScale.toFixed(3) + ')';
+
+    if(heroOrbWrap){
+      heroOrbWrap.style.opacity = (1 - progress).toFixed(3);
+      heroOrbWrap.style.transform = 'scale(' + (1 - progress * 0.08).toFixed(3) + ')';
+    }
+  }
+
+  if(heroOrbOverlay){
+    var heroOrbIntroStart = null;
+    function runHeroOrbIntro(ts){
+      if(heroOrbIntroStart === null) heroOrbIntroStart = ts;
+      var introProgress = clamp01((ts - heroOrbIntroStart) / 1150);
+      heroOrbIntro = 1 - introProgress;
+      updateHeroOrbTransition();
+      if(introProgress < 1) requestAnimationFrame(runHeroOrbIntro);
+    }
+    requestAnimationFrame(runHeroOrbIntro);
+    window.addEventListener('scroll', updateHeroOrbTransition, {passive:true});
+    window.addEventListener('resize', updateHeroOrbTransition);
+    updateHeroOrbTransition();
+  }
 
   // HERO CHAT EMBED
   var chatMount = document.getElementById('chat_form');
