@@ -48,9 +48,8 @@
     .hero {
       height: 100vh;
       background: var(--d9);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      display: grid;
+      grid-template-rows: auto 1fr;
       position: relative;
       overflow: hidden;
     }
@@ -69,7 +68,6 @@
     }
 
     .hero-bottom {
-      flex: 1;
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
