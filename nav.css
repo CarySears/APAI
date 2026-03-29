@@ -48,6 +48,25 @@
 .when-btn em{font-style:italic;font-weight:300;}
 .when-btn:hover{opacity:.88;}
 
+.nav-chat-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--w7);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 14px;
+  transition: color .2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav-chat-btn:hover {
+  color: white;
+}
+
 @media(max-width:768px){
   .mega-panel-when{min-width:unset;right:0;left:0;}
   .when-btn{display:none;}
