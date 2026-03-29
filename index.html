@@ -56,7 +56,7 @@
     .hero-top {
       width: 100%;
       text-align: center;
-      padding: 140px 48px 56px;
+      padding: 120px 48px 32px;
       border-bottom: 1px solid rgba(255,255,255,.04);
       position: relative;
       z-index: 2;
@@ -77,7 +77,7 @@
       padding: 48px;
       border-right: 1px solid rgba(255,255,255,.04);
     }
-    .hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;animation:fadeUp .7s .2s both}
+    .hero-tag{display:inline-flex;align-items:center;justify-content:center;width:100%;gap:10px;margin-bottom:28px;animation:fadeUp .7s .2s both}
     .hero-tag-pulse{width:7px;height:7px;border-radius:50%;background:var(--grad);flex-shrink:0;animation:pulseGlow 2.4s ease-in-out infinite}
     @keyframes pulseGlow{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(121,197,199,.4)}50%{opacity:.7;box-shadow:0 0 0 6px rgba(121,197,199,0)}}
     .hero-tag-txt{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1)}
@@ -94,13 +94,14 @@
     .hero-h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     .hero-echo {
       font-family: var(--fd);
-      font-size: 72px;
+      font-size: 32px;
       font-weight: 300;
       font-style: italic;
       line-height: 1.02;
-      letter-spacing: -1.5px;
-      color: rgba(255,255,255,.22);
+      letter-spacing: 0;
+      color: rgba(255,255,255,.45);
       text-align: center;
+      margin-top: 16px;
     }
     .hero-right {
       display: flex;
@@ -122,8 +123,8 @@
     /* HERO RIGHT — LOGO STAGE */
     .logo-stage {
       position: relative;
-      width: 300px;
-      height: 300px;
+      width: 380px;
+      height: 380px;
       overflow: visible;
       flex-shrink: 0;
     }
