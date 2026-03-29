@@ -1120,15 +1120,6 @@
     obs.observe(el);
   });
 
-  // HERO CHAT EMBED
-  var chatMount = document.getElementById('chat_form');
-  if (chatMount && !document.querySelector('script[data-bot-id="7591"]')) {
-    var chatScript = document.createElement('script');
-    chatScript.src = 'https://platform.simplebotinstall.com/w/chat_form_plugin.js';
-    chatScript.setAttribute('data-bot-id', '7591');
-    chatMount.appendChild(chatScript);
-  }
-
   // VIDEO PLAY
   document.querySelectorAll('.test-vid').forEach(function(w){
     w.addEventListener('click',function(){
