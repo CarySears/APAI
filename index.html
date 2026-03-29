@@ -46,38 +46,25 @@
 
     /* HERO */
     .hero {
+      min-height: 100vh;
       background: var(--d9);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 0;
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .hero-top {
-      width: 100%;
-      text-align: center;
-      padding: 120px 48px 48px;
-      border-bottom: 1px solid rgba(255,255,255,.05);
-      position: relative;
-      z-index: 2;
-    }
-    .hero-bottom {
-      width: 100%;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      flex: 1;
-      min-height: 0;
-      overflow: hidden;
-      align-items: stretch;
+      align-items: center;
+      padding: 0 64px;
+      gap: 64px;
       position: relative;
-      z-index: 2;
+      box-sizing: border-box;
     }
     .hero-gr{position:absolute;top:-20%;right:-10%;width:65%;height:130%;background:radial-gradient(ellipse,rgba(46,166,212,.07) 0%,transparent 68%);pointer-events:none}
     .hero-gl{position:absolute;bottom:-20%;left:-10%;width:55%;height:90%;background:radial-gradient(ellipse,rgba(249,115,22,.04) 0%,transparent 60%);pointer-events:none}
     .hero-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(121,197,199,.07) 1px,transparent 1px);background-size:32px 32px;mask-image:radial-gradient(ellipse at 72% 50%,black 25%,transparent 68%);pointer-events:none}
-    .hero-left-orb{display:flex;align-items:center;justify-content:center;padding:48px;border-right:1px solid rgba(255,255,255,.05);overflow:hidden;max-height:100%}
+    .hero-left {
+      position: relative;
+      z-index: 2;
+      max-width: 560px;
+      padding-top: 80px;
+    }
     .hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;animation:fadeUp .7s .2s both}
     .hero-tag-pulse{width:7px;height:7px;border-radius:50%;background:var(--grad);flex-shrink:0;animation:pulseGlow 2.4s ease-in-out infinite}
     @keyframes pulseGlow{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(121,197,199,.4)}50%{opacity:.7;box-shadow:0 0 0 6px rgba(121,197,199,0)}}
@@ -87,6 +74,7 @@
     .hero-echo{font-family:var(--fd);font-size:66px;font-weight:300;font-style:italic;line-height:1.02;letter-spacing:-1.5px;color:rgba(255,255,255,.22);margin-bottom:42px;animation:fadeUp .7s .4s both}
     .hero-p{font-size:17px;font-weight:300;line-height:1.72;color:var(--w7);max-width:600px;margin:0 auto;animation:fadeUp .7s .54s both}
     .hero-p strong{color:white;font-weight:500}
+    .hero-ctas{display:flex;align-items:center;gap:20px;flex-wrap:wrap;animation:fadeUp .7s .6s both}
     .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:13px 26px;border-radius:50px;transition:opacity .2s,transform .2s}
     .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
     .btn-primary .av{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,255,255,.3)}
@@ -100,13 +88,10 @@
       position: relative;
       z-index: 2;
       display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      animation: fadeUp .8s .3s both;
-      padding-left: 72px;
-      padding-top: 40px;
+      flex-direction: column;
+      gap: 16px;
+      padding-top: 80px;
     }
-    .hero-left-orb .hero-right{justify-content:center;padding-left:0;padding-top:0}
     .logo-stage {
       position: relative;
       width: 300px;
@@ -143,8 +128,81 @@
       }
     }
 
-    .hero-chat{overflow:hidden;padding:32px 40px;display:flex;flex-direction:column;justify-content:center;gap:16px}
-    .hero-chat-embed{height:320px;min-height:320px;overflow:hidden;border-radius:var(--rlg);border:1px solid rgba(255,255,255,.08)}
+    .hero-chat-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--t1);
+      margin-bottom: 8px;
+    }
+
+    .hero-chat-embed {
+      border-radius: var(--rlg);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.08);
+      height: 320px;
+    }
+
+    .orb-transition {
+      background: var(--d9);
+      border-top: 1px solid rgba(255,255,255,.05);
+      padding: 80px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .orb-transition-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity .9s ease, transform .9s ease;
+    }
+
+    .orb-transition-inner.vis {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .orb-transition-stage {
+      width: 280px;
+      height: 280px;
+    }
+
+    .orb-transition-text {
+      text-align: center;
+    }
+
+    .orb-transition-tagline {
+      font-family: var(--fd);
+      font-size: 42px;
+      font-weight: 300;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .orb-transition-tagline em {
+      font-style: italic;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .orb-transition-sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--w7);
+    }
 
     @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
@@ -360,10 +418,25 @@
 
     /* RESPONSIVE */
     @media(max-width:1024px){
-      .hero-bottom{grid-template-columns:1fr}
-      .hero-left-orb{border-right:none;border-bottom:1px solid rgba(255,255,255,.05);padding:32px}
-      .hero-top{padding:100px 32px 40px}
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 100px 32px 64px;
+        gap: 40px;
+      }
+      .hero-left {
+        padding-top: 0;
+      }
+      .hero-right {
+        padding-top: 0;
+      }
       .logo-stage{width:300px;height:300px;margin:0 auto}
+      .orb-transition-stage {
+        width: 220px;
+        height: 220px;
+      }
+      .orb-transition-tagline {
+        font-size: 32px;
+      }
       .hero-h1,.hero-echo{font-size:48px}
       .def-inner{grid-template-columns:1fr;gap:40px}
       .relate-grid{grid-template-columns:repeat(2,1fr)}
@@ -379,8 +452,15 @@
     @media(max-width:640px){
       nav{padding:0 20px}
       .nav-links{display:none}
-      .hero-top{padding:80px 20px 32px}
-      .hero-chat{padding:32px 20px}
+      .hero {
+        padding: 80px 20px 48px;
+      }
+      .orb-transition {
+        padding: 56px 20px;
+      }
+      .orb-transition-tagline {
+        font-size: 26px;
+      }
       .hero-h1,.hero-echo{font-size:36px}
       .sl,.sd{padding:64px 20px}
       .def-band,.fw-band{padding:48px 20px}
@@ -517,35 +597,51 @@
   <div class="hero-gl"></div>
   <div class="hero-dots"></div>
 
-  <div class="hero-top">
+  <div class="hero-left">
     <div class="hero-tag">
+      <div class="hero-tag-pulse"></div>
       <span class="hero-tag-txt">Behavioral Science + Human-Centered AI</span>
     </div>
     <h1 class="hero-h1">Your business has more potential<br>than it's <em>converting.</em></h1>
     <div class="hero-echo">We fix that.</div>
     <p class="hero-p">Most agencies are an expense. We're a profit center. We maximize your current opportunities, then build new ones.</p>
+    <div class="hero-ctas">
+      <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-primary">
+        <img src="https://actionpotential.ai/CaryProfilePic.jpeg" alt="Cary" class="av" />
+        Book a Free AI Audit
+      </a>
+      <button class="btn-ghost" onclick="document.getElementById('what-we-are').scrollIntoView({behavior:'smooth'})">
+        See what we do <span class="arr-c">&#8594;</span>
+      </button>
+    </div>
   </div>
 
-  <div class="hero-bottom">
-    <div class="hero-left-orb">
-      <div class="hero-right">
-        <div class="logo-stage" id="logoStage">
-          <div class="orb orb-1"><div class="orb-node"></div></div>
-          <div class="orb orb-2"><div class="orb-node"></div></div>
-          <div class="orb orb-3"><div class="orb-node"></div></div>
-          <img src="https://assets.cdn.filesafe.space/yOkUSQmv7D3J1n6pmgAL/media/674632f08c90e99b82c653b9.webp" alt="ActionPotential.AI" class="logo-img" />
-        </div>
-      </div>
+  <div class="hero-right">
+    <div class="hero-chat-label">
+      <div class="hero-tag-pulse"></div>
+      <span>Free AI Audit — Let's find your friction</span>
     </div>
-    <div class="hero-chat">
-      <div class="hero-chat-embed">
-        <div id="chat_form"></div>
-        <script src="https://platform.simplebotinstall.com/w/chat_form_plugin.js" data-bot-id="7591"></script>
-      </div>
+    <div class="hero-chat-embed">
+      <script src="https://platform.simplebotinstall.com/w/chat_form_plugin.js" data-bot-id="7591"></script>
     </div>
   </div>
 
 </section>
+
+<div class="orb-transition" id="orb-transition">
+  <div class="orb-transition-inner">
+    <div class="logo-stage orb-transition-stage" id="orbTransitionStage">
+      <div class="orb orb-1"><div class="orb-node"></div></div>
+      <div class="orb orb-2"><div class="orb-node"></div></div>
+      <div class="orb orb-3"><div class="orb-node"></div></div>
+      <img src="https://assets.cdn.filesafe.space/yOkUSQmv7D3J1n6pmgAL/media/674632f08c90e99b82c653b9.webp" alt="ActionPotential.AI" class="logo-img" />
+    </div>
+    <div class="orb-transition-text">
+      <div class="orb-transition-tagline">Be Found. Be Chosen. <em>Be Remembered.</em></div>
+      <p class="orb-transition-sub">The full-system agency that builds it, runs it, and stays with you.</p>
+    </div>
+  </div>
+</div>
 
 <!-- MARQUEE -->
 <div class="mq-strip">
@@ -1052,7 +1148,9 @@
   var obs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}});
   },{threshold:0.05,rootMargin:'0px 0px -20px 0px'});
-  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
+  document.querySelectorAll('.rv, .orb-transition-inner').forEach(function(el){
+    obs.observe(el);
+  });
 
   // VIDEO PLAY
   document.querySelectorAll('.test-vid').forEach(function(w){
