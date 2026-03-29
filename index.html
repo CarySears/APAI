@@ -69,6 +69,7 @@
       grid-template-columns: 1fr 1fr;
       flex: 1;
       min-height: 0;
+      overflow: hidden;
       align-items: stretch;
       position: relative;
       z-index: 2;
@@ -142,8 +143,8 @@
       }
     }
 
-    .hero-chat{overflow:visible;padding:32px 40px;display:flex;flex-direction:column;justify-content:center;gap:16px}
-    .hero-chat-embed{height:480px;min-height:480px;overflow:visible;border-radius:var(--rlg);border:1px solid rgba(255,255,255,.08)}
+    .hero-chat{overflow:hidden;padding:32px 40px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+    .hero-chat-embed{height:320px;min-height:320px;overflow:hidden;border-radius:var(--rlg);border:1px solid rgba(255,255,255,.08)}
 
     @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
