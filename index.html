@@ -651,7 +651,7 @@
       <span style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1)">Free AI Audit — Let's find your friction</span>
     </div>
     <div class="hero-chat-embed">
-      <script src="https://platform.simplebotinstall.com/w/chat_form_plugin.js" data-bot-id="7591" async></script>
+      <div id="chat_form"></div>
     </div>
   </div>
 
@@ -1183,6 +1183,15 @@
   document.querySelectorAll('.rv, .orb-transition-inner').forEach(function(el){
     obs.observe(el);
   });
+
+  // HERO CHAT EMBED
+  var chatMount = document.getElementById('chat_form');
+  if (chatMount && !document.querySelector('script[data-bot-id="7591"]')) {
+    var chatScript = document.createElement('script');
+    chatScript.src = 'https://platform.simplebotinstall.com/w/chat_form_plugin.js';
+    chatScript.setAttribute('data-bot-id', '7591');
+    chatMount.appendChild(chatScript);
+  }
 
   // VIDEO PLAY
   document.querySelectorAll('.test-vid').forEach(function(w){
