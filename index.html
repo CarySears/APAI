@@ -41,6 +41,8 @@
       transition: transform .1s;
       opacity: 0;
       visibility: hidden;
+      left: -999px;
+      top: -999px;
     }
 
 
@@ -56,7 +58,7 @@
     .hero-top {
       width: 100%;
       text-align: center;
-      padding: 120px 48px 32px;
+      padding: 100px 48px 24px;
       border-bottom: 1px solid rgba(255,255,255,.04);
       position: relative;
       z-index: 2;
@@ -110,7 +112,7 @@
       flex-direction: column;
       justify-content: center;
       padding: 40px 48px;
-      gap: 16px;
+      gap: 0;
       position: relative;
       z-index: 2;
     }
@@ -125,8 +127,8 @@
     /* HERO RIGHT — LOGO STAGE */
     .logo-stage {
       position: relative;
-      width: 380px;
-      height: 380px;
+      width: 420px;
+      height: 420px;
       overflow: visible;
       flex-shrink: 0;
     }
@@ -170,7 +172,7 @@
       border-radius: var(--rlg);
       border: 1px solid rgba(255,255,255,.08);
       overflow: hidden;
-      height: 320px;
+      height: 340px;
     }
 
     @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
@@ -579,10 +581,6 @@
     </div>
 
     <div class="hero-right">
-      <div class="hero-chat-label">
-        <div class="hero-tag-pulse"></div>
-        <span style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1)">Free AI Audit — Let's find your friction</span>
-      </div>
       <div class="hero-chat-embed">
         <div id="chat_form"></div>
         <script src="https://platform.simplebotinstall.com/w/chat_form_plugin.js" data-bot-id="7591" async></script>
