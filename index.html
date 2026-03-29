@@ -69,7 +69,7 @@
       grid-template-columns: 1fr 1fr;
       flex: 1;
       min-height: 0;
-      overflow: hidden;
+      align-items: stretch;
       position: relative;
       z-index: 2;
     }
@@ -142,8 +142,8 @@
       }
     }
 
-    .hero-chat{display:flex;flex-direction:column;justify-content:center;padding:48px 40px;gap:16px;overflow:hidden;max-height:100%}
-    .hero-chat-embed{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(--rlg);padding:24px;min-height:320px;max-height:100%;overflow:hidden}
+    .hero-chat{overflow:visible;padding:32px 40px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+    .hero-chat-embed{height:480px;min-height:480px;overflow:visible;border-radius:var(--rlg);border:1px solid rgba(255,255,255,.08)}
 
     @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
