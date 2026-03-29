@@ -46,30 +46,30 @@
 
     /* HERO */
     .hero {
+      height: 100vh;
+      min-height: 100vh;
       background: var(--d9);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      padding: 0;
-      align-content: stretch;
+      justify-content: space-between;
       position: relative;
-      min-height: 100vh;
+      padding: 0;
+      overflow: hidden;
     }
     .hero-top {
       width: 100%;
       text-align: center;
-      padding: 80px 48px 0;
-      margin-bottom: -40px;
+      padding: 120px 48px 20px;
+      border-bottom: 1px solid rgba(255,255,255,.04);
       position: relative;
       z-index: 2;
     }
     .hero-bottom {
+      flex: 1;
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      padding: 0 8%;
-      gap: 48px;
-      flex: 1;
+      min-height: 0;
     }
     .hero-gr{position:absolute;top:-20%;right:-10%;width:65%;height:130%;background:radial-gradient(ellipse,rgba(46,166,212,.07) 0%,transparent 68%);pointer-events:none}
     .hero-gl{position:absolute;bottom:-20%;left:-10%;width:55%;height:90%;background:radial-gradient(ellipse,rgba(249,115,22,.04) 0%,transparent 60%);pointer-events:none}
@@ -79,18 +79,47 @@
       align-items: center;
       justify-content: center;
       height: 100%;
-      padding: 24px 0;
+      padding: 32px 48px;
       border-right: 1px solid rgba(255,255,255,.04);
     }
-    .hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;animation:fadeUp .7s .2s both}
+    .hero-tag{display:inline-flex;align-items:center;justify-content:center;width:100%;gap:10px;margin-bottom:28px;animation:fadeUp .7s .2s both}
     .hero-tag-pulse{width:7px;height:7px;border-radius:50%;background:var(--grad);flex-shrink:0;animation:pulseGlow 2.4s ease-in-out infinite}
     @keyframes pulseGlow{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(121,197,199,.4)}50%{opacity:.7;box-shadow:0 0 0 6px rgba(121,197,199,0)}}
     .hero-tag-txt{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1)}
-    .hero-h1{font-family:var(--fd);font-size:56px;font-weight:300;line-height:1.02;letter-spacing:-1.5px;color:white;margin-bottom:18px;animation:fadeUp .7s .32s both}
+    .hero-h1 {
+      font-family: var(--fd);
+      font-size: 72px;
+      font-weight: 300;
+      line-height: 1.02;
+      letter-spacing: -1.5px;
+      color: white;
+      margin-top: 20px;
+      margin-bottom: 0;
+      text-align: center;
+    }
     .hero-h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .hero-echo{font-family:var(--fd);font-size:66px;font-weight:300;font-style:italic;line-height:1.02;letter-spacing:-1.5px;color:rgba(255,255,255,.22);margin-top:4px;margin-bottom:0;animation:fadeUp .7s .4s both}
-    .hero-p{font-size:17px;font-weight:300;line-height:1.72;color:var(--w7);max-width:600px;margin:0 auto;animation:fadeUp .7s .54s both}
-    .hero-p strong{color:white;font-weight:500}
+    .hero-echo {
+      font-family: var(--fd);
+      font-size: 32px;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.2;
+      letter-spacing: 0;
+      color: rgba(255,255,255,.45);
+      text-align: center;
+      margin-top: 16px;
+      margin-bottom: 0;
+    }
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 24px 48px;
+      gap: 0;
+      position: relative;
+      z-index: 2;
+    }
     .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:13px 26px;border-radius:50px;transition:opacity .2s,transform .2s}
     .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
     .btn-primary .av{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,255,255,.3)}
@@ -100,18 +129,10 @@
     .btn-ghost:hover .arr-c{background:white;color:var(--d9)}
 
     /* HERO RIGHT — LOGO STAGE */
-    .hero-right {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%;
-      padding: 24px 0 24px 48px;
-    }
-    .hero-left-orb .hero-right{justify-content:center;padding-left:0;padding-top:0}
     .logo-stage {
       position: relative;
-      width: 360px;
-      height: 360px;
+      width: 420px;
+      height: 420px;
       overflow: visible;
       flex-shrink: 0;
     }
@@ -144,14 +165,19 @@
       }
     }
 
-    .hero-chat{display:flex;flex-direction:column;justify-content:center;padding:48px 40px;gap:16px}
-    .hero-chat-label{display:inline-flex;align-items:center;gap:10px}
+    .hero-chat-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
     .hero-chat-embed {
       border-radius: var(--rlg);
       border: 1px solid rgba(255,255,255,.08);
       overflow: hidden;
-      height: 320px;
-      width: 100%;
+      height: 100%;
+      min-height: 300px;
     }
 
     @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
@@ -368,22 +394,20 @@
 
     /* RESPONSIVE */
     @media(max-width:1024px){
+      .hero-top {
+        padding: 120px 32px 40px;
+      }
       .hero-bottom {
         grid-template-columns: 1fr;
-        padding: 24px 5%;
-        gap: 32px;
       }
       .hero-left-orb {
         border-right: none;
         border-bottom: 1px solid rgba(255,255,255,.04);
-        padding: 24px 0;
+        padding: 32px;
       }
-      .hero-right {
-        padding: 24px 0;
+      .hero-h1, .hero-echo {
+        font-size: 52px;
       }
-      .hero-top{padding:100px 32px 40px}
-      .logo-stage{width:300px;height:300px;margin:0 auto}
-      .hero-h1,.hero-echo{font-size:48px}
       .def-inner{grid-template-columns:1fr;gap:40px}
       .relate-grid{grid-template-columns:repeat(2,1fr)}
       .sys-header{grid-template-columns:1fr;gap:32px}
@@ -398,11 +422,15 @@
     @media(max-width:640px){
       nav{padding:0 20px}
       .nav-links{display:none}
-      .hero-top{padding:80px 20px 0}
-      .hero-bottom{padding:16px 5%}
-      .hero-chat{padding:32px 20px}
-      .hero-h1{font-size:36px}
-      .hero-echo{font-size:22px}
+      .hero-top {
+        padding: 100px 20px 32px;
+      }
+      .hero-right {
+        padding: 32px 20px;
+      }
+      .hero-h1, .hero-echo {
+        font-size: 36px;
+      }
       .sl,.sd{padding:64px 20px}
       .def-band,.fw-band{padding:48px 20px}
       .logo-bar{padding:22px 20px}
@@ -539,32 +567,28 @@
   <div class="hero-dots"></div>
 
   <div class="hero-top">
-    <div class="hero-tag">
+    <div class="hero-tag" style="justify-content:center;">
+      <div class="hero-tag-pulse"></div>
       <span class="hero-tag-txt">Behavioral Science + Human-Centered AI</span>
     </div>
     <h1 class="hero-h1">Your business has more potential<br>than it's <em>converting.</em></h1>
-    <div class="hero-echo">We fix that.</div>
-    <p class="hero-p">Most agencies are an expense. We're a profit center. We maximize your current opportunities, then build new ones.</p>
+    <div class="hero-echo">We maximize your current opportunities and create new ones.</div>
   </div>
 
   <div class="hero-bottom">
     <div class="hero-left-orb">
-      <div class="hero-right">
-        <div class="logo-stage" id="logoStage">
-          <div class="orb orb-1"><div class="orb-node"></div></div>
-          <div class="orb orb-2"><div class="orb-node"></div></div>
-          <div class="orb orb-3"><div class="orb-node"></div></div>
-          <img src="https://assets.cdn.filesafe.space/yOkUSQmv7D3J1n6pmgAL/media/674632f08c90e99b82c653b9.webp" alt="ActionPotential.AI" class="logo-img" />
-        </div>
+      <div class="logo-stage" id="logoStage">
+        <div class="orb orb-1"><div class="orb-node"></div></div>
+        <div class="orb orb-2"><div class="orb-node"></div></div>
+        <div class="orb orb-3"><div class="orb-node"></div></div>
+        <img src="https://assets.cdn.filesafe.space/yOkUSQmv7D3J1n6pmgAL/media/674632f08c90e99b82c653b9.webp" alt="ActionPotential.AI" class="logo-img" />
       </div>
     </div>
-    <div class="hero-chat">
-      <div class="hero-chat-label">
-        <span class="hero-tag-pulse"></span>
-        <span style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1)">Free AI Audit — Let's find your friction</span>
-      </div>
+
+    <div class="hero-right">
       <div class="hero-chat-embed">
-        <script src="https://platform.simplebotinstall.com/w/chat_form_plugin.js" data-bot-id="7591"></script>
+        <div id="chat_form"></div>
+        <script src="https://platform.simplebotinstall.com/w/chat_form_plugin.js" data-bot-id="7591" async></script>
       </div>
     </div>
   </div>
@@ -1076,7 +1100,18 @@
   var obs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}});
   },{threshold:0.05,rootMargin:'0px 0px -20px 0px'});
-  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
+  document.querySelectorAll('.rv').forEach(function(el){
+    obs.observe(el);
+  });
+
+  // HERO CHAT EMBED
+  var chatMount = document.getElementById('chat_form');
+  if (chatMount && !document.querySelector('script[data-bot-id="7591"]')) {
+    var chatScript = document.createElement('script');
+    chatScript.src = 'https://platform.simplebotinstall.com/w/chat_form_plugin.js';
+    chatScript.setAttribute('data-bot-id', '7591');
+    chatMount.appendChild(chatScript);
+  }
 
   // VIDEO PLAY
   document.querySelectorAll('.test-vid').forEach(function(w){
