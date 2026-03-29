@@ -57,31 +57,38 @@
     .hero-top {
       width: 100%;
       text-align: center;
-      padding: 120px 48px 48px;
-      border-bottom: 1px solid rgba(255,255,255,.05);
+      padding: 60px 48px 0;
       position: relative;
       z-index: 2;
+      border-bottom: none;
     }
     .hero-bottom {
-      width: 100%;
+      flex: 1;
+      min-height: 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      flex: 1;
-      min-height: 400px;
-      position: relative;
-      z-index: 2;
+      align-items: center;
+      padding: 24px 8%;
+      gap: 48px;
     }
     .hero-gr{position:absolute;top:-20%;right:-10%;width:65%;height:130%;background:radial-gradient(ellipse,rgba(46,166,212,.07) 0%,transparent 68%);pointer-events:none}
     .hero-gl{position:absolute;bottom:-20%;left:-10%;width:55%;height:90%;background:radial-gradient(ellipse,rgba(249,115,22,.04) 0%,transparent 60%);pointer-events:none}
     .hero-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(121,197,199,.07) 1px,transparent 1px);background-size:32px 32px;mask-image:radial-gradient(ellipse at 72% 50%,black 25%,transparent 68%);pointer-events:none}
-    .hero-left-orb{display:flex;align-items:center;justify-content:center;padding:48px;border-right:1px solid rgba(255,255,255,.05)}
+    .hero-left-orb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 24px 0;
+      border-right: 1px solid rgba(255,255,255,.04);
+    }
     .hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;animation:fadeUp .7s .2s both}
     .hero-tag-pulse{width:7px;height:7px;border-radius:50%;background:var(--grad);flex-shrink:0;animation:pulseGlow 2.4s ease-in-out infinite}
     @keyframes pulseGlow{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(121,197,199,.4)}50%{opacity:.7;box-shadow:0 0 0 6px rgba(121,197,199,0)}}
     .hero-tag-txt{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1)}
-    .hero-h1{font-family:var(--fd);font-size:66px;font-weight:300;line-height:1.02;letter-spacing:-1.5px;color:white;margin-bottom:18px;animation:fadeUp .7s .32s both}
+    .hero-h1{font-family:var(--fd);font-size:56px;font-weight:300;line-height:1.02;letter-spacing:-1.5px;color:white;margin-bottom:18px;animation:fadeUp .7s .32s both}
     .hero-h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .hero-echo{font-family:var(--fd);font-size:66px;font-weight:300;font-style:italic;line-height:1.02;letter-spacing:-1.5px;color:rgba(255,255,255,.22);margin-bottom:42px;animation:fadeUp .7s .4s both}
+    .hero-echo{font-family:var(--fd);font-size:66px;font-weight:300;font-style:italic;line-height:1.02;letter-spacing:-1.5px;color:rgba(255,255,255,.22);margin-top:4px;margin-bottom:0;animation:fadeUp .7s .4s both}
     .hero-p{font-size:17px;font-weight:300;line-height:1.72;color:var(--w7);max-width:600px;margin:0 auto;animation:fadeUp .7s .54s both}
     .hero-p strong{color:white;font-weight:500}
     .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:13px 26px;border-radius:50px;transition:opacity .2s,transform .2s}
@@ -94,20 +101,17 @@
 
     /* HERO RIGHT — LOGO STAGE */
     .hero-right {
-      position: relative;
-      z-index: 2;
       display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      animation: fadeUp .8s .3s both;
-      padding-left: 72px;
-      padding-top: 40px;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 24px 0 24px 48px;
     }
     .hero-left-orb .hero-right{justify-content:center;padding-left:0;padding-top:0}
     .logo-stage {
       position: relative;
-      width: 400px;
-      height: 400px;
+      width: 360px;
+      height: 360px;
       overflow: visible;
       flex-shrink: 0;
     }
@@ -142,7 +146,13 @@
 
     .hero-chat{display:flex;flex-direction:column;justify-content:center;padding:48px 40px;gap:16px}
     .hero-chat-label{display:inline-flex;align-items:center;gap:10px}
-    .hero-chat-embed{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(--rlg);padding:24px;min-height:320px}
+    .hero-chat-embed {
+      border-radius: var(--rlg);
+      border: 1px solid rgba(255,255,255,.08);
+      overflow: hidden;
+      height: 320px;
+      width: 100%;
+    }
 
     @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
@@ -358,8 +368,19 @@
 
     /* RESPONSIVE */
     @media(max-width:1024px){
-      .hero-bottom{grid-template-columns:1fr}
-      .hero-left-orb{border-right:none;border-bottom:1px solid rgba(255,255,255,.05);padding:32px}
+      .hero-bottom {
+        grid-template-columns: 1fr;
+        padding: 24px 5%;
+        gap: 32px;
+      }
+      .hero-left-orb {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,.04);
+        padding: 24px 0;
+      }
+      .hero-right {
+        padding: 24px 0;
+      }
       .hero-top{padding:100px 32px 40px}
       .logo-stage{width:300px;height:300px;margin:0 auto}
       .hero-h1,.hero-echo{font-size:48px}
@@ -377,9 +398,11 @@
     @media(max-width:640px){
       nav{padding:0 20px}
       .nav-links{display:none}
-      .hero-top{padding:80px 20px 32px}
+      .hero-top{padding:80px 20px 0}
+      .hero-bottom{padding:16px 5%}
       .hero-chat{padding:32px 20px}
-      .hero-h1,.hero-echo{font-size:36px}
+      .hero-h1{font-size:36px}
+      .hero-echo{font-size:22px}
       .sl,.sd{padding:64px 20px}
       .def-band,.fw-band{padding:48px 20px}
       .logo-bar{padding:22px 20px}
