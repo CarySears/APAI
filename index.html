@@ -51,7 +51,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      padding: 0 64px;
+      padding: 80px 64px 0;
       gap: 64px;
       position: relative;
       box-sizing: border-box;
@@ -63,7 +63,7 @@
       position: relative;
       z-index: 2;
       max-width: 560px;
-      padding-top: 80px;
+      padding-top: 40px;
     }
     .hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;animation:fadeUp .7s .2s both}
     .hero-tag-pulse{width:7px;height:7px;border-radius:50%;background:var(--grad);flex-shrink:0;animation:pulseGlow 2.4s ease-in-out infinite}
@@ -90,7 +90,7 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
-      padding-top: 80px;
+      padding-top: 40px;
     }
     .logo-stage {
       position: relative;
@@ -142,20 +142,28 @@
 
     .hero-chat-embed {
       border-radius: var(--rlg);
-      overflow: hidden;
       border: 1px solid rgba(255,255,255,.08);
-      height: 320px;
+      min-height: 320px;
+      height: auto;
+      overflow: hidden;
     }
 
     .orb-transition {
+      position: relative;
+      height: 300vh;
       background: var(--d9);
-      min-height: 100vh;
+    }
+
+    .orb-transition-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
+      flex-direction: column;
+      gap: 48px;
       overflow: hidden;
-      border-top: 1px solid rgba(255,255,255,.04);
     }
 
     .orb-transition-bg {
@@ -198,6 +206,7 @@
       color: white;
       line-height: 1.1;
       margin-bottom: 14px;
+      text-align: center;
       opacity: 0;
       transform: translateY(16px);
       transition: opacity .8s .4s ease, transform .8s .4s ease;
@@ -220,6 +229,7 @@
       font-size: 16px;
       font-weight: 300;
       color: var(--w7);
+      text-align: center;
       opacity: 0;
       transform: translateY(12px);
       transition: opacity .8s .7s ease, transform .8s .7s ease;
@@ -449,12 +459,8 @@
         padding: 100px 32px 64px;
         gap: 40px;
       }
-      .hero-left {
-        padding-top: 0;
-      }
-      .hero-right {
-        padding-top: 0;
-      }
+      .hero-left {padding-top: 40px}
+      .hero-right {padding-top: 40px}
       .orb-transition-stage {
         width: 240px;
         height: 240px;
@@ -477,9 +483,7 @@
     @media(max-width:640px){
       nav{padding:0 20px}
       .nav-links{display:none}
-      .hero {
-        padding: 80px 20px 48px;
-      }
+      .hero {padding: 80px 20px 48px}
       .orb-transition-tagline {
         font-size: 28px;
       }
@@ -644,25 +648,29 @@
   <div class="hero-right">
     <div class="hero-chat-label">
       <div class="hero-tag-pulse"></div>
-      <span>Free AI Audit — Let's find your friction</span>
+      <span style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1)">Free AI Audit — Let's find your friction</span>
     </div>
-    <div class="hero-chat-embed" id="chatEmbed"></div>
+    <div class="hero-chat-embed">
+      <script src="https://platform.simplebotinstall.com/w/chat_form_plugin.js" data-bot-id="7591" async></script>
+    </div>
   </div>
 
 </section>
 
 <div class="orb-transition" id="orb-transition">
-  <div class="orb-transition-bg"></div>
-  <div class="orb-transition-inner">
-    <div class="logo-stage orb-transition-stage" id="orbTransitionStage">
-      <div class="orb orb-1"><div class="orb-node"></div></div>
-      <div class="orb orb-2"><div class="orb-node"></div></div>
-      <div class="orb orb-3"><div class="orb-node"></div></div>
-      <img src="https://assets.cdn.filesafe.space/yOkUSQmv7D3J1n6pmgAL/media/674632f08c90e99b82c653b9.webp" alt="ActionPotential.AI" class="logo-img" />
-    </div>
-    <div class="orb-transition-text">
-      <div class="orb-transition-tagline">Be Found. Be Chosen. <em>Be Remembered.</em></div>
-      <p class="orb-transition-sub">The full-system agency that builds it, runs it, and stays with you.</p>
+  <div class="orb-transition-sticky">
+    <div class="orb-transition-bg"></div>
+    <div class="orb-transition-inner">
+      <div class="logo-stage orb-transition-stage" id="orbTransitionStage">
+        <div class="orb orb-1"><div class="orb-node"></div></div>
+        <div class="orb orb-2"><div class="orb-node"></div></div>
+        <div class="orb orb-3"><div class="orb-node"></div></div>
+        <img src="https://assets.cdn.filesafe.space/yOkUSQmv7D3J1n6pmgAL/media/674632f08c90e99b82c653b9.webp" alt="ActionPotential.AI" class="logo-img" />
+      </div>
+      <div class="orb-transition-text">
+        <div class="orb-transition-tagline">Be Found. Be Chosen. <em>Be Remembered.</em></div>
+        <p class="orb-transition-sub">The full-system agency that builds it, runs it, and stays with you.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -1175,11 +1183,6 @@
   document.querySelectorAll('.rv, .orb-transition-inner').forEach(function(el){
     obs.observe(el);
   });
-
-  var chatScript = document.createElement('script');
-  chatScript.src = 'https://platform.simplebotinstall.com/w/chat_form_plugin.js';
-  chatScript.setAttribute('data-bot-id', '7591');
-  document.getElementById('chatEmbed').appendChild(chatScript);
 
   // VIDEO PLAY
   document.querySelectorAll('.test-vid').forEach(function(w){
