@@ -46,18 +46,20 @@
 
     /* HERO */
     .hero {
-      height: 100vh;
       background: var(--d9);
-      display: grid;
-      grid-template-rows: auto 1fr;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
       align-content: stretch;
       position: relative;
-      overflow: hidden;
+      min-height: 100vh;
     }
     .hero-top {
       width: 100%;
       text-align: center;
       padding: 80px 48px 0;
+      margin-bottom: -40px;
       position: relative;
       z-index: 2;
     }
@@ -65,9 +67,9 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      padding: 0 6%;
-      gap: 40px;
-      min-height: 0;
+      padding: 0 8%;
+      gap: 48px;
+      flex: 1;
     }
     .hero-gr{position:absolute;top:-20%;right:-10%;width:65%;height:130%;background:radial-gradient(ellipse,rgba(46,166,212,.07) 0%,transparent 68%);pointer-events:none}
     .hero-gl{position:absolute;bottom:-20%;left:-10%;width:55%;height:90%;background:radial-gradient(ellipse,rgba(249,115,22,.04) 0%,transparent 60%);pointer-events:none}
@@ -77,45 +79,16 @@
       align-items: center;
       justify-content: center;
       height: 100%;
-      padding: 16px 0;
+      padding: 24px 0;
+      border-right: 1px solid rgba(255,255,255,.04);
     }
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      gap: 10px;
-      margin-bottom: 20px;
-      animation: fadeUp .7s .2s both;
-    }
+    .hero-tag{display:inline-flex;align-items:center;gap:10px;margin-bottom:28px;animation:fadeUp .7s .2s both}
     .hero-tag-pulse{width:7px;height:7px;border-radius:50%;background:var(--grad);flex-shrink:0;animation:pulseGlow 2.4s ease-in-out infinite}
     @keyframes pulseGlow{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(121,197,199,.4)}50%{opacity:.7;box-shadow:0 0 0 6px rgba(121,197,199,0)}}
     .hero-tag-txt{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1)}
-    .hero-h1 {
-      font-family: var(--fd);
-      font-size: 58px;
-      font-weight: 300;
-      line-height: 1.02;
-      letter-spacing: -1.5px;
-      color: white;
-      margin-bottom: 0;
-      text-align: center;
-      animation: fadeUp .7s .32s both;
-    }
+    .hero-h1{font-family:var(--fd);font-size:56px;font-weight:300;line-height:1.02;letter-spacing:-1.5px;color:white;margin-bottom:18px;animation:fadeUp .7s .32s both}
     .hero-h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .hero-echo {
-      font-family: var(--fd);
-      font-size: 28px;
-      font-weight: 300;
-      font-style: italic;
-      line-height: 1.2;
-      letter-spacing: 0;
-      color: rgba(255,255,255,.40);
-      text-align: center;
-      margin-top: 10px;
-      margin-bottom: 0;
-      animation: fadeUp .7s .4s both;
-    }
+    .hero-echo{font-family:var(--fd);font-size:66px;font-weight:300;font-style:italic;line-height:1.02;letter-spacing:-1.5px;color:rgba(255,255,255,.22);margin-top:4px;margin-bottom:0;animation:fadeUp .7s .4s both}
     .hero-p{font-size:17px;font-weight:300;line-height:1.72;color:var(--w7);max-width:600px;margin:0 auto;animation:fadeUp .7s .54s both}
     .hero-p strong{color:white;font-weight:500}
     .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:13px 26px;border-radius:50px;transition:opacity .2s,transform .2s}
@@ -132,15 +105,13 @@
       flex-direction: column;
       justify-content: center;
       height: 100%;
-      padding: 16px 0;
-      position: relative;
-      z-index: 2;
+      padding: 24px 0 24px 48px;
     }
     .hero-left-orb .hero-right{justify-content:center;padding-left:0;padding-top:0}
     .logo-stage {
       position: relative;
-      width: 340px;
-      height: 340px;
+      width: 360px;
+      height: 360px;
       overflow: visible;
       flex-shrink: 0;
     }
@@ -179,7 +150,7 @@
       border-radius: var(--rlg);
       border: 1px solid rgba(255,255,255,.08);
       overflow: hidden;
-      height: 300px;
+      height: 320px;
       width: 100%;
     }
 
@@ -397,32 +368,22 @@
 
     /* RESPONSIVE */
     @media(max-width:1024px){
-      .hero {
-        height: auto;
-        min-height: 100vh;
-        grid-template-rows: auto auto;
-      }
-      .hero-top {
-        padding: 100px 32px 24px;
-      }
       .hero-bottom {
         grid-template-columns: 1fr;
-        padding: 0 5%;
-        gap: 24px;
+        padding: 24px 5%;
+        gap: 32px;
       }
       .hero-left-orb {
-        padding: 16px 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,.04);
+        padding: 24px 0;
       }
       .hero-right {
-        padding: 16px 0 32px;
+        padding: 24px 0;
       }
-      .hero-h1 {
-        font-size: 44px;
-      }
-      .hero-echo {
-        font-size: 22px;
-      }
+      .hero-top{padding:100px 32px 40px}
       .logo-stage{width:300px;height:300px;margin:0 auto}
+      .hero-h1,.hero-echo{font-size:48px}
       .def-inner{grid-template-columns:1fr;gap:40px}
       .relate-grid{grid-template-columns:repeat(2,1fr)}
       .sys-header{grid-template-columns:1fr;gap:32px}
@@ -437,19 +398,11 @@
     @media(max-width:640px){
       nav{padding:0 20px}
       .nav-links{display:none}
-      .hero-top {
-        padding: 80px 20px 20px;
-      }
-      .hero-bottom {
-        padding: 0 20px;
-      }
+      .hero-top{padding:80px 20px 0}
+      .hero-bottom{padding:16px 5%}
       .hero-chat{padding:32px 20px}
-      .hero-h1 {
-        font-size: 34px;
-      }
-      .hero-echo {
-        font-size: 18px;
-      }
+      .hero-h1{font-size:36px}
+      .hero-echo{font-size:22px}
       .sl,.sd{padding:64px 20px}
       .def-band,.fw-band{padding:48px 20px}
       .logo-bar{padding:22px 20px}
