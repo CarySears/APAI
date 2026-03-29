@@ -149,34 +149,7 @@
       overflow: hidden;
     }
 
-    .hero-orb-wrap{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:320px;
-      position:relative;
-      z-index:2;
-      opacity:1;
-      will-change:opacity,transform;
-    }
-    .hero-orb-transition {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      pointer-events: none;
-      z-index: 3;
-      opacity: 0;
-      transform: scale(.78);
-      will-change: opacity, transform;
-    }
-    .hero-orb-bg {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 50% 50%, rgba(46,166,212,.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
+    .hero-orb-wrap{display:flex;align-items:center;justify-content:center;min-height:320px;position:relative;z-index:2}
     .hero-orb-stage {
       width: 320px;
       height: 320px;
@@ -580,15 +553,6 @@
   </div>
 
   <div class="hero-right">
-    <div class="hero-orb-transition" id="heroOrbTransition" aria-hidden="true">
-      <div class="hero-orb-bg"></div>
-      <div class="logo-stage hero-orb-stage" id="heroOrbStageOverlay">
-        <div class="orb orb-1"><div class="orb-node"></div></div>
-        <div class="orb orb-2"><div class="orb-node"></div></div>
-        <div class="orb orb-3"><div class="orb-node"></div></div>
-        <img src="https://assets.cdn.filesafe.space/yOkUSQmv7D3J1n6pmgAL/media/674632f08c90e99b82c653b9.webp" alt="" class="logo-img" />
-      </div>
-    </div>
     <div class="hero-orb-wrap" aria-hidden="true">
       <div class="logo-stage hero-orb-stage" id="heroOrbStage">
         <div class="orb orb-1"><div class="orb-node"></div></div>
@@ -1116,51 +1080,6 @@
   document.querySelectorAll('.rv').forEach(function(el){
     obs.observe(el);
   });
-
-  // HERO ORB TRANSITION
-  var heroEl = document.querySelector('.hero');
-  var heroOrbOverlay = document.getElementById('heroOrbTransition');
-  var heroOrbWrap = document.querySelector('.hero-orb-wrap');
-  var heroOrbIntro = 1;
-
-  function clamp01(v){
-    return Math.max(0, Math.min(1, v));
-  }
-
-  function updateHeroOrbTransition(){
-    if(!heroEl || !heroOrbOverlay) return;
-    var rect = heroEl.getBoundingClientRect();
-    var heroHeight = heroEl.offsetHeight || window.innerHeight;
-    var heroScroll = Math.max(0, -rect.top);
-    var scrollProgress = clamp01(heroScroll / (heroHeight * 0.62));
-    var progress = Math.max(heroOrbIntro, scrollProgress);
-    var fadeOut = clamp01((heroScroll - heroHeight * 0.82) / (heroHeight * 0.22));
-    var overlayOpacity = Math.max(0, progress * (1 - fadeOut));
-    var overlayScale = 0.78 + progress * 0.9;
-
-    heroOrbOverlay.style.opacity = overlayOpacity.toFixed(3);
-    heroOrbOverlay.style.transform = 'scale(' + overlayScale.toFixed(3) + ')';
-
-    if(heroOrbWrap){
-      heroOrbWrap.style.opacity = (1 - progress).toFixed(3);
-      heroOrbWrap.style.transform = 'scale(' + (1 - progress * 0.08).toFixed(3) + ')';
-    }
-  }
-
-  if(heroOrbOverlay){
-    var heroOrbIntroStart = null;
-    function runHeroOrbIntro(ts){
-      if(heroOrbIntroStart === null) heroOrbIntroStart = ts;
-      var introProgress = clamp01((ts - heroOrbIntroStart) / 1150);
-      heroOrbIntro = 1 - introProgress;
-      updateHeroOrbTransition();
-      if(introProgress < 1) requestAnimationFrame(runHeroOrbIntro);
-    }
-    requestAnimationFrame(runHeroOrbIntro);
-    window.addEventListener('scroll', updateHeroOrbTransition, {passive:true});
-    window.addEventListener('resize', updateHeroOrbTransition);
-    updateHeroOrbTransition();
-  }
 
   // HERO CHAT EMBED
   var chatMount = document.getElementById('chat_form');
