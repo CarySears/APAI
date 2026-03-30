@@ -201,11 +201,22 @@
     /* MARQUEE */
     .mq-strip{background:var(--d7);border-top:1px solid rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.045);padding:16px 0 20px;overflow:hidden}
     .mq-strip-label{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--w4);text-align:center;margin-bottom:16px}
-    .mq-track{display:flex;width:max-content;animation:marquee 48s linear infinite;align-items:center}
+    .mq-track{display:flex;width:max-content;animation: marquee 60s linear infinite;will-change: transform;align-items:center}
     .mq-track:hover{animation-play-state:paused}
-    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
     .mq-logo-item{display:flex;align-items:center;justify-content:center;padding:0 56px;}
     .mq-logo-item img{height:64px;width:auto;opacity:0.85;transition:opacity .2s;object-fit:contain;filter:none;border-radius:8px;mix-blend-mode:screen;}
+    .mq-logo-item img[alt="Integrated Mindfulness Institute"] {
+      mix-blend-mode: multiply;
+      border-radius: 0;
+    }
+    .mq-logo-item img[alt="Miami Scooter Tour"] {
+      mix-blend-mode: screen;
+      border-radius: 0;
+    }
     .mq-logo-item img:hover{opacity:1;}
 
     /* SECTION SYSTEM */
