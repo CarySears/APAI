@@ -207,17 +207,27 @@
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-    .mq-logo-item{display:flex;align-items:center;justify-content:center;padding:0 56px;}
-    .mq-logo-item img{height:64px;width:auto;opacity:0.85;transition:opacity .2s;object-fit:contain;filter:none;border-radius:8px;mix-blend-mode:screen;}
-    .mq-logo-item img[alt="Integrated Mindfulness Institute"] {
-      mix-blend-mode: multiply;
-      border-radius: 0;
+    .mq-logo-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      flex-shrink: 0;
+      margin: 0 24px;
     }
-    .mq-logo-item img[alt="Miami Scooter Tour"] {
-      mix-blend-mode: screen;
-      border-radius: 0;
+    .mq-logo-item img {
+      height: 60px;
+      width: auto;
+      max-width: 110px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      opacity: 0.9;
+      transition: opacity .2s;
     }
-    .mq-logo-item img:hover{opacity:1;}
+    .mq-logo-item img:hover { opacity: 1; }
 
     /* SECTION SYSTEM */
     .sl{background:var(--lb);color:var(--td);padding:96px 48px}
