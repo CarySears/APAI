@@ -199,14 +199,13 @@
     }
 
     /* MARQUEE */
-    .mq-strip{background:var(--d7);border-top:1px solid rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.045);padding:22px 0;overflow:hidden}
-    .mq-track{display:flex;width:max-content;animation:marquee 28s linear infinite}
+    .mq-strip{background:var(--d7);border-top:1px solid rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.045);padding:28px 0;overflow:hidden}
+    .mq-track{display:flex;width:max-content;animation:marquee 32s linear infinite;align-items:center}
     .mq-track:hover{animation-play-state:paused}
     @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-    .mq-item{display:flex;align-items:center;gap:14px;padding:0 44px;border-right:1px solid rgba(255,255,255,.05);white-space:nowrap}
-    .mq-dot{width:4px;height:4px;border-radius:50%;background:var(--gteal);flex-shrink:0}
-    .mq-lbl{font-size:11px;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:var(--w4)}
-    .mq-val{font-family:var(--fd);font-size:18px;font-weight:300;color:var(--t1)}
+    .mq-logo-item{display:flex;align-items:center;justify-content:center;padding:0 48px;border-right:1px solid rgba(255,255,255,.05)}
+    .mq-logo-item img{height:40px;width:auto;opacity:0.65;transition:opacity .2s;object-fit:contain;filter:grayscale(100%)}
+    .mq-logo-item img:hover{opacity:1;filter:grayscale(0%)}
 
     /* SECTION SYSTEM */
     .sl{background:var(--lb);color:var(--td);padding:96px 48px}
@@ -614,24 +613,18 @@
 <!-- MARQUEE -->
 <div class="mq-strip">
   <div class="mq-track">
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Be found</span><span class="mq-val">Traditional search + AI engines</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Be chosen</span><span class="mq-val">Human-Centered AI systems</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Be remembered</span><span class="mq-val">Reviews, referrals, retention</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Foundation</span><span class="mq-val">Behavioral Science</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Approach</span><span class="mq-val">Human-Centered AI</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Availability</span><span class="mq-val">24 / 7 / 365</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Response time</span><span class="mq-val">Instant</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Setup</span><span class="mq-val">Days, not months</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Technical knowledge needed</span><span class="mq-val">Zero</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Be found</span><span class="mq-val">Traditional search + AI engines</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Be chosen</span><span class="mq-val">Human-Centered AI systems</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Be remembered</span><span class="mq-val">Reviews, referrals, retention</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Foundation</span><span class="mq-val">Behavioral Science</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Approach</span><span class="mq-val">Human-Centered AI</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Availability</span><span class="mq-val">24 / 7 / 365</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Response time</span><span class="mq-val">Instant</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Setup</span><span class="mq-val">Days, not months</span></div>
-    <div class="mq-item"><div class="mq-dot"></div><span class="mq-lbl">Technical knowledge needed</span><span class="mq-val">Zero</span></div>
+    <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/HGE21CBaknlKH4BuYcpz/media/6717d355dae31b04ee86f1e5.png" alt="Vesping Around" /></div>
+    <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/ZctkpoTQvVYMUST1tu5T/media/69bdb9703fa673828810ea75.svg" alt="Daniel G. Wong, M.D." /></div>
+    <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/jNqy5QsBJRJ9cjslwRNp/media/686d35a5097a8052bf3b964a.png" alt="Anna Brooke Healing" /></div>
+    <div class="mq-logo-item"><img src="https://storage.googleapis.com/funnel-ai-production/chat/rTpFKggDR07ycsBlZtVQ/HC-Logo-Transparent-background.png" alt="Healing Cosmos" /></div>
+    <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/yT9s1YYRfLRKiqk1qx0k/media/688cbc10ff308922877b8889.jpeg" alt="Integrated Mindfulness Institute" /></div>
+    <div class="mq-logo-item"><img src="/WhatsApp_Image_2026-02-24_at_11_16_00_AM.jpeg" alt="Miami Scooter Tour" /></div>
+    <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/HGE21CBaknlKH4BuYcpz/media/6717d355dae31b04ee86f1e5.png" alt="Vesping Around" /></div>
+    <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/ZctkpoTQvVYMUST1tu5T/media/69bdb9703fa673828810ea75.svg" alt="Daniel G. Wong, M.D." /></div>
+    <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/jNqy5QsBJRJ9cjslwRNp/media/686d35a5097a8052bf3b964a.png" alt="Anna Brooke Healing" /></div>
+    <div class="mq-logo-item"><img src="https://storage.googleapis.com/funnel-ai-production/chat/rTpFKggDR07ycsBlZtVQ/HC-Logo-Transparent-background.png" alt="Healing Cosmos" /></div>
+    <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/yT9s1YYRfLRKiqk1qx0k/media/688cbc10ff308922877b8889.jpeg" alt="Integrated Mindfulness Institute" /></div>
+    <div class="mq-logo-item"><img src="/WhatsApp_Image_2026-02-24_at_11_16_00_AM.jpeg" alt="Miami Scooter Tour" /></div>
   </div>
 </div>
 
