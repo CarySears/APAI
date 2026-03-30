@@ -39,7 +39,7 @@
 /* WHEN nav item — highlighted */
 .when-item .nav-link{color:var(--t1) !important;font-weight:500 !important;}
 .when-item .nav-link:hover{color:white !important;}
-.mega-panel-when{min-width:480px;max-height:700px;overflow:visible;left:auto;right:0;transform:none;}
+.mega-panel-when{min-width:600px;max-height:90vh;overflow-y:auto;left:auto;right:0;transform:none;}
 .mega-head-when{font-family:'Cormorant Garamond',Georgia,serif;font-size:52px;font-weight:300;font-style:italic;line-height:1;margin-bottom:8px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .when-sub{font-size:13px;font-weight:300;color:var(--w7);margin-bottom:4px;}
 .when-tagline {
