@@ -664,7 +664,17 @@
     <div class="hero-right">
       <div class="hero-chat-embed">
         <div id="chat_form"></div>
-        <script src="https://platform.aminos.ai/w/chat_form_plugin.js" data-bot-id="7591"></script>
+        <script>
+          (function(){
+            try {
+              localStorage.removeItem('chatFormMessageList7591');
+              localStorage.removeItem('chatFormSessionId7591');
+              localStorage.removeItem('chatFormUserId_7591');
+              localStorage.removeItem('chatFormUserId');
+            } catch (e) {}
+          })();
+        </script>
+        <script src="https://platform.aminos.ai/w/chat_form_plugin.js" data-bot-id="7591" data-force-new-session="true"></script>
       </div>
     </div>
   </div>
