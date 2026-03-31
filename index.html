@@ -666,6 +666,13 @@
         <div id="simplebot_inline_mount"></div>
         <script>
           (function(){
+            var originalPath = window.location.pathname + window.location.search + window.location.hash;
+            var addedHomeFragment = false;
+            if (window.location.href.indexOf('home') === -1) {
+              history.replaceState(null, '', window.location.pathname + window.location.search + '#home');
+              addedHomeFragment = true;
+            }
+
             var mount = document.getElementById('simplebot_inline_mount');
             if (mount) {
               var botScript = document.createElement('script');
@@ -684,7 +691,12 @@
                 var host = document.getElementById('widget-chat-host') || document.getElementById('aminos-chat-host');
                 if(!host){
                   tries++;
-                  if(tries > 200) clearInterval(timer);
+                  if(tries > 200) {
+                    clearInterval(timer);
+                    if (addedHomeFragment) {
+                      history.replaceState(null, '', originalPath);
+                    }
+                  }
                   return;
                 }
 
@@ -712,6 +724,9 @@
 
                 if(root && root.querySelector('.chat-window')){
                   clearInterval(timer);
+                  if (addedHomeFragment) {
+                    history.replaceState(null, '', originalPath);
+                  }
                 }
               }, 100);
             }
