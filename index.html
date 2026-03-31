@@ -151,7 +151,7 @@
       height: auto;
       min-height: 0;
       background: transparent;
-      width: 480px;
+      width: 520px;
       flex-shrink: 0;
     }
 
@@ -718,13 +718,13 @@
                   mount.appendChild(host);
                 }
 
-                host.style.cssText = 'all:initial;position:relative;display:block;width:100%;height:520px;z-index:1;';
+                host.style.cssText = 'all:initial;position:relative;display:block;width:100%;height:610px;z-index:1;';
 
                 var root = host.shadowRoot;
                 if(root && !root.getElementById('inline-simplebot-overrides')){
                   var style = document.createElement('style');
                   style.id = 'inline-simplebot-overrides';
-                  style.textContent = '.chat-launcher{display:none!important}.chat-window{position:relative!important;right:auto!important;bottom:auto!important;width:100%!important;height:520px!important;max-height:520px!important;opacity:1!important;visibility:visible!important;transform:none!important;pointer-events:auto!important;box-shadow:none!important}.chat-window--closed{opacity:1!important;visibility:visible!important;transform:none!important;pointer-events:auto!important}.chat-window__footer{margin-top:0!important}';
+                  style.textContent = '.chat-launcher{display:none!important}.chat-window{position:relative!important;right:auto!important;bottom:auto!important;width:100%!important;height:610px!important;max-height:610px!important;opacity:1!important;visibility:visible!important;transform:none!important;pointer-events:auto!important;box-shadow:none!important}.chat-window--closed{opacity:1!important;visibility:visible!important;transform:none!important;pointer-events:auto!important}.chat-window__footer{margin-top:0!important}';
                   root.appendChild(style);
                 }
 
@@ -736,9 +736,13 @@
                   }
 
                   var resetBtn = root.querySelector('button[aria-label="Reset conversation"]');
-                  if(resetBtn && !resetBtn.__inlineReset){
-                    resetBtn.__inlineReset = true;
-                    setTimeout(function(){ resetBtn.click(); }, 350);
+                  var hasChoiceButtons = root.querySelector('.chat-suggestions__pill');
+                  if(resetBtn && !hasChoiceButtons){
+                    if(!resetBtn.__inlineResetCount){ resetBtn.__inlineResetCount = 0; }
+                    if(resetBtn.__inlineResetCount < 3){
+                      resetBtn.__inlineResetCount += 1;
+                      setTimeout(function(){ resetBtn.click(); }, 350 + (resetBtn.__inlineResetCount * 350));
+                    }
                   }
                 }
 
