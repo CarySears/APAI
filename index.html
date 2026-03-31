@@ -662,11 +662,28 @@
     <div class="hero-right">
       <div class="hero-chat-embed">
         <div id="simplebot_inline_mount"></div>
-        <script src="https://platform.simplebotinstall.com/w/chat_plugin.js" data-bot-id="7591" async></script>
         <script>
           (function(){
+            var originalHref = window.location.href;
+            var originalPath = window.location.pathname + window.location.search + window.location.hash;
+            var addedHomeFragment = false;
+            if (originalHref.indexOf('home') === -1) {
+              var baseUrl = window.location.pathname + window.location.search + '#home';
+              history.replaceState(null, '', baseUrl);
+              addedHomeFragment = true;
+            }
+
+            var mount = document.getElementById('simplebot_inline_mount');
+            if (mount) {
+              var botScript = document.createElement('script');
+              botScript.src = 'https://platform.simplebotinstall.com/w/chat_plugin.js';
+              botScript.setAttribute('data-bot-id', '7591');
+              botScript.async = true;
+              mount.appendChild(botScript);
+            }
+
             function initInlineSimplebot(){
-              var mount = document.getElementById('simplebot_inline_mount');
+              mount = document.getElementById('simplebot_inline_mount');
               if(!mount) return;
 
               var tries = 0;
@@ -674,7 +691,12 @@
                 var host = document.getElementById('widget-chat-host') || document.getElementById('aminos-chat-host');
                 if(!host){
                   tries++;
-                  if(tries > 200) clearInterval(timer);
+                  if(tries > 200) {
+                    clearInterval(timer);
+                    if (addedHomeFragment) {
+                      history.replaceState(null, '', originalPath);
+                    }
+                  }
                   return;
                 }
 
@@ -702,6 +724,9 @@
 
                 if(root && root.querySelector('.chat-window')){
                   clearInterval(timer);
+                  if (addedHomeFragment) {
+                    history.replaceState(null, '', originalPath);
+                  }
                 }
               }, 100);
             }
