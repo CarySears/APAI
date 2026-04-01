@@ -147,8 +147,9 @@
     .hero-chat-embed {
       border-radius: var(--rlg);
       border: 1px solid rgba(255,255,255,.08);
-      overflow: hidden;
-      height: 360px;
+      overflow: visible;
+      height: auto;
+      min-height: 360px;
       width: 480px;
       flex-shrink: 0;
     }
@@ -661,7 +662,7 @@
 
     <div class="hero-right">
       <div class="hero-chat-embed">
-        <div id="simplebot_inline_mount"></div>
+        <div id="chat_form" style="height:100%;width:100%;"></div>
         <script>
           (function(){
             var BOT_ID = '7591';
@@ -673,7 +674,7 @@
               addedHomeFragment = true;
             }
 
-            var mount = document.getElementById('simplebot_inline_mount');
+            var mount = document.getElementById('chat_form');
             if (mount) {
               var botScript = document.createElement('script');
               botScript.src = 'https://platform.aminos.ai/w/chat_plugin.js';
@@ -684,7 +685,7 @@
             }
 
             function initInlineSimplebot(){
-              mount = document.getElementById('simplebot_inline_mount');
+              mount = document.getElementById('chat_form');
               if(!mount) return;
 
               var tries = 0;
