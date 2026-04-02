@@ -676,9 +676,8 @@
             var mount = document.getElementById('chat_form');
             if (mount) {
               var botScript = document.createElement('script');
-              botScript.src = 'https://platform.aminos.ai/w/chat_plugin.js';
+              botScript.src = 'https://platform.aminos.ai/w/chat_form_plugin.js';
               botScript.setAttribute('data-bot-id', BOT_ID);
-              botScript.setAttribute('data-force-new-session', 'true');
               botScript.async = true;
               mount.appendChild(botScript);
             }
