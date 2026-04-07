@@ -107,18 +107,44 @@
     }
     .hero-h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
-    .hero-echo {
-      font-family: var(--fd);
-      font-size: 28px;
+    .hero-clarity {
+      max-width: 860px;
+      margin: 16px auto 0;
+      font-size: 19px;
       font-weight: 300;
-      font-style: italic;
-      line-height: 1.2;
-      letter-spacing: 0;
-      color: rgba(255,255,255,.38);
+      line-height: 1.7;
+      color: rgba(255,255,255,.76);
       text-align: center;
-      margin-top: 10px;
-      margin-bottom: 0;
       animation: fadeUp .7s .4s both;
+    }
+    .hero-strip {
+      margin: 20px auto 0;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(121,197,199,.28);
+      background: rgba(121,197,199,.07);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--t1);
+      display: inline-block;
+      animation: fadeUp .7s .5s both;
+    }
+    .hero-cta-wrap {
+      margin-top: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      animation: fadeUp .7s .6s both;
+    }
+    .hero-micro {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255,255,255,.58);
+      max-width: 640px;
+      line-height: 1.55;
     }
 
     .hero-left-orb {
@@ -487,7 +513,7 @@
         border-bottom: 1px solid rgba(255,255,255,.04);
         padding: 32px;
       }
-      .hero-h1, .hero-echo {
+      .hero-h1 {
         font-size: 52px;
       }
       .def-inner{grid-template-columns:1fr;gap:40px}
@@ -510,8 +536,15 @@
       .hero-right {
         padding: 32px 20px;
       }
-      .hero-h1, .hero-echo {
+      .hero-h1 {
         font-size: 36px;
+      }
+      .hero-clarity {
+        font-size: 17px;
+      }
+      .hero-strip {
+        line-height: 1.55;
+        border-radius: var(--rmd);
       }
       .sl,.sd{padding:64px 20px}
       .def-band,.fw-band{padding:48px 20px}
@@ -653,8 +686,16 @@
       <div class="hero-tag-pulse"></div>
       <span class="hero-tag-txt">Behavioral Science + Human-Centered AI</span>
     </div>
-    <h1 class="hero-h1">Your business has more potential<br>than it's <em>converting.</em></h1>
-    <div class="hero-echo">We maximize your current opportunities and create new ones.</div>
+    <h1 class="hero-h1">Your business has more potential than it&rsquo;s converting.</h1>
+    <div class="hero-clarity">We help established service businesses get more attention, capture it, and turn it into booked appointments and revenue using behavioral science and human-centered AI.</div>
+    <div class="hero-strip">More demand. Fewer missed opportunities. Better follow-up.</div>
+    <div class="hero-cta-wrap">
+      <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-primary">
+        <img src="https://actionpotential.ai/CaryProfilePic.jpeg" alt="Cary" class="av" />
+        Get your free Behavioral Revenue Audit
+      </a>
+      <p class="hero-micro">In 45 minutes, you&rsquo;ll see exactly where attention is being lost and how to turn it into revenue.</p>
+    </div>
   </div>
 
   <div class="hero-bottom">
