@@ -234,6 +234,172 @@
       text-align: center;
     }
 
+    /* DIAGNOSTIC MULTI-STEP */
+    .diag-panel {
+      display: none;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .diag-panel.diag-active {
+      display: flex;
+    }
+    .diag-step-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: rgba(121,197,199,.72);
+    }
+    .diag-question {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .02em;
+      color: rgba(255,255,255,.88);
+      line-height: 1.5;
+    }
+    .diag-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .diag-opt {
+      width: 100%;
+      padding: 13px 16px;
+      border-radius: var(--rmd);
+      border: 1px solid rgba(255,255,255,.11);
+      background: rgba(255,255,255,.025);
+      color: rgba(255,255,255,.78);
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+      transition: border-color .15s, background .15s, color .15s;
+    }
+    .diag-opt:hover {
+      border-color: rgba(121,197,199,.38);
+      background: rgba(121,197,199,.055);
+      color: rgba(255,255,255,.92);
+    }
+    .diag-opt:focus-visible {
+      outline: 2px solid rgba(121,197,199,.82);
+      outline-offset: 2px;
+    }
+    .diag-opt.diag-selected {
+      border-color: rgba(121,197,199,.72);
+      background: rgba(121,197,199,.11);
+      color: #fff;
+    }
+    .diag-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .diag-next {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: var(--rmd);
+      background: var(--t2);
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid rgba(255,255,255,.16);
+      transition: background .15s;
+    }
+    .diag-next:hover:not(:disabled) { background: var(--bl); }
+    .diag-next:focus-visible { outline: 2px solid rgba(121,197,199,.9); outline-offset: 2px; }
+    .diag-next:active:not(:disabled) { background: var(--t2); }
+    .diag-next:disabled { opacity: .3; cursor: not-allowed; }
+    .diag-back {
+      background: none;
+      border: none;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(255,255,255,.42);
+      text-align: center;
+      padding: 4px 0;
+      transition: color .15s;
+    }
+    .diag-back:hover { color: rgba(255,255,255,.72); }
+    .diag-back:focus-visible { outline: 2px solid rgba(121,197,199,.82); outline-offset: 2px; border-radius: 2px; }
+
+    /* RESULT STEP */
+    .diag-result-heading {
+      font-family: var(--fd);
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 1.18;
+      color: white;
+    }
+    .diag-result-heading span {
+      background: var(--gteal);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .diag-result-body {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.72;
+      color: rgba(255,255,255,.65);
+    }
+    .diag-result-insight {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.68;
+      color: rgba(255,255,255,.82);
+      padding: 14px 16px;
+      border-left: 2px solid rgba(121,197,199,.45);
+      background: rgba(121,197,199,.04);
+      border-radius: 0 var(--rsm) var(--rsm) 0;
+    }
+    .diag-result-cta-line {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.65;
+      color: rgba(255,255,255,.52);
+      font-style: italic;
+    }
+    .diag-audit-btn {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: var(--rmd);
+      background: var(--gteal);
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      transition: opacity .15s;
+    }
+    .diag-audit-btn:hover { opacity: .88; }
+    .diag-audit-btn:focus-visible { outline: 2px solid rgba(121,197,199,.9); outline-offset: 2px; }
+
+    /* CALENDAR STEP */
+    .diag-cal-heading {
+      font-family: var(--fd);
+      font-size: 26px;
+      font-weight: 300;
+      line-height: 1.18;
+      color: white;
+    }
+    .diag-cal-sub {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.72;
+      color: rgba(255,255,255,.62);
+    }
+    .diag-cal-frame-wrap {
+      border-radius: var(--rmd);
+      overflow: hidden;
+      background: rgba(255,255,255,.02);
+      border: 1px solid rgba(255,255,255,.07);
+    }
+    .diag-cal-frame-wrap iframe {
+      display: block;
+      width: 100%;
+      min-height: 480px;
+      border: none;
+    }
+
     .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:13px 26px;border-radius:50px;transition:opacity .2s,transform .2s}
     .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
     .btn-primary .av{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,255,255,.3)}
@@ -697,20 +863,68 @@
       <p class="hero-micro">In 45 minutes, you&rsquo;ll see where opportunities are being lost and what to fix first.</p>
     </div>
 
-    <aside class="hero-card" aria-label="Behavioral Revenue Audit">
-      <p class="hero-card-eyebrow">Behavioral Revenue Audit</p>
-      <h2 class="hero-card-title">Find your biggest revenue leak</h2>
-      <p class="hero-card-copy">Tell us what&rsquo;s breaking down and we&rsquo;ll show you what to fix first.</p>
-      <p class="hero-question">What is the biggest issue right now?</p>
-      <div class="hero-options" role="radiogroup" aria-label="Biggest issue right now">
-        <button type="button" class="diag-option" data-value="Not enough demand" role="radio" aria-checked="false">Not enough demand</button>
-        <button type="button" class="diag-option" data-value="Leads are not converting" role="radio" aria-checked="false">Leads are not converting</button>
-        <button type="button" class="diag-option" data-value="We miss calls or inquiries" role="radio" aria-checked="false">We miss calls or inquiries</button>
-        <button type="button" class="diag-option" data-value="Follow-up is too slow" role="radio" aria-checked="false">Follow-up is too slow</button>
-        <button type="button" class="diag-option" data-value="Our team is overloaded" role="radio" aria-checked="false">Our team is overloaded</button>
+    <aside class="hero-card" aria-label="Behavioral Revenue Audit" id="diagCard">
+
+      <!-- STEP 1 -->
+      <div class="diag-panel diag-active" id="diagStep1" role="group" aria-labelledby="diagS1Heading">
+        <p class="hero-card-eyebrow">Behavioral Revenue Audit</p>
+        <h2 class="hero-card-title" id="diagS1Heading">Find your biggest revenue leak</h2>
+        <p class="hero-card-copy">Answer 2 quick questions and we&rsquo;ll show you where revenue is likely being lost.</p>
+        <p class="diag-question">What&rsquo;s the biggest issue right now?</p>
+        <div class="diag-options" role="radiogroup" aria-label="Biggest issue right now">
+          <button type="button" class="diag-opt" data-value="Not enough demand" role="radio" aria-checked="false">Not enough demand</button>
+          <button type="button" class="diag-opt" data-value="Leads are not converting" role="radio" aria-checked="false">Leads are not converting</button>
+          <button type="button" class="diag-opt" data-value="We miss calls or inquiries" role="radio" aria-checked="false">We miss calls or inquiries</button>
+          <button type="button" class="diag-opt" data-value="Follow-up is too slow" role="radio" aria-checked="false">Follow-up is too slow</button>
+          <button type="button" class="diag-opt" data-value="Our team is overloaded" role="radio" aria-checked="false">Our team is overloaded</button>
+        </div>
+        <div class="diag-actions">
+          <button type="button" class="diag-next" id="diagNext1" disabled>Next</button>
+        </div>
       </div>
-      <button type="button" class="hero-continue" id="heroContinue" disabled>Continue</button>
-      <p class="hero-card-caption">No pressure. Just clarity.</p>
+
+      <!-- STEP 2 -->
+      <div class="diag-panel" id="diagStep2" role="group" aria-labelledby="diagS2Question">
+        <p class="hero-card-eyebrow">Behavioral Revenue Audit</p>
+        <p class="diag-question" id="diagS2Question"></p>
+        <div class="diag-options" role="radiogroup" aria-label="Step 2 options" id="diagS2Options"></div>
+        <div class="diag-actions">
+          <button type="button" class="diag-next" id="diagNext2" disabled>See My Estimate</button>
+          <button type="button" class="diag-back" id="diagBack2">&#8592; Back</button>
+        </div>
+      </div>
+
+      <!-- RESULT STEP -->
+      <div class="diag-panel" id="diagStepResult" role="group" aria-labelledby="diagResultHeading">
+        <p class="hero-card-eyebrow">Behavioral Revenue Audit</p>
+        <h2 class="diag-result-heading" id="diagResultHeading">This could be costing you <span id="diagLossAmount"></span>/month in lost revenue</h2>
+        <p class="diag-result-body">Most businesses in your position lose revenue through missed opportunities, slow response, inconsistent follow-up, or capacity bottlenecks.</p>
+        <p class="diag-result-insight" id="diagResultInsight"></p>
+        <p class="diag-result-cta-line">The full Behavioral Revenue Audit will show you exactly where this is happening and what to fix first.</p>
+        <div class="diag-actions">
+          <button type="button" class="diag-audit-btn" id="diagAuditBtn">See My Full Audit</button>
+          <button type="button" class="diag-back" id="diagBackResult">&#8592; Back</button>
+        </div>
+      </div>
+
+      <!-- CALENDAR STEP -->
+      <div class="diag-panel" id="diagStepCal" role="group" aria-labelledby="diagCalHeading">
+        <p class="hero-card-eyebrow">Behavioral Revenue Audit</p>
+        <h2 class="diag-cal-heading" id="diagCalHeading">Book your Behavioral Revenue Audit</h2>
+        <p class="diag-cal-sub">Choose a time that works for you and we&rsquo;ll walk through where opportunities are being lost and what to fix first.</p>
+        <div class="diag-cal-frame-wrap">
+          <iframe
+            src="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm"
+            scrolling="yes"
+            title="Book your Behavioral Revenue Audit"
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="diag-actions">
+          <button type="button" class="diag-back" id="diagBackCal">&#8592; Back</button>
+        </div>
+      </div>
+
     </aside>
   </div>
 </section>
@@ -1268,32 +1482,185 @@
     });
   });
 
-  // HERO DIAGNOSTIC STATE
-  var heroDiagnosticState = { selectedOption: null };
-  var heroOptions = document.querySelectorAll('.diag-option');
-  var heroContinueButton = document.getElementById('heroContinue');
-  function updateHeroSelection(option){
-    heroDiagnosticState.selectedOption = option.getAttribute('data-value');
-    heroOptions.forEach(function(item){
-      item.classList.remove('selected');
-      item.setAttribute('aria-checked', 'false');
-    });
-    option.classList.add('selected');
-    option.setAttribute('aria-checked', 'true');
-    heroContinueButton.disabled = !heroDiagnosticState.selectedOption;
-  }
-  heroOptions.forEach(function(option){
-    option.addEventListener('click', function(){
-      updateHeroSelection(option);
-    });
-  });
-  if(heroContinueButton){
-    heroContinueButton.addEventListener('click', function(){
-      if(heroDiagnosticState.selectedOption){
-        console.log('Selected diagnostic issue:', heroDiagnosticState.selectedOption);
+  // HERO DIAGNOSTIC — MULTI-STEP STATE MACHINE
+  (function(){
+    var BOOKING_URL = 'https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm';
+    var DEFAULT_LEAD_VOLUME = 50;
+    var DEFAULT_CLOSE_RATE  = 0.25;
+    var DEFAULT_CUSTOMER_VALUE = 500;
+
+    var step2Map = {
+      'Not enough demand': {
+        question: 'How many new inquiries do you get per month?',
+        options: ['0\u201320','20\u201350','50\u2013100','100+']
+      },
+      'Leads are not converting': {
+        question: 'Roughly what percentage of leads become customers?',
+        options: ['Under 10%','10\u201320%','20\u201340%','40%+']
+      },
+      'We miss calls or inquiries': {
+        question: 'About how many inquiries go unanswered?',
+        options: ['Almost none','A few each week','Several per day','We miss a lot']
+      },
+      'Follow-up is too slow': {
+        question: 'How quickly do you typically respond to new inquiries?',
+        options: ['Within 5 minutes','Within 1 hour','Same day','Next day or later']
+      },
+      'Our team is overloaded': {
+        question: 'How often are leads delayed or dropped because your team is stretched too thin?',
+        options: ['Rarely','Sometimes','Often','Constantly']
       }
+    };
+
+    var insightMap = {
+      'Not enough demand': 'You may be losing revenue because not enough qualified people are finding you consistently.',
+      'Leads are not converting': 'You may be losing revenue because too many of the leads you already have are slipping away before they book.',
+      'We miss calls or inquiries': 'You may be losing revenue because every missed inquiry is a chance for someone to choose a competitor instead.',
+      'Follow-up is too slow': 'You may be losing revenue because response speed has a major impact on whether people choose you or move on.',
+      'Our team is overloaded': 'You may be losing revenue because demand is outpacing your ability to respond and follow through consistently.'
+    };
+
+    function calcLoss(step1, step2Answer) {
+      var loss = 0;
+      if (step1 === 'Not enough demand') {
+        var volMap = {'0\u201320':10,'20\u201350':35,'50\u2013100':75,'100+':120};
+        var vol = volMap[step2Answer] || 35;
+        loss = vol * DEFAULT_CLOSE_RATE * DEFAULT_CUSTOMER_VALUE * 0.30;
+      } else if (step1 === 'Leads are not converting') {
+        var crMap = {'Under 10%':0.08,'10\u201320%':0.15,'20\u201340%':0.30,'40%+':0.45};
+        var cr = crMap[step2Answer] !== undefined ? crMap[step2Answer] : 0.15;
+        var lostRate = Math.max(0, 0.30 - cr);
+        loss = DEFAULT_LEAD_VOLUME * DEFAULT_CUSTOMER_VALUE * lostRate;
+      } else if (step1 === 'We miss calls or inquiries') {
+        var mrMap = {'Almost none':0.05,'A few each week':0.15,'Several per day':0.30,'We miss a lot':0.45};
+        var mr = mrMap[step2Answer] !== undefined ? mrMap[step2Answer] : 0.15;
+        loss = DEFAULT_LEAD_VOLUME * DEFAULT_CLOSE_RATE * DEFAULT_CUSTOMER_VALUE * mr;
+      } else if (step1 === 'Follow-up is too slow') {
+        var dpMap = {'Within 5 minutes':0.05,'Within 1 hour':0.20,'Same day':0.35,'Next day or later':0.50};
+        var dp = dpMap[step2Answer] !== undefined ? dpMap[step2Answer] : 0.20;
+        loss = DEFAULT_LEAD_VOLUME * DEFAULT_CLOSE_RATE * DEFAULT_CUSTOMER_VALUE * dp;
+      } else if (step1 === 'Our team is overloaded') {
+        var opMap = {'Rarely':0.10,'Sometimes':0.20,'Often':0.35,'Constantly':0.50};
+        var op = opMap[step2Answer] !== undefined ? opMap[step2Answer] : 0.20;
+        loss = DEFAULT_LEAD_VOLUME * DEFAULT_CLOSE_RATE * DEFAULT_CUSTOMER_VALUE * op;
+      }
+      return Math.round(loss);
+    }
+
+    function formatAmount(n) {
+      return '~$' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    // STATE
+    var state = { step1: null, step2: null };
+
+    // ELEMENTS
+    var panels = {
+      1: document.getElementById('diagStep1'),
+      2: document.getElementById('diagStep2'),
+      result: document.getElementById('diagStepResult'),
+      cal: document.getElementById('diagStepCal')
+    };
+
+    function showPanel(key) {
+      Object.keys(panels).forEach(function(k){ panels[k].classList.remove('diag-active'); });
+      panels[key].classList.add('diag-active');
+    }
+
+    // --- STEP 1 ---
+    var next1 = document.getElementById('diagNext1');
+    var s1Opts = document.querySelectorAll('#diagStep1 .diag-opt');
+
+    s1Opts.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        state.step1 = btn.getAttribute('data-value');
+        s1Opts.forEach(function(b){ b.classList.remove('diag-selected'); b.setAttribute('aria-checked','false'); });
+        btn.classList.add('diag-selected');
+        btn.setAttribute('aria-checked','true');
+        next1.disabled = false;
+      });
     });
-  }
+
+    next1.addEventListener('click', function(){
+      if (!state.step1) return;
+      buildStep2(state.step1);
+      showPanel(2);
+    });
+
+    // --- STEP 2 ---
+    var next2 = document.getElementById('diagNext2');
+    var back2 = document.getElementById('diagBack2');
+    var s2Question = document.getElementById('diagS2Question');
+    var s2Options  = document.getElementById('diagS2Options');
+
+    var builtForIssue = null;
+
+    function buildStep2(issue) {
+      var cfg = step2Map[issue];
+      if (!cfg) return;
+      // Only reset step2 selection when issue changes
+      if (issue !== builtForIssue) {
+        state.step2 = null;
+        builtForIssue = issue;
+      }
+      s2Question.textContent = cfg.question;
+      s2Options.innerHTML = '';
+      next2.disabled = !state.step2;
+      var preserved = state.step2;
+      cfg.options.forEach(function(label){
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'diag-opt';
+        btn.setAttribute('role','radio');
+        btn.setAttribute('aria-checked','false');
+        btn.setAttribute('data-value', label);
+        btn.textContent = label;
+        btn.addEventListener('click', function(){
+          state.step2 = label;
+          s2Options.querySelectorAll('.diag-opt').forEach(function(b){ b.classList.remove('diag-selected'); b.setAttribute('aria-checked','false'); });
+          btn.classList.add('diag-selected');
+          btn.setAttribute('aria-checked','true');
+          next2.disabled = false;
+        });
+        s2Options.appendChild(btn);
+        if (label === preserved) {
+          btn.classList.add('diag-selected');
+          btn.setAttribute('aria-checked','true');
+        }
+      });
+    }
+
+    next2.addEventListener('click', function(){
+      if (!state.step2) return;
+      var loss = calcLoss(state.step1, state.step2);
+      document.getElementById('diagLossAmount').textContent = formatAmount(loss);
+      document.getElementById('diagResultInsight').textContent = insightMap[state.step1] || '';
+      showPanel('result');
+    });
+
+    back2.addEventListener('click', function(){
+      showPanel(1);
+    });
+
+    // --- RESULT ---
+    var auditBtn    = document.getElementById('diagAuditBtn');
+    var backResult  = document.getElementById('diagBackResult');
+
+    auditBtn.addEventListener('click', function(){
+      showPanel('cal');
+    });
+
+    backResult.addEventListener('click', function(){
+      showPanel(2);
+    });
+
+    // --- CALENDAR ---
+    var backCal = document.getElementById('diagBackCal');
+    backCal.addEventListener('click', function(){
+      showPanel('result');
+    });
+
+  })();
 
 </script>
 <script src="/includes.js"></script>
