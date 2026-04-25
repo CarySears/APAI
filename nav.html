@@ -1,114 +1,23 @@
-<nav id="nav">
-  <a href="/" class="nav-logo">
+<nav id="nav" aria-label="Primary">
+  <a href="/" class="nav-logo" aria-label="ActionPotential.AI home">
     <img src="/logo-cropped.png" alt="ActionPotential.AI" />
   </a>
-  <div class="nav-menu">
 
-    <div class="nav-item has-mega">
-      <button class="nav-link">Who <span class="nav-chev">&#9660;</span></button>
-      <div class="mega-panel">
-        <div class="mega-col">
-          <div class="mega-head">Who We Are</div>
-          <a href="#about">Cary Sears — Founder</a>
-          <a href="#what-we-are">Our Approach</a>
-          <a href="/case-studies/daniel-wong.html">Case Studies</a>
-        </div>
-        <div class="mega-col">
-          <div class="mega-head">Who We Serve</div>
-          <a href="/industries/">All Industries</a>
-          <a href="/industries/mental-health.html">Mental Health</a>
-          <a href="/industries/wellness.html">Wellness and Healing</a>
-          <a href="/industries/home-services.html">Home Services</a>
-          <a href="/industries/coaching.html">Coaching and Consulting</a>
-          <a href="/industries/legal.html">Legal and Professional</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="nav-item has-mega">
-      <button class="nav-link">What <span class="nav-chev">&#9660;</span></button>
-      <div class="mega-panel">
-        <div class="mega-col">
-          <div class="mega-head">Be Found</div>
-          <a href="/services/visibility/">Visibility Overview</a>
-          <a href="/services/visibility/seo-and-geo.html">SEO + Generative Engine Optimization</a>
-          <a href="/services/visibility/google-ads.html">Google Ads</a>
-          <a href="/services/visibility/meta-ads.html">Meta Ads</a>
-          <a href="/services/visibility/retargeting.html">Retargeting</a>
-          <a href="/services/visibility/social-profiles.html">AI-Optimized Social Profiles</a>
-          <a href="/services/visibility/social-posting.html">AI-Authority Social Posting</a>
-        </div>
-        <div class="mega-col">
-          <div class="mega-head">Be Chosen</div>
-          <a href="/services/ai-agents/">AI Agents Overview</a>
-          <a href="/services/ai-agents/voice-ai.html">Voice AI</a>
-          <a href="/services/ai-agents/conversational-ai.html">Conversational AI</a>
-          <a href="/services/ai-agents/reviews-ai.html">Reviews AI</a>
-          <a href="/services/ai-agents/intelligent-website.html">Intelligent Website</a>
-        </div>
-        <div class="mega-col">
-          <div class="mega-head">Be Remembered</div>
-          <a href="/services/behavioral-ai-nurture/">Behavioral AI Nurture</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="nav-item has-mega">
-      <button class="nav-link">Where <span class="nav-chev">&#9660;</span></button>
-      <div class="mega-panel mega-panel-sm">
-        <div class="mega-col">
-          <div class="mega-head">Where We Work</div>
-          <a href="/locations/westchester.html">Westchester County</a>
-          <a href="/locations/new-york-city.html">New York City</a>
-          <a href="/locations/nationwide.html">Nationwide</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="nav-item has-mega when-item">
-      <button class="nav-link when-link">When <span class="nav-chev">&#9660;</span></button>
-      <div class="mega-panel mega-panel-when">
-        <div class="mega-col">
-          <div class="mega-head-when">Now.</div>
-          <p class="when-sub">Book Your Free AI Audit.<br><span class="when-tagline">Find your friction. Free your revenue.</span></p>
-          <iframe
-            src="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm"
-            style="width:100%;min-height:650px;border:none;border-radius:8px;margin-top:12px;"
-            scrolling="yes"
-            id="booking-iframe">
-          </iframe>
-        </div>
-      </div>
-    </div>
-
-    <div class="nav-item has-mega">
-      <button class="nav-link">Why <span class="nav-chev">&#9660;</span></button>
-      <div class="mega-panel mega-panel-sm">
-        <div class="mega-col">
-          <div class="mega-head">Why We Exist</div>
-          <a href="#what-we-are">Our Mission</a>
-          <a href="#about">The Science Behind It</a>
-          <a href="/blog/">Insights</a>
-          <a href="/faq/">FAQ</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="nav-item has-mega">
-      <button class="nav-link">How <span class="nav-chev">&#9660;</span></button>
-      <div class="mega-panel mega-panel-sm">
-        <div class="mega-col">
-          <div class="mega-head">How We Work</div>
-          <a href="#how">Our Process</a>
-          <a href="/case-studies/daniel-wong.html">See It In Action</a>
-          <a href="/faq/">FAQ</a>
-        </div>
-      </div>
-    </div>
-
+  <div class="nav-menu" id="navMenu">
+    <a href="/#how" class="nav-link">How It Works</a>
+    <a href="/#relate" class="nav-link">Who It&rsquo;s For</a>
+    <a href="/#results" class="nav-link">Results</a>
+    <a href="/#what-we-are" class="nav-link">Our Approach</a>
+    <a href="/#demo" class="nav-btn nav-btn-mobile">Start Audit</a>
   </div>
-  <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="nav-btn when-btn">Book Your Free AI Audit &rarr;</a>
-  <button class="nav-mob-btn" id="navMobBtn">&#9776;</button>
+
+  <a href="/#demo" class="nav-btn nav-btn-desktop">Start Audit</a>
+  <button
+    class="nav-mob-btn"
+    id="navMobBtn"
+    aria-label="Toggle navigation menu"
+    aria-controls="navMenu"
+    aria-expanded="false">&#9776;</button>
 </nav>
 <script 
   src="https://beta.leadconnectorhq.com/loader.js"  
