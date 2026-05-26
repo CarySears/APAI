@@ -275,9 +275,22 @@
     /* LOGO BAR */
     .logo-bar{background:var(--d8);border-top:1px solid rgba(255,255,255,.05);padding:26px 48px}
     .logo-bar-lbl{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--w4);text-align:center;margin-bottom:18px}
-    .logo-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
-    .l-pill{font-size:12px;font-weight:400;color:var(--w7);padding:6px 16px;border:1px solid rgba(255,255,255,.07);border-radius:50px;transition:border-color .2s,color .2s}
-    .l-pill:hover{border-color:rgba(121,197,199,.28);color:var(--t1)}
+    .logo-chips{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:14px}
+    .logo-chip{
+      width:92px;
+      height:92px;
+      flex-shrink:0;
+      border-radius:50%;
+      box-sizing:border-box;
+      border:1px solid rgba(255,255,255,.08);
+      padding:21px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .logo-chip[data-tone="light"]{background:#F4F1EA;border-color:rgba(11,14,22,.08)}
+    .logo-chip[data-tone="dark"]{background:#0B0E16;border-color:rgba(255,255,255,.08)}
+    .logo-chip img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
 
     /* TESTIMONIALS */
     .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
@@ -910,13 +923,14 @@
 <!-- LOGO BAR -->
 <div class="logo-bar">
   <div class="logo-bar-lbl">Proud to work with</div>
-  <div class="logo-pills">
-    <span class="l-pill">Vesping Around</span>
-    <span class="l-pill">Integrated Mindfulness Institute</span>
-    <span class="l-pill">Anna Brooke Healing</span>
-    <span class="l-pill">Miami Scooter Tour</span>
-    <span class="l-pill">Healing Cosmos</span>
-    <span class="l-pill">Daniel G. Wong, M.D.</span>
+  <div class="logo-chips">
+    <div class="logo-chip" data-tone="dark" data-client="vesping"><img src="/client-logos/vesping-around.png" alt="Vesping Around logo" /></div>
+    <div class="logo-chip" data-tone="light" data-client="imi"><img src="/IMITransparentLogo.jpeg" alt="Integrated Mindfulness Institute logo" /></div>
+    <div class="logo-chip" data-tone="dark" data-client="anna-brooke"><img src="/client-logos/anna-brooke-healing.png" alt="Anna Brooke Healing logo" /></div>
+    <div class="logo-chip" data-tone="dark" data-client="miami-scooter"><img src="/client-logos/miami-scooter-tour.png" alt="Miami Scooter Tour logo" /></div>
+    <div class="logo-chip" data-tone="dark" data-client="healing-cosmos"><img src="/client-logos/healing-cosmos.png" alt="Healing Cosmos logo" /></div>
+    <div class="logo-chip" data-tone="light" data-client="daniel-wong"><img src="/client-logos/daniel-g-wong-md.png" alt="Daniel G. Wong, M.D. logo" /></div>
+    <div class="logo-chip" data-tone="light" data-client="career-coaching-pro"><img src="/ccplogo.png" alt="Career Coaching Pro logo" /></div>
   </div>
 </div>
 
