@@ -291,113 +291,23 @@
     .btn-ghost:hover .arr-c{background:white;color:var(--d9)}
 
     /* MARQUEE */
-    .mq-strip{background:var(--d7);border-top:1px solid rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.045);padding:52px 0;overflow-x:hidden;overflow-y:visible}
-    .mq-strip-label{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--w4);text-align:center;margin-bottom:16px}
-    .mq-track{display:flex;width:max-content;animation: marquee var(--mq-duration, 60s) linear infinite;will-change:transform;align-items:center}
-    .mq-track:hover{animation-play-state:paused}
-    @keyframes marquee {
-      0% { transform: translate3d(0, 0, 0); }
-      100% { transform: translate3d(calc(-1 * var(--mq-shift, 50%)), 0, 0); }
-    }
-    .mq-set{
-      display:flex;
-      align-items:center;
-      gap:72px;
-      padding-right:72px;
-      flex-shrink:0;
-    }
-    .mq-logo-item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .mq-logo-item img {
-      height: 96px;
-      width: auto;
-      max-width: 240px;
-      object-fit: contain;
-      opacity: 0.92;
-      transition: opacity .2s;
-      filter: none;
-      mix-blend-mode: normal;
-    }
-    .mq-logo-imi {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      overflow: hidden;
-      flex-shrink: 0;
-      line-height: 0;
-    }
-    .mq-logo-imi img {
-      width: 100%;
-      height: 100%;
-      max-width: none;
-      object-fit: cover;
-      opacity: 0.92;
-      transition: opacity .2s;
-    }
-    .mq-logo-imi img:hover { opacity: 1; }
-    .mq-imi-lockup {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 14px;
-      text-align: left;
-      position: relative;
-      z-index: 1;
-    }
-    .mq-imi-name {
-      font-size: 9px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.88);
-      line-height: 1.4;
-      max-width: 118px;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
-      position: relative;
-      z-index: 2;
-    }
-    .mq-logo-item img[alt="Miami Scooter Tour"] {
-      height: 96px;
-      max-width: 96px;
-    }
-    .mq-logo-item img[alt="Career Coaching Pro"] {
-      height: 96px;
-      max-width: 320px;
-    }
-    .mq-logo-item img:hover { opacity: 1; }
-    .mq-text-logo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 12px;
-      gap: 10px;
-    }
-    .mq-text-logo-name {
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #ffffff;
-      white-space: nowrap;
-    }
-    .mq-text-logo-divider {
-      width: 40px;
-      height: 1px;
-      background: rgba(255,255,255,0.3);
-    }
-    .mq-text-logo-sub {
-      font-size: 10px;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      white-space: nowrap;
+    .mq-strip{--mq-gap:80px;--mq-logo-h:80px;background:var(--d7);border-top:1px solid rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.045);padding:52px 0;overflow:hidden}
+    .mq-strip-label{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--w4);text-align:center;margin-bottom:20px}
+    .mq-viewport{overflow:hidden}
+    .mq-track{display:flex;align-items:center;gap:var(--mq-gap);width:max-content;will-change:transform}
+    .mq-set{display:flex;align-items:center;gap:var(--mq-gap);flex-shrink:0}
+    .mq-logo-item{display:flex;align-items:center;justify-content:center;flex-shrink:0;height:var(--mq-logo-h)}
+    .mq-logo-item img{height:var(--mq-logo-h);width:auto;max-width:200px;object-fit:contain;opacity:.92;display:block}
+    .mq-logo-imi{width:var(--mq-logo-h);height:var(--mq-logo-h);border-radius:50%;overflow:hidden;flex-shrink:0;line-height:0}
+    .mq-logo-imi img{width:100%;height:100%;max-width:none;object-fit:cover;opacity:.92}
+    .mq-imi-lockup{display:flex;flex-direction:row;align-items:center;gap:12px;height:var(--mq-logo-h)}
+    .mq-imi-name{font-size:8px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.88);line-height:1.35;max-width:104px;text-shadow:0 1px 4px rgba(0,0,0,.75)}
+    .mq-text-logo{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;height:var(--mq-logo-h)}
+    .mq-text-logo-name{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;white-space:nowrap}
+    .mq-text-logo-divider{width:36px;height:1px;background:rgba(255,255,255,.3)}
+    .mq-text-logo-sub{font-size:8.5px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);white-space:nowrap}
+    @media (prefers-reduced-motion: reduce){
+      .mq-track{transform:none!important}
     }
     /* SECTION SYSTEM */
     .sl{background:var(--lb);color:var(--td);padding:96px 48px}
@@ -807,46 +717,28 @@
 <!-- MARQUEE -->
 <div class="mq-strip">
   <div class="mq-strip-label">Proud to work with</div>
-  <div class="mq-track">
-    <div class="mq-set">
-      <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/HGE21CBaknlKH4BuYcpz/media/6717d355dae31b04ee86f1e5.png" alt="Vesping Around" /></div>
-      <div class="mq-logo-item">
-        <div class="mq-imi-lockup" aria-label="Integrated Mindfulness Institute">
-          <div class="mq-logo-imi"><img src="/IMITransparentLogo.jpeg" alt="" /></div>
-          <span class="mq-imi-name">Integrated Mindfulness Institute</span>
+  <div class="mq-viewport">
+    <div class="mq-track">
+      <div class="mq-set">
+        <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/HGE21CBaknlKH4BuYcpz/media/6717d355dae31b04ee86f1e5.png" alt="Vesping Around" /></div>
+        <div class="mq-logo-item">
+          <div class="mq-imi-lockup" aria-label="Integrated Mindfulness Institute">
+            <div class="mq-logo-imi"><img src="/IMITransparentLogo.jpeg" alt="" /></div>
+            <span class="mq-imi-name">Integrated Mindfulness Institute</span>
+          </div>
         </div>
-      </div>
-      <div class="mq-logo-item">
-        <div class="mq-text-logo">
-          <span class="mq-text-logo-name">Daniel G. Wong, M.D.</span>
-          <div class="mq-text-logo-divider"></div>
-          <span class="mq-text-logo-sub">Compassionate Psychiatric Care</span>
+        <div class="mq-logo-item">
+          <div class="mq-text-logo">
+            <span class="mq-text-logo-name">Daniel G. Wong, M.D.</span>
+            <div class="mq-text-logo-divider"></div>
+            <span class="mq-text-logo-sub">Compassionate Psychiatric Care</span>
+          </div>
         </div>
+        <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/jNqy5QsBJRJ9cjslwRNp/media/686d35a5097a8052bf3b964a.png" alt="Anna Brooke Healing" /></div>
+        <div class="mq-logo-item"><img src="/miami-scooter-tour.png" alt="Miami Scooter Tour" /></div>
+        <div class="mq-logo-item"><img src="https://storage.googleapis.com/funnel-ai-production/chat/rTpFKggDR07ycsBlZtVQ/HC-Logo-Transparent-background.png" alt="Healing Cosmos" /></div>
+        <div class="mq-logo-item"><img src="/career-coaching-pro.png" alt="Career Coaching Pro" /></div>
       </div>
-      <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/jNqy5QsBJRJ9cjslwRNp/media/686d35a5097a8052bf3b964a.png" alt="Anna Brooke Healing" /></div>
-      <div class="mq-logo-item"><img src="/miami-scooter-tour.png" alt="Miami Scooter Tour" /></div>
-      <div class="mq-logo-item"><img src="https://storage.googleapis.com/funnel-ai-production/chat/rTpFKggDR07ycsBlZtVQ/HC-Logo-Transparent-background.png" alt="Healing Cosmos" /></div>
-      <div class="mq-logo-item"><img src="/career-coaching-pro.png" alt="Career Coaching Pro" /></div>
-    </div>
-    <div class="mq-set" aria-hidden="true">
-      <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/HGE21CBaknlKH4BuYcpz/media/6717d355dae31b04ee86f1e5.png" alt="" /></div>
-      <div class="mq-logo-item">
-        <div class="mq-imi-lockup">
-          <div class="mq-logo-imi"><img src="/IMITransparentLogo.jpeg" alt="" /></div>
-          <span class="mq-imi-name">Integrated Mindfulness Institute</span>
-        </div>
-      </div>
-      <div class="mq-logo-item">
-        <div class="mq-text-logo">
-          <span class="mq-text-logo-name">Daniel G. Wong, M.D.</span>
-          <div class="mq-text-logo-divider"></div>
-          <span class="mq-text-logo-sub">Compassionate Psychiatric Care</span>
-        </div>
-      </div>
-      <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/jNqy5QsBJRJ9cjslwRNp/media/686d35a5097a8052bf3b964a.png" alt="" /></div>
-      <div class="mq-logo-item"><img src="/miami-scooter-tour.png" alt="" /></div>
-      <div class="mq-logo-item"><img src="https://storage.googleapis.com/funnel-ai-production/chat/rTpFKggDR07ycsBlZtVQ/HC-Logo-Transparent-background.png" alt="" /></div>
-      <div class="mq-logo-item"><img src="/career-coaching-pro.png" alt="" /></div>
     </div>
   </div>
 </div>
@@ -1587,24 +1479,57 @@
   renderHeroDiagnostic();
 
   (function initMarquee(){
-    var track = document.querySelector('.mq-track');
+    var viewport = document.querySelector('.mq-viewport');
+    var track = viewport && viewport.querySelector('.mq-track');
     var set = track && track.querySelector('.mq-set');
-    if(!track || !set) return;
+    if(!viewport || !track || !set) return;
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    function updateMarquee(){
-      var width = set.getBoundingClientRect().width;
-      track.style.setProperty('--mq-shift', width + 'px');
-      track.style.setProperty('--mq-duration', Math.max(40, width / 45) + 's');
+    var clone = set.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    clone.querySelectorAll('img').forEach(function(img){ img.alt = ''; });
+    clone.querySelectorAll('[aria-label]').forEach(function(el){ el.removeAttribute('aria-label'); });
+    track.appendChild(clone);
+
+    var offset = 0;
+    var paused = false;
+    var loopWidth = 0;
+    var speed = 42;
+    var rafId = 0;
+    var lastTs = 0;
+
+    function measure(){
+      var gap = parseFloat(getComputedStyle(track).gap) || 0;
+      loopWidth = set.offsetWidth + gap;
     }
 
-    updateMarquee();
-    window.addEventListener('resize', updateMarquee);
-    if(document.fonts && document.fonts.ready) document.fonts.ready.then(updateMarquee);
-    window.addEventListener('load', updateMarquee);
+    function frame(ts){
+      if(!lastTs) lastTs = ts;
+      var dt = Math.min((ts - lastTs) / 1000, 0.05);
+      lastTs = ts;
+      if(!paused && loopWidth > 0){
+        offset += speed * dt;
+        while(offset >= loopWidth) offset -= loopWidth;
+        track.style.transform = 'translate3d(' + (-offset) + 'px,0,0)';
+      }
+      rafId = requestAnimationFrame(frame);
+    }
 
+    function remeasure(){
+      measure();
+      if(offset >= loopWidth && loopWidth > 0) offset = offset % loopWidth;
+    }
+
+    measure();
+    rafId = requestAnimationFrame(frame);
+    viewport.addEventListener('mouseenter', function(){ paused = true; });
+    viewport.addEventListener('mouseleave', function(){ paused = false; lastTs = 0; });
+    window.addEventListener('resize', remeasure);
+    window.addEventListener('load', remeasure);
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(remeasure);
     track.querySelectorAll('img').forEach(function(img){
       if(img.complete) return;
-      img.addEventListener('load', updateMarquee, { once: true });
+      img.addEventListener('load', remeasure, { once: true });
     });
   })();
 
