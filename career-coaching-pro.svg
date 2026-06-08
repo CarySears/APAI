@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 110" fill="none" role="img" aria-label="Career Coaching Pro">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 110" fill="none" role="img" aria-label="Career Coaching Pro">
   <defs>
     <mask id="ccp-gap">
-      <rect width="520" height="110" fill="white"/>
+      <rect width="600" height="110" fill="white"/>
       <rect x="83" y="0" width="9" height="110" fill="black"/>
     </mask>
   </defs>
@@ -13,9 +13,9 @@
     x="118"
     y="67"
     font-family="Segoe UI, system-ui, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif"
-    font-size="27"
+    font-size="24"
     font-weight="600"
     fill="#EFEFEF"
-    letter-spacing="-0.3"
-  >CareerCoachingPro</text>
+    letter-spacing="0.02em"
+  >Career Coaching Pro</text>
 </svg>
