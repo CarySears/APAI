@@ -293,18 +293,24 @@
     /* MARQUEE */
     .mq-strip{background:var(--d7);border-top:1px solid rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.045);padding:48px 0;overflow:hidden}
     .mq-strip-label{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--w4);text-align:center;margin-bottom:16px}
-    .mq-track{display:flex;width:max-content;animation: marquee 60s linear infinite;will-change: transform;align-items:center}
+    .mq-track{display:flex;width:max-content;animation: marquee var(--mq-duration, 60s) linear infinite;will-change:transform;align-items:center}
     .mq-track:hover{animation-play-state:paused}
     @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(calc(-1 * var(--mq-shift, 50%)), 0, 0); }
+    }
+    .mq-set{
+      display:flex;
+      align-items:center;
+      gap:72px;
+      padding-right:72px;
+      flex-shrink:0;
     }
     .mq-logo-item {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      padding: 0 36px;
     }
     .mq-logo-item img {
       height: 96px;
@@ -781,32 +787,36 @@
 <div class="mq-strip">
   <div class="mq-strip-label">Proud to work with</div>
   <div class="mq-track">
-    <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/HGE21CBaknlKH4BuYcpz/media/6717d355dae31b04ee86f1e5.png" alt="Vesping Around" /></div>
-    <div class="mq-logo-item"><div class="mq-logo-imi"><img src="/IMITransparentLogo.jpeg" alt="Integrated Mindfulness Institute" /></div></div>
-    <div class="mq-logo-item">
-      <div class="mq-text-logo">
-        <span class="mq-text-logo-name">Daniel G. Wong, M.D.</span>
-        <div class="mq-text-logo-divider"></div>
-        <span class="mq-text-logo-sub">Compassionate Psychiatric Care</span>
+    <div class="mq-set">
+      <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/HGE21CBaknlKH4BuYcpz/media/6717d355dae31b04ee86f1e5.png" alt="Vesping Around" /></div>
+      <div class="mq-logo-item"><div class="mq-logo-imi"><img src="/IMITransparentLogo.jpeg" alt="Integrated Mindfulness Institute" /></div></div>
+      <div class="mq-logo-item">
+        <div class="mq-text-logo">
+          <span class="mq-text-logo-name">Daniel G. Wong, M.D.</span>
+          <div class="mq-text-logo-divider"></div>
+          <span class="mq-text-logo-sub">Compassionate Psychiatric Care</span>
+        </div>
       </div>
+      <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/jNqy5QsBJRJ9cjslwRNp/media/686d35a5097a8052bf3b964a.png" alt="Anna Brooke Healing" /></div>
+      <div class="mq-logo-item"><img src="/miami-scooter-tour.png" alt="Miami Scooter Tour" /></div>
+      <div class="mq-logo-item"><img src="https://storage.googleapis.com/funnel-ai-production/chat/rTpFKggDR07ycsBlZtVQ/HC-Logo-Transparent-background.png" alt="Healing Cosmos" /></div>
+      <div class="mq-logo-item"><img src="/career-coaching-pro.png" alt="Career Coaching Pro" /></div>
     </div>
-    <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/jNqy5QsBJRJ9cjslwRNp/media/686d35a5097a8052bf3b964a.png" alt="Anna Brooke Healing" /></div>
-    <div class="mq-logo-item"><img src="/miami-scooter-tour.png" alt="Miami Scooter Tour" /></div>
-    <div class="mq-logo-item"><img src="https://storage.googleapis.com/funnel-ai-production/chat/rTpFKggDR07ycsBlZtVQ/HC-Logo-Transparent-background.png" alt="Healing Cosmos" /></div>
-    <div class="mq-logo-item"><img src="/career-coaching-pro.png" alt="Career Coaching Pro" /></div>
-    <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/HGE21CBaknlKH4BuYcpz/media/6717d355dae31b04ee86f1e5.png" alt="Vesping Around" /></div>
-    <div class="mq-logo-item"><div class="mq-logo-imi"><img src="/IMITransparentLogo.jpeg" alt="Integrated Mindfulness Institute" /></div></div>
-    <div class="mq-logo-item">
-      <div class="mq-text-logo">
-        <span class="mq-text-logo-name">Daniel G. Wong, M.D.</span>
-        <div class="mq-text-logo-divider"></div>
-        <span class="mq-text-logo-sub">Compassionate Psychiatric Care</span>
+    <div class="mq-set" aria-hidden="true">
+      <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/HGE21CBaknlKH4BuYcpz/media/6717d355dae31b04ee86f1e5.png" alt="" /></div>
+      <div class="mq-logo-item"><div class="mq-logo-imi"><img src="/IMITransparentLogo.jpeg" alt="" /></div></div>
+      <div class="mq-logo-item">
+        <div class="mq-text-logo">
+          <span class="mq-text-logo-name">Daniel G. Wong, M.D.</span>
+          <div class="mq-text-logo-divider"></div>
+          <span class="mq-text-logo-sub">Compassionate Psychiatric Care</span>
+        </div>
       </div>
+      <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/jNqy5QsBJRJ9cjslwRNp/media/686d35a5097a8052bf3b964a.png" alt="" /></div>
+      <div class="mq-logo-item"><img src="/miami-scooter-tour.png" alt="" /></div>
+      <div class="mq-logo-item"><img src="https://storage.googleapis.com/funnel-ai-production/chat/rTpFKggDR07ycsBlZtVQ/HC-Logo-Transparent-background.png" alt="" /></div>
+      <div class="mq-logo-item"><img src="/career-coaching-pro.png" alt="" /></div>
     </div>
-    <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/jNqy5QsBJRJ9cjslwRNp/media/686d35a5097a8052bf3b964a.png" alt="Anna Brooke Healing" /></div>
-    <div class="mq-logo-item"><img src="/miami-scooter-tour.png" alt="Miami Scooter Tour" /></div>
-    <div class="mq-logo-item"><img src="https://storage.googleapis.com/funnel-ai-production/chat/rTpFKggDR07ycsBlZtVQ/HC-Logo-Transparent-background.png" alt="Healing Cosmos" /></div>
-    <div class="mq-logo-item"><img src="/career-coaching-pro.png" alt="Career Coaching Pro" /></div>
   </div>
 </div>
 
@@ -1544,6 +1554,28 @@
     }
   }
   renderHeroDiagnostic();
+
+  (function initMarquee(){
+    var track = document.querySelector('.mq-track');
+    var set = track && track.querySelector('.mq-set');
+    if(!track || !set) return;
+
+    function updateMarquee(){
+      var width = set.getBoundingClientRect().width;
+      track.style.setProperty('--mq-shift', width + 'px');
+      track.style.setProperty('--mq-duration', Math.max(40, width / 45) + 's');
+    }
+
+    updateMarquee();
+    window.addEventListener('resize', updateMarquee);
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(updateMarquee);
+    window.addEventListener('load', updateMarquee);
+
+    track.querySelectorAll('img').forEach(function(img){
+      if(img.complete) return;
+      img.addEventListener('load', updateMarquee, { once: true });
+    });
+  })();
 
 </script>
 <script src="/includes.js"></script>
