@@ -1,21 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 110" fill="none" role="img" aria-label="Career Coaching Pro">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none" role="img" aria-label="Career Coaching Pro">
   <defs>
     <mask id="ccp-ring-gap">
-      <rect width="520" height="110" fill="white"/>
-      <rect x="83" y="0" width="9" height="110" fill="black"/>
+      <rect width="180" height="180" fill="white"/>
+      <rect x="118" y="18" width="8" height="104" fill="black"/>
     </mask>
   </defs>
   <g mask="url(#ccp-ring-gap)">
-    <circle cx="55" cy="55" r="47" stroke="#002B5C" stroke-width="11"/>
-    <circle cx="55" cy="55" r="33" stroke="#E86B3C" stroke-width="11"/>
+    <circle cx="90" cy="72" r="44" stroke="#002B5C" stroke-width="10"/>
+    <circle cx="90" cy="72" r="30" stroke="#E86B3C" stroke-width="10"/>
   </g>
   <text
-    x="118"
-    y="67"
+    x="90"
+    y="136"
+    text-anchor="middle"
     font-family="Segoe UI, system-ui, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif"
-    font-size="27"
+    font-size="15"
     font-weight="600"
     fill="#F2F2F2"
-    letter-spacing="-0.3"
-  >CareerCoachingPro</text>
+    letter-spacing="0.4"
+  >Career Coaching</text>
+  <text
+    x="90"
+    y="156"
+    text-anchor="middle"
+    font-family="Segoe UI, system-ui, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif"
+    font-size="15"
+    font-weight="700"
+    fill="#E86B3C"
+    letter-spacing="1.2"
+  >PRO</text>
 </svg>
