@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" role="img" aria-label="Integrated Mindfulness Institute">
+  <circle cx="100" cy="100" r="92" stroke="#F7B42D" stroke-width="2.4"/>
+  <g stroke="#E62D3C" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M48 60h8M52 60v80M48 140h8" stroke-width="3.6"/>
+    <path d="M144 60h8M148 60v80M144 140h8" stroke-width="3.6"/>
+    <circle cx="100" cy="58" r="6.5" stroke-width="3.6"/>
+    <path d="M76 106V84c0-2 4-16 24-16s24 14 24 16v22" stroke-width="3.8"/>
+    <path d="M82 142c0-9 8-14 18-14s18 5 18 14c0 9-8 14-18 14s-18-5-18-14zm36 0c0-9 8-14 18-14s18 5 18 14c0 9-8 14-18 14s-18-5-18-14z" stroke-width="3.4"/>
+  </g>
+</svg>
