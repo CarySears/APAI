@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Access Optimization System for Psychiatry Practices — ActionPotential.AI</title>
+  <meta name="description" content="We help NYC metro psychiatry practices help the right patients find you, reach you, and follow through—without increasing administrative burden. Behavioral science + human-centered AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cabinet+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/nav.css" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    img,video{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    button{font-family:inherit;cursor:pointer;border:none;background:none}
+    :root{
+      --t1:#79C5C7;--t2:#2EA6D4;--t3:#00A79D;--bl:#1B75BB;
+      --grad:linear-gradient(135deg,#f97316 0%,#ec4899 30%,#a855f7 60%,#2EA6D4 82%,#00A79D 100%);
+      --gteal:linear-gradient(135deg,#2EA6D4,#00A79D);
+      --d9:#070c11;--d8:#0c1520;--d7:#111d2e;--d6:#172539;
+      --lb:#f6f4f0;--lc:#ffffff;--ls:#efece7;--lbr:rgba(0,0,0,.07);
+      --td:#090e14;--tm:#3c4650;--mu:#79838d;
+      --w1:#fff;--w7:rgba(255,255,255,.68);--w4:rgba(255,255,255,.38);--w2:rgba(255,255,255,.18);
+      --fd:'Cormorant Garamond',Georgia,serif;--fb:'Cabinet Grotesk',-apple-system,sans-serif;
+      --rsm:6px;--rmd:12px;--rlg:20px;--rxl:32px;
+    }
+    body{font-family:var(--fb);background:var(--d9);color:var(--w1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+    /* HERO */
+    .hero{min-height:100vh;background:var(--d9);display:flex;align-items:center;padding:132px 48px 72px}
+    .hero-layout{width:100%;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:80px;align-items:center}
+    .hero-left{display:flex;flex-direction:column;align-items:flex-start;max-width:640px}
+    .hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--t1);margin-bottom:24px;display:inline-flex;align-items:center;gap:10px}
+    .hero-eyebrow::before{content:'';width:22px;height:1px;background:var(--t1)}
+    .hero-h1{font-family:var(--fd);font-size:68px;font-weight:300;line-height:.96;letter-spacing:-1.2px;color:white;margin-bottom:32px;max-width:18ch;text-wrap:balance}
+    .hero-h1-accent{color:var(--t1)}
+    .hero-body{font-size:18px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.82);max-width:520px;margin-bottom:20px}
+    .hero-secondary{font-size:14px;font-weight:400;line-height:1.65;color:rgba(255,255,255,.68);max-width:560px;margin-bottom:30px}
+    .hero-clarity-strip{font-size:12px;font-weight:500;letter-spacing:.06em;color:rgba(193,237,233,.72);border:1px solid rgba(121,197,199,.08);border-radius:999px;background:rgba(121,197,199,.025);padding:10px 16px;margin-bottom:48px}
+    .hero-primary-cta{display:inline-flex;align-items:center;justify-content:center;padding:18px 38px;border-radius:999px;background:var(--t2);color:white;font-size:21px;font-weight:500;border:1px solid rgba(255,255,255,.26);margin-bottom:10px;transition:background .2s}
+    .hero-primary-cta:hover{background:var(--bl)}
+    .hero-primary-cta:focus-visible{outline:2px solid rgba(121,197,199,.9);outline-offset:2px}
+    .hero-micro{font-size:12px;font-weight:300;line-height:1.65;color:rgba(255,255,255,.62);max-width:580px}
+    .hero-visual{display:flex;align-items:center;justify-content:center}
+    .hero-visual img{width:100%;height:auto;border-radius:var(--rlg);box-shadow:0 12px 48px rgba(0,0,0,.28)}
+
+    /* SECTION SYSTEM */
+    .sl{background:var(--lb);color:var(--td);padding:96px 48px}
+    .sd{background:var(--d8);color:white;padding:96px 48px}
+    .si{max-width:1200px;margin:0 auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+    .sl .eyebrow{color:var(--mu)}
+    .sd .eyebrow{color:var(--t1)}
+    .eyebrow-line{width:22px;height:1px;flex-shrink:0}
+    .sl .eyebrow-line{background:var(--mu)}
+    .sd .eyebrow-line{background:var(--t1)}
+    .sh2{font-family:var(--fd);font-weight:300;line-height:1.1;letter-spacing:-.5px;margin-bottom:16px}
+    .sh2-xl{font-size:52px}
+    .sh2-lg{font-size:42px}
+    .sl .sh2{color:var(--td)}
+    .sd .sh2{color:white}
+    .sh2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .ssub{font-size:17px;font-weight:300;line-height:1.72;max-width:600px}
+    .sl .ssub{color:var(--tm)}
+    .sd .ssub{color:var(--w7)}
+
+    /* INTRO BAND */
+    .intro-band{background:linear-gradient(135deg,var(--d8) 0%,var(--d7) 100%);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);padding:64px 48px}
+    .intro-inner{max-width:1200px;margin:0 auto;text-align:center}
+    .intro-inner h2{font-family:var(--fd);font-size:36px;font-weight:300;color:white;margin-bottom:16px;line-height:1.15}
+    .intro-inner h2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .intro-inner p{font-size:17px;font-weight:300;line-height:1.75;color:var(--w7);max-width:720px;margin:0 auto 28px}
+    .intro-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+    .intro-pill{font-size:11px;font-weight:500;padding:6px 16px;border-radius:50px;color:var(--t1);background:rgba(121,197,199,.08);border:1px solid rgba(121,197,199,.15)}
+
+    /* PAIN GRID */
+    .pain-intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:56px}
+    .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--lbr);border:1px solid var(--lbr);border-radius:var(--rlg);overflow:hidden}
+    .pain-card{background:var(--lc);padding:32px 28px;position:relative;transition:background .25s}
+    .pain-card:hover{background:var(--d9)}
+    .pain-card h3{font-family:var(--fd);font-size:18px;font-weight:400;font-style:italic;color:var(--td);line-height:1.35;transition:color .25s;margin-bottom:0}
+    .pain-card:hover h3{color:white}
+    .pain-hover{position:absolute;inset:0;padding:28px;background:var(--d9);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:300;color:var(--t1);line-height:1.6;text-align:center;opacity:0;transition:opacity .25s}
+    .pain-card:hover .pain-hover{opacity:1}
+    .pain-callout{margin-top:48px;padding:32px 40px;background:rgba(46,166,212,.06);border:1px solid rgba(46,166,212,.15);border-radius:var(--rmd);border-left:3px solid var(--t2)}
+    .pain-callout p{font-size:16px;font-weight:300;line-height:1.8;color:var(--tm);font-style:italic}
+    .pain-callout strong{color:var(--td);font-weight:500;font-style:normal}
+
+    /* SYSTEM VISUAL */
+    .system-visual{margin-top:48px;border-radius:var(--rlg);overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+    .system-visual img{width:100%;height:auto;display:block}
+
+    /* THREE COMPONENTS */
+    .comp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+    .comp-card{background:var(--lc);border:1px solid var(--lbr);border-radius:var(--rlg);padding:36px 32px;transition:transform .2s,box-shadow .2s}
+    .comp-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.09)}
+    .comp-num{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:12px}
+    .comp-card h3{font-family:var(--fd);font-size:26px;font-weight:400;color:var(--td);margin-bottom:6px;line-height:1.2}
+    .comp-tag{font-size:12px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--t3);margin-bottom:16px}
+    .comp-card > p{font-size:14px;font-weight:300;color:var(--tm);line-height:1.7;margin-bottom:20px}
+    .comp-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .comp-list li{font-size:13px;font-weight:300;color:var(--mu);line-height:1.5;padding-left:14px;position:relative}
+    .comp-list li::before{content:'';position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--t2)}
+
+    /* CREDENTIALS */
+    .cred-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:52px}
+    .cred-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(--rmd);padding:32px 28px;transition:background .2s,border-color .2s,transform .15s}
+    .cred-card:hover{background:rgba(121,197,199,.05);border-color:rgba(121,197,199,.15);transform:translateY(-2px)}
+    .cred-card-lbl{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:10px}
+    .cred-card h3{font-family:var(--fd);font-size:24px;font-weight:300;color:white;margin-bottom:12px;line-height:1.2}
+    .cred-card p{font-size:14px;font-weight:300;line-height:1.7;color:var(--w7)}
+    .live-now{margin-top:40px;padding:32px 36px;background:rgba(0,167,157,.07);border:1px solid rgba(0,167,157,.18);border-radius:var(--rmd)}
+    .live-now h3{font-family:var(--fd);font-size:22px;font-weight:300;color:var(--t3);margin-bottom:12px}
+    .live-now p{font-size:14px;font-weight:300;line-height:1.7;color:var(--w7);margin-bottom:16px}
+    .live-list{display:flex;flex-wrap:wrap;gap:8px}
+    .live-item{font-size:11px;font-weight:500;padding:5px 14px;border-radius:50px;color:var(--t1);background:rgba(121,197,199,.08);border:1px solid rgba(121,197,199,.15)}
+
+    /* GUARANTEE */
+    .guar-card{background:var(--lc);border:1px solid var(--lbr);border-radius:var(--rlg);padding:48px;margin-top:48px;border-left:3px solid var(--t2)}
+    .guar-card h3{font-family:var(--fd);font-size:32px;font-weight:300;color:var(--td);margin-bottom:16px}
+    .guar-card > p{font-size:16px;font-weight:300;line-height:1.75;color:var(--tm);margin-bottom:24px;max-width:760px}
+    .guar-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 32px;margin-bottom:24px}
+    .guar-list li{font-size:13px;font-weight:300;color:var(--mu);line-height:1.5;padding-left:16px;position:relative}
+    .guar-list li::before{content:'';position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--t2)}
+    .guar-note{font-size:12px;font-weight:300;color:var(--mu);line-height:1.6;font-style:italic}
+
+    /* CTA */
+    .cta-card{background:var(--d9);border-radius:var(--rxl);padding:80px;text-align:center;position:relative;overflow:hidden}
+    .cta-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+    .cta-card::after{content:'';position:absolute;top:-40%;left:-20%;width:140%;height:140%;background:radial-gradient(ellipse at 50% 50%,rgba(46,166,212,.055) 0%,transparent 60%);pointer-events:none}
+    .cta-card h2{font-family:var(--fd);font-size:46px;font-weight:300;color:white;line-height:1.1;margin-bottom:14px;position:relative;z-index:1}
+    .cta-card h2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .cta-card > p{font-size:17px;font-weight:300;color:var(--w7);line-height:1.7;max-width:560px;margin:0 auto 40px;position:relative;z-index:1}
+    .cta-note{font-size:12px;color:var(--w4);margin-top:14px;position:relative;z-index:1}
+
+    /* FOOTER */
+    footer{background:var(--d9);border-top:1px solid rgba(255,255,255,.05);padding:44px 48px 28px}
+    .footer-inner{max-width:1200px;margin:0 auto}
+    .footer-tag{font-family:var(--fd);font-size:21px;font-weight:300;font-style:italic;color:var(--w4);text-align:center;margin-bottom:28px}
+    .footer-tag em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .footer-nav{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+    .footer-nav a{font-size:12px;font-weight:300;color:var(--w4);transition:color .2s}
+    .footer-nav a:hover{color:var(--t1)}
+    .footer-nav span{color:var(--w2);font-size:11px}
+    .footer-copy{font-size:11px;font-weight:300;color:var(--w4);text-align:center;letter-spacing:.04em}
+
+    /* SCROLL REVEAL */
+    .rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+    .rv.vis{opacity:1;transform:translateY(0)}
+    .rv-d1{transition-delay:.1s}
+    .rv-d2{transition-delay:.2s}
+
+  /* RESPONSIVE */
+    @media(max-width:1024px){
+      .hero{min-height:auto;padding:112px 32px 56px}
+      .hero-layout{grid-template-columns:1fr;gap:40px}
+      .hero-h1{font-size:52px}
+      .pain-intro{grid-template-columns:1fr;gap:32px}
+      .pain-grid{grid-template-columns:repeat(2,1fr)}
+      .comp-grid{grid-template-columns:1fr}
+      .cred-grid{grid-template-columns:1fr}
+      .guar-list{grid-template-columns:1fr}
+      .cta-card{padding:48px 32px}
+    }
+    @media(max-width:640px){
+      .hero{padding:96px 20px 44px}
+      .hero-h1{font-size:38px;line-height:1.08}
+      .hero-body{font-size:16px}
+      .sl,.sd{padding:64px 20px}
+      .intro-band{padding:48px 20px}
+      .pain-grid{grid-template-columns:1fr}
+      .sh2-xl{font-size:36px}
+      .sh2-lg{font-size:28px}
+      .cta-card{padding:36px 22px}
+      .cta-card h2{font-size:30px}
+      footer{padding:36px 20px 24px}
+    }
+  </style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-layout">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Patient Access Optimization System&trade;</p>
+      <h1 class="hero-h1">Help the right patients find you, reach you, and <span class="hero-h1-accent">follow through.</span></h1>
+      <p class="hero-body">We help growth-oriented psychiatry practices in the NYC metro area reduce friction throughout the patient access journey&mdash;so your practice can grow without increasing administrative burden.</p>
+      <p class="hero-secondary">Combining behavioral science with human-centered AI. Built specifically for private psychiatry practices with 1&ndash;10 providers.</p>
+      <p class="hero-clarity-strip">Discoverability &middot; Responsiveness &middot; Continuous Optimization</p>
+      <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="hero-primary-cta" id="audit">Show Me The System</a>
+      <p class="hero-micro">See how the Patient Access Optimization System works for psychiatry practices like yours.</p>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <img src="/APAI-wheel-no-footer.png" alt="Patient Access Optimization System — discoverability, responsiveness, behavioral access strategy, and continuous optimization" width="1040" height="1040" />
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<div class="intro-band" id="promise">
+  <div class="intro-inner rv">
+    <h2>One system. One name. <em>Everything anchors to it.</em></h2>
+    <p>The right patients should be able to find your practice, reach your practice, and follow through without increasing administrative burden for your team. Every deliverable in this offer is designed to reduce friction throughout the patient access journey.</p>
+    <div class="intro-pills">
+      <span class="intro-pill">Manhattan</span>
+      <span class="intro-pill">Westchester</span>
+      <span class="intro-pill">Fairfield County</span>
+      <span class="intro-pill">Northern NJ</span>
+      <span class="intro-pill">Long Island</span>
+      <span class="intro-pill">Child &amp; Adolescent Psychiatry</span>
+      <span class="intro-pill">Integrative Psychiatry</span>
+      <span class="intro-pill">Concierge Psychiatry</span>
+      <span class="intro-pill">Interventional Psychiatry</span>
+    </div>
+  </div>
+</div>
+
+<!-- THEIR WORLD -->
+<section class="sl" id="who-its-for">
+  <div class="si">
+    <div class="pain-intro">
+      <div class="rv">
+        <div class="eyebrow"><div class="eyebrow-line"></div>Their world right now</div>
+        <h2 class="sh2 sh2-xl">These aren&rsquo;t marketing problems.<br>They&rsquo;re patient access <em>friction</em> problems.</h2>
+      </div>
+      <div class="rv rv-d1">
+        <p class="ssub">Every barrier between a prospective patient&rsquo;s decision to seek help and receiving care creates friction. Most practices have normalized it because they don&rsquo;t yet realize how much of it can be removed.</p>
+      </div>
+    </div>
+    <div class="pain-grid rv">
+      <div class="pain-card">
+        <h3>&ldquo;The voicemail pile never goes away.&rdquo;</h3>
+        <div class="pain-hover">Every morning starts with a backlog of missed inquiries to return before the clinical day begins.</div>
+      </div>
+      <div class="pain-card">
+        <h3>&ldquo;Phone tag is routine.&rdquo;</h3>
+        <div class="pain-hover">A patient reaches out Monday. Someone calls back Wednesday. They&rsquo;ve already booked elsewhere.</div>
+      </div>
+      <div class="pain-card">
+        <h3>&ldquo;After-hours inquiries go dark.&rdquo;</h3>
+        <div class="pain-hover">The practice closes at 5pm. Patient need does not. Inquiries sit unanswered until the next business day.</div>
+      </div>
+      <div class="pain-card">
+        <h3>&ldquo;The right patients can&rsquo;t find us.&rdquo;</h3>
+        <div class="pain-hover">A thin Google profile. A website that doesn&rsquo;t build trust. AI search returning competitors.</div>
+      </div>
+      <div class="pain-card">
+        <h3>&ldquo;Our website is static and clinical.&rdquo;</h3>
+        <div class="pain-hover">It lists services and credentials but doesn&rsquo;t reduce stigma-related hesitation or guide patients toward the next step.</div>
+      </div>
+      <div class="pain-card">
+        <h3>&ldquo;Growth creates more complexity.&rdquo;</h3>
+        <div class="pain-hover">More patients means more intake, coordination, and admin. Scaling feels like adding burden rather than creating leverage.</div>
+      </div>
+      <div class="pain-card">
+        <h3>&ldquo;Marketing ethics make me hesitate.&rdquo;</h3>
+        <div class="pain-hover">Most marketing options feel like they require compromising patient dignity. Uncertainty keeps you from trying things that might work.</div>
+      </div>
+      <div class="pain-card">
+        <h3>&ldquo;We&rsquo;re the integration layer.&rdquo;</h3>
+        <div class="pain-hover">Scheduling. EHR. Phone. Email. Reviews. None of it talks to each other. You connect it all manually.</div>
+      </div>
+      <div class="pain-card">
+        <h3>&ldquo;Patients in crisis get voicemail.&rdquo;</h3>
+        <div class="pain-hover">That friction doesn&rsquo;t just cost revenue. It can delay access to care&mdash;and that resonates more deeply than any growth metric.</div>
+      </div>
+    </div>
+    <div class="pain-callout rv">
+      <p><strong>The pain that lands differently with psychiatrists:</strong> Patients navigating fear, stigma, or crisis call and get voicemail. You became a psychiatrist to help people. The realization that small barriers can prevent the right patients from getting help often resonates more deeply than any discussion about marketing or growth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE SYSTEM -->
+<section class="sd" id="how-it-works">
+  <div class="si">
+    <div class="rv">
+      <div class="eyebrow"><div class="eyebrow-line"></div>The system</div>
+      <h2 class="sh2 sh2-xl">Three components. <em>One connected system.</em></h2>
+      <p class="ssub">All three operate together under the Patient Access Optimization System&trade;. Each is designed to reduce friction throughout the patient access journey&mdash;helping the right patients find the practice, reach the practice, and follow through with care.</p>
+    </div>
+    <div class="system-visual rv rv-d1">
+      <img src="/APAI-cards-no-footer.png" alt="Patient Access Optimization System components: Discoverability, Responsiveness, Behavioral Access Strategy, and Continuous Optimization" width="2400" height="1200" loading="lazy" />
+    </div>
+    <div class="comp-grid">
+      <div class="comp-card rv">
+        <div class="comp-num">01 &middot; Fill the bucket</div>
+        <h3>Discoverability</h3>
+        <div class="comp-tag">Help the right patients find and trust the practice</div>
+        <p>Patient access begins before a phone call. It begins when a prospective patient searches for help and either finds you or doesn&rsquo;t.</p>
+        <ul class="comp-list">
+          <li>Google Business Profile optimization</li>
+          <li>Local SEO &amp; AI-search visibility (GEO)</li>
+          <li>Authority-focused website optimization</li>
+          <li>HIPAA-conscious, stigma-aware visibility strategy</li>
+          <li>Weekly reporting</li>
+        </ul>
+      </div>
+      <div class="comp-card rv rv-d1">
+        <div class="comp-num">02 &middot; Plug the holes</div>
+        <h3>Responsiveness</h3>
+        <div class="comp-tag">Make sure every inquiry gets a timely response</div>
+        <p>Discoverability without responsiveness is a leaky bucket. Prospective patients find the practice but encounter friction when they attempt to take the next step.</p>
+        <ul class="comp-list">
+          <li>24/7 AI voice receptionist</li>
+          <li>After-hours inquiry handling &amp; missed-call text-back</li>
+          <li>SMS, Facebook, Instagram &amp; WhatsApp communication</li>
+          <li>Appointment booking workflows &amp; reminders</li>
+          <li>HIPAA-compliant CRM &amp; unified inbox</li>
+        </ul>
+      </div>
+      <div class="comp-card rv rv-d2">
+        <div class="comp-num">03 &middot; Make it sticky</div>
+        <h3>Behavioral Access Strategy</h3>
+        <div class="comp-tag">Continuous optimization month after month</div>
+        <p>This is what separates the system from a collection of tools. Specific issues. Specific insights. Specific improvements.</p>
+        <ul class="comp-list">
+          <li>Inquiry responsiveness &amp; intake bottleneck analysis</li>
+          <li>Website friction analysis with specific fixes</li>
+          <li>Stigma-aware messaging optimization</li>
+          <li>No-show reduction strategy</li>
+          <li>Monthly strategy reviews with prioritized action plans</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DIFFERENT -->
+<section class="sd" id="our-approach" style="background:var(--d9);border-top:1px solid rgba(255,255,255,.05)">
+  <div class="si">
+    <div class="rv">
+      <div class="eyebrow"><div class="eyebrow-line"></div>Why this is different</div>
+      <h2 class="sh2 sh2-lg">The credential stack no generic agency <em>can replicate.</em></h2>
+      <p class="ssub">When a psychiatrist asks, &ldquo;Why should I trust you with my practice?&rdquo; this is the answer. Not a marketing pitch&mdash;a combination of education, clinical experience, digital health leadership, and behavioral science expertise.</p>
+    </div>
+    <div class="cred-grid">
+      <div class="cred-card rv">
+        <div class="cred-card-lbl">Behavioral Science Foundation</div>
+        <h3>How people actually think, decide, and act</h3>
+        <p>M.A. Experimental Psychology. M.S. User Experience Design. Graduate research in cardiovascular psychophysiology. Published research in health psychology and biofeedback. Every workflow is designed around how people actually think, decide, and take action.</p>
+      </div>
+      <div class="cred-card rv rv-d1">
+        <div class="cred-card-lbl">Real Clinical Experience</div>
+        <h3>Inside the work, not just adjacent to it</h3>
+        <p>Two years full-time at the Cleveland Clinic conducting neuropsychological testing. Four years as a psychiatric case manager. Married to a clinical psychologist. The clinical world is a professional environment I&rsquo;ve worked in, supported, and lived alongside for years.</p>
+      </div>
+      <div class="cred-card rv">
+        <div class="cred-card-lbl">Digital Health Operator</div>
+        <h3>Scaled a healthcare operation from the inside</h3>
+        <p>Founding team member (Director-level, employee #5) at a venture-backed digital neurology practice. Experienced scaling a healthcare operation from the inside, not as an outside vendor.</p>
+      </div>
+      <div class="cred-card rv rv-d1">
+        <div class="cred-card-lbl">Behavior Change at Scale</div>
+        <h3>Established principles, not marketing tactics</h3>
+        <p>Senior Manager at Noom, leading 10 managers and more than 100 behavior change coaches. National Board Certified Health &amp; Wellness Coach (NBC-HWC). The Behavioral Access Strategy component is informed by established principles of behavior change and health communication.</p>
+      </div>
+    </div>
+    <div class="live-now rv">
+      <h3>Live now &mdash; active psychiatry practice implementation</h3>
+      <p>This is not a theoretical framework. It is an active implementation being used in a real psychiatry practice today.</p>
+      <div class="live-list">
+        <span class="live-item">AI Voice Receptionist</span>
+        <span class="live-item">Automated Consultation Scheduling</span>
+        <span class="live-item">FAQ Automation</span>
+        <span class="live-item">Emergency Escalation Workflows</span>
+        <span class="live-item">GBP Optimization</span>
+        <span class="live-item">Review Management</span>
+        <span class="live-item">AI-Powered Website Assistant</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="sl" id="results">
+  <div class="si">
+    <div class="rv">
+      <div class="eyebrow"><div class="eyebrow-line"></div>Implementation guarantee</div>
+      <h2 class="sh2 sh2-lg">Named. Specific. <em>Within our control.</em></h2>
+      <p class="ssub">When a single patient relationship is worth $3,000&ndash;$15,000+ over its lifetime, patient access cannot be left to chance.</p>
+    </div>
+    <div class="guar-card rv rv-d1">
+      <h3>We guarantee full implementation within 30 days</h3>
+      <p>All agreed-upon Patient Access Optimization System components will be implemented, configured, and operational within 30 days of receiving the required access, content, approvals, and onboarding information. If the system is not fully operational within that timeframe, we will continue working at no additional cost until it is.</p>
+      <ul class="guar-list">
+        <li>Discoverability systems configured and active (SEO, GEO, GBP, website)</li>
+        <li>AI Voice Receptionist operational</li>
+        <li>Website chat and voice assistants active</li>
+        <li>Missed-call recovery and after-hours workflows functioning</li>
+        <li>Appointment booking and follow-up workflows configured</li>
+        <li>Unified communications inbox operational</li>
+        <li>Reporting and dashboard visibility established</li>
+        <li>HIPAA-compliant CRM configured and operational</li>
+      </ul>
+      <p class="guar-note">Client requirements for guarantee to apply: timely onboarding participation, communication platform access, workflow approvals, and active system utilization.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sd" id="cta">
+  <div class="si">
+    <div class="cta-card rv">
+      <h2>Ready to see the <em>system?</em></h2>
+      <p>Help the right patients find you, reach you, and follow through&mdash;without increasing administrative burden. Commit to 6 months and the setup fee is waived entirely.</p>
+      <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="hero-primary-cta">Show Me The System</a>
+      <p class="cta-note">Month-to-month available after onboarding. Built for growth-oriented psychiatry practices in the NYC metro area.</p>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="/includes.js"></script>
+<script>
+(function(){
+  // Point nav links to page sections
+  function wireNav(){
+    var nav = document.getElementById('nav');
+    if(!nav) return;
+    var map = {
+      '#how-it-works': '#how-it-works',
+      '#who-its-for': '#who-its-for',
+      '#results': '#results',
+      '#our-approach': '#our-approach',
+      '#audit': '#audit'
+    };
+    nav.querySelectorAll('a[href^="#"]').forEach(function(link){
+      var href = link.getAttribute('href');
+      if(map[href]) link.setAttribute('href', map[href]);
+    });
+    var btn = nav.querySelector('.nav-btn');
+    if(btn) {
+      btn.textContent = 'Show Me The System';
+      btn.setAttribute('href', 'https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm');
+    }
+    var mobCta = nav.querySelector('.nav-mobile-cta');
+    if(mobCta) {
+      mobCta.textContent = 'Show Me The System';
+      mobCta.setAttribute('href', 'https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm');
+    }
+  }
+
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting) e.target.classList.add('vis');
+    });
+  }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
+
+  var navPh = document.getElementById('nav-placeholder');
+  new MutationObserver(wireNav).observe(navPh, { childList: true, subtree: true });
+  setTimeout(wireNav, 200);
+})();
+</script>
+</body>
+</html>
