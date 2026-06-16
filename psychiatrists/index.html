@@ -922,9 +922,13 @@ function tog(hd){
 }
 
 (function(){
+  var navWired=false;
+  var navObserver;
   function wireNav(){
+    if(navWired) return;
     var nav=document.getElementById('nav');
     if(!nav) return;
+    navWired=true;
     var map={'#how-it-works':'#how-it-works','#who-its-for':'#who-its-for','#results':'#results','#our-approach':'#our-approach','#audit':'#demo'};
     nav.querySelectorAll('a[href^="#"]').forEach(function(link){
       var href=link.getAttribute('href');
@@ -934,6 +938,7 @@ function tog(hd){
     if(btn){btn.textContent='Show Me The System';btn.setAttribute('href','https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm')}
     var mob=nav.querySelector('.nav-mobile-cta');
     if(mob){mob.textContent='Show Me The System';mob.setAttribute('href','https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm')}
+    if(navObserver) navObserver.disconnect();
   }
 
   var obs=new IntersectionObserver(function(entries){
@@ -947,7 +952,8 @@ function tog(hd){
     });
   });
 
-  new MutationObserver(wireNav).observe(document.getElementById('nav-placeholder'),{childList:true,subtree:true});
+  navObserver=new MutationObserver(wireNav);
+  navObserver.observe(document.getElementById('nav-placeholder'),{childList:true});
   setTimeout(wireNav,200);
 
   (function initMarquee(){
