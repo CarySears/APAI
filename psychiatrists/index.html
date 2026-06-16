@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Patient Access Optimization System for Psychiatry Practices — ActionPotential.AI</title>
-  <meta name="description" content="We help NYC metro psychiatry practices help the right patients find you, reach you, and follow through—without increasing administrative burden. Behavioral science + human-centered AI." />
+  <title>Patient Access for Psychiatry Private Practices — ActionPotential.AI</title>
+  <meta name="description" content="Help the right patients find your NYC metro psychiatry practice, reach you, and follow through — without adding to your administrative burden. Book a free discovery call." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cabinet+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -28,7 +28,6 @@
     }
     body{font-family:var(--fb);background:var(--d9);color:var(--w1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
-    /* HERO */
     .hero{min-height:100vh;background:var(--d9);display:flex;align-items:center;padding:132px 48px 72px}
     .hero-layout{width:100%;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,500px);gap:80px;align-items:center}
     .hero-left{display:flex;flex-direction:column;align-items:flex-start;max-width:640px}
@@ -36,20 +35,13 @@
     .hero-eyebrow::before{content:'';width:22px;height:1px;background:var(--t1)}
     .hero-h1{font-family:var(--fd);font-size:68px;font-weight:300;line-height:.96;letter-spacing:-1.2px;color:white;margin-bottom:32px;max-width:20ch;text-wrap:balance}
     .hero-h1-accent{color:var(--t1)}
-    .hero-body{font-size:18px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.82);max-width:520px;margin-bottom:20px}
-    .hero-secondary{font-size:14px;font-weight:400;line-height:1.65;color:rgba(255,255,255,.68);max-width:560px;margin-bottom:30px}
-    .hero-clarity-strip{font-size:12px;font-weight:500;letter-spacing:.06em;color:rgba(193,237,233,.72);border:1px solid rgba(121,197,199,.08);border-radius:999px;background:rgba(121,197,199,.025);padding:10px 16px;margin-bottom:48px}
+    .hero-body{font-size:18px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.82);max-width:520px;margin-bottom:30px}
     .hero-primary-cta{display:inline-flex;align-items:center;justify-content:center;padding:18px 38px;border-radius:999px;background:var(--t2);color:white;font-size:21px;font-weight:500;border:1px solid rgba(255,255,255,.26);margin-bottom:10px;transition:background .2s}
     .hero-primary-cta:hover{background:var(--bl)}
     .hero-primary-cta:focus-visible{outline:2px solid rgba(121,197,199,.9);outline-offset:2px}
     .hero-micro{font-size:12px;font-weight:300;line-height:1.65;color:rgba(255,255,255,.62);max-width:580px}
     .hero-visual img{width:100%;height:auto;border-radius:var(--rlg);box-shadow:0 12px 48px rgba(0,0,0,.28)}
 
-    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:13px 26px;border-radius:50px;transition:opacity .2s,transform .2s}
-    .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
-    .btn-primary .av{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,255,255,.3)}
-
-    /* MARQUEE */
     .mq-strip{--mq-gap:64px;--mq-slot:152px;--mq-slot-wide:208px;--mq-logo-h:80px;background:var(--d7);border-top:1px solid rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.045);padding:52px 0;overflow:hidden}
     .mq-strip-label{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--w4);text-align:center;margin-bottom:20px}
     .mq-viewport{overflow:hidden}
@@ -59,17 +51,24 @@
     .mq-set{display:flex;align-items:center;gap:var(--mq-gap);padding-right:var(--mq-gap);flex-shrink:0}
     .mq-logo-item{display:flex;align-items:center;justify-content:center;flex:0 0 var(--mq-slot);width:var(--mq-slot);height:var(--mq-logo-h)}
     .mq-logo-item--wide{flex-basis:var(--mq-slot-wide);width:var(--mq-slot-wide)}
-    .mq-logo-item img{height:var(--mq-logo-h);width:auto;max-width:100%;object-fit:contain;opacity:.92;display:block}
+    .mq-logo-imi{width:var(--mq-logo-h);height:var(--mq-logo-h);border-radius:50%;overflow:hidden;flex-shrink:0;line-height:0}
+    .mq-logo-imi img{width:100%;height:100%;max-width:none;object-fit:cover;opacity:.92}
+    .mq-imi-lockup{display:flex;flex-direction:row;align-items:center;gap:12px;height:var(--mq-logo-h)}
+    .mq-imi-name{font-size:8px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.88);line-height:1.35;max-width:104px;text-shadow:0 1px 4px rgba(0,0,0,.75)}
     .mq-text-logo{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;height:var(--mq-logo-h)}
     .mq-text-logo-name{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;white-space:nowrap}
     .mq-text-logo-divider{width:36px;height:1px;background:rgba(255,255,255,.3)}
     .mq-text-logo-sub{font-size:8.5px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);white-space:nowrap}
+    .mq-live-badge{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;white-space:nowrap}
+    .mq-live-dot{width:8px;height:8px;border-radius:50%;background:var(--t3);flex-shrink:0;box-shadow:0 0 8px rgba(0,167,157,.6)}
     @media (prefers-reduced-motion:reduce){.mq-track{animation:none!important}}
 
-    /* SECTIONS */
     .sl{background:var(--lb);color:var(--td);padding:96px 48px}
     .sd{background:var(--d8);color:white;padding:96px 48px}
     .si{max-width:1200px;margin:0 auto}
+    .sec-center{text-align:center}
+    .sec-center .eyebrow{justify-content:center}
+    .sec-center .ssub{margin-left:auto;margin-right:auto}
     .eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
     .sl .eyebrow{color:var(--mu)} .sd .eyebrow{color:var(--t1)}
     .eyebrow-line{width:22px;height:1px;flex-shrink:0}
@@ -80,272 +79,105 @@
     .sh2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     .ssub{font-size:17px;font-weight:300;line-height:1.72;max-width:600px}
     .sl .ssub{color:var(--tm)} .sd .ssub{color:var(--w7)}
+    .ssub-italic{font-style:italic}
 
-    /* STATS */
-    .stats-band{background:var(--d9);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);padding:80px 48px}
-    .stats-inner{max-width:1200px;margin:0 auto}
-    .stats-eyebrow{text-align:center;margin-bottom:52px}
-    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.05);border-radius:var(--rlg);overflow:hidden}
-    .stat-card{background:var(--d8);padding:40px 32px;text-align:center;transition:background .25s}
-    .stat-card:hover{background:var(--d7)}
-    .stat-num{font-family:var(--fd);font-size:64px;font-weight:300;line-height:1;margin-bottom:12px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .stat-label{font-size:13px;font-weight:500;color:white;margin-bottom:8px}
-    .stat-sub{font-size:12px;font-weight:300;color:var(--w4);line-height:1.5}
+    .psych-problem{background:var(--d7);padding:96px 48px;color:white}
+    .psych-problem .sh2{color:white}
+    .psych-pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+    .psych-pain-card{background:var(--d8);border-left:3px solid var(--t1);padding:28px 24px;border-radius:0 var(--rmd) var(--rmd) 0}
+    .psych-pain-card h3{font-family:var(--fd);font-size:18px;font-weight:400;color:white;margin-bottom:10px;line-height:1.35}
+    .psych-pain-card p{font-size:14px;font-weight:300;color:var(--w7);line-height:1.65}
+    .psych-pullquote{margin-top:48px;padding:32px 40px;border-left:3px solid var(--t1);max-width:820px;margin-left:auto;margin-right:auto}
+    .psych-pullquote p{font-size:18px;font-weight:300;font-style:italic;color:var(--w7);line-height:1.75}
 
-    /* DEF BAND */
-    .def-band{background:linear-gradient(135deg,var(--d8) 0%,var(--d7) 100%);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);padding:64px 48px}
-    .def-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-    .def-left h2{font-family:var(--fd);font-size:44px;font-weight:300;line-height:1.08;letter-spacing:-.5px;color:white;margin-bottom:20px}
-    .def-left h2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .def-left p{font-size:16px;font-weight:300;line-height:1.75;color:var(--w7)}
-    .def-right{display:flex;flex-direction:column;gap:20px}
-    .def-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(--rmd);padding:24px 28px;transition:background .2s,border-color .2s,transform .15s}
-    .def-card:hover{background:rgba(121,197,199,.05);border-color:rgba(121,197,199,.15);transform:translateY(-2px)}
-    .def-card-lbl{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:8px}
-    .def-card p{font-size:14px;font-weight:300;line-height:1.65;color:var(--w7)}
-    .def-callout{max-width:1200px;margin:40px auto 0;padding:32px 40px;background:rgba(46,166,212,.06);border:1px solid rgba(46,166,212,.15);border-radius:var(--rmd)}
-    .def-callout p{font-size:16px;font-weight:300;line-height:1.75;color:var(--w7);font-style:italic}
+    .psych-system-img{max-width:1100px;margin:48px auto 0;border-radius:var(--rlg);overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.28)}
+    .psych-system-img img{width:100%;height:auto;display:block}
+    .psych-system-body{max-width:600px;margin:32px auto 40px;font-size:16px;font-weight:300;color:var(--w7);line-height:1.75}
 
-    /* ICP */
-    .icp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
-    .icp-card{background:var(--lc);border:1px solid var(--lbr);border-radius:var(--rlg);padding:32px}
-    .icp-card h3{font-family:var(--fd);font-size:22px;font-weight:400;color:var(--td);margin-bottom:12px}
-    .icp-card p,.icp-card li{font-size:14px;font-weight:300;color:var(--tm);line-height:1.65}
-    .icp-card ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:12px}
-    .icp-card li{padding-left:14px;position:relative}
-    .icp-card li::before{content:'';position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--t2)}
+    .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:13px 26px;border-radius:50px;transition:opacity .2s,transform .2s}
+    .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
 
-    /* PAIN */
-    .pain-intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:56px}
-    .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--lbr);border:1px solid var(--lbr);border-radius:var(--rlg);overflow:hidden}
-    .pain-card{background:var(--lc);padding:32px 28px;position:relative;transition:background .25s,transform .15s}
-    .pain-card:hover{background:var(--d9);transform:perspective(600px) rotateX(2deg) rotateY(-2deg) translateY(-2px)}
-    .pain-card h3{font-family:var(--fd);font-size:18px;font-weight:400;font-style:italic;color:var(--td);line-height:1.35;transition:color .25s}
-    .pain-card:hover h3{color:white}
-    .pain-hover{position:absolute;inset:0;padding:28px;background:var(--d9);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:300;color:var(--t1);line-height:1.6;text-align:center;opacity:0;transition:opacity .25s}
-    .pain-card:hover .pain-hover{opacity:1}
-    .pain-callout{margin-top:48px;padding:32px 40px;background:rgba(46,166,212,.06);border:1px solid rgba(46,166,212,.15);border-radius:var(--rmd);border-left:3px solid var(--t2)}
-    .pain-callout p{font-size:16px;font-weight:300;line-height:1.8;color:var(--tm);font-style:italic}
-    .pain-callout strong{color:var(--td);font-weight:500;font-style:normal}
-
-    /* SYSTEM VISUAL */
-    .system-visual{margin-top:48px;border-radius:var(--rlg);overflow:hidden;border:1px solid rgba(255,255,255,.06)}
-    .system-visual img{width:100%;height:auto;display:block}
-
-    /* SVC OVERVIEW */
-    .svc-overview{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
-    .svc-block{background:var(--lc);border:1px solid var(--lbr);border-radius:var(--rlg);padding:32px;transition:background .2s,transform .2s,box-shadow .2s;cursor:pointer}
-    .svc-block:hover{background:var(--ls);transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.09)}
-    .svc-block-num{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:12px}
-    .svc-block h3{font-family:var(--fd);font-size:28px;font-weight:400;color:var(--td);margin-bottom:12px}
-    .svc-block p{font-size:13px;font-weight:300;color:var(--mu);line-height:1.65;margin-bottom:20px}
-    .svc-block-cta{font-size:13px;font-weight:500;color:var(--t2)}
-
-    /* SVC DETAIL */
-    .svc-header{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:48px}
-    .svc-badge{display:inline-block;font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:4px 14px;border-radius:50px;margin-bottom:12px}
-    .badge-blue{background:rgba(27,117,187,.18);color:var(--t2);border:1px solid rgba(27,117,187,.28)}
-    .badge-teal{background:rgba(0,167,157,.18);color:var(--t3);border:1px solid rgba(0,167,157,.28)}
-    .badge-grad{background:rgba(168,85,247,.12);color:#c084fc;border:1px solid rgba(168,85,247,.2)}
-    .svc-title{font-family:var(--fd);font-size:42px;font-weight:300;margin-bottom:8px}
-    .sd .svc-title{color:white} .sl .svc-title{color:var(--td)}
-    .svc-sub{font-size:16px;font-weight:300;line-height:1.65;margin-bottom:20px}
-    .sd .svc-sub{color:var(--w7)} .sl .svc-sub{color:var(--tm)}
-    .svc-body{font-size:15px;font-weight:300;line-height:1.75}
-    .sd .svc-body{color:var(--w7)} .sl .svc-body{color:var(--tm)}
-    .svc-strip{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;padding-top:24px;border-top:1px solid}
-    .sd .svc-strip{border-color:rgba(255,255,255,.07)} .sl .svc-strip{border-color:var(--lbr)}
-    .svc-strip-item{font-size:11px;font-weight:500;padding:5px 14px;border-radius:50px}
-    .sd .svc-strip-item{color:var(--t1);background:rgba(121,197,199,.08);border:1px solid rgba(121,197,199,.15)}
-    .sl .svc-strip-item{color:var(--t2);background:rgba(46,166,212,.08);border:1px solid rgba(46,166,212,.15)}
-    .drw{border-radius:var(--rsm);margin-bottom:5px;overflow:hidden}
-    .drw-dark{background:rgba(27,117,187,.1);border:.5px solid rgba(46,166,212,.18)}
-    .drw-light{background:rgba(46,166,212,.06);border:.5px solid rgba(46,166,212,.14)}
-    .drw-teal{background:rgba(0,167,157,.1);border:.5px solid rgba(0,167,157,.18)}
-    .drw-hd{display:flex;align-items:center;justify-content:space-between;padding:10px 15px;cursor:pointer;user-select:none}
-    .drw-hd:hover{opacity:.75}
-    .drw-name{font-size:13px;font-weight:500}
-    .drw-dark .drw-name,.drw-light .drw-name{color:var(--t2)}
-    .drw-teal .drw-name{color:var(--t3)}
-    .drw-chev{font-size:9px;color:var(--w4);transition:transform .22s}
-    .drw-chev.open{transform:rotate(180deg)}
-    .drw-bd{max-height:0;overflow:hidden;transition:max-height .28s ease}
-    .drw-bd.open{max-height:220px}
-    .drw-bd p{font-size:12px;font-weight:300;line-height:1.65;color:var(--w7);padding:4px 15px 12px}
-
-    /* Q BAND */
-    .q-band{background:var(--d9);padding:80px 48px;border-top:1px solid rgba(255,255,255,.05)}
-    .q-inner{max-width:1200px;margin:0 auto}
-    .q-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.05);border-radius:var(--rlg);overflow:hidden;margin-top:52px}
-    .q-card{background:var(--d8);padding:48px 36px;position:relative;overflow:hidden;cursor:default;transition:background .3s;min-height:280px;display:flex;flex-direction:column;justify-content:center}
-    .q-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--grad);transform:scaleX(0);transition:transform .4s;transform-origin:left}
-    .q-card:hover::after{transform:scaleX(1)}
-    .q-num{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t2);margin-bottom:20px;opacity:.6}
-    .q-question{font-family:var(--fd);font-size:22px;font-weight:300;font-style:italic;color:white;line-height:1.4;transition:opacity .3s,transform .3s}
-    .q-card:hover .q-question{opacity:0;transform:translateY(-8px)}
-    .q-answer{position:absolute;inset:0;padding:48px 36px;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(12px);transition:opacity .3s,transform .3s}
-    .q-card:hover .q-answer{opacity:1;transform:translateY(0)}
-    .q-service{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t2);margin-bottom:14px}
-    .q-solve{font-size:16px;font-weight:300;color:white;line-height:1.6}
-
-    /* FLYWHEEL */
-    .fw-band{background:var(--d9);border-top:1px solid rgba(255,255,255,.05);padding:56px 48px;text-align:center}
-    .fw-headline{font-family:var(--fd);font-size:36px;font-weight:300;color:white;margin-bottom:12px}
-    .fw-headline em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .fw-body{font-size:15px;font-weight:300;color:var(--w7);line-height:1.7;max-width:640px;margin:0 auto 36px}
-    .fw-nodes{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0}
-    .fw-node{display:flex;align-items:center}
-    .fw-lbl{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--w7);padding:8px 16px;border:1px solid rgba(255,255,255,.07);border-radius:50px;background:rgba(255,255,255,.03);transition:border-color .2s,color .2s,background .2s,transform .15s}
-    .fw-lbl:hover{border-color:rgba(121,197,199,.3);color:var(--t1);background:rgba(121,197,199,.05);transform:translateY(-2px)}
-    .fw-arr{font-size:12px;color:var(--w2);padding:0 6px}
-
-    /* STEPS */
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;border:1px solid var(--lbr);border-radius:var(--rlg);overflow:hidden}
-    .step{padding:38px 30px;background:var(--lc);border-right:1px solid var(--lbr);transition:background .2s}
-    .step:last-child{border-right:none}
-    .step:hover{background:var(--ls)}
-    .step-num{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:14px}
-    .step h3{font-family:var(--fd);font-size:22px;font-weight:400;color:var(--td);margin-bottom:10px}
-    .step p{font-size:13px;font-weight:300;color:var(--mu);line-height:1.65}
-    .how-note{margin-top:36px;padding:36px 40px;background:var(--lc);border:1px solid var(--lbr);border-radius:var(--rlg);border-left:3px solid var(--t2)}
-    .how-note p{font-size:16px;font-weight:300;color:var(--tm);line-height:1.8;max-width:760px}
-    .how-note strong{color:var(--td);font-weight:500}
-
-    /* PRICING */
-    .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;align-items:stretch}
-    .price-card{border-radius:var(--rlg);padding:36px 32px;display:flex;flex-direction:column;position:relative}
-    .price-card--down{background:var(--lc);border:1px solid var(--lbr)}
-    .price-card--core{background:linear-gradient(180deg,rgba(46,166,212,.12) 0%,rgba(0,167,157,.08) 100%);border:2px solid rgba(46,166,212,.35)}
-    .price-card--up{background:var(--lc);border:1px solid var(--lbr)}
-    .price-badge{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
-    .price-card--down .price-badge{color:var(--mu)}
-    .price-card--core .price-badge{color:var(--t2)}
-    .price-card--up .price-badge{color:var(--t3)}
-    .price-card h3{font-family:var(--fd);font-size:26px;font-weight:400;color:var(--td);margin-bottom:8px;line-height:1.2}
-    .price-card--core h3{color:var(--td)}
-    .price-desc{font-size:14px;font-weight:300;color:var(--tm);line-height:1.65;margin-bottom:24px;flex:1}
-    .price-amt{font-family:var(--fd);font-size:28px;font-weight:300;color:var(--td);margin-bottom:4px}
-    .price-period{font-size:12px;font-weight:300;color:var(--mu);margin-bottom:20px}
-    .price-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
-    .price-list li{font-size:13px;font-weight:300;color:var(--mu);padding-left:14px;position:relative;line-height:1.5}
-    .price-list li::before{content:'';position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--t2)}
-    .price-core-label{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--t2);color:white;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:5px 16px;border-radius:50px;white-space:nowrap}
-    .price-discount{margin-top:40px;padding:28px 36px;background:rgba(46,166,212,.06);border:1px solid rgba(46,166,212,.15);border-radius:var(--rmd);text-align:center}
-    .price-discount p{font-size:16px;font-weight:300;color:var(--tm);line-height:1.7}
-    .price-discount strong{color:var(--td);font-weight:500}
-
-    /* OBJECTIONS */
-    .obj-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--lbr);border:1px solid var(--lbr);border-radius:var(--rlg);overflow:hidden;margin-top:52px}
-    .obj-row{display:grid;grid-template-columns:1fr 1.4fr;background:var(--lc)}
-    .obj-row:nth-child(even){background:var(--ls)}
-    .obj-q{padding:32px 28px;border-right:1px solid var(--lbr)}
-    .obj-a{padding:32px 28px}
-    .obj-q h3{font-family:var(--fd);font-size:20px;font-weight:400;font-style:italic;color:var(--td);line-height:1.35}
-    .obj-a p{font-size:14px;font-weight:300;color:var(--tm);line-height:1.75}
-
-    /* GUARANTEE */
-    .guar-card{background:var(--lc);border:1px solid var(--lbr);border-radius:var(--rlg);padding:48px;margin-top:48px;border-left:3px solid var(--t2)}
-    .guar-card h3{font-family:var(--fd);font-size:32px;font-weight:300;color:var(--td);margin-bottom:16px}
-    .guar-card > p{font-size:16px;font-weight:300;line-height:1.75;color:var(--tm);margin-bottom:24px}
-    .guar-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:10px 32px;margin-bottom:24px}
-    .guar-list li{font-size:13px;font-weight:300;color:var(--mu);line-height:1.5;padding-left:16px;position:relative}
-    .guar-list li::before{content:'';position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--t2)}
-    .guar-note{font-size:12px;font-weight:300;color:var(--mu);line-height:1.6;font-style:italic}
-
-    /* CONVERSION */
-    .conv-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:52px}
-    .conv-vid{background:var(--d7);border:1px solid rgba(255,255,255,.07);border-radius:var(--rlg);aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:32px}
-    .conv-vid-lbl{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1)}
-    .conv-vid-title{font-family:var(--fd);font-size:22px;font-weight:300;color:white}
-    .conv-vid-hint{font-size:12px;font-weight:300;color:var(--w4);max-width:280px;line-height:1.6}
-    .form-card{background:var(--d7);border:1px solid rgba(255,255,255,.07);border-radius:var(--rlg);padding:40px}
-    .form-card h3{font-family:var(--fd);font-size:28px;font-weight:300;color:white;margin-bottom:6px}
-    .form-card > p{font-size:14px;font-weight:300;color:var(--w7);margin-bottom:26px;line-height:1.6}
-    .btn-form{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:14px;border-radius:50px;margin-top:8px;transition:opacity .2s}
-    .btn-form:hover{opacity:.88}
-    .btn-form .av{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,255,255,.3)}
-    .form-note{font-size:11px;color:var(--w4);text-align:center;margin-top:12px;line-height:1.5}
-
-    /* TESTIMONIAL */
-    .test-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:52px;max-width:480px}
+    .test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:52px}
     .test-card{background:var(--lc);border:1px solid var(--lbr);border-radius:var(--rlg);overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s}
     .test-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.09)}
-    .test-vid{aspect-ratio:16/10;background:var(--ls);border-bottom:1px solid var(--lbr);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .test-vid{aspect-ratio:16/10;background:var(--ls);border-bottom:1px solid var(--lbr);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;cursor:pointer}
+    .test-vid video,.test-vid img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .test-overlay{position:absolute;inset:0;background:rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;z-index:2;transition:background .2s}
+    .test-card:hover .test-overlay{background:rgba(0,0,0,.08)}
+    .play-btn{width:50px;height:50px;background:rgba(255,255,255,.92);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+    .test-card:hover .play-btn{transform:scale(1.08)}
+    .play-btn svg{width:18px;height:18px;fill:#1B75BB}
     .test-ph{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
     .test-info{padding:20px 22px}
     .test-name{font-size:14px;font-weight:500;color:var(--td);margin-bottom:2px}
     .test-biz{font-size:12px;font-weight:400;color:var(--t3)}
 
-    /* FOUNDER */
-    .founder-grid{display:grid;grid-template-columns:400px 1fr;gap:80px;align-items:center}
-    .founder-img-wrap{position:relative}
-    .founder-img-wrap img{width:100%;border-radius:var(--rlg);filter:grayscale(15%);transition:filter .3s}
-    .founder-img-wrap:hover img{filter:grayscale(0)}
-    .founder-img-wrap::after{content:'';position:absolute;bottom:-1px;left:20px;right:20px;height:3px;background:var(--grad);border-radius:0 0 var(--rlg) var(--rlg)}
-    .founder-lbl{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--t1);margin-bottom:14px}
-    .founder-name{font-family:var(--fd);font-size:46px;font-weight:300;color:white;line-height:1;margin-bottom:4px}
-    .founder-title{font-size:14px;font-weight:300;color:var(--t1);margin-bottom:26px}
-    .founder-bio{font-size:16px;font-weight:300;line-height:1.82;color:var(--w7);margin-bottom:28px}
-    .founder-bio strong{color:white;font-weight:500}
-    .creds{display:flex;flex-wrap:wrap;gap:8px}
-    .cred{font-size:12px;font-weight:400;padding:7px 18px;border-radius:50px;display:inline-flex;align-items:center;gap:6px}
-    .cred::before{content:'';width:6px;height:6px;border-radius:50%;flex-shrink:0}
-    .cred-deg{color:var(--t2);background:rgba(46,166,212,.07);border:1px solid rgba(46,166,212,.16)}
-    .cred-deg::before{background:var(--t2)}
-    .cred-org{color:var(--t1);background:rgba(121,197,199,.07);border:1px solid rgba(121,197,199,.16)}
-    .cred-org::before{background:var(--t1)}
+    .psych-who-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:52px;text-align:left}
+    .psych-who-col h3{font-family:var(--fd);font-size:24px;font-weight:400;color:var(--td);margin-bottom:20px}
+    .psych-who-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+    .psych-who-list li{font-size:14px;font-weight:300;line-height:1.65;color:var(--tm);padding-left:16px;position:relative}
+    .psych-who-list--yes li::before{content:'';position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--t2)}
+    .psych-who-list--no li::before{content:'';position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--mu);opacity:.5}
+    .psych-geo-note{text-align:center;margin-top:40px;font-size:13px;color:var(--mu)}
 
-    /* CTA */
-    .cta-card{background:var(--d9);border-radius:var(--rxl);padding:80px;text-align:center;position:relative;overflow:hidden}
-    .cta-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
-    .cta-card::after{content:'';position:absolute;top:-40%;left:-20%;width:140%;height:140%;background:radial-gradient(ellipse at 50% 50%,rgba(46,166,212,.055) 0%,transparent 60%);pointer-events:none}
-    .cta-card h2{font-family:var(--fd);font-size:46px;font-weight:300;color:white;line-height:1.1;margin-bottom:14px;position:relative;z-index:1}
-    .cta-card h2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .cta-card > p{font-size:17px;font-weight:300;color:var(--w7);line-height:1.7;max-width:560px;margin:0 auto 40px;position:relative;z-index:1}
-    .cta-list{list-style:none;display:inline-flex;flex-direction:column;gap:10px;text-align:left;margin-bottom:44px;position:relative;z-index:1}
-    .cta-list li{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:300;color:var(--w7)}
-    .cta-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--t1);flex-shrink:0}
-    .cta-note{font-size:12px;color:var(--w4);margin-top:14px;position:relative;z-index:1}
+    .psych-cred-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:48px 64px;margin-top:52px;text-align:left}
+    .psych-cred-block h3{font-size:14px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--t1);margin-bottom:12px}
+    .psych-cred-div{width:36px;height:1px;background:var(--t1);margin-bottom:16px;opacity:.4}
+    .psych-cred-block p{font-size:15px;font-weight:300;line-height:1.75;color:var(--w7)}
+    .psych-live-callout{margin-top:56px;padding:36px 40px;border:1px solid rgba(121,197,199,.2);border-radius:var(--rlg);background:rgba(121,197,199,.04);text-align:left}
+    .psych-live-label{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+    .psych-live-dot{width:8px;height:8px;border-radius:50%;background:var(--t3);box-shadow:0 0 8px rgba(0,167,157,.6)}
+    .psych-live-callout h3{font-family:var(--fd);font-size:28px;font-weight:300;color:white;margin-bottom:12px}
+    .psych-live-callout p{font-size:15px;font-weight:300;line-height:1.75;color:var(--w7)}
 
-    /* SCROLL REVEAL */
+    .psych-obj-stack{display:flex;flex-direction:column;gap:40px;margin-top:52px;max-width:900px;margin-left:auto;margin-right:auto;text-align:left}
+    .psych-obj-label{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);margin-bottom:8px}
+    .psych-obj-label--answer{color:var(--t2);margin-top:16px}
+    .psych-obj-q{font-family:var(--fd);font-size:22px;font-weight:400;font-style:italic;color:var(--td);line-height:1.35}
+    .psych-obj-a{font-size:15px;font-weight:300;line-height:1.75;color:var(--tm)}
+
+    .psych-book-wrap{max-width:600px;margin:0 auto}
+    .form-card{background:var(--d7);border:1px solid rgba(255,255,255,.07);border-radius:var(--rlg);padding:40px;text-align:left;margin-top:40px}
+    .f-field{margin-bottom:14px}
+    .f-field label{display:block;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--w7);margin-bottom:6px}
+    .f-field input{width:100%;padding:11px 15px;font-size:14px;font-family:var(--fb);font-weight:300;color:white;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--rsm);outline:none;transition:border-color .2s,background .2s}
+    .f-field input:focus{border-color:var(--t1);background:rgba(121,197,199,.05)}
+    .f-field input::placeholder{color:var(--w4)}
+    .btn-form{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:14px;border-radius:50px;margin-top:8px;transition:opacity .2s;border:none;cursor:pointer;font-family:var(--fb)}
+    .btn-form:hover{opacity:.88}
+    .form-note{font-size:11px;color:var(--w4);text-align:center;margin-top:12px;line-height:1.5}
+
+    footer{background:var(--d9);border-top:1px solid rgba(255,255,255,.05);padding:44px 48px 28px}
+    .footer-inner{max-width:1200px;margin:0 auto}
+    .footer-tag{font-family:var(--fd);font-size:21px;font-weight:300;font-style:italic;color:var(--w4);text-align:center;margin-bottom:28px}
+    .footer-tag em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .footer-nav{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+    .footer-nav a{font-size:12px;font-weight:300;color:var(--w4);transition:color .2s}
+    .footer-nav a:hover{color:var(--t1)}
+    .footer-nav span{color:var(--w2);font-size:11px}
+    .footer-copy{font-size:11px;font-weight:300;color:var(--w4);text-align:center;letter-spacing:.04em}
+
     .rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
     .rv.vis{opacity:1;transform:translateY(0)}
-    .rv-d1{transition-delay:.1s} .rv-d2{transition-delay:.2s}
+    .rv-d1{transition-delay:.1s} .rv-d2{transition-delay:.2s} .rv-d3{transition-delay:.3s}
 
-    /* RESPONSIVE */
-    @media(max-width:1024px){
+    @media(max-width:768px){
       .hero{min-height:auto;padding:112px 32px 56px}
       .hero-layout{grid-template-columns:1fr;gap:40px}
       .hero-h1{font-size:52px}
-      .def-inner,.pain-intro,.svc-header,.conv-grid,.founder-grid{grid-template-columns:1fr;gap:32px}
-      .stats-grid,.icp-grid,.svc-overview,.price-grid{grid-template-columns:1fr}
-      .pain-grid{grid-template-columns:repeat(2,1fr)}
-      .q-grid{grid-template-columns:1fr}
-      .q-card:hover .q-question{opacity:1;transform:none}
-      .q-answer{position:static;opacity:0;max-height:0;overflow:hidden;padding:0;margin-top:16px;transform:none;transition:max-height .3s,opacity .3s}
-      .q-card.tapped .q-answer{opacity:1;max-height:300px}
-      .steps{grid-template-columns:repeat(2,1fr)}
-      .step:nth-child(2){border-right:none}
-      .step:nth-child(1),.step:nth-child(2){border-bottom:1px solid var(--lbr)}
-      .guar-list{grid-template-columns:1fr}
-      .obj-row{grid-template-columns:1fr}
-      .obj-q{border-right:none;border-bottom:1px solid var(--lbr)}
-      .cta-card{padding:48px 32px}
-      .founder-img-wrap{max-width:320px}
+      .hero-visual img{width:85%;margin:0 auto}
+      .psych-problem,.sl,.sd{padding:64px 20px}
+      .psych-pain-grid{grid-template-columns:1fr}
+      .psych-who-grid{grid-template-columns:1fr;gap:40px}
+      .psych-cred-grid{grid-template-columns:1fr}
+      .test-grid{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto}
+      .sh2-xl{font-size:36px}
+      .sh2-lg{font-size:28px}
+      footer{padding:36px 20px 24px}
     }
     @media(max-width:640px){
       .hero{padding:96px 20px 44px}
       .hero-h1{font-size:38px}
-      .sl,.sd,.stats-band,.q-band,.def-band,.fw-band{padding-left:20px;padding-right:20px}
-      .sl,.sd{padding-top:64px;padding-bottom:64px}
-      .stats-band,.q-band{padding-top:64px;padding-bottom:64px}
-      .pain-grid,.steps{grid-template-columns:1fr}
-      .step{border-right:none!important;border-bottom:1px solid var(--lbr)}
-      .step:last-child{border-bottom:none}
-      .sh2-xl{font-size:36px}
-      .sh2-lg{font-size:28px}
-      .cta-card{padding:36px 22px}
-      .cta-card h2{font-size:30px}
     }
   </style>
 </head>
@@ -353,17 +185,15 @@
 
 <div id="nav-placeholder"></div>
 
-<!-- HERO -->
-<section class="hero" id="top">
+<!-- SECTION 1 — HERO -->
+<section class="hero" id="hero">
   <div class="hero-layout">
     <div class="hero-left">
-      <p class="hero-eyebrow">Patient Access Optimization System&trade;</p>
-      <h1 class="hero-h1">Help the right patients find you, reach you, and <span class="hero-h1-accent">follow through.</span></h1>
-      <p class="hero-body">We help growth-oriented psychiatry practices in the NYC metro area reduce friction throughout the patient access journey&mdash;so your practice can grow without increasing administrative burden.</p>
-      <p class="hero-secondary">Combining behavioral science with human-centered AI. Built for private psychiatry practices with 1&ndash;10 providers.</p>
-      <p class="hero-clarity-strip">Discoverability &middot; Responsiveness &middot; Continuous Optimization</p>
-      <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="hero-primary-cta" id="audit">Show Me The System</a>
-      <p class="hero-micro">See how the Patient Access Optimization System works for psychiatry practices like yours.</p>
+      <p class="hero-eyebrow">For Psychiatry Private Practices &middot; NYC Metro Area</p>
+      <h1 class="hero-h1">Help the right patients<br>find you, reach you,<br>and <span class="hero-h1-accent">follow through.</span></h1>
+      <p class="hero-body">Prospective patients are reaching out to your practice after hours, hitting voicemail, and booking somewhere else. We fix that &mdash; without adding to your administrative burden.</p>
+      <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="hero-primary-cta">Book a Free Discovery Call</a>
+      <p class="hero-micro">30 minutes. No pitch deck. Just a clear look at where your practice is losing patient access opportunities and what to do about it.</p>
     </div>
     <div class="hero-visual">
       <img src="/APAI-wheel-no-footer.png" alt="Patient Access Optimization System — discoverability, responsiveness, behavioral access strategy, and continuous optimization" width="1040" height="1040" />
@@ -371,9 +201,9 @@
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="mq-strip">
-  <div class="mq-strip-label">Active psychiatry practice implementation</div>
+<!-- SECTION 2 — SOCIAL PROOF STRIP -->
+<div class="mq-strip" id="proof-strip">
+  <div class="mq-strip-label">Currently Supporting</div>
   <div class="mq-viewport">
     <div class="mq-track">
       <div class="mq-set">
@@ -385,526 +215,216 @@
           </div>
         </div>
         <div class="mq-logo-item mq-logo-item--wide">
-          <div class="mq-text-logo">
-            <span class="mq-text-logo-name">ActionPotential.AI</span>
-            <div class="mq-text-logo-divider"></div>
-            <span class="mq-text-logo-sub">Patient Access Optimization</span>
+          <div class="mq-imi-lockup" aria-label="Integrated Mindfulness Institute">
+            <div class="mq-logo-imi"><img src="/IMITransparentLogo.jpeg" alt="" /></div>
+            <span class="mq-imi-name">Integrated Mindfulness Institute</span>
           </div>
         </div>
-        <div class="mq-logo-item"><img src="/IMITransparentLogo.jpeg" alt="Integrated Mindfulness Institute" /></div>
-        <div class="mq-logo-item"><img src="/imi-white.png" alt="Integrated Mindfulness Institute" /></div>
+        <div class="mq-logo-item mq-logo-item--wide">
+          <span class="mq-live-badge"><span class="mq-live-dot" aria-hidden="true"></span> Active Psychiatry Practice</span>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- STATS -->
-<div class="stats-band" id="challenge">
-  <div class="stats-inner">
-    <div class="eyebrow stats-eyebrow rv"><div class="eyebrow-line" style="background:var(--t1)"></div><span style="color:var(--t1)">The access challenge</span></div>
-    <div class="stats-grid rv">
-      <div class="stat-card">
-        <div class="stat-num">$3K&ndash;15K+</div>
-        <div class="stat-label">Estimated value per patient relationship in private psychiatry.</div>
-        <div class="stat-sub">Patient access cannot be left to chance at this revenue level.</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">78%</div>
-        <div class="stat-label">Of leads go with the first practice to respond.</div>
-        <div class="stat-sub">Phone tag and voicemail piles cost more than most practices realize.</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">5<span style="font-size:32px">min</span></div>
-        <div class="stat-label">Response window before conversion probability drops sharply.</div>
-        <div class="stat-sub">After-hours inquiries that sit until morning often never convert.</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">50%+</div>
-        <div class="stat-label">Of people now use AI to find local care recommendations.</div>
-        <div class="stat-sub">A thin Google profile means competitors get found instead of you.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- WHAT IT IS -->
-<div class="def-band" id="promise">
-  <div class="def-inner">
-    <div class="def-left rv">
-      <h2>One system. One name.<br><em>Everything anchors to it.</em></h2>
-      <p>The Patient Access Optimization System&trade; is not &ldquo;our platform&rdquo; or &ldquo;our agency.&rdquo; It is the name used on every call, in every ad, on every landing page, and in every follow-up. The name reinforces the outcome we deliver and moves the conversation away from marketing tactics and generic software features.</p>
-    </div>
-    <div class="def-right rv rv-d1">
-      <div class="def-card">
-        <div class="def-card-lbl">The Promise</div>
-        <p>The right patients should be able to find your practice, reach your practice, and follow through without increasing administrative burden for your team.</p>
-      </div>
-      <div class="def-card">
-        <div class="def-card-lbl">Behavioral Science + AI</div>
-        <p>Every workflow is designed around how psychiatric patients actually search, hesitate, and take action&mdash;not generic marketing frameworks borrowed from dental practices or med spas.</p>
-      </div>
-      <div class="def-card">
-        <div class="def-card-lbl">Done For You</div>
-        <p>Structured, guided implementation. You participate in onboarding and approvals. We handle the build, configuration, testing, and ongoing optimization.</p>
-      </div>
-    </div>
-  </div>
-  <div class="def-callout rv">
-    <p>&ldquo;We help the right patients find you, reach you, and follow through so your practice can grow without increasing administrative burden.&rdquo;</p>
-  </div>
-</div>
-
-<!-- WHO IT'S FOR -->
-<section class="sl" id="who-its-for">
+<!-- SECTION 3 — PROBLEM -->
+<section class="psych-problem sec-center" id="problem">
   <div class="si">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>Ideal client profile</div>
-    <h2 class="sh2 sh2-lg rv">Built for growth-oriented<br>psychiatry <em>private practices.</em></h2>
-    <p class="ssub rv">Practices in the NYC metro area that want sustainable growth without increasing administrative burden&mdash;and that understand the difference between aggressive marketing and thoughtfully optimized patient access.</p>
-    <div class="icp-grid">
-      <div class="icp-card rv">
-        <h3>Geography &amp; niches</h3>
-        <ul>
-          <li>Manhattan, Westchester, Fairfield County, Northern NJ, Long Island</li>
-          <li>Child &amp; Adolescent Psychiatry</li>
-          <li>General Adult &amp; Integrative Psychiatry</li>
-          <li>Concierge &amp; Interventional Psychiatry (TMS / Ketamine)</li>
-          <li>Small group practices (1&ndash;10 providers)</li>
-        </ul>
+    <h2 class="sh2 sh2-lg rv">What Your Practice Is Living With Right Now</h2>
+    <p class="ssub ssub-italic rv" style="color:var(--w4);margin:0 auto 0">These aren&rsquo;t marketing problems. They&rsquo;re patient access friction problems &mdash; and most practices have normalized them.</p>
+    <div class="psych-pain-grid rv">
+      <div class="psych-pain-card">
+        <h3>The voicemail pile never goes away.</h3>
+        <p>Every morning starts with a backlog of missed inquiries to return before the clinical day begins.</p>
       </div>
-      <div class="icp-card rv rv-d1">
-        <h3>Qualifying signals</h3>
-        <ul>
-          <li>Strong clinical reputation with inquiry bottlenecks</li>
-          <li>Weak Google or AI-search visibility</li>
-          <li>Slow or inconsistent response to new patient inquiries</li>
-          <li>Front desk overload without budget for additional staff</li>
-          <li>Growth intent: more of the right patients, not just more leads</li>
-        </ul>
+      <div class="psych-pain-card">
+        <h3>Phone tag is routine.</h3>
+        <p>A patient reaches out Monday. Someone calls back Wednesday. They&rsquo;ve already booked elsewhere.</p>
       </div>
-      <div class="icp-card rv rv-d2">
-        <h3>Who this is not for</h3>
-        <ul>
-          <li>Practices below the revenue threshold</li>
-          <li>No established practice or patient base</li>
-          <li>DIY-education-only buyers</li>
-          <li>Unwilling to adopt required platforms</li>
-          <li>Volume marketing without concern for patient fit</li>
-        </ul>
+      <div class="psych-pain-card">
+        <h3>After-hours inquiries go dark.</h3>
+        <p>The practice closes at 5pm. Patient need does not. Inquiries sit unanswered until the next business day.</p>
       </div>
+      <div class="psych-pain-card">
+        <h3>The right patients can&rsquo;t find you.</h3>
+        <p>A thin Google profile. A website that doesn&rsquo;t build trust. AI-powered search returning your competitors.</p>
+      </div>
+      <div class="psych-pain-card">
+        <h3>The website doesn&rsquo;t move people forward.</h3>
+        <p>It lists services and credentials. It doesn&rsquo;t answer questions or guide a prospective patient toward the next step.</p>
+      </div>
+      <div class="psych-pain-card">
+        <h3>Growth adds complexity instead of leverage.</h3>
+        <p>More patients means more intake, more coordination, more administrative burden. Scaling feels like adding work.</p>
+      </div>
+    </div>
+    <div class="psych-pullquote rv">
+      <p>&ldquo;Patients navigating fear, stigma, or crisis call and get voicemail. That friction doesn&rsquo;t just cost revenue. It can delay access to care.&rdquo;</p>
     </div>
   </div>
 </section>
 
-<!-- PAIN POINTS -->
-<section class="sd" id="friction">
+<!-- SECTION 4 — THE SYSTEM -->
+<section class="sd sec-center" id="the-system">
   <div class="si">
-    <div class="pain-intro">
-      <div class="rv">
-        <div class="eyebrow"><div class="eyebrow-line"></div>Their world right now</div>
-        <h2 class="sh2 sh2-xl">These aren&rsquo;t marketing problems.<br>They&rsquo;re patient access <em>friction</em> problems.</h2>
-      </div>
-      <div class="rv rv-d1">
-        <p class="ssub">Every barrier between a prospective patient&rsquo;s decision to seek help and receiving care creates friction. Most practices have normalized it because they don&rsquo;t yet realize how much of it can be removed.</p>
-      </div>
-    </div>
-    <div class="pain-grid rv">
-      <div class="pain-card"><h3>&ldquo;The voicemail pile never goes away.&rdquo;</h3><div class="pain-hover">Every morning starts with a backlog of missed inquiries to return before the clinical day begins.</div></div>
-      <div class="pain-card"><h3>&ldquo;Phone tag is routine.&rdquo;</h3><div class="pain-hover">A patient reaches out Monday. Someone calls back Wednesday. They&rsquo;ve already booked elsewhere.</div></div>
-      <div class="pain-card"><h3>&ldquo;After-hours inquiries go dark.&rdquo;</h3><div class="pain-hover">The practice closes at 5pm. Patient need does not. Inquiries sit unanswered until the next business day.</div></div>
-      <div class="pain-card"><h3>&ldquo;The right patients can&rsquo;t find us.&rdquo;</h3><div class="pain-hover">A thin Google profile. A website that doesn&rsquo;t build trust. AI search returning competitors.</div></div>
-      <div class="pain-card"><h3>&ldquo;Our website is static and clinical.&rdquo;</h3><div class="pain-hover">It lists services and credentials but doesn&rsquo;t reduce stigma-related hesitation or guide patients toward the next step.</div></div>
-      <div class="pain-card"><h3>&ldquo;Growth creates more complexity.&rdquo;</h3><div class="pain-hover">More patients means more intake, coordination, and admin. Scaling feels like adding burden rather than creating leverage.</div></div>
-      <div class="pain-card"><h3>&ldquo;Marketing ethics make me hesitate.&rdquo;</h3><div class="pain-hover">Most marketing options feel like they require compromising patient dignity.</div></div>
-      <div class="pain-card"><h3>&ldquo;We&rsquo;re the integration layer.&rdquo;</h3><div class="pain-hover">Scheduling. EHR. Phone. Email. Reviews. None of it talks to each other. You connect it all manually.</div></div>
-      <div class="pain-card"><h3>&ldquo;Patients in crisis get voicemail.&rdquo;</h3><div class="pain-hover">That friction doesn&rsquo;t just cost revenue. It can delay access to care.</div></div>
-    </div>
-    <div class="pain-callout rv" style="background:rgba(121,197,199,.06);border-color:rgba(121,197,199,.15);border-left-color:var(--t1)">
-      <p><strong>The pain that lands differently with psychiatrists:</strong> Patients navigating fear, stigma, or crisis call and get voicemail. You became a psychiatrist to help people. The realization that small barriers can prevent the right patients from getting help often resonates more deeply than any discussion about marketing or growth.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SYSTEM OVERVIEW -->
-<section class="sl" id="how-it-works">
-  <div class="si">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>What they get</div>
-    <h2 class="sh2 sh2-lg rv">Three components. <em>One connected system.</em></h2>
-    <p class="ssub rv">All three operate together under the Patient Access Optimization System&trade;. Each reduces friction throughout the patient access journey.</p>
-    <div class="system-visual rv">
+    <h2 class="sh2 sh2-lg rv">The Patient Access Optimization System&trade;</h2>
+    <p class="ssub rv">One connected system designed to help the right patients find your practice, reach your practice, and follow through &mdash; without increasing administrative burden.</p>
+    <div class="psych-system-img rv">
       <img src="/APAI-cards-no-footer.png" alt="Patient Access Optimization System: Discoverability, Responsiveness, Behavioral Access Strategy, Continuous Optimization" width="2400" height="1200" loading="lazy" />
     </div>
-    <div class="svc-overview rv">
-      <div class="svc-block" onclick="document.getElementById('svc-discover').scrollIntoView({behavior:'smooth'})">
-        <div class="svc-block-num">01 &middot; Fill the bucket</div>
-        <h3>Discoverability</h3>
-        <p>Help the right patients find and trust the practice before they ever pick up the phone.</p>
-        <span class="svc-block-cta">See what&rsquo;s included &#8595;</span>
-      </div>
-      <div class="svc-block" onclick="document.getElementById('svc-respond').scrollIntoView({behavior:'smooth'})">
-        <div class="svc-block-num">02 &middot; Plug the holes</div>
-        <h3>Responsiveness</h3>
-        <p>Make sure every inquiry gets a timely, patient-centered response across every channel.</p>
-        <span class="svc-block-cta">See what&rsquo;s included &#8595;</span>
-      </div>
-      <div class="svc-block" onclick="document.getElementById('svc-optimize').scrollIntoView({behavior:'smooth'})">
-        <div class="svc-block-num">03 &middot; Make it sticky</div>
-        <h3>Behavioral Access Strategy</h3>
-        <p>Continuous optimization using behavioral science&mdash;not generic marketing tactics.</p>
-        <span class="svc-block-cta">See what&rsquo;s included &#8595;</span>
-      </div>
-    </div>
+    <p class="psych-system-body rv">Every component &mdash; discoverability, responsiveness, behavioral access strategy, and continuous optimization &mdash; addresses a specific barrier between a prospective patient and care.</p>
+    <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-primary rv">Book a Free Discovery Call</a>
   </div>
 </section>
 
-<!-- COMPONENT 1 -->
-<section class="sd" id="svc-discover">
+<!-- SECTION 5 — VIDEO TESTIMONIALS -->
+<section class="sl sec-center" id="testimonials">
   <div class="si">
-    <div class="svc-header">
-      <div class="rv">
-        <span class="svc-badge badge-grad">Fill the Bucket</span>
-        <div class="svc-title">Discoverability</div>
-        <div class="svc-sub">Help the right patients find and trust the practice.</div>
-        <p class="svc-body">Patient access begins before a phone call. It begins when a prospective patient searches for help and either finds you or doesn&rsquo;t. Most psychiatry practices are difficult to find on Google, Google Maps, or AI-powered search. The Discoverability component uses HIPAA-conscious, stigma-aware strategies that respect how psychiatric patients actually search for care.</p>
-        <div class="svc-strip">
-          <span class="svc-strip-item">GBP optimization</span>
-          <span class="svc-strip-item">Local SEO</span>
-          <span class="svc-strip-item">AI-search visibility (GEO)</span>
-          <span class="svc-strip-item">Weekly reporting</span>
-        </div>
-      </div>
-      <div class="drawers rv rv-d1">
-        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Google Business Profile optimization</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Complete, optimized, and actively managed GBP that builds trust and improves local visibility for psychiatric care searches.</p></div></div>
-        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Local SEO &amp; AI-search visibility (GEO)</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Optimized to appear in Google, Google Maps, ChatGPT, Perplexity, and AI Overviews when prospective patients search for psychiatric care in your area.</p></div></div>
-        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Authority-focused website optimization</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Technical SEO, conversion friction reduction, and stigma-aware content that answers key questions and guides patients toward the next step.</p></div></div>
-        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Optional Google Ads management</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Available as part of Strategic Growth Expansion for practices ready to add paid channels alongside organic discoverability.</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMPONENT 2 -->
-<section class="sl" id="svc-respond">
-  <div class="si">
-    <div class="svc-header">
-      <div class="rv">
-        <span class="svc-badge badge-blue">Plug the Holes</span>
-        <div class="svc-title">Responsiveness</div>
-        <div class="svc-sub">Make sure every inquiry gets a timely, patient-centered response.</div>
-        <p class="svc-body">Discoverability without responsiveness is a leaky bucket. When a prospective patient reaches out, they are often doing something that required significant courage. Every unanswered call, delayed response, or confusing next step increases the likelihood they will not follow through. The clinician delivers the care. The system makes care easier to access.</p>
-        <div class="svc-strip">
-          <span class="svc-strip-item">24/7 AI voice receptionist</span>
-          <span class="svc-strip-item">After-hours coverage</span>
-          <span class="svc-strip-item">HIPAA-compliant CRM</span>
-          <span class="svc-strip-item">White-glove onboarding</span>
-        </div>
-      </div>
-      <div class="drawers rv rv-d1">
-        <div class="drw drw-light"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">24/7 AI voice receptionist</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Answers after-hours inquiries, handles common questions, schedules appointments, and escalates emergencies&mdash;without providing clinical advice, diagnosis, or treatment.</p></div></div>
-        <div class="drw drw-light"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Website chat &amp; voice assistants</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Conversational AI on your website that helps anxious or uncertain prospective patients ask questions and take the next step in a stigma-aware, patient-centered way.</p></div></div>
-        <div class="drw drw-light"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Missed-call recovery &amp; multi-channel inbox</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>SMS text-back, Facebook, Instagram, WhatsApp, and a unified communication inbox so no inquiry falls through the cracks.</p></div></div>
-        <div class="drw drw-light"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Booking, reminders &amp; reputation</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Appointment booking workflows, no-show reduction, review management, and emergency escalation workflows configured for your practice.</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMPONENT 3 -->
-<section class="sd" id="svc-optimize">
-  <div class="si">
-    <div class="svc-header">
-      <div class="rv">
-        <span class="svc-badge badge-teal">Make It Sticky</span>
-        <div class="svc-title">Behavioral Access Strategy</div>
-        <div class="svc-sub">Continuous optimization month after month.</div>
-        <p class="svc-body">This is what separates the system from a collection of tools. Each monthly strategy session identifies and reduces friction throughout the patient access journey using principles from behavioral science and patient-centered communication. You leave each session with a prioritized action plan tied to measurable outcomes&mdash;not a list of things we could do, but a list of what we are doing next.</p>
-        <div class="svc-strip">
-          <span class="svc-strip-item">Monthly strategy reviews</span>
-          <span class="svc-strip-item">Stigma-aware messaging</span>
-          <span class="svc-strip-item">Intake bottleneck analysis</span>
-          <span class="svc-strip-item">Ongoing prioritization</span>
-        </div>
-      </div>
-      <div class="drawers rv rv-d1">
-        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Inquiry responsiveness review</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Monthly analysis of how quickly and effectively the practice responds to new patient inquiries across all channels.</p></div></div>
-        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Website friction analysis</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Specific pages, specific fixes. Identifying where prospective patients hesitate, get confused, or abandon the journey.</p></div></div>
-        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Stigma-aware messaging optimization</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Messaging that reduces hesitation related to fear, stigma, and uncertainty&mdash;grounded in health communication research, not generic ad copy.</p></div></div>
-        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Reporting &amp; performance analysis</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Discoverability performance, patient journey analysis, no-show reduction strategy, and operational workflow optimization.</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- QUESTIONS -->
-<div class="q-band">
-  <div class="q-inner">
-    <div class="eyebrow rv"><div class="eyebrow-line" style="background:var(--t1)"></div><span style="color:var(--t1)">Three questions worth sitting with</span></div>
-    <div class="q-grid rv">
-      <div class="q-card">
-        <div class="q-num">After hours</div>
-        <div class="q-question">&ldquo;NYC psychiatry practices: prospective patients are reaching out after hours. What happens next?&rdquo;</div>
-        <div class="q-answer">
-          <div class="q-service">Responsiveness</div>
-          <div class="q-solve">The AI voice receptionist and after-hours workflows ensure every inquiry gets a timely, patient-centered response&mdash;not voicemail.</div>
-        </div>
-      </div>
-      <div class="q-card">
-        <div class="q-num">Discoverability</div>
-        <div class="q-question">&ldquo;When someone finally decides to seek psychiatric care, is your practice the one they find&mdash;or your competitor?&rdquo;</div>
-        <div class="q-answer">
-          <div class="q-service">Discoverability</div>
-          <div class="q-solve">GBP optimization, local SEO, and AI-search visibility put you where prospective patients are actually searching.</div>
-        </div>
-      </div>
-      <div class="q-card">
-        <div class="q-num">Follow-through</div>
-        <div class="q-question">&ldquo;How many prospective patients reached out with courage&mdash;and never followed through because of friction?&rdquo;</div>
-        <div class="q-answer">
-          <div class="q-service">Behavioral Access Strategy</div>
-          <div class="q-solve">Monthly optimization identifies and removes the specific barriers preventing the right patients from becoming patients.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FLYWHEEL -->
-<div class="fw-band">
-  <div class="si rv" style="text-align:center">
-    <div class="eyebrow" style="justify-content:center;margin-bottom:16px"><div class="eyebrow-line" style="background:var(--t1)"></div><span style="color:var(--t1)">The patient access journey compounds</span></div>
-    <div class="fw-headline">Find. Reach. <em>Follow through.</em></div>
-    <p class="fw-body">Every part of the system feeds the next. Better discoverability brings more of the right patients. Responsiveness converts more inquiries. Behavioral optimization reduces friction month after month. Reviews and reputation feed visibility. The system gets stronger over time.</p>
-    <div class="fw-nodes">
-      <div class="fw-node"><span class="fw-lbl">Discoverability</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Inquiry</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Response</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Booking</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Intake</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Care</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Reviews</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Reputation</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">More of the right patients</span><span class="fw-arr">&#8635;</span></div>
-    </div>
-  </div>
-</div>
-
-<!-- HOW WE WORK -->
-<section class="sl" id="implementation">
-  <div class="si">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>How we work</div>
-    <h2 class="sh2 sh2-lg rv">We don&rsquo;t hand you software.<br>We <em>implement the system</em> for you.</h2>
-    <p class="ssub rv">The goal is not to create more work for the practice. The goal is to reduce administrative burden, improve patient access, and make growth easier to manage.</p>
-    <div class="steps rv">
-      <div class="step"><div class="step-num">Week 1</div><h3>Onboarding</h3><p>Access, content, approvals, and workflow discovery. We map your current patient access journey and identify friction points.</p></div>
-      <div class="step"><div class="step-num">Weeks 2&ndash;3</div><h3>Build &amp; configure</h3><p>AI voice receptionist, website assistants, CRM, discoverability systems, and communication workflows configured for your practice.</p></div>
-      <div class="step"><div class="step-num">Week 4</div><h3>Launch &amp; test</h3><p>Full system operational. Team training, workflow testing, and emergency escalation verification.</p></div>
-      <div class="step"><div class="step-num">Ongoing</div><h3>Optimize</h3><p>Monthly strategy reviews, reporting, and continuous improvement. You never manage this alone.</p></div>
-    </div>
-    <div class="how-note rv">
-      <p>Most marketing agencies generate leads and walk away. Most AI companies hand you a login and disappear. <strong>We guarantee full implementation within 30 days</strong> and continue working at no additional cost until every agreed-upon component is operational.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="sd" id="pricing">
-  <div class="si">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>Offer architecture</div>
-    <h2 class="sh2 sh2-lg rv">Three tiers. <em>Lead with the core.</em></h2>
-    <p class="ssub rv">Level 2 is the primary pitch for growth-oriented practices. Level 1 is the downsell for operational relief. Level 3 is the upsell for expansion-stage or multi-provider practices.</p>
-    <div class="price-grid">
-      <div class="price-card price-card--down rv">
-        <div class="price-badge">Level 1 &middot; Downsell</div>
-        <h3>Patient Access Essentials&trade;</h3>
-        <p class="price-desc">For practices focused primarily on operational relief, responsiveness, and patient access&mdash;not yet focused on growth or discoverability initiatives.</p>
-        <div class="price-amt">$497&ndash;$997</div>
-        <div class="price-period">/month &middot; Setup $1,500&ndash;$3,500</div>
-        <ul class="price-list">
-          <li>AI Voice Receptionist</li>
-          <li>Website Chat &amp; Voice Assistants</li>
-          <li>Missed-Call Recovery &amp; After-Hours Coverage</li>
-          <li>Appointment Booking Workflows</li>
-          <li>HIPAA-Compliant CRM &amp; Unified Inbox</li>
-          <li>Basic Reporting</li>
-        </ul>
-      </div>
-      <div class="price-card price-card--core rv rv-d1">
-        <span class="price-core-label">Lead Pitch</span>
-        <div class="price-badge">Level 2 &middot; Core Offer</div>
-        <h3>Patient Access Optimization System&trade;</h3>
-        <p class="price-desc">Full DFY implementation of discoverability, responsiveness, behavioral access strategy, automation, and ongoing optimization.</p>
-        <div class="price-amt">$1,500&ndash;$3,000</div>
-        <div class="price-period">/month &middot; Setup $3,000&ndash;$6,000</div>
-        <ul class="price-list">
-          <li>Everything in Essentials, plus:</li>
-          <li>Google Business Profile &amp; Local SEO</li>
-          <li>AI-Search Visibility (GEO)</li>
-          <li>Website &amp; Technical SEO Optimization</li>
-          <li>Behavioral Access Strategy (monthly)</li>
-          <li>Stigma-aware messaging optimization</li>
-          <li>Weekly reporting &amp; strategy reviews</li>
-        </ul>
-      </div>
-      <div class="price-card price-card--up rv rv-d2">
-        <div class="price-badge">Level 3 &middot; Upsell</div>
-        <h3>Strategic Growth Expansion</h3>
-        <p class="price-desc">For expansion-stage or multi-provider practices adding providers, locations, service lines, or patient volume.</p>
-        <div class="price-amt">$3,000&ndash;$5,000+</div>
-        <div class="price-period">/month &middot; Setup $5,000&ndash;$8,000</div>
-        <ul class="price-list">
-          <li>Everything in Core, plus:</li>
-          <li>Google Ads management</li>
-          <li>Multi-location SEO &amp; GBP</li>
-          <li>Additional AI agents &amp; workflows</li>
-          <li>Advanced reporting &amp; analytics</li>
-          <li>Provider-specific visibility campaigns</li>
-          <li>Expansion planning &amp; support</li>
-        </ul>
-      </div>
-    </div>
-    <div class="price-discount rv">
-      <p><strong>Commit to 6 months, and we waive the setup fee entirely.</strong> Month-to-month is available after onboarding. This is not a lock-in&mdash;it is a commitment to implementation, optimization, and measurable improvement.</p>
-    </div>
-  </div>
-</section>
-
-<!-- OBJECTIONS -->
-<section class="sl" id="objections">
-  <div class="si">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>Skeptical by training</div>
-    <h2 class="sh2 sh2-lg rv">Top objections&mdash;<em>and how we answer them.</em></h2>
-    <p class="ssub rv">Skeptical clinicians ask better questions and make better long-term clients. Here is what we hear most often.</p>
-    <div class="obj-grid rv">
-      <div class="obj-row">
-        <div class="obj-q"><h3>&ldquo;I&rsquo;m worried about AI in a mental health context. My patients are sensitive.&rdquo;</h3></div>
-        <div class="obj-a"><p>The system supports patient access, not patient care. It answers questions, handles after-hours inquiries, recovers missed calls, and schedules appointments. It does not provide therapy, clinical advice, diagnosis, or treatment. The clinician remains responsible for every aspect of care. The technology removes barriers that prevent patients from reaching the clinician in the first place.</p></div>
-      </div>
-      <div class="obj-row">
-        <div class="obj-q"><h3>&ldquo;I&rsquo;ve worked with agencies before, and it didn&rsquo;t work.&rdquo;</h3></div>
-        <div class="obj-a"><p>Most agencies approach psychiatry as a marketing problem. We built the Patient Access Optimization System around a different question: what prevents the right patients from finding the practice, reaching the practice, and following through with care? My background includes neuropsychological testing at Cleveland Clinic, four years as a psychiatric case manager, digital health operations, and behavior change leadership at Noom. This is not a psychiatry niche chosen for convenience.</p></div>
-      </div>
-      <div class="obj-row">
-        <div class="obj-q"><h3>&ldquo;I don&rsquo;t have bandwidth to implement something new.&rdquo;</h3></div>
-        <div class="obj-a"><p>The goal is to reduce administrative burden, not add to it. Implementation is structured, guided, and largely done-for-you. The practice participates in onboarding, provides required access and approvals, and we handle the build, configuration, testing, and ongoing optimization.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GUARANTEE -->
-<section class="sd" id="results">
-  <div class="si">
-    <div class="rv">
-      <div class="eyebrow"><div class="eyebrow-line"></div>Implementation guarantee</div>
-      <h2 class="sh2 sh2-lg">Named. Specific. <em>Within our control.</em></h2>
-      <p class="ssub">When a single patient relationship is worth $3,000&ndash;$15,000+ over its lifetime, patient access cannot be left to chance.</p>
-    </div>
-    <div class="guar-card rv rv-d1" style="background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.07)">
-      <h3 style="color:white">We guarantee full implementation within 30 days</h3>
-      <p style="color:var(--w7)">All agreed-upon Patient Access Optimization System components will be implemented, configured, and operational within 30 days of receiving the required access, content, approvals, and onboarding information. If the system is not fully operational within that timeframe, we will continue working at no additional cost until it is.</p>
-      <ul class="guar-list">
-        <li style="color:var(--w7)">Discoverability systems configured and active (SEO, GEO, GBP, website)</li>
-        <li style="color:var(--w7)">AI Voice Receptionist operational</li>
-        <li style="color:var(--w7)">Website chat and voice assistants active</li>
-        <li style="color:var(--w7)">Missed-call recovery and after-hours workflows functioning</li>
-        <li style="color:var(--w7)">Appointment booking and follow-up workflows configured</li>
-        <li style="color:var(--w7)">Unified communications inbox operational</li>
-        <li style="color:var(--w7)">Reporting and dashboard visibility established</li>
-        <li style="color:var(--w7)">HIPAA-compliant CRM configured and operational</li>
-      </ul>
-      <p class="guar-note" style="color:var(--w4)">Client requirements: timely onboarding participation, communication platform access, workflow approvals, and active system utilization.</p>
-    </div>
-  </div>
-</section>
-
-<!-- BOOKING -->
-<section class="sl" id="demo">
-  <div class="si">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>Show me the system</div>
-    <h2 class="sh2 sh2-lg rv">See how it works for<br><em>your practice.</em></h2>
-    <div class="conv-grid">
-      <div class="rv">
-        <div class="conv-vid">
-          <div class="conv-vid-lbl">Active implementation</div>
-          <div class="conv-vid-title">Patient Access Optimization System</div>
-          <p class="conv-vid-hint">Currently supporting an active psychiatry practice with AI voice receptionist, automated scheduling, FAQ automation, emergency escalation, GBP optimization, and review management.</p>
-        </div>
-      </div>
-      <div class="form-card rv rv-d1">
-        <h3>Show Me The System</h3>
-        <p>Walk through how the Patient Access Optimization System works for psychiatry practices&mdash;discoverability, responsiveness, and continuous optimization in one connected system.</p>
-        <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-form">
-          <img src="https://actionpotential.ai/CaryProfilePic.jpeg" alt="Cary" class="av" />
-          Book a walkthrough
-        </a>
-        <p class="form-note">No pitch deck. No pressure. &nbsp;&#183;&nbsp; Built for NYC metro psychiatry practices</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIAL -->
-<section class="sd" id="testimonial">
-  <div class="si">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>Live now</div>
-    <h2 class="sh2 sh2-lg rv">Active psychiatry practice<br><em>implementation.</em></h2>
-    <p class="ssub rv">This is not a theoretical framework. It is an active implementation being used in a real psychiatry practice today.</p>
-    <div class="test-grid rv">
-      <div class="test-card">
+    <h2 class="sh2 sh2-lg rv">From the Practices Running the System</h2>
+    <p class="ssub rv">Faster response. Fewer missed inquiries. Growth without the overhead.</p>
+    <div class="test-grid">
+      <div class="test-card rv">
         <div class="test-vid">
-          <span class="test-ph">Dr. Wong testimonial coming soon</span>
+          <!-- PLACEHOLDER: <img class="poster" src="./poster-mauro.jpg" /><video src="./Mauro Testimonial.MP4"></video> -->
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--ls)"><span class="test-ph">Placeholder: Mauro video</span></div>
+          <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
         </div>
-        <div class="test-info">
-          <div class="test-name">Daniel G. Wong, M.D.</div>
-          <div class="test-biz">Child Psychiatrist &middot; Private Practice</div>
+        <div class="test-info"><div class="test-name">Mauro Clerici</div><div class="test-biz">Vesping Around</div></div>
+      </div>
+      <div class="test-card rv rv-d1">
+        <div class="test-vid">
+          <!-- PLACEHOLDER: <img class="poster" src="./poster-dan.jpg" /><video src="./Dan-Testimonial.mp4"></video> -->
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--ls)"><span class="test-ph">Placeholder: Dr. Wong video</span></div>
+          <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
         </div>
+        <div class="test-info"><div class="test-name">Daniel G. Wong, M.D.</div><div class="test-biz">Child Psychiatrist &middot; Private Practice</div></div>
+      </div>
+      <div class="test-card rv rv-d2">
+        <div class="test-vid">
+          <!-- PLACEHOLDER: <img class="poster" src="./poster-jai.jpg" /><video src="./jaiTest.mp4"></video> -->
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--ls)"><span class="test-ph">Placeholder: Jai video</span></div>
+          <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="test-info"><div class="test-name">Jai McPheron</div><div class="test-biz">Integrated Mindfulness Institute</div></div>
+      </div>
+      <div class="test-card rv rv-d3">
+        <div class="test-vid">
+          <!-- PLACEHOLDER: <img class="poster" src="./poster-anna.jpg" /><video src="./Anna-Testimonial.mp4"></video> -->
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--ls)"><span class="test-ph">Placeholder: Anna Brooke video</span></div>
+          <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="test-info"><div class="test-name">Anna Brooke</div><div class="test-biz">Anna Brooke Healing</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOUNDER -->
-<section class="sd" id="our-approach" style="background:var(--d9);border-top:1px solid rgba(255,255,255,.05)">
+<!-- SECTION 6 — WHO THIS IS FOR -->
+<section class="sl sec-center" id="who">
   <div class="si">
-    <div class="founder-grid">
-      <div class="founder-img-wrap rv">
-        <img src="https://actionpotential.ai/CaryProfilePic.jpeg" alt="Cary Sears, Founder and CEO" />
+    <h2 class="sh2 sh2-lg rv">Built Specifically for Psychiatry Private Practices</h2>
+    <div class="psych-who-grid rv">
+      <div class="psych-who-col">
+        <h3>This is built for you if:</h3>
+        <ul class="psych-who-list psych-who-list--yes">
+          <li>You run a private psychiatry practice with 1&ndash;10 providers in the NYC metro area</li>
+          <li>You have an established patient base and want sustainable growth</li>
+          <li>You&rsquo;re losing inquiries to voicemail, slow response, or poor online visibility</li>
+          <li>You want systems that work without adding to your team&rsquo;s workload</li>
+          <li>You believe access to psychiatric care should be easier &mdash; without compromising clinical quality</li>
+        </ul>
       </div>
-      <div class="rv rv-d1">
-        <div class="founder-lbl">The positioning nobody else occupies</div>
-        <div class="founder-name">Cary Sears</div>
-        <div class="founder-title">Founder and CEO, ActionPotential.AI</div>
-        <p class="founder-bio">Behavioral science. Health communication. User experience design. Digital health operations. Human-centered AI. Clinical experience. <strong>Most agencies approach psychiatry using marketing frameworks borrowed from other healthcare verticals.</strong> The Patient Access Optimization System was built specifically around the realities of psychiatric care, patient decision-making, stigma reduction, and the barriers that prevent people from getting help.</p>
-        <div class="creds">
-          <span class="cred cred-deg">M.A. Experimental Psychology</span>
-          <span class="cred cred-deg">M.S. UX Design</span>
-          <span class="cred cred-org">Cleveland Clinic</span>
-          <span class="cred cred-org">Noom</span>
-          <span class="cred cred-org">Neura Health</span>
-          <span class="cred cred-org">NBC-HWC</span>
-        </div>
+      <div class="psych-who-col">
+        <h3>This isn&rsquo;t the right fit if:</h3>
+        <ul class="psych-who-list psych-who-list--no">
+          <li>You&rsquo;re just starting out with no established practice or patient base</li>
+          <li>You want high-volume lead generation without concern for patient fit</li>
+          <li>You&rsquo;re not willing to adopt the required platforms during onboarding</li>
+        </ul>
+      </div>
+    </div>
+    <p class="psych-geo-note rv">Currently serving: Manhattan &middot; Westchester County &middot; Fairfield County &middot; Northern NJ &middot; Long Island</p>
+  </div>
+</section>
+
+<!-- SECTION 7 — CREDENTIALS -->
+<section class="sd sec-center" id="credentials">
+  <div class="si">
+    <h2 class="sh2 sh2-lg rv">Why Psychiatrists Trust This Work to Us</h2>
+    <p class="ssub rv">This isn&rsquo;t a marketing agency that chose psychiatry as a niche. This is a background that belongs here.</p>
+    <div class="psych-cred-grid rv">
+      <div class="psych-cred-block">
+        <h3>Behavioral Science Foundation</h3>
+        <div class="psych-cred-div"></div>
+        <p>M.A. Experimental Psychology. M.S. User Experience Design. Graduate research in cardiovascular psychophysiology. Every workflow, message, and follow-up sequence is designed around how patients actually think, decide, and take action &mdash; not how marketers assume they do.</p>
+      </div>
+      <div class="psych-cred-block">
+        <h3>Real Clinical Experience</h3>
+        <div class="psych-cred-div"></div>
+        <p>Two years full-time at the Cleveland Clinic conducting neuropsychological testing. Four years as a psychiatric case manager. This is not an industry niche chosen for convenience. It is a professional world I have worked in and lived alongside for years.</p>
+      </div>
+      <div class="psych-cred-block">
+        <h3>Digital Health Operator</h3>
+        <div class="psych-cred-div"></div>
+        <p>Founding team member (Director-level, employee #5) at a venture-backed digital neurology practice. I understand what it takes to grow a clinical practice from the inside &mdash; including what breaks when you scale too fast without the right systems.</p>
+      </div>
+      <div class="psych-cred-block">
+        <h3>Behavior Change at Scale</h3>
+        <div class="psych-cred-div"></div>
+        <p>Senior Manager at Noom, leading 10 managers and more than 100 behavior change coaches. National Board Certified Health &amp; Wellness Coach. The patient communication strategy in this system is grounded in established behavior change principles &mdash; not chatbot templates.</p>
+      </div>
+    </div>
+    <div class="psych-live-callout rv">
+      <div class="psych-live-label"><span class="psych-live-dot" aria-hidden="true"></span> Live Now</div>
+      <h3>Currently Supporting an Active Psychiatry Practice</h3>
+      <p>AI Voice Receptionist. Automated consultation scheduling. FAQ automation. Emergency escalation workflows. Google Business Profile optimization. Review management. AI-powered website assistant. This is not a proof of concept. It is running today.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 8 — OBJECTIONS -->
+<section class="sl sec-center" id="objections">
+  <div class="si">
+    <h2 class="sh2 sh2-lg rv">Common Concerns &mdash; Answered Directly</h2>
+    <div class="psych-obj-stack rv">
+      <div class="psych-obj-block">
+        <div class="psych-obj-label">What they ask</div>
+        <p class="psych-obj-q">&ldquo;I&rsquo;m worried about AI in a mental health context. My patients are sensitive.&rdquo;</p>
+        <div class="psych-obj-label psych-obj-label--answer">The honest answer</div>
+        <p class="psych-obj-a">The system supports patient access &mdash; not patient care. It answers questions, handles after-hours inquiries, recovers missed calls, and helps prospective patients take the next step. It does not provide therapy, clinical guidance, diagnosis, or treatment. The clinician remains fully responsible for care. The technology removes the barriers that prevent patients from reaching the clinician in the first place.</p>
+      </div>
+      <div class="psych-obj-block">
+        <div class="psych-obj-label">What they ask</div>
+        <p class="psych-obj-q">&ldquo;I&rsquo;ve worked with agencies before and it didn&rsquo;t work.&rdquo;</p>
+        <div class="psych-obj-label psych-obj-label--answer">The honest answer</div>
+        <p class="psych-obj-a">Most agencies treat psychiatry as a marketing problem. We don&rsquo;t. The question we start with is: what prevents the right patients from finding your practice, reaching your practice, and following through with care? The answer is rarely just marketing. It&rsquo;s usually a combination of discoverability, responsiveness, communication design, workflow friction, and patient psychology. That&rsquo;s the system we built.</p>
+      </div>
+      <div class="psych-obj-block">
+        <div class="psych-obj-label">What they ask</div>
+        <p class="psych-obj-q">&ldquo;I don&rsquo;t have bandwidth to implement something new.&rdquo;</p>
+        <div class="psych-obj-label psych-obj-label--answer">The honest answer</div>
+        <p class="psych-obj-a">That&rsquo;s exactly who this is built for. The implementation is structured, guided, and largely done-for-you. You participate in onboarding, provide access and approvals, and we handle the build, configuration, testing, and ongoing optimization. The goal is to reduce your administrative load &mdash; not add to it.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="sl" id="cta">
+<!-- SECTION 9 — FINAL CTA + BOOKING FORM -->
+<section class="sd sec-center" id="book">
   <div class="si">
-    <div class="cta-card rv">
-      <h2>Help the right patients<br><em>find you, reach you, follow through.</em></h2>
-      <p>Without increasing administrative burden. See the Patient Access Optimization System built specifically for psychiatry practices in the NYC metro area.</p>
-      <ul class="cta-list">
-        <li>Discoverability: help the right patients find and trust your practice</li>
-        <li>Responsiveness: every inquiry gets a timely, patient-centered response</li>
-        <li>Behavioral Access Strategy: continuous optimization month after month</li>
-        <li>30-day implementation guarantee</li>
-        <li>Commit to 6 months and the setup fee is waived</li>
-      </ul>
-      <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-primary" style="display:inline-flex">
-        <img src="https://actionpotential.ai/CaryProfilePic.jpeg" alt="Cary" class="av" />
-        Show Me The System
-      </a>
-      <p class="cta-note">Month-to-month available after onboarding. No generic agency pitch. One system. One name.</p>
+    <div class="psych-book-wrap">
+      <h2 class="sh2 sh2-lg rv">See Where Your Practice Is Losing Patient Access Opportunities</h2>
+      <p class="ssub rv">In 30 minutes, we&rsquo;ll walk through your current patient access gaps &mdash; your online visibility, your after-hours response, your intake workflow &mdash; and show you exactly what to fix first.</p>
+      <form class="form-card rv" action="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" method="get">
+        <div class="f-field"><label for="full-name">Full Name</label><input type="text" id="full-name" name="full_name" placeholder="Dr. Jane Smith" required /></div>
+        <div class="f-field"><label for="practice-name">Practice Name</label><input type="text" id="practice-name" name="practice_name" placeholder="Smith Psychiatry" required /></div>
+        <div class="f-field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="jane@yourpractice.com" required /></div>
+        <div class="f-field"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required /></div>
+        <div class="f-field"><label for="website">Practice Website (optional)</label><input type="url" id="website" name="website" placeholder="https://yourpractice.com" /></div>
+        <button type="submit" class="btn-form">Book My Free Discovery Call</button>
+        <p class="form-note">Your information is HIPAA-consciously handled and will never be shared. This is a working session, not a sales call.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -913,15 +433,9 @@
 
 <script src="/includes.js"></script>
 <script>
-function tog(hd){
-  var bd=hd.parentElement.querySelector('.drw-bd');
-  var ch=hd.querySelector('.drw-chev');
-  var open=bd.classList.contains('open');
-  bd.classList.toggle('open',!open);
-  ch.classList.toggle('open',!open);
-}
-
 (function(){
+  var bookingUrl='https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm';
+
   var navWired=false;
   var navObserver;
   function wireNav(){
@@ -929,32 +443,34 @@ function tog(hd){
     var nav=document.getElementById('nav');
     if(!nav) return;
     navWired=true;
-    var map={'#how-it-works':'#how-it-works','#who-its-for':'#who-its-for','#results':'#results','#our-approach':'#our-approach','#audit':'#demo'};
+    var map={'#how-it-works':'#the-system','#who-its-for':'#who','#results':'#testimonials','#our-approach':'#credentials','#audit':'#book'};
     nav.querySelectorAll('a[href^="#"]').forEach(function(link){
       var href=link.getAttribute('href');
       if(map[href]) link.setAttribute('href',map[href]);
     });
     var btn=nav.querySelector('.nav-btn');
-    if(btn){btn.textContent='Show Me The System';btn.setAttribute('href','https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm')}
+    if(btn){btn.textContent='Book a Free Discovery Call';btn.setAttribute('href',bookingUrl)}
     var mob=nav.querySelector('.nav-mobile-cta');
-    if(mob){mob.textContent='Show Me The System';mob.setAttribute('href','https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm')}
+    if(mob){mob.textContent='Book a Free Discovery Call';mob.setAttribute('href',bookingUrl)}
     if(navObserver) navObserver.disconnect();
   }
+
+  navObserver=new MutationObserver(wireNav);
+  navObserver.observe(document.getElementById('nav-placeholder'),{childList:true});
+  setTimeout(wireNav,200);
 
   var obs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}});
   },{threshold:0.05,rootMargin:'0px 0px -20px 0px'});
   document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
 
-  document.querySelectorAll('.q-card').forEach(function(card){
-    card.addEventListener('click',function(){
-      if(window.innerWidth<=1024) card.classList.toggle('tapped');
+  document.querySelectorAll('.test-vid').forEach(function(w){
+    w.addEventListener('click',function(){
+      var v=w.querySelector('video');
+      var o=w.querySelector('.test-overlay');
+      if(v){v.play();if(o)o.style.opacity='0'}
     });
   });
-
-  navObserver=new MutationObserver(wireNav);
-  navObserver.observe(document.getElementById('nav-placeholder'),{childList:true});
-  setTimeout(wireNav,200);
 
   (function initMarquee(){
     var track=document.querySelector('.mq-track');
@@ -963,13 +479,21 @@ function tog(hd){
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var clone=set.cloneNode(true);
     clone.setAttribute('aria-hidden','true');
-  clone.querySelectorAll('img').forEach(function(img){img.alt=''});
+    clone.querySelectorAll('img').forEach(function(img){img.alt=''});
+    clone.querySelectorAll('[aria-label]').forEach(function(el){el.removeAttribute('aria-label')});
     track.appendChild(clone);
     function sync(){
       var w=set.offsetWidth;
       if(w>0) track.style.setProperty('--mq-duration',(w/40)+'s');
-    }
-    sync(); window.addEventListener('resize',sync); window.addEventListener('load',sync);
+     }
+    sync();
+    window.addEventListener('resize',sync);
+    window.addEventListener('load',sync);
+    if(document.fonts&&document.fonts.ready) document.fonts.ready.then(sync);
+    track.querySelectorAll('img').forEach(function(img){
+      if(img.complete) return;
+      img.addEventListener('load',sync,{once:true});
+    });
   })();
 })();
 </script>
