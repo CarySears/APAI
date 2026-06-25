@@ -63,6 +63,19 @@
     .hero-back:hover{color:rgba(255,255,255,.9)}
     .hero-result-heading{font-family:var(--fd);font-size:26px;font-weight:300;line-height:1.2;color:white}
     .hero-result-copy{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.76)}
+    .hero-progress{font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(121,197,199,.85)}
+    .score-overall{font-family:var(--fd);font-size:32px;font-weight:300;color:white;margin:8px 0 16px}
+    .score-overall span{color:var(--t1)}
+    .score-rows{display:flex;flex-direction:column;gap:10px;margin:16px 0}
+    .score-row{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;font-weight:300;color:rgba(255,255,255,.76)}
+    .score-row-label{flex:1}
+    .score-row-val{font-weight:500;color:white;white-space:nowrap}
+    .score-bar{flex:1;height:4px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden;max-width:100px}
+    .score-bar-fill{height:100%;background:var(--t2);border-radius:2px}
+    .hero-opportunity{margin-top:16px;padding:14px 16px;border:1px solid rgba(121,197,199,.15);border-radius:var(--rmd);background:rgba(121,197,199,.04)}
+    .hero-opportunity-label{font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--t1);margin-bottom:6px}
+    .hero-opportunity-text{font-size:13px;font-weight:300;line-height:1.6;color:rgba(255,255,255,.78)}
+    .hero-support{font-size:12px;font-weight:300;line-height:1.6;color:rgba(255,255,255,.52);text-align:center}
 
     .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:13px 26px;border-radius:50px;transition:opacity .2s,transform .2s}
     .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
@@ -173,22 +186,22 @@
 <div id="nav-placeholder"></div>
 
 <!-- 1. HERO -->
-<section class="hero">
+<section class="hero" id="hero">
   <div class="hero-layout">
     <div class="hero-left">
       <p class="hero-eyebrow">Behavioral Science + Intelligent Automation for Psychiatry Practices</p>
       <h1 class="hero-h1">Patient Access Optimization for <span class="hero-h1-accent">Private Psychiatry Practices</span></h1>
       <p class="hero-body">Helping prospective patients find you, connect with you, and book appointments while reducing the administrative burden on your practice.</p>
       <div class="hero-ctas">
-        <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="hero-primary-cta">Start Patient Access Assessment</a>
+        <a href="#hero" class="hero-primary-cta">Start Patient Access Assessment</a>
         <a href="#the-system" class="hero-secondary-cta">See How It Works <span class="arr-c">&#8595;</span></a>
       </div>
-      <p class="hero-micro">Complete the assessment in under 3 minutes. Receive a personalized Patient Access Report and recommended next steps.</p>
+      <p class="hero-micro">Complete the assessment in under 3 minutes and receive a Patient Access Snapshot before booking a review.</p>
     </div>
 
     <aside class="hero-card" aria-label="Patient Access Assessment">
       <h2 class="hero-card-title">Patient Access Assessment</h2>
-      <p class="hero-card-copy">Answer a few quick questions to identify the biggest barriers preventing prospective patients from finding your practice, connecting with you, and booking appointments.</p>
+      <p class="hero-card-copy">Answer a few quick questions to see where patient access may be breaking down in your practice.</p>
       <div id="heroDiagnosticStep" class="hero-card-step" aria-live="polite"></div>
     </aside>
   </div>
@@ -363,20 +376,12 @@
 <section class="sd-alt" id="audit">
   <div class="si">
     <div class="cta-card rv">
-      <h2>Start with a Patient Access Assessment.</h2>
-      <p>Complete the assessment in under 3 minutes. We will identify the biggest barriers preventing prospective patients from finding your practice, connecting with your office, and booking appointments.</p>
-      <ul class="cta-list">
-        <li>Your top patient access bottlenecks</li>
-        <li>Missed inquiry and responsiveness opportunities</li>
-        <li>Administrative burden reduction opportunities</li>
-        <li>Recommended automation and workflow improvements</li>
-        <li>A prioritized patient access roadmap</li>
-      </ul>
-      <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-primary" style="display:inline-flex;">
-        <img src="https://actionpotential.ai/CaryProfilePic.jpeg" alt="Cary" class="av" />
+      <h2>Get your Patient Access Snapshot.</h2>
+      <p>Answer a few quick questions to identify where prospective patients may be getting stuck before they find, contact, or book with your practice.</p>
+      <a href="#hero" class="btn-primary" style="display:inline-flex;margin-top:8px;">
         Start Patient Access Assessment
       </a>
-      <p class="cta-note">No pressure. No generic AI demo. Just a clear view of where patient access is breaking down and what to fix first.</p>
+      <p class="cta-note">You will see your results before deciding whether to book a review.</p>
     </div>
   </div>
 </section>
@@ -409,59 +414,176 @@
 
   var bookingUrl='https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm';
   var heroStepMount=document.getElementById('heroDiagnosticStep');
-  var stepOneOptions=[
-    'Not enough of the right new patient inquiries',
-    'Missed calls or slow responses',
-    'Too much administrative burden',
-    'Prospective patients do not complete the booking process',
-    'Cancellations or no-shows'
+  var assessmentQuestions=[
+    {
+      question:'How do most new patients currently find your practice?',
+      options:[
+        {text:'Referrals or word of mouth',points:15},
+        {text:'Psychology Today',points:15},
+        {text:'Google search or Google Maps',points:20},
+        {text:'Insurance directories',points:10},
+        {text:'We are not sure',points:5}
+      ]
+    },
+    {
+      question:'When a prospective patient calls during business hours, what usually happens?',
+      options:[
+        {text:'Someone usually answers',points:20},
+        {text:'We answer when we can',points:15},
+        {text:'It often goes to voicemail',points:10},
+        {text:'We rely mostly on voicemail',points:5},
+        {text:'I am not sure',points:5}
+      ]
+    },
+    {
+      question:'What happens when prospective patients reach out after hours?',
+      options:[
+        {text:'They receive a timely automated response',points:20},
+        {text:'We follow up the next business day',points:15},
+        {text:'They leave a voicemail',points:10},
+        {text:'We do not have a clear after-hours process',points:5},
+        {text:'I am not sure',points:5}
+      ]
+    },
+    {
+      question:'How easy is it for a prospective patient to move from interest to a booked appointment?',
+      options:[
+        {text:'Very easy',points:20},
+        {text:'Somewhat easy',points:15},
+        {text:'There are several steps',points:10},
+        {text:'Many people drop off before booking',points:5},
+        {text:'I am not sure',points:5}
+      ]
+    },
+    {
+      question:'How often do you review patient access performance?',
+      options:[
+        {text:'Monthly',points:20},
+        {text:'Quarterly',points:15},
+        {text:'Occasionally',points:10},
+        {text:'Rarely or never',points:5},
+        {text:'We do not track this yet',points:5}
+      ]
+    }
   ];
-  var heroDiagnosticState={step:'step1',step1Answer:null};
+  var opportunityMessages={
+    discoverability:'Prospective patients may not be finding your practice where they are already searching.',
+    responsiveness:'Prospective patients may be experiencing delays or missed responses before they can schedule.',
+    patientJourney:'Friction between first interest and booking may be causing prospective patients to drop off.',
+    continuous:'Your practice may not yet have a clear process for measuring and improving patient access over time.'
+  };
+  var heroDiagnosticState={step:0,answers:[]};
+
+  function pointsToScore(points){
+    return Math.round((points/20)*100);
+  }
+
+  function getAnswerPoints(questionIndex){
+    var answerIdx=heroDiagnosticState.answers[questionIndex];
+    if(answerIdx===undefined) return 0;
+    return assessmentQuestions[questionIndex].options[answerIdx].points;
+  }
+
+  function computeResults(){
+    var q1=getAnswerPoints(0);
+    var q2=getAnswerPoints(1);
+    var q3=getAnswerPoints(2);
+    var q4=getAnswerPoints(3);
+    var q5=getAnswerPoints(4);
+    var pillars=[
+      {key:'discoverability',label:'Discoverability',score:pointsToScore(q1)},
+      {key:'responsiveness',label:'Responsiveness',score:pointsToScore((q2+q3)/2)},
+      {key:'patientJourney',label:'Patient Journey',score:pointsToScore(q4)},
+      {key:'continuous',label:'Continuous Optimization',score:pointsToScore(q5)}
+    ];
+    var overall=Math.round(pillars.reduce(function(sum,p){return sum+p.score},0)/pillars.length);
+    var lowest=pillars.reduce(function(min,p){return p.score<min.score?p:min},pillars[0]);
+    return {overall:overall,pillars:pillars,lowest:lowest};
+  }
 
   function renderHeroDiagnostic(){
     if(!heroStepMount) return;
-    if(heroDiagnosticState.step==='step1'){
+    var total=assessmentQuestions.length;
+    if(heroDiagnosticState.step<total){
+      var q=assessmentQuestions[heroDiagnosticState.step];
+      var selected=heroDiagnosticState.answers[heroDiagnosticState.step];
       heroStepMount.innerHTML=
-        '<p class="hero-question">What is the biggest patient access bottleneck right now?</p>'+
-        '<div class="hero-options" role="radiogroup" aria-label="What is the biggest patient access bottleneck right now?">'+
-          stepOneOptions.map(function(option){
-            var selected=heroDiagnosticState.step1Answer===option;
-            return '<button type="button" class="diag-option'+(selected?' selected':'')+'" data-step1="'+option+'" role="radio" aria-checked="'+(selected?'true':'false')+'">'+option+'</button>';
+        '<p class="hero-progress">Question '+(heroDiagnosticState.step+1)+' of '+total+'</p>'+
+        '<p class="hero-question">'+q.question+'</p>'+
+        '<div class="hero-options" role="radiogroup" aria-label="'+q.question+'">'+
+          q.options.map(function(option,idx){
+            var isSelected=selected===idx;
+            return '<button type="button" class="diag-option'+(isSelected?' selected':'')+'" data-idx="'+idx+'" role="radio" aria-checked="'+(isSelected?'true':'false')+'">'+option.text+'</button>';
           }).join('')+
         '</div>'+
         '<div class="hero-step-actions">'+
-          '<button type="button" class="hero-continue" id="heroStep1Next" '+(heroDiagnosticState.step1Answer?'':'disabled')+'>Next</button>'+
+          '<button type="button" class="hero-continue" id="heroQuestionNext" '+(selected!==undefined?'':'disabled')+'>'+(heroDiagnosticState.step===total-1?'See My Results':'Next')+'</button>'+
+          (heroDiagnosticState.step>0?'<button type="button" class="hero-back" id="heroQuestionBack">Back</button>':'')+
         '</div>';
-      heroStepMount.querySelectorAll('[data-step1]').forEach(function(button){
+      heroStepMount.querySelectorAll('[data-idx]').forEach(function(button){
         button.addEventListener('click',function(){
-          heroDiagnosticState.step1Answer=button.getAttribute('data-step1');
+          heroDiagnosticState.answers[heroDiagnosticState.step]=parseInt(button.getAttribute('data-idx'),10);
           renderHeroDiagnostic();
         });
       });
-      var step1Next=document.getElementById('heroStep1Next');
-      if(step1Next){
-        step1Next.addEventListener('click',function(){
-          if(heroDiagnosticState.step1Answer){
-            heroDiagnosticState.step='complete';
-            renderHeroDiagnostic();
+      var questionNext=document.getElementById('heroQuestionNext');
+      if(questionNext){
+        questionNext.addEventListener('click',function(){
+          if(heroDiagnosticState.answers[heroDiagnosticState.step]===undefined) return;
+          if(heroDiagnosticState.step===total-1){
+            heroDiagnosticState.step='results';
+          }else{
+            heroDiagnosticState.step+=1;
           }
+          renderHeroDiagnostic();
+        });
+      }
+      var questionBack=document.getElementById('heroQuestionBack');
+      if(questionBack){
+        questionBack.addEventListener('click',function(){
+          heroDiagnosticState.step-=1;
+          renderHeroDiagnostic();
         });
       }
       return;
     }
-    heroStepMount.innerHTML=
-      '<p class="hero-result-heading">Your Patient Access Report is ready</p>'+
-      '<p class="hero-result-copy">Complete the assessment in under 3 minutes. Receive a personalized Patient Access Report and recommended next steps.</p>'+
-      '<div class="hero-step-actions">'+
-        '<a href="'+bookingUrl+'" class="hero-continue" style="display:flex;align-items:center;justify-content:center;text-align:center">Start Patient Access Assessment</a>'+
-        '<button type="button" class="hero-back" id="heroCompleteBack">Back</button>'+
-      '</div>';
-    var completeBack=document.getElementById('heroCompleteBack');
-    if(completeBack){
-      completeBack.addEventListener('click',function(){
-        heroDiagnosticState.step='step1';
-        renderHeroDiagnostic();
-      });
+    if(heroDiagnosticState.step==='results'){
+      var results=computeResults();
+      heroStepMount.innerHTML=
+        '<p class="hero-result-heading">Your Patient Access Snapshot</p>'+
+        '<p class="hero-result-copy">Overall Patient Access Score:</p>'+
+        '<p class="score-overall"><span>'+results.overall+'</span> / 100</p>'+
+        '<div class="score-rows">'+
+          results.pillars.map(function(p){
+            return '<div class="score-row">'+
+              '<span class="score-row-label">'+p.label+'</span>'+
+              '<span class="score-bar"><span class="score-bar-fill" style="width:'+p.score+'%"></span></span>'+
+              '<span class="score-row-val">'+p.score+'</span>'+
+            '</div>';
+          }).join('')+
+        '</div>'+
+        '<div class="hero-opportunity">'+
+          '<p class="hero-opportunity-label">Biggest Opportunity</p>'+
+          '<p class="hero-opportunity-text">'+opportunityMessages[results.lowest.key]+'</p>'+
+        '</div>'+
+        '<div class="hero-step-actions">'+
+          '<button type="button" class="hero-continue" id="heroReviewResults">Review My Results</button>'+
+          '<p class="hero-support">Book a short Patient Access Review and we will walk through your results, identify the highest-impact opportunities, and recommend practical next steps.</p>'+
+          '<button type="button" class="hero-back" id="heroResultsBack">Back</button>'+
+        '</div>';
+      var reviewBtn=document.getElementById('heroReviewResults');
+      if(reviewBtn){
+        reviewBtn.addEventListener('click',function(){
+          window.location.href=bookingUrl;
+        });
+      }
+      var resultsBack=document.getElementById('heroResultsBack');
+      if(resultsBack){
+        resultsBack.addEventListener('click',function(){
+          heroDiagnosticState.step=total-1;
+          renderHeroDiagnostic();
+        });
+      }
     }
   }
   renderHeroDiagnostic();
