@@ -75,7 +75,9 @@
     .hero-opportunity{margin-top:16px;padding:14px 16px;border:1px solid rgba(121,197,199,.15);border-radius:var(--rmd);background:rgba(121,197,199,.04)}
     .hero-opportunity-label{font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--t1);margin-bottom:6px}
     .hero-opportunity-text{font-size:13px;font-weight:300;line-height:1.6;color:rgba(255,255,255,.78)}
-    .hero-support{font-size:12px;font-weight:300;line-height:1.6;color:rgba(255,255,255,.52);text-align:center}
+    .hero-booking-cta{margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08)}
+    .hero-booking-title{font-family:var(--fd);font-size:22px;font-weight:300;line-height:1.25;color:white;margin-bottom:10px}
+    .hero-support{font-size:12px;font-weight:300;line-height:1.6;color:rgba(255,255,255,.52);text-align:center;margin-top:10px}
 
     .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:13px 26px;border-radius:50px;transition:opacity .2s,transform .2s}
     .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
@@ -189,19 +191,13 @@
 <section class="hero" id="hero">
   <div class="hero-layout">
     <div class="hero-left">
-      <p class="hero-eyebrow">Behavioral Science + Intelligent Automation for Psychiatry Practices</p>
       <h1 class="hero-h1">Patient Access Optimization for <span class="hero-h1-accent">Private Psychiatry Practices</span></h1>
       <p class="hero-body">Helping prospective patients find you, connect with you, and book appointments while reducing the administrative burden on your practice.</p>
-      <div class="hero-ctas">
-        <a href="#hero" class="hero-primary-cta">Start Patient Access Assessment</a>
-        <a href="#the-system" class="hero-secondary-cta">See How It Works <span class="arr-c">&#8595;</span></a>
-      </div>
-      <p class="hero-micro">Complete the assessment in under 3 minutes and receive a Patient Access Snapshot before booking a review.</p>
     </div>
 
     <aside class="hero-card" aria-label="Patient Access Assessment">
       <h2 class="hero-card-title">Patient Access Assessment</h2>
-      <p class="hero-card-copy">Answer a few quick questions to see where patient access may be breaking down in your practice.</p>
+      <p class="hero-card-copy">Answer a few quick questions to see where patient access may be breaking down in your practice before scheduling a review.</p>
       <div id="heroDiagnosticStep" class="hero-card-step" aria-live="polite"></div>
     </aside>
   </div>
@@ -551,6 +547,7 @@
       var results=computeResults();
       heroStepMount.innerHTML=
         '<p class="hero-result-heading">Your Patient Access Snapshot</p>'+
+        '<p class="hero-result-copy">Based on your responses, your practice may have opportunities to improve how prospective patients find you, connect with you, and book appointments.</p>'+
         '<p class="hero-result-copy">Overall Patient Access Score:</p>'+
         '<p class="score-overall"><span>'+results.overall+'</span> / 100</p>'+
         '<div class="score-rows">'+
@@ -563,17 +560,21 @@
           }).join('')+
         '</div>'+
         '<div class="hero-opportunity">'+
-          '<p class="hero-opportunity-label">Biggest Opportunity</p>'+
+          '<p class="hero-opportunity-label">Biggest Opportunity: '+results.lowest.label+'</p>'+
           '<p class="hero-opportunity-text">'+opportunityMessages[results.lowest.key]+'</p>'+
         '</div>'+
-        '<div class="hero-step-actions">'+
-          '<button type="button" class="hero-continue" id="heroReviewResults">Review My Results</button>'+
-          '<p class="hero-support">Book a short Patient Access Review and we will walk through your results, identify the highest-impact opportunities, and recommend practical next steps.</p>'+
-          '<button type="button" class="hero-back" id="heroResultsBack">Back</button>'+
+        '<div class="hero-booking-cta">'+
+          '<p class="hero-booking-title">Schedule Your 15-Minute Patient Access Review</p>'+
+          '<p class="hero-result-copy">We will review your Patient Access Snapshot together, identify the biggest sources of patient access friction, and discuss practical next steps.</p>'+
+          '<div class="hero-step-actions">'+
+            '<button type="button" class="hero-continue" id="heroScheduleReview">Schedule My 15-Minute Review</button>'+
+            '<p class="hero-support">No pressure. No generic AI demo. Just a focused review of where patient access may be breaking down and what to fix first.</p>'+
+            '<button type="button" class="hero-back" id="heroResultsBack">Back</button>'+
+          '</div>'+
         '</div>';
-      var reviewBtn=document.getElementById('heroReviewResults');
-      if(reviewBtn){
-        reviewBtn.addEventListener('click',function(){
+      var scheduleBtn=document.getElementById('heroScheduleReview');
+      if(scheduleBtn){
+        scheduleBtn.addEventListener('click',function(){
           window.location.href=bookingUrl;
         });
       }
