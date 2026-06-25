@@ -26,12 +26,10 @@
       --fd:'Cormorant Garamond',Georgia,serif;--fb:'Cabinet Grotesk',-apple-system,sans-serif;
       --rsm:6px;--rmd:12px;--rlg:20px;--rxl:32px;
     }
-    body{font-family:var(--fb);background:var(--page-bg);color:var(--w1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-
-    .cur{width:10px;height:10px;background:var(--t1);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform .1s;opacity:0;visibility:hidden}
+    body{font-family:var(--fb);background:var(--page-bg);color:var(--w1);-webkit-font-smoothing:antialiased}
 
     .hero,.sd,.sd-alt,section,footer{background:var(--page-bg)}
-    .hero{min-height:100vh;display:flex;align-items:flex-start;padding:108px 48px 72px}
+    .hero{min-height:auto;display:flex;align-items:flex-start;padding:108px 48px 72px}
     .hero-layout{width:100%;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,500px);gap:80px;align-items:center}
     .hero-left{display:flex;flex-direction:column;align-items:flex-start;max-width:640px}
     .hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1);margin-bottom:24px;display:inline-flex;align-items:center;gap:10px}
@@ -88,8 +86,7 @@
     .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
     .btn-primary .av{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,255,255,.3)}
 
-    .sd,.sd-alt{color:white;padding:96px 48px;position:relative}
-    section:not(.hero)::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(1200px,calc(100% - 96px));height:2px;background:var(--grad-subtle);opacity:.45}
+    .sd,.sd-alt{color:white;padding:96px 48px}
     .si{max-width:1200px;margin:0 auto}
     .sec-center{text-align:center}
     .sec-center .ssub{margin-left:auto;margin-right:auto}
@@ -169,15 +166,13 @@
     .cta-note{font-size:12px;color:var(--w4);margin-top:14px;position:relative;z-index:1;max-width:520px;margin-left:auto;margin-right:auto}
 
     footer{border-top:none;position:relative}
-    footer::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(1200px,calc(100% - 96px));height:2px;background:var(--grad-subtle);opacity:.45}
     footer .footer-tag em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
-    .rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
-    .rv.vis{opacity:1;transform:translateY(0)}
-    .rv-d1{transition-delay:.1s}
-    .rv-d2{transition-delay:.2s}
-    .rv-d3{transition-delay:.3s}
+    .rv{opacity:1;transform:none;transition:none}
 
+    @media (prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation:none!important;transition:none!important}
+    }
     @media(max-width:1024px){
       .hero{min-height:auto;padding:100px 32px 56px}
       .hero-layout{grid-template-columns:1fr;gap:40px}
@@ -206,7 +201,6 @@
 </head>
 <body>
 
-<div class="cur" id="cur"></div>
 <div id="nav-placeholder"></div>
 
 <!-- 1. HERO -->
@@ -443,21 +437,6 @@
 <div id="footer-placeholder"></div>
 
 <script>
-  var cur=document.getElementById('cur');
-  var curMoved=false;
-  document.addEventListener('mousemove',function(e){
-    cur.style.left=e.clientX-5+'px';
-    cur.style.top=e.clientY-5+'px';
-    if(!curMoved){cur.style.opacity='1';cur.style.visibility='visible';curMoved=true}
-  });
-  document.addEventListener('mouseleave',function(){cur.style.opacity='0';cur.style.visibility='hidden';curMoved=false});
-  document.addEventListener('mouseenter',function(){if(curMoved){cur.style.opacity='1';cur.style.visibility='visible'}});
-
-  var obs=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}});
-  },{threshold:0.05,rootMargin:'0px 0px -20px 0px'});
-  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
-
   document.querySelectorAll('.test-vid').forEach(function(w){
     w.addEventListener('click',function(){
       var v=w.querySelector('video');

@@ -14,11 +14,6 @@
     var nav = document.getElementById('nav');
     if(!nav) return;
 
-    // Scroll behavior
-    window.addEventListener('scroll', function(){
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
-
     // Mobile toggle
     var mobBtn = document.getElementById('navMobBtn');
     var menu = document.getElementById('navMenu');

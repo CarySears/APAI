@@ -1,8 +1,6 @@
-#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:88px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;width:100%;border-bottom:1px solid transparent;transition:background .4s,border-color .4s}
-#nav.scrolled{background:rgba(12,21,32,.92);backdrop-filter:blur(20px);border-bottom:none}
-#nav.scrolled::after{content:'';position:absolute;bottom:0;left:5%;right:5%;height:2px;background:linear-gradient(90deg,rgba(249,115,22,.5) 0%,rgba(236,72,153,.5) 25%,rgba(168,85,247,.5) 50%,rgba(46,166,212,.5) 75%,rgba(0,167,157,.5) 100%);opacity:.55}
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:88px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;width:100%;background:var(--page-bg,#0c1520);border-bottom:1px solid rgba(255,255,255,.06)}
 .nav-logo{display:flex;align-items:center;height:88px;flex-shrink:0}
-.nav-logo img{height:36px;width:auto;display:block;mix-blend-mode:screen;margin:auto 0}
+.nav-logo img{height:36px;width:auto;display:block;margin:auto 0}
 .nav-menu{display:flex;align-items:center;gap:4px;justify-content:center;position:absolute;left:50%;transform:translateX(-50%)}
 a.nav-link{font-family:'Cabinet Grotesk',-apple-system,sans-serif;font-size:13px;font-weight:400;color:rgba(255,255,255,.68);background:none;border:none;cursor:pointer;padding:8px 14px;display:inline-flex;align-items:center;transition:color .2s;white-space:nowrap;text-decoration:none}
 a.nav-link:hover{color:white}
