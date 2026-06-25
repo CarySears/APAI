@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ActionPotential.AI — Behavioral AI for Service Businesses</title>
-  <meta name="description" content="We build Behavioral AI systems grounded in the science of how people actually think, feel, and decide. Human-Centered AI that works twice as hard for you, on autopilot." />
+  <title>Patient Access Optimization for Private Psychiatry Practices — ActionPotential.AI</title>
+  <meta name="description" content="ActionPotential.AI helps private psychiatry practices optimize patient access — helping the right patients find you, connect with you, and book appointments while reducing administrative burden." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cabinet+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -20,454 +20,140 @@
       --grad:linear-gradient(135deg,#f97316 0%,#ec4899 30%,#a855f7 60%,#2EA6D4 82%,#00A79D 100%);
       --gteal:linear-gradient(135deg,#2EA6D4,#00A79D);
       --d9:#070c11;--d8:#0c1520;--d7:#111d2e;--d6:#172539;
-      --lb:#f6f4f0;--lc:#ffffff;--ls:#efece7;--lbr:rgba(0,0,0,.07);
-      --td:#090e14;--tm:#3c4650;--mu:#79838d;
       --w1:#fff;--w7:rgba(255,255,255,.68);--w4:rgba(255,255,255,.38);--w2:rgba(255,255,255,.18);
       --fd:'Cormorant Garamond',Georgia,serif;--fb:'Cabinet Grotesk',-apple-system,sans-serif;
       --rsm:6px;--rmd:12px;--rlg:20px;--rxl:32px;
     }
     body{font-family:var(--fb);background:var(--d9);color:var(--w1);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
-    /* CURSOR */
-    .cur {
-      width: 10px;
-      height: 10px;
-      background: var(--t1);
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 9999;
-      mix-blend-mode: difference;
-      transition: transform .1s;
-      opacity: 0;
-      visibility: hidden;
-    }
-
+    .cur{width:10px;height:10px;background:var(--t1);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform .1s;opacity:0;visibility:hidden}
 
     /* HERO */
-    .hero {
-      min-height: 100vh;
-      background: var(--d9);
-      display: flex;
-      align-items: center;
-      padding: 132px 48px 72px;
-    }
-    .hero-layout {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 500px);
-      gap: 126px;
-      align-items: center;
-    }
-    .hero-left {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      max-width: 640px;
-    }
-    .hero-h1 {
-      font-family: var(--fd);
-      font-size: 75px;
-      font-weight: 300;
-      line-height: .94;
-      letter-spacing: -1.3px;
-      color: white;
-      margin-bottom: 74px;
-      max-width: 22ch;
-      text-wrap: balance;
-    }
-    .hero-h1-accent {
-      color: var(--t1);
-    }
-    .hero-body {
-      font-size: 18px;
-      font-weight: 300;
-      line-height: 1.8;
-      color: rgba(255,255,255,.82);
-      max-width: 520px;
-      margin-bottom: 30px;
-    }
-    .hero-secondary {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.65;
-      color: rgba(255,255,255,.68);
-      max-width: 560px;
-      margin-bottom: 30px;
-    }
-    .hero-clarity-strip {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: .06em;
-      color: rgba(193,237,233,.72);
-      border: 1px solid rgba(121,197,199,.08);
-      border-radius: 999px;
-      background: rgba(121,197,199,.025);
-      padding: 10px 16px;
-      margin-bottom: 70px;
-    }
-    .hero-primary-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 18px 38px;
-      border-radius: 999px;
-      background: var(--t2);
-      color: white;
-      font-size: 21px;
-      font-weight: 500;
-      border: 1px solid rgba(255,255,255,.26);
-      margin-bottom: 10px;
-    }
-    .hero-primary-cta:hover {
-      background: var(--bl);
-    }
-    .hero-primary-cta:focus-visible {
-      outline: 2px solid rgba(121,197,199,.9);
-      outline-offset: 2px;
-    }
-    .hero-primary-cta:active {
-      background: var(--t2);
-    }
-    .hero-micro {
-      font-size: 12px;
-      font-weight: 300;
-      line-height: 1.65;
-      color: rgba(255,255,255,.62);
-      max-width: 580px;
-    }
-    .hero-card {
-      background: rgba(12,21,32,.75);
-      border: 1px solid rgba(255,255,255,.03);
-      border-radius: var(--rlg);
-      padding: 36px;
-      box-shadow: 0 6px 16px rgba(0,0,0,.14);
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .hero-card-eyebrow {
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: .03em;
-      color: rgba(121,197,199,.95);
-    }
-    .hero-card-title {
-      font-family: var(--fd);
-      font-size: 34px;
-      font-weight: 300;
-      line-height: 1.16;
-      color: white;
-    }
-    .hero-card-copy {
-      font-size: 15px;
-      font-weight: 300;
-      line-height: 1.72;
-      color: rgba(255,255,255,.68);
-    }
-    .hero-question {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: .03em;
-      color: rgba(255,255,255,.8);
-    }
-    .hero-options {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .diag-option {
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: var(--rmd);
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.025);
-      color: rgba(255,255,255,.84);
-      font-size: 14px;
-      font-weight: 400;
-      text-align: left;
-    }
-    .diag-option:hover {
-      border-color: rgba(121,197,199,.42);
-      background: rgba(121,197,199,.06);
-    }
-    .diag-option:focus-visible {
-      outline: 2px solid rgba(121,197,199,.82);
-      outline-offset: 2px;
-    }
-    .diag-option.selected {
-      border-color: rgba(121,197,199,.74);
-      background: rgba(121,197,199,.12);
-      color: white;
-    }
-    .hero-continue {
-      margin-top: 8px;
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: var(--rmd);
-      background: var(--t2);
-      color: white;
-      font-size: 14px;
-      font-weight: 500;
-      border: 1px solid rgba(255,255,255,.16);
-    }
-    .hero-continue:hover:not(:disabled) {
-      background: var(--bl);
-    }
-    .hero-continue:focus-visible {
-      outline: 2px solid rgba(121,197,199,.9);
-      outline-offset: 2px;
-    }
-    .hero-continue:active:not(:disabled) {
-      background: var(--t2);
-    }
-    .hero-continue:disabled {
-      opacity: .3;
-      cursor: not-allowed;
-    }
-    .hero-card-caption {
-      font-size: 12px;
-      font-weight: 300;
-      color: rgba(255,255,255,.52);
-      text-align: center;
-    }
-    .hero-card-step {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      min-height: 360px;
-    }
-    .hero-step-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 4px;
-    }
-    .hero-back {
-      align-self: flex-start;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: .02em;
-      color: rgba(255,255,255,.68);
-      padding: 4px 0;
-    }
-    .hero-back:hover {
-      color: rgba(255,255,255,.9);
-    }
-    .hero-back:focus-visible {
-      outline: 2px solid rgba(121,197,199,.82);
-      outline-offset: 2px;
-      border-radius: 4px;
-    }
-    .hero-result-heading {
-      font-family: var(--fd);
-      font-size: 30px;
-      font-weight: 300;
-      line-height: 1.2;
-      color: white;
-    }
-    .hero-result-copy {
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 1.7;
-      color: rgba(255,255,255,.76);
-    }
-    .hero-calendar-frame {
-      width: 100%;
-      min-height: 520px;
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: var(--rmd);
-      background: rgba(12,21,32,.86);
-    }
+    .hero{min-height:100vh;background:var(--d9);display:flex;align-items:center;padding:132px 48px 72px}
+    .hero-layout{width:100%;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,500px);gap:80px;align-items:center}
+    .hero-left{display:flex;flex-direction:column;align-items:flex-start;max-width:640px}
+    .hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1);margin-bottom:24px;display:inline-flex;align-items:center;gap:10px}
+    .hero-eyebrow::before{content:'';width:22px;height:1px;background:var(--t1)}
+    .hero-h1{font-family:var(--fd);font-size:58px;font-weight:300;line-height:.98;letter-spacing:-1.1px;color:white;margin-bottom:28px;max-width:22ch;text-wrap:balance}
+    .hero-h1-accent{color:var(--t1)}
+    .hero-body{font-size:18px;font-weight:300;line-height:1.8;color:rgba(255,255,255,.82);max-width:520px;margin-bottom:32px}
+    .hero-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-bottom:10px}
+    .hero-primary-cta{display:inline-flex;align-items:center;justify-content:center;padding:18px 38px;border-radius:999px;background:var(--t2);color:white;font-size:18px;font-weight:500;border:1px solid rgba(255,255,255,.26);transition:background .2s}
+    .hero-primary-cta:hover{background:var(--bl)}
+    .hero-primary-cta:focus-visible{outline:2px solid rgba(121,197,199,.9);outline-offset:2px}
+    .hero-secondary-cta{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:400;color:rgba(255,255,255,.72);padding:12px 0;transition:color .2s}
+    .hero-secondary-cta:hover{color:white}
+    .hero-secondary-cta .arr-c{width:22px;height:22px;border:1px solid currentColor;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px}
+    .hero-micro{font-size:12px;font-weight:300;line-height:1.65;color:rgba(255,255,255,.62);max-width:580px}
+    .hero-card{background:rgba(12,21,32,.75);border:1px solid rgba(255,255,255,.03);border-radius:var(--rlg);padding:36px;box-shadow:0 6px 16px rgba(0,0,0,.14);display:flex;flex-direction:column;gap:16px}
+    .hero-card-eyebrow{font-size:10px;font-weight:500;letter-spacing:.03em;color:rgba(121,197,199,.95)}
+    .hero-card-title{font-family:var(--fd);font-size:30px;font-weight:300;line-height:1.16;color:white}
+    .hero-card-copy{font-size:15px;font-weight:300;line-height:1.72;color:rgba(255,255,255,.68)}
+    .hero-question{font-size:12px;font-weight:500;letter-spacing:.03em;color:rgba(255,255,255,.8)}
+    .hero-options{display:flex;flex-direction:column;gap:12px}
+    .diag-option{width:100%;padding:14px 16px;border-radius:var(--rmd);border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.025);color:rgba(255,255,255,.84);font-size:14px;font-weight:400;text-align:left}
+    .diag-option:hover{border-color:rgba(121,197,199,.42);background:rgba(121,197,199,.06)}
+    .diag-option:focus-visible{outline:2px solid rgba(121,197,199,.82);outline-offset:2px}
+    .diag-option.selected{border-color:rgba(121,197,199,.74);background:rgba(121,197,199,.12);color:white}
+    .hero-continue{margin-top:8px;width:100%;padding:14px 16px;border-radius:var(--rmd);background:var(--t2);color:white;font-size:14px;font-weight:500;border:1px solid rgba(255,255,255,.16)}
+    .hero-continue:hover:not(:disabled){background:var(--bl)}
+    .hero-continue:focus-visible{outline:2px solid rgba(121,197,199,.9);outline-offset:2px}
+    .hero-continue:disabled{opacity:.3;cursor:not-allowed}
+    .hero-card-caption{font-size:12px;font-weight:300;color:rgba(255,255,255,.52);text-align:center}
+    .hero-card-step{display:flex;flex-direction:column;gap:14px;min-height:360px}
+    .hero-step-actions{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+    .hero-back{align-self:flex-start;font-size:12px;font-weight:500;letter-spacing:.02em;color:rgba(255,255,255,.68);padding:4px 0}
+    .hero-back:hover{color:rgba(255,255,255,.9)}
+    .hero-back:focus-visible{outline:2px solid rgba(121,197,199,.82);outline-offset:2px;border-radius:4px}
+    .hero-result-heading{font-family:var(--fd);font-size:28px;font-weight:300;line-height:1.2;color:white}
+    .hero-result-copy{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.76)}
+    .hero-calendar-frame{width:100%;min-height:520px;border:1px solid rgba(255,255,255,.08);border-radius:var(--rmd);background:rgba(12,21,32,.86)}
 
-    .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:13px 26px;border-radius:50px;transition:opacity .2s,transform .2s}
+    .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:13px 26px;border-radius:50px;transition:opacity .2s,transform .2s}
     .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
     .btn-primary .av{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,255,255,.3)}
-    .btn-ghost{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:400;color:var(--w7);padding:13px 0;transition:color .2s}
-    .btn-ghost:hover{color:white}
-    .arr-c{width:22px;height:22px;border:1px solid currentColor;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;transition:background .2s,color .2s}
-    .btn-ghost:hover .arr-c{background:white;color:var(--d9)}
 
-    /* MARQUEE */
-    .mq-strip{--mq-gap:64px;--mq-slot:152px;--mq-slot-wide:208px;--mq-logo-h:80px;background:var(--d7);border-top:1px solid rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.045);padding:52px 0;overflow:hidden}
-    .mq-strip-label{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--w4);text-align:center;margin-bottom:20px}
-    .mq-viewport{overflow:hidden}
-    .mq-track{display:flex;align-items:center;width:max-content;animation:mq-scroll var(--mq-duration,50s) linear infinite;will-change:transform}
-    .mq-viewport:hover .mq-track{animation-play-state:paused}
-    @keyframes mq-scroll{
-      from{transform:translate3d(0,0,0)}
-      to{transform:translate3d(-50%,0,0)}
-    }
-    .mq-set{display:flex;align-items:center;gap:var(--mq-gap);padding-right:var(--mq-gap);flex-shrink:0}
-    .mq-logo-item{display:flex;align-items:center;justify-content:center;flex:0 0 var(--mq-slot);width:var(--mq-slot);height:var(--mq-logo-h)}
-    .mq-logo-item--wide{flex-basis:var(--mq-slot-wide);width:var(--mq-slot-wide)}
-    .mq-logo-item img{height:var(--mq-logo-h);width:auto;max-width:100%;object-fit:contain;opacity:.92;display:block}
-    .mq-logo-imi{width:var(--mq-logo-h);height:var(--mq-logo-h);border-radius:50%;overflow:hidden;flex-shrink:0;line-height:0}
-    .mq-logo-imi img{width:100%;height:100%;max-width:none;object-fit:cover;opacity:.92}
-    .mq-imi-lockup{display:flex;flex-direction:row;align-items:center;gap:12px;height:var(--mq-logo-h)}
-    .mq-imi-name{font-size:8px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.88);line-height:1.35;max-width:104px;text-shadow:0 1px 4px rgba(0,0,0,.75)}
-    .mq-text-logo{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;height:var(--mq-logo-h)}
-    .mq-text-logo-name{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;white-space:nowrap}
-    .mq-text-logo-divider{width:36px;height:1px;background:rgba(255,255,255,.3)}
-    .mq-text-logo-sub{font-size:8.5px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);white-space:nowrap}
-    @media (prefers-reduced-motion: reduce){
-      .mq-track{animation:none!important}
-    }
     /* SECTION SYSTEM */
-    .sl{background:var(--lb);color:var(--td);padding:96px 48px}
     .sd{background:var(--d8);color:white;padding:96px 48px}
+    .sd-alt{background:var(--d7);color:white;padding:96px 48px}
     .si{max-width:1200px;margin:0 auto}
-    .eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
-    .sl .eyebrow{color:var(--mu)}
-    .sd .eyebrow{color:var(--t1)}
-    .eyebrow-line{width:22px;height:1px;flex-shrink:0}
-    .sl .eyebrow-line{background:var(--mu)}
-    .sd .eyebrow-line{background:var(--t1)}
-    .sh2{font-family:var(--fd);font-weight:300;line-height:1.1;letter-spacing:-.5px;margin-bottom:16px}
+    .sec-center{text-align:center}
+    .sec-center .eyebrow{justify-content:center}
+    .sec-center .ssub{margin-left:auto;margin-right:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--t1)}
+    .eyebrow-line{width:22px;height:1px;flex-shrink:0;background:var(--t1)}
+    .sh2{font-family:var(--fd);font-weight:300;line-height:1.1;letter-spacing:-.5px;margin-bottom:16px;color:white}
     .sh2-xl{font-size:52px}
     .sh2-lg{font-size:42px}
-    .sl .sh2{color:var(--td)}
-    .sd .sh2{color:white}
     .sh2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .ssub{font-size:17px;font-weight:300;line-height:1.72;max-width:560px}
-    .sl .ssub{color:var(--tm)}
-    .sd .ssub{color:var(--w7)}
+    .ssub{font-size:17px;font-weight:300;line-height:1.72;max-width:640px;color:var(--w7)}
 
-    /* DEFINITION BAND */
-    .def-band{background:linear-gradient(135deg,var(--d8) 0%,var(--d7) 100%);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);padding:64px 48px}
-    .def-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-    .def-left h2{font-family:var(--fd);font-size:44px;font-weight:300;line-height:1.08;letter-spacing:-.5px;color:white;margin-bottom:20px}
-    .def-left h2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .def-left p{font-size:16px;font-weight:300;line-height:1.75;color:var(--w7)}
-    .def-right{display:flex;flex-direction:column;gap:20px}
-    .def-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:var(--rmd);padding:24px 28px;transition:background .2s,border-color .2s}
-    .def-card:hover{background:rgba(121,197,199,.05);border-color:rgba(121,197,199,.15)}
-    .def-card-lbl{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:8px}
-    .def-card p{font-size:14px;font-weight:300;line-height:1.65;color:var(--w7)}
+    /* CREDIBILITY BAR */
+    .cred-bar{background:var(--d7);border-top:1px solid rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.045);padding:52px 48px}
+    .cred-bar-inner{max-width:1200px;margin:0 auto;text-align:center}
+    .cred-bar-headline{font-family:var(--fd);font-size:22px;font-weight:300;color:rgba(255,255,255,.88);margin-bottom:28px;line-height:1.4}
+    .cred-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
+    .cred-pill{font-size:12px;font-weight:400;color:var(--w7);padding:8px 18px;border:1px solid rgba(255,255,255,.08);border-radius:50px;background:rgba(255,255,255,.02);transition:border-color .2s,color .2s}
+    .cred-pill:hover{border-color:rgba(121,197,199,.28);color:var(--t1)}
 
-    /* RELATE SECTION */
-    .relate-intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:56px}
-    .relate-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--lbr);border:1px solid var(--lbr);border-radius:var(--rlg);overflow:hidden}
-    .relate-card{background:var(--lc);padding:32px 28px;position:relative;cursor:default;transition:background .25s}
-    .relate-card:hover{background:var(--d9)}
-    .relate-card h3{font-family:var(--fd);font-size:19px;font-weight:400;font-style:italic;color:var(--td);line-height:1.35;transition:color .25s}
-    .relate-card:hover h3{color:white}
-    .relate-hover{position:absolute;inset:0;padding:28px;background:var(--d9);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:300;color:var(--t1);line-height:1.6;text-align:center;opacity:0;transition:opacity .25s}
-    .relate-card:hover .relate-hover{opacity:1}
+    /* PAIN SECTION */
+    .pain-intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:56px;text-align:left}
+    .quote-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);border-radius:var(--rlg);overflow:hidden}
+    .quote-card{background:var(--d8);padding:28px 24px;transition:background .25s}
+    .quote-card:hover{background:var(--d6)}
+    .quote-card p{font-family:var(--fd);font-size:17px;font-weight:400;font-style:italic;color:rgba(255,255,255,.88);line-height:1.45}
 
-    /* SYSTEM ENGINES */
-    .sys-header{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:56px}
-    .sys-note{background:rgba(46,166,212,.06);border:1px solid rgba(46,166,212,.14);border-radius:var(--rmd);padding:28px;margin-bottom:12px}
-    .sys-note p{font-size:15px;font-weight:300;line-height:1.7;color:var(--w7)}
-    .sys-warn{background:rgba(249,115,22,.04);border:1px solid rgba(249,115,22,.1);border-radius:var(--rmd);padding:22px 28px}
-    .sys-warn p{font-size:14px;font-weight:300;line-height:1.65;color:rgba(255,255,255,.48)}
-    .sys-warn strong{color:rgba(255,200,100,.7);font-weight:500}
-    .engines{border:1px solid rgba(255,255,255,.07);border-radius:var(--rlg);overflow:hidden}
-    .eng{padding:40px}
-    .eng.core{background:rgba(27,117,187,.08);border-bottom:1px solid rgba(255,255,255,.05)}
-    .eng.scale{background:rgba(0,167,157,.07)}
-    .eng-bridge{padding:18px 40px;text-align:center;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04)}
-    .eng-bridge p{font-family:var(--fd);font-size:17px;font-style:italic;font-weight:300;color:var(--w7)}
-    .eng-badge{display:inline-block;font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:50px;margin-bottom:10px}
-    .eng.core .eng-badge{background:rgba(27,117,187,.18);color:var(--t2);border:1px solid rgba(27,117,187,.28)}
-    .eng.scale .eng-badge{background:rgba(0,167,157,.18);color:var(--t3);border:1px solid rgba(0,167,157,.28)}
-    .eng-title{font-family:var(--fd);font-size:26px;font-weight:300;color:white;margin-bottom:3px}
-    .eng-sub{font-size:13px;font-weight:300;margin-bottom:22px}
-    .eng.core .eng-sub{color:rgba(46,166,212,.65)}
-    .eng.scale .eng-sub{color:rgba(0,167,157,.65)}
-    .drw{border-radius:var(--rsm);margin-bottom:5px;overflow:hidden}
-    .eng.core .drw{background:rgba(27,117,187,.1);border:.5px solid rgba(46,166,212,.18)}
-    .eng.scale .drw{background:rgba(0,167,157,.1);border:.5px solid rgba(0,167,157,.18)}
-    .drw-hd{display:flex;align-items:center;justify-content:space-between;padding:10px 15px;cursor:pointer;user-select:none;transition:opacity .15s}
-    .drw-hd:hover{opacity:.75}
-    .drw-name{font-size:13px;font-weight:500}
-    .eng.core .drw-name{color:var(--t2)}
-    .eng.scale .drw-name{color:var(--t3)}
-    .drw-chev{font-size:9px;color:var(--w4);transition:transform .22s}
-    .drw-chev.open{transform:rotate(180deg)}
-    .drw-bd{max-height:0;overflow:hidden;transition:max-height .28s ease}
-    .drw-bd.open{max-height:220px}
-    .drw-bd p{font-size:12px;font-weight:300;line-height:1.65;color:var(--w7);padding:4px 15px 6px}
-    .drw-bd a{display:inline-block;font-size:11px;font-weight:500;padding:0 15px 11px;transition:opacity .15s}
-    .eng.core .drw-bd a{color:var(--t2)}
-    .eng.scale .drw-bd a{color:var(--t3)}
-    .drw-bd a:hover{opacity:.65}
-    .eng-div{display:flex;align-items:center;gap:12px;margin:14px 0 8px}
-    .eng-div-line{flex:1;height:1px}
-    .eng.core .eng-div-line{background:rgba(46,166,212,.14)}
-    .eng.scale .eng-div-line{background:rgba(0,167,157,.14)}
-    .eng-div-lbl{font-size:9px;font-weight:500;letter-spacing:.1em;text-transform:uppercase}
-    .eng.core .eng-div-lbl{color:rgba(46,166,212,.38)}
-    .eng.scale .eng-div-lbl{color:rgba(0,167,157,.38)}
-
-    /* FLYWHEEL */
-    .fw-band{background:var(--d9);border-top:1px solid rgba(255,255,255,.05);padding:56px 48px;text-align:center}
-    .fw-band h3{font-family:var(--fd);font-size:16px;font-weight:300;font-style:italic;color:var(--w4);letter-spacing:.04em;margin-bottom:28px}
-    .fw-nodes{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0}
-    .fw-node{display:flex;align-items:center}
-    .fw-lbl{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--w7);padding:8px 16px;border:1px solid rgba(255,255,255,.07);border-radius:50px;background:rgba(255,255,255,.03);transition:border-color .2s,color .2s,background .2s}
-    .fw-lbl:hover{border-color:rgba(121,197,199,.3);color:var(--t1);background:rgba(121,197,199,.05)}
-    .fw-arr{font-size:12px;color:var(--w2);padding:0 6px}
+    /* SYSTEM SECTION */
+    .system-visual{max-width:1100px;margin:48px auto 0;border-radius:var(--rlg);overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.28)}
+    .system-visual img{width:100%;height:auto;display:block}
+    .system-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:56px;text-align:left}
+    .system-card{background:var(--d6);border:1px solid rgba(255,255,255,.06);border-radius:var(--rlg);padding:32px 28px;transition:border-color .2s,transform .15s}
+    .system-card:hover{border-color:rgba(121,197,199,.18);transform:translateY(-2px)}
+    .system-card-num{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:12px}
+    .system-card h3{font-family:var(--fd);font-size:26px;font-weight:400;color:white;margin-bottom:10px}
+    .system-card-desc{font-size:14px;font-weight:300;color:var(--w7);line-height:1.65;margin-bottom:16px}
+    .system-card ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .system-card li{font-size:13px;font-weight:300;color:rgba(255,255,255,.62);padding-left:14px;position:relative;line-height:1.5}
+    .system-card li::before{content:'';position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--t1);opacity:.7}
 
     /* STEPS */
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;border:1px solid var(--lbr);border-radius:var(--rlg);overflow:hidden}
-    .step{padding:38px 30px;background:var(--lc);border-right:1px solid var(--lbr);transition:background .2s}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;border:1px solid rgba(255,255,255,.07);border-radius:var(--rlg);overflow:hidden;text-align:left}
+    .step{padding:38px 30px;background:var(--d6);border-right:1px solid rgba(255,255,255,.07);transition:background .2s}
     .step:last-child{border-right:none}
-    .step:hover{background:var(--ls)}
+    .step:hover{background:var(--d7)}
     .step-num{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:14px}
-    .step h3{font-family:var(--fd);font-size:22px;font-weight:400;color:var(--td);margin-bottom:10px}
-    .step p{font-size:13px;font-weight:300;color:var(--mu);line-height:1.65}
-    .how-note{margin-top:36px;padding:36px 40px;background:var(--lc);border:1px solid var(--lbr);border-radius:var(--rlg);border-left:3px solid var(--t2)}
-    .how-note p{font-size:16px;font-weight:300;color:var(--tm);line-height:1.8;max-width:760px}
-    .how-note strong{color:var(--td);font-weight:500}
+    .step h3{font-family:var(--fd);font-size:22px;font-weight:400;color:white;margin-bottom:10px}
+    .step p{font-size:13px;font-weight:300;color:var(--w7);line-height:1.65}
+    .how-note{margin-top:36px;padding:36px 40px;background:rgba(121,197,199,.04);border:1px solid rgba(121,197,199,.12);border-radius:var(--rlg);border-left:3px solid var(--t2);text-align:left}
+    .how-note p{font-size:16px;font-weight:300;color:var(--w7);line-height:1.8;max-width:860px}
 
-    /* CONVERSION */
-    .conv-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:52px}
-    .conv-vid{background:var(--d7);border:1px solid rgba(255,255,255,.07);border-radius:var(--rlg);aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:32px;position:relative;overflow:hidden}
-    .conv-vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .conv-vid-lbl{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1);position:relative;z-index:1}
-    .conv-vid-title{font-family:var(--fd);font-size:22px;font-weight:300;color:white;position:relative;z-index:1}
-    .conv-vid-hint{font-size:12px;font-weight:300;color:var(--w4);max-width:200px;text-align:center;position:relative;z-index:1}
-    .form-card{background:var(--d7);border:1px solid rgba(255,255,255,.07);border-radius:var(--rlg);padding:40px}
-    .form-card h3{font-family:var(--fd);font-size:28px;font-weight:300;color:white;margin-bottom:6px}
-    .form-card > p{font-size:14px;font-weight:300;color:var(--w7);margin-bottom:26px;line-height:1.6}
-    .f-field{margin-bottom:14px}
-    .f-field label{display:block;font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--w7);margin-bottom:6px}
-    .f-field input,.f-field select{width:100%;padding:11px 15px;font-size:14px;font-family:var(--fb);font-weight:300;color:white;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--rsm);outline:none;appearance:none;transition:border-color .2s,background .2s}
-    .f-field input:focus,.f-field select:focus{border-color:var(--t1);background:rgba(121,197,199,.05)}
-    .f-field select option{background:var(--d8)}
-    .btn-form{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:14px;border-radius:50px;margin-top:8px;transition:opacity .2s}
-    .btn-form:hover{opacity:.88}
-    .btn-form .av{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,255,255,.3)}
-    .form-note{font-size:11px;color:var(--w4);text-align:center;margin-top:12px;line-height:1.5}
-
-    /* LOGO BAR */
-    .logo-bar{background:var(--d8);border-top:1px solid rgba(255,255,255,.05);padding:26px 48px}
-    .logo-bar-lbl{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--w4);text-align:center;margin-bottom:18px}
-    .logo-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
-    .l-pill{font-size:12px;font-weight:400;color:var(--w7);padding:6px 16px;border:1px solid rgba(255,255,255,.07);border-radius:50px;transition:border-color .2s,color .2s}
-    .l-pill:hover{border-color:rgba(121,197,199,.28);color:var(--t1)}
+    /* WHY DIFFERENT */
+    .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:52px;text-align:left}
+    .why-card{background:var(--d6);border:1px solid rgba(255,255,255,.06);border-radius:var(--rlg);padding:32px 28px;transition:border-color .2s}
+    .why-card:hover{border-color:rgba(121,197,199,.15)}
+    .why-card h3{font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--t1);margin-bottom:14px}
+    .why-card p{font-size:15px;font-weight:300;line-height:1.75;color:var(--w7)}
 
     /* TESTIMONIALS */
-    .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
-    .test-card{background:var(--lc);border:1px solid var(--lbr);border-radius:var(--rlg);overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s}
-    .test-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.09)}
-    .test-vid{aspect-ratio:16/10;background:var(--ls);border-bottom:1px solid var(--lbr);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;cursor:pointer}
+    .test-label{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-top:48px;margin-bottom:16px;text-align:left}
+    .test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:24px}
+    .test-grid--single{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+    .test-card{background:var(--d6);border:1px solid rgba(255,255,255,.07);border-radius:var(--rlg);overflow:hidden;transition:transform .2s,box-shadow .2s}
+    .test-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.2)}
+    .test-vid{aspect-ratio:16/10;background:var(--d7);border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;cursor:pointer}
     .test-vid video,.test-vid img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
     .test-overlay{position:absolute;inset:0;background:rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;z-index:2;transition:background .2s}
     .test-card:hover .test-overlay{background:rgba(0,0,0,.08)}
     .play-btn{width:50px;height:50px;background:rgba(255,255,255,.92);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .2s}
     .test-card:hover .play-btn{transform:scale(1.08)}
     .play-btn svg{width:18px;height:18px;fill:#1B75BB}
-    .test-ph{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
-    .test-info{padding:20px 22px}
-    .test-name{font-size:14px;font-weight:500;color:var(--td);margin-bottom:2px}
+    .test-ph{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--w4)}
+    .test-info{padding:20px 22px;text-align:left}
+    .test-name{font-size:14px;font-weight:500;color:white;margin-bottom:2px}
     .test-biz{font-size:12px;font-weight:400;color:var(--t3)}
 
     /* FOUNDER */
-    .founder-grid{display:grid;grid-template-columns:400px 1fr;gap:80px;align-items:center}
+    .founder-grid{display:grid;grid-template-columns:400px 1fr;gap:80px;align-items:center;text-align:left}
     .founder-img-wrap{position:relative}
     .founder-img-wrap img{width:100%;border-radius:var(--rlg);filter:grayscale(15%);transition:filter .3s}
     .founder-img-wrap:hover img{filter:grayscale(0)}
@@ -478,7 +164,7 @@
     .founder-bio{font-size:16px;font-weight:300;line-height:1.82;color:var(--w7);margin-bottom:28px}
     .founder-bio strong{color:white;font-weight:500}
     .creds{display:flex;flex-wrap:wrap;gap:8px}
-    .cred{font-size:12px;font-weight:400;padding:7px 18px;border-radius:50px;letter-spacing:.02em;transition:background .2s,border-color .2s;display:inline-flex;align-items:center;gap:6px}
+    .cred{font-size:12px;font-weight:400;padding:7px 18px;border-radius:50px;letter-spacing:.02em;display:inline-flex;align-items:center;gap:6px}
     .cred::before{content:'';width:6px;height:6px;border-radius:50%;flex-shrink:0}
     .cred-deg{color:var(--t2);background:rgba(46,166,212,.07);border:1px solid rgba(46,166,212,.16)}
     .cred-deg::before{background:var(--t2)}
@@ -486,27 +172,15 @@
     .cred-org::before{background:var(--t1)}
 
     /* CTA */
-    .cta-card{background:var(--d9);border-radius:var(--rxl);padding:80px;text-align:center;position:relative;overflow:hidden}
+    .cta-card{background:var(--d6);border:1px solid rgba(255,255,255,.06);border-radius:var(--rxl);padding:80px;text-align:center;position:relative;overflow:hidden}
     .cta-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
     .cta-card::after{content:'';position:absolute;top:-40%;left:-20%;width:140%;height:140%;background:radial-gradient(ellipse at 50% 50%,rgba(46,166,212,.055) 0%,transparent 60%);pointer-events:none}
     .cta-card h2{font-family:var(--fd);font-size:46px;font-weight:300;color:white;line-height:1.1;margin-bottom:14px;position:relative;z-index:1}
-    .cta-card h2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .cta-card > p{font-size:17px;font-weight:300;color:var(--w7);line-height:1.7;max-width:520px;margin:0 auto 40px;position:relative;z-index:1}
+    .cta-card > p{font-size:17px;font-weight:300;color:var(--w7);line-height:1.7;max-width:560px;margin:0 auto 32px;position:relative;z-index:1}
     .cta-list{list-style:none;display:inline-flex;flex-direction:column;gap:10px;text-align:left;margin-bottom:44px;position:relative;z-index:1}
-    .cta-list li{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:300;color:var(--w7)}
-    .cta-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--t1);flex-shrink:0}
-    .cta-note{font-size:12px;color:var(--w4);margin-top:14px;position:relative;z-index:1}
-
-    /* FOOTER */
-    footer{background:var(--d9);border-top:1px solid rgba(255,255,255,.05);padding:44px 48px 28px}
-    .footer-inner{max-width:1200px;margin:0 auto}
-    .footer-tag{font-family:var(--fd);font-size:21px;font-weight:300;font-style:italic;color:var(--w4);text-align:center;margin-bottom:28px}
-    .footer-tag em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .footer-nav{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-    .footer-nav a{font-size:12px;font-weight:300;color:var(--w4);transition:color .2s}
-    .footer-nav a:hover{color:var(--t1)}
-    .footer-nav span{color:var(--w2);font-size:11px}
-    .footer-copy{font-size:11px;font-weight:300;color:var(--w4);text-align:center;letter-spacing:.04em}
+    .cta-list li{display:flex;align-items:flex-start;gap:12px;font-size:14px;font-weight:300;color:var(--w7);line-height:1.5}
+    .cta-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--t1);flex-shrink:0;margin-top:.45em}
+    .cta-note{font-size:12px;color:var(--w4);margin-top:14px;position:relative;z-index:1;max-width:520px;margin-left:auto;margin-right:auto}
 
     /* SCROLL REVEAL */
     .rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
@@ -515,630 +189,283 @@
     .rv-d2{transition-delay:.2s}
     .rv-d3{transition-delay:.3s}
 
-    /* RESPONSIVE */
     @media(max-width:1024px){
-      .hero {
-        min-height: auto;
-        padding: 112px 32px 56px;
-      }
-      .hero-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      .hero-h1 {
-        font-size: 59px;
-      }
-      .def-inner{grid-template-columns:1fr;gap:40px}
-      .relate-grid{grid-template-columns:repeat(2,1fr)}
-      .sys-header{grid-template-columns:1fr;gap:32px}
+      .hero{min-height:auto;padding:112px 32px 56px}
+      .hero-layout{grid-template-columns:1fr;gap:40px}
+      .hero-h1{font-size:48px}
+      .pain-intro{grid-template-columns:1fr;gap:32px}
+      .quote-grid{grid-template-columns:repeat(2,1fr)}
+      .system-cards{grid-template-columns:1fr}
       .steps{grid-template-columns:repeat(2,1fr)}
       .step:nth-child(2){border-right:none}
-      .step:nth-child(1),.step:nth-child(2){border-bottom:1px solid var(--lbr)}
+      .step:nth-child(1),.step:nth-child(2){border-bottom:1px solid rgba(255,255,255,.07)}
+      .why-grid{grid-template-columns:1fr}
       .founder-grid{grid-template-columns:1fr}
       .founder-img-wrap{max-width:320px}
-      .conv-grid{grid-template-columns:1fr}
       .cta-card{padding:48px 32px}
     }
     @media(max-width:640px){
-      nav{padding:0 20px}
-      .nav-links{display:none}
-      .hero {
-        padding: 96px 20px 44px;
-      }
-      .hero-h1 {
-        font-size: 40px;
-        line-height: 1.1;
-      }
-      .hero-body {
-        font-size: 16px;
-      }
-      .hero-secondary {
-        font-size: 14px;
-      }
-      .hero-card {
-        padding: 24px 20px;
-      }
-      .hero-card-title {
-        font-size: 32px;
-      }
-      .hero-card-step {
-        min-height: 0;
-      }
-      .hero-result-heading {
-        font-size: 26px;
-      }
-      .hero-calendar-frame {
-        min-height: 500px;
-      }
-      .sl,.sd{padding:64px 20px}
-      .def-band,.fw-band{padding:48px 20px}
-      .logo-bar{padding:22px 20px}
-      footer{padding:36px 20px 24px}
-      .relate-grid{grid-template-columns:1fr}
-      .relate-intro{grid-template-columns:1fr;gap:24px;margin-bottom:40px}
-      .test-grid{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto}
+      .hero{padding:96px 20px 44px}
+      .hero-h1{font-size:36px}
+      .hero-body{font-size:16px}
+      .hero-card{padding:24px 20px}
+      .hero-card-title{font-size:26px}
+      .hero-card-step{min-height:0}
+      .hero-calendar-frame{min-height:500px}
+      .sd,.sd-alt,.cred-bar{padding:64px 20px}
+      .cred-bar{padding:40px 20px}
+      .quote-grid{grid-template-columns:1fr}
       .steps{grid-template-columns:1fr}
-      .step{border-right:none !important;border-bottom:1px solid var(--lbr)}
+      .step{border-right:none!important;border-bottom:1px solid rgba(255,255,255,.07)}
       .step:last-child{border-bottom:none}
+      .test-grid{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto}
       .sh2-xl{font-size:36px}
       .sh2-lg{font-size:28px}
       .cta-card{padding:36px 22px}
       .cta-card h2{font-size:30px}
     }
-    .drw-learn{display:inline-block;font-size:11px;font-weight:500;padding:0 15px 12px;transition:opacity .15s}
-    .drw-dark .drw-learn{color:var(--t2)}
-    .drw-light .drw-learn{color:var(--bl)}
-    .drw-teal .drw-learn{color:var(--t3)}
-    .drw-learn:hover{opacity:.65}
-    .svc-overview{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
-    .svc-block{background:var(--lc);border:1px solid var(--lbr);border-radius:var(--rlg);padding:32px;transition:background .2s,transform .2s,box-shadow .2s;cursor:pointer}
-    .svc-block:hover{background:var(--ls);transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.09)}
-    .svc-block-num{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:12px}
-    .svc-block h3{font-family:var(--fd);font-size:28px;font-weight:400;color:var(--td);margin-bottom:12px}
-    .svc-block p{font-size:13px;font-weight:300;color:var(--mu);line-height:1.65;margin-bottom:20px}
-    .svc-block-cta{font-size:13px;font-weight:500;color:var(--t2);display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
-    .svc-block:hover .svc-block-cta{gap:10px}
-    .svc-header{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:48px}
-    .svc-badge{display:inline-block;font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:4px 14px;border-radius:50px;margin-bottom:12px}
-    .badge-blue{background:rgba(27,117,187,.18);color:var(--t2);border:1px solid rgba(27,117,187,.28)}
-    .badge-teal{background:rgba(0,167,157,.18);color:var(--t3);border:1px solid rgba(0,167,157,.28)}
-    .badge-grad{background:rgba(168,85,247,.12);color:#c084fc;border:1px solid rgba(168,85,247,.2)}
-    .svc-title{font-family:var(--fd);font-size:42px;font-weight:300;margin-bottom:8px}
-    .sd .svc-title{color:white}
-    .sl .svc-title{color:var(--td)}
-    .svc-sub{font-size:16px;font-weight:300;line-height:1.65;margin-bottom:20px}
-    .sd .svc-sub{color:var(--w7)}
-    .sl .svc-sub{color:var(--tm)}
-    .svc-body{font-size:15px;font-weight:300;line-height:1.75}
-    .sd .svc-body{color:var(--w7)}
-    .sl .svc-body{color:var(--tm)}
-    .svc-strip{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;padding-top:24px;border-top:1px solid}
-    .sd .svc-strip{border-color:rgba(255,255,255,.07)}
-    .sl .svc-strip{border-color:var(--lbr)}
-    .svc-strip-item{font-size:11px;font-weight:500;padding:5px 14px;border-radius:50px}
-    .sd .svc-strip-item{color:var(--t1);background:rgba(121,197,199,.08);border:1px solid rgba(121,197,199,.15)}
-    .sl .svc-strip-item{color:var(--t2);background:rgba(46,166,212,.08);border:1px solid rgba(46,166,212,.15)}
-    .svc-learn{display:inline-flex;align-items:center;gap:8px;margin-top:28px;font-size:14px;font-weight:500;color:var(--t2);transition:gap .2s}
-    .svc-learn:hover{gap:12px}
-    .def-callout{max-width:1200px;margin:40px auto 0;padding:32px 40px;background:rgba(46,166,212,.06);border:1px solid rgba(46,166,212,.15);border-radius:var(--rmd)}
-    .def-callout p{font-size:16px;font-weight:300;line-height:1.75;color:var(--w7);font-style:italic}
-    .fw-headline{font-family:var(--fd);font-size:36px;font-weight:300;color:white;margin-bottom:12px}
-    .fw-headline em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .fw-body{font-size:15px;font-weight:300;color:var(--w7);line-height:1.7;max-width:640px;margin:0 auto 36px}
-    @media(max-width:1024px){.svc-overview{grid-template-columns:1fr}.svc-header{grid-template-columns:1fr;gap:32px}}
-    @media(max-width:640px){.svc-overview{grid-template-columns:1fr}}
-
-    /* STATS BAND */
-    .stats-band{background:var(--d9);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);padding:80px 48px}
-    .stats-inner{max-width:1200px;margin:0 auto}
-    .stats-eyebrow{text-align:center;margin-bottom:52px}
-    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.05);border-radius:var(--rlg);overflow:hidden}
-    .stat-card{background:var(--d8);padding:40px 32px;text-align:center;transition:background .25s}
-    .stat-card:hover{background:var(--d7)}
-    .stat-num{font-family:var(--fd);font-size:64px;font-weight:300;line-height:1;margin-bottom:12px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-    .stat-label{font-size:13px;font-weight:500;color:white;margin-bottom:8px;letter-spacing:.02em}
-    .stat-sub{font-size:12px;font-weight:300;color:var(--w4);line-height:1.5}
-    @keyframes countUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-    .stat-num.counted{animation:countUp .6s ease both}
-
-    /* QUESTION BAND */
-    .q-band{background:var(--d9);padding:80px 48px;border-top:1px solid rgba(255,255,255,.05)}
-    .q-inner{max-width:1200px;margin:0 auto}
-    .q-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.05);border-radius:var(--rlg);overflow:hidden;margin-top:52px}
-    .q-card{background:var(--d8);padding:48px 36px;position:relative;overflow:hidden;cursor:default;transition:background .3s;min-height:280px;display:flex;flex-direction:column;justify-content:center}
-    .q-card::before{content:'';position:absolute;inset:0;background:var(--grad);opacity:0;transition:opacity .4s}
-    .q-card:hover::before{opacity:.04}
-    .q-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--grad);transform:scaleX(0);transition:transform .4s;transform-origin:left}
-    .q-card:hover::after{transform:scaleX(1)}
-    .q-num{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t2);margin-bottom:20px;opacity:.6}
-    .q-question{font-family:var(--fd);font-size:22px;font-weight:300;font-style:italic;color:white;line-height:1.4;transition:opacity .3s,transform .3s}
-    .q-card:hover .q-question{opacity:0;transform:translateY(-8px)}
-    .q-answer{position:absolute;inset:0;padding:48px 36px;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(12px);transition:opacity .3s,transform .3s}
-    .q-card:hover .q-answer{opacity:1;transform:translateY(0)}
-    .q-service{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t2);margin-bottom:14px}
-    .q-solve{font-size:16px;font-weight:300;color:white;line-height:1.6;margin-bottom:20px}
-    .q-link{font-size:13px;font-weight:500;color:var(--t1);display:inline-flex;align-items:center;gap:8px;transition:gap .2s}
-    .q-link:hover{gap:12px}
-
-    /* STAT COUNT ANIMATION */
-    .stat-num[data-target]{opacity:0}
-    .stat-num[data-target].vis{opacity:1}
-
-    /* PLAYFUL CARD TILT */
-    .relate-card{transform-style:preserve-3d;transition:background .2s,transform .15s}
-    .relate-card:hover{transform:perspective(600px) rotateX(2deg) rotateY(-2deg) translateY(-2px)}
-
-    /* ENHANCED HOVER INTERACTIONS */
-    .def-card{transition:background .2s,border-color .2s,transform .15s}
-    .def-card:hover{transform:translateY(-2px)}
-    .svc-block{transition:background .2s,transform .2s,box-shadow .2s}
-    .fw-lbl{transition:border-color .2s,color .2s,background .2s,transform .15s}
-    .fw-lbl:hover{transform:translateY(-2px)}
-
-    @media(max-width:1024px){
-      .stats-grid{grid-template-columns:repeat(2,1fr)}
-      .q-grid{grid-template-columns:1fr}
-      .q-card{min-height:220px}
-      .q-card:hover .q-question{opacity:1;transform:none}
-      .q-answer{position:static;opacity:0;transform:none;padding:0;margin-top:16px;max-height:0;overflow:hidden;transition:max-height .3s,opacity .3s}
-      .q-card.tapped .q-answer{opacity:1;max-height:200px}
-    }
-    @media(max-width:640px){
-      .stats-band{padding:48px 20px}
-      .q-band{padding:48px 20px}
-      .stats-grid{grid-template-columns:1fr 1fr}
-      .stat-num{font-size:48px}
-    }
-
   </style>
 </head>
 <body>
 
 <div class="cur" id="cur"></div>
-
-<!-- NAV -->
 <div id="nav-placeholder"></div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-layout">
     <div class="hero-left">
-      <h1 class="hero-h1">Your business has more potential than it&rsquo;s <span class="hero-h1-accent">converting.</span></h1>
-      <p class="hero-body">We partner with established service businesses to capture more of the opportunities they already have and create new ones using behavioral science and human-centered AI.</p>
-      <p class="hero-secondary">So you can grow without getting overwhelmed.</p>
-      <p class="hero-clarity-strip">More demand. Better follow-up. Higher conversion.</p>
-      <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="hero-primary-cta">Start your Behavioral Revenue Audit</a>
-      <p class="hero-micro">In 45 minutes, you&rsquo;ll see where opportunities are being lost and what to fix first.</p>
+      <p class="hero-eyebrow">Behavioral Science + Intelligent Automation for Psychiatry Practices</p>
+      <h1 class="hero-h1">Patient Access Optimization for <span class="hero-h1-accent">Private Psychiatry Practices</span></h1>
+      <p class="hero-body">Helping the right patients find you, connect with you, and book appointments while reducing the administrative burden on your practice.</p>
+      <div class="hero-ctas">
+        <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="hero-primary-cta">Start Patient Access Assessment</a>
+        <a href="#the-system" class="hero-secondary-cta">See How It Works <span class="arr-c">&#8595;</span></a>
+      </div>
+      <p class="hero-micro">In 45 minutes, we&rsquo;ll identify the biggest barriers preventing prospective patients from finding your practice, reaching you, and booking appointments.</p>
     </div>
 
-    <aside class="hero-card" aria-label="Behavioral Revenue Audit">
-      <p class="hero-card-eyebrow">Behavioral Revenue Audit</p>
-      <h2 class="hero-card-title">Find your biggest revenue leak</h2>
-      <p class="hero-card-copy">Answer 2 quick questions and we&rsquo;ll show you where revenue is likely being lost.</p>
+    <aside class="hero-card" aria-label="Patient Access Assessment">
+      <h2 class="hero-card-title">Patient Access Assessment</h2>
+      <p class="hero-card-copy">Answer a few quick questions to identify the biggest barriers preventing prospective patients from finding your practice, connecting with you, and booking appointments.</p>
       <div id="heroDiagnosticStep" class="hero-card-step" aria-live="polite"></div>
     </aside>
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="mq-strip">
-  <div class="mq-strip-label">Proud to work with</div>
-  <div class="mq-viewport">
-    <div class="mq-track">
-      <div class="mq-set">
-        <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/HGE21CBaknlKH4BuYcpz/media/6717d355dae31b04ee86f1e5.png" alt="Vesping Around" /></div>
-        <div class="mq-logo-item mq-logo-item--wide">
-          <div class="mq-imi-lockup" aria-label="Integrated Mindfulness Institute">
-            <div class="mq-logo-imi"><img src="/IMITransparentLogo.jpeg" alt="" /></div>
-            <span class="mq-imi-name">Integrated Mindfulness Institute</span>
-          </div>
-        </div>
-        <div class="mq-logo-item mq-logo-item--wide">
-          <div class="mq-text-logo">
-            <span class="mq-text-logo-name">Daniel G. Wong, M.D.</span>
-            <div class="mq-text-logo-divider"></div>
-            <span class="mq-text-logo-sub">Compassionate Psychiatric Care</span>
-          </div>
-        </div>
-        <div class="mq-logo-item"><img src="https://assets.cdn.filesafe.space/jNqy5QsBJRJ9cjslwRNp/media/686d35a5097a8052bf3b964a.png" alt="Anna Brooke Healing" /></div>
-        <div class="mq-logo-item"><img src="/miami-scooter-tour.png" alt="Miami Scooter Tour" /></div>
-        <div class="mq-logo-item"><img src="https://storage.googleapis.com/funnel-ai-production/chat/rTpFKggDR07ycsBlZtVQ/HC-Logo-Transparent-background.png" alt="Healing Cosmos" /></div>
-        <div class="mq-logo-item mq-logo-item--wide"><img src="/career-coaching-pro.png" alt="Career Coaching Pro" /></div>
-      </div>
+<!-- CREDIBILITY BAR -->
+<div class="cred-bar">
+  <div class="cred-bar-inner rv">
+    <p class="cred-bar-headline">Built from psychology, healthcare operations, UX, and behavioral science.</p>
+    <div class="cred-pills">
+      <span class="cred-pill">M.A. Experimental Psychology</span>
+      <span class="cred-pill">M.S. User Experience Design</span>
+      <span class="cred-pill">Cleveland Clinic neuropsychology research</span>
+      <span class="cred-pill">Psychiatric case management experience</span>
+      <span class="cred-pill">Digital health operations experience</span>
+      <span class="cred-pill">Active psychiatry practice implementation</span>
     </div>
   </div>
 </div>
 
-<!-- MAYBE YOU CAN RELATE -->
-<section class="sl" id="relate">
+<!-- PAIN SECTION -->
+<section class="sd-alt" id="relate">
   <div class="si">
-    <div class="relate-intro">
+    <div class="pain-intro">
       <div class="rv">
         <div class="eyebrow"><div class="eyebrow-line"></div>Maybe you can relate</div>
-        <h2 class="sh2 sh2-xl">Something's not<br>working and you<br>can <em>feel</em> it.</h2>
+        <h2 class="sh2 sh2-xl">Patient access is harder than it should be, and you can <em>feel</em> it.</h2>
       </div>
       <div class="rv rv-d1">
-        <p class="ssub">You are exceptional at what you do. But between the calls you missed, the leads that went quiet, and the follow-up that never quite happened, revenue is slipping through that you will never even know about. Any of this sound familiar?</p>
+        <p class="ssub">Your clinical work may be excellent, but prospective patients still fall through the cracks before care begins. They search and find another practice. They call and reach voicemail. They intend to book but never complete the process. Meanwhile, you or your staff spend valuable time returning calls, answering repetitive questions, and managing intake friction.</p>
       </div>
     </div>
-    <div class="relate-grid rv">
-      <div class="relate-card">
-        <h3>"I'm drowning in admin."</h3>
-        <div class="relate-hover">AI Agents handle the admin. You handle the work.</div>
-      </div>
-      <div class="relate-card">
-        <h3>"I can't get to all the calls and messages."</h3>
-        <div class="relate-hover">Voice AI and Conversational AI answer everything, instantly, 24/7.</div>
-      </div>
-      <div class="relate-card">
-        <h3>"I can't scale. I'm already at capacity."</h3>
-        <div class="relate-hover">Systems create capacity. We build them for you.</div>
-      </div>
-      <div class="relate-card">
-        <h3>"I can't afford more staff. But I need more help."</h3>
-        <div class="relate-hover">AI Agents cost a fraction of a hire and work around the clock.</div>
-      </div>
-      <div class="relate-card">
-        <h3>"My business is a best kept secret."</h3>
-        <div class="relate-hover">We put you everywhere your people are searching. SEO, AI Search, and Ads.</div>
-      </div>
-      <div class="relate-card">
-        <h3>"I rely almost entirely on referrals."</h3>
-        <div class="relate-hover">SEO and AI Search build a pipeline that doesn't depend on word of mouth. Reviews and referrals build visibility and trust.</div>
-      </div>
-      <div class="relate-card">
-        <h3>"My follow-up is inconsistent and I know it."</h3>
-        <div class="relate-hover">Behavioral Nurture follows up automatically, in your voice, at the right moment.</div>
-      </div>
-      <div class="relate-card">
-        <h3>"I don't stay in touch with people the way I should."</h3>
-        <div class="relate-hover">Re-engagement sequences keep the relationship warm without any effort from you.</div>
-      </div>
-      <div class="relate-card">
-        <h3>"I know I need AI to compete. I just don't understand it."</h3>
-        <div class="relate-hover">Human-Centered AI makes it non-threatening. We build it, train it, and run it for you. Zero technical knowledge required.</div>
-      </div>
-      <div class="relate-card">
-        <h3>"Things are changing so fast. I feel like I'm falling behind."</h3>
-        <div class="relate-hover">We stay ahead of it so you don't have to.</div>
-      </div>
+    <div class="quote-grid rv">
+      <div class="quote-card"><p>&ldquo;Patients call, but I cannot always respond quickly.&rdquo;</p></div>
+      <div class="quote-card"><p>&ldquo;After-hours inquiries sit until the next business day.&rdquo;</p></div>
+      <div class="quote-card"><p>&ldquo;I do not want more admin work just to improve access.&rdquo;</p></div>
+      <div class="quote-card"><p>&ldquo;We rely on referrals, but people still need to find and contact us.&rdquo;</p></div>
+      <div class="quote-card"><p>&ldquo;Prospective patients ask the same questions over and over.&rdquo;</p></div>
+      <div class="quote-card"><p>&ldquo;The website does not really guide people to the next step.&rdquo;</p></div>
+      <div class="quote-card"><p>&ldquo;I know AI could help, but I need it handled carefully.&rdquo;</p></div>
+      <div class="quote-card"><p>&ldquo;Growth should not mean more chaos.&rdquo;</p></div>
+      <div class="quote-card"><p>&ldquo;I want the right patients, not just more inquiries.&rdquo;</p></div>
+      <div class="quote-card"><p>&ldquo;Small barriers are keeping people from care.&rdquo;</p></div>
     </div>
   </div>
 </section>
 
-<!-- STATS BAND -->
-<div class="stats-band">
-  <div class="stats-inner">
-    <div class="eyebrow stats-eyebrow rv"><div class="eyebrow-line" style="background:var(--t1)"></div><span style="color:var(--t1)">The Challenge</span></div>
-    <div class="stats-grid rv">
-      <div class="stat-card">
-        <div class="stat-num" data-target="62">0</div>
-        <div class="stat-label">Of service businesses miss at least one inbound inquiry every day.</div>
-        <div class="stat-sub">That is revenue you earned and never collected.</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num" data-target="78">0</div>
-        <div class="stat-label">Of leads go with the first business to respond.</div>
-        <div class="stat-sub">Speed is not just courtesy. It is competitive advantage.</div>
-      </div>
-      <div class="stat-num-wrap stat-card">
-        <div class="stat-num">5<span style="font-size:32px">min</span></div>
-        <div class="stat-label">Response window before conversion probability drops by half.</div>
-        <div class="stat-sub">The window of intent closes faster than most businesses realize.</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">50<span style="font-size:32px">%+</span></div>
-        <div class="stat-label">Of people now use AI to find local service recommendations.</div>
-        <div class="stat-sub">If you are not in those answers, you are invisible to half the market.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- WHAT WE ARE -->
-<div class="def-band" id="what-we-are">
-  <div class="def-inner">
-    <div class="def-left rv">
-      <h2>Software with a Service,<br>built for the <em>human and AI future.</em></h2>
-      <p>We are not a traditional marketing agency. We are not a software vendor. We are something genuinely new. A company that combines behavioral science, Human-Centered AI, conversational design, and marketing to help service businesses get found, get chosen, and build the kind of reputation that compounds over time. Every system we build is grounded in the science of how people actually think, feel, and decide. Not just what they click. Why they choose.</p>
-    </div>
-    <div class="def-right rv rv-d1">
-      <div class="def-card">
-        <div class="def-card-lbl">Behavioral Science</div>
-        <p>Understanding why people make decisions, form trust, experience hesitation, and take action is the foundation of everything we build. Not as a marketing claim. As a genuine scientific practice that Cary has spent his career studying and applying.</p>
-      </div>
-      <div class="def-card">
-        <div class="def-card-lbl">Human-Centered AI</div>
-        <p>AI designed around the needs of both the person you serve and the business you run. Not just automation. Genuinely better experiences for everyone involved. The AI equivalent of Human-Centered Design.</p>
-      </div>
-      <div class="def-card">
-        <div class="def-card-lbl">Conversational Design</div>
-        <p>The craft of designing interactions that feel natural, build trust, and move people gently toward a decision they already want to make. Voice AI that sounds human. Follow-up that reads the moment. Systems that deepen connection rather than replace it.</p>
-      </div>
-    </div>
-  </div>
-  <div class="def-callout rv">
-    <p>Any AI can answer a call or send a follow-up message. What it cannot do on its own is understand why someone hesitates, what builds their trust, or how to design the moment that turns curiosity into commitment. That understanding is what we build into every system.</p>
-  </div>
-</div>
-
-<!-- SERVICES OVERVIEW -->
-<section class="sl" id="services">
+<!-- SYSTEM SECTION -->
+<section class="sd sec-center" id="the-system">
   <div class="si">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>What We Do</div>
-    <h2 class="sh2 sh2-lg rv">Three ways we help<br>your business grow.</h2>
-    <p class="ssub rv">Not necessarily in this order. We start with a free audit and build a plan around where you actually are.</p>
-    <div class="svc-overview rv">
-      <div class="svc-block" onclick="document.getElementById('svc-found').scrollIntoView({behavior:'smooth'})">
-        <div class="svc-block-num">01</div>
-        <h3>Be Found</h3>
-        <p>Get discovered in traditional search, AI engines, Google Ads, and Meta. SEO is owned real estate. Ads are faster wins on rented property. Together they compound.</p>
-        <span class="svc-block-cta">See how it works &#8595;</span>
+    <div class="eyebrow rv"><div class="eyebrow-line"></div>Patient Access Optimization System</div>
+    <h2 class="sh2 sh2-lg rv">One system. Four connected parts.</h2>
+    <p class="ssub rv">Patient access is not one isolated problem. It is the full journey from first search to first appointment, supported by systems that also reduce administrative burden.</p>
+    <div class="system-visual rv">
+      <img src="/APAI-cards-no-footer.png" alt="Patient Access Optimization System: Discoverability, Responsiveness, Patient Journey Optimization, Continuous Optimization" width="2400" height="1200" loading="lazy" />
+    </div>
+    <div class="system-cards">
+      <div class="system-card rv">
+        <div class="system-card-num">01</div>
+        <h3>Discoverability</h3>
+        <p class="system-card-desc">Help the right patients find and trust your practice.</p>
+        <ul>
+          <li>Local search visibility</li>
+          <li>Google Business Profile optimization</li>
+          <li>AI search optimization</li>
+          <li>Website and technical SEO</li>
+          <li>Authority content</li>
+        </ul>
       </div>
-      <div class="svc-block" onclick="document.getElementById('svc-chosen').scrollIntoView({behavior:'smooth'})">
-        <div class="svc-block-num">02</div>
-        <h3>Be Chosen</h3>
-        <p>AI Agents that answer every call, respond to every message, and book every appointment. Built, trained, and maintained for you with white-glove service.</p>
-        <span class="svc-block-cta">See how it works &#8595;</span>
+      <div class="system-card rv rv-d1">
+        <div class="system-card-num">02</div>
+        <h3>Responsiveness</h3>
+        <p class="system-card-desc">Make it easier for prospective patients to connect with your practice.</p>
+        <ul>
+          <li>AI voice receptionist</li>
+          <li>Conversational website assistant</li>
+          <li>After-hours coverage</li>
+          <li>Missed-call recovery</li>
+          <li>Automated booking</li>
+        </ul>
       </div>
-      <div class="svc-block" onclick="document.getElementById('svc-remembered').scrollIntoView({behavior:'smooth'})">
-        <div class="svc-block-num">03</div>
-        <h3>Be Remembered</h3>
-        <p>Behavioral nurture sequences that turn leads into clients and clients into advocates. Decision science on autopilot, with human strategy behind it.</p>
-        <span class="svc-block-cta">See how it works &#8595;</span>
+      <div class="system-card rv rv-d2">
+        <div class="system-card-num">03</div>
+        <h3>Patient Journey Optimization</h3>
+        <p class="system-card-desc">Use behavioral science and patient-centered communication to reduce friction before the first appointment.</p>
+        <ul>
+          <li>Patient-centered communication</li>
+          <li>Stigma-aware messaging</li>
+          <li>Access journey mapping</li>
+          <li>Fit clarification</li>
+          <li>Follow-up workflows</li>
+          <li>No-show reduction</li>
+        </ul>
+      </div>
+      <div class="system-card rv rv-d3">
+        <div class="system-card-num">04</div>
+        <h3>Continuous Optimization</h3>
+        <p class="system-card-desc">Continuously identify and remove barriers that prevent prospective patients from accessing care.</p>
+        <ul>
+          <li>Monthly strategy reviews</li>
+          <li>Workflow analysis</li>
+          <li>Reporting</li>
+          <li>Ongoing optimization</li>
+          <li>Routine audits and conversion reviews</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
-
-<!-- QUESTION BAND -->
-<div class="q-band">
-  <div class="q-inner">
-    <div class="eyebrow rv"><div class="eyebrow-line" style="background:var(--t1)"></div><span style="color:var(--t1)">Three questions worth sitting with</span></div>
-    <div class="q-grid rv">
-      <div class="q-card">
-        <div class="q-num">Be Found</div>
-        <div class="q-question">"Right now, someone is searching for exactly what you do. Are you at the top of Google? In AI Overviews? Is ChatGPT recommending your competitor instead of you?"</div>
-        <div class="q-answer">
-          <div class="q-service">Be Found</div>
-          <div class="q-solve">We make sure you show up everywhere your people are searching. Google, AI Overviews, ChatGPT, and beyond.</div>
-          <a href="#svc-found" class="q-link">See how Be Found works &#8595;</a>
-        </div>
-      </div>
-      <div class="q-card">
-        <div class="q-num">Be Chosen</div>
-        <div class="q-question">"When someone reaches out, how long before they hear back?"</div>
-        <div class="q-answer">
-          <div class="q-service">Be Chosen</div>
-          <div class="q-solve">AI Agents answer every call, text, and message instantly. 24/7. In your voice.</div>
-          <a href="#svc-chosen" class="q-link">See how Be Chosen works &#8595;</a>
-        </div>
-      </div>
-      <div class="q-card">
-        <div class="q-num">Be Remembered</div>
-        <div class="q-question">"When did you last follow up with someone who never became a client?"</div>
-        <div class="q-answer">
-          <div class="q-service">Be Remembered</div>
-          <div class="q-solve">Behavioral Nurture does it for you. Automatically. At exactly the right moment.</div>
-          <a href="#svc-remembered" class="q-link">See how Be Remembered works &#8595;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- SERVICE 1 — BE FOUND -->
-<section class="sd" id="svc-found">
-  <div class="si">
-    <div class="svc-header">
-      <div class="rv">
-        <span class="svc-badge badge-grad">Owned Real Estate + Faster Wins</span>
-        <div class="svc-title">Be Found</div>
-        <div class="svc-sub">Get discovered everywhere your prospective clients are searching, in traditional search engines, in AI engines, and everywhere in between.</div>
-        <p class="svc-body">SEO and AI Search are long-term owned real estate. You build it once and it pays dividends for years. Paid ads are faster wins on rented property. They work brilliantly in combination. And increasingly, the search engines your prospective clients are using are AI engines. When someone asks ChatGPT or Perplexity for a recommendation in your field, are you in the answer? We make sure you are.</p>
-        <div class="svc-strip">
-          <span class="svc-strip-item">Onboarding call</span>
-          <span class="svc-strip-item">Monthly reporting call</span>
-          <span class="svc-strip-item">Dedicated CSM</span>
-          <span class="svc-strip-item">Weekly reporting</span>
-          <span class="svc-strip-item">Dashboard access</span>
-        </div>
-        <a href="/services/visibility" class="svc-learn">Learn more about Visibility &#8594;</a>
-      </div>
-      <div class="drawers rv rv-d1">
-        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">AI search optimization</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Optimized to appear in ChatGPT, Perplexity, Google AI Overviews, and other AI answer engines. The businesses investing in AI search visibility now will have a compounding advantage over those who wait.</p><a href="/services/ai-search-optimization" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">SEO foundation</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Traditional search is still the foundation. We build it right, with content structured around how people actually search when they are ready to take action, optimizing for both Google rankings and the signals AI engines use to make recommendations.</p><a href="/services/seo" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Google ads</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Paid search puts you in front of high-intent people at the exact moment they are looking. Every click feeds into a behavioral system built to capture, nurture, and convert.</p><a href="/services/google-ads" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Meta ads</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Facebook and Instagram campaigns that build awareness before your ideal clients even start searching. Better ROI because the behavioral nurture system actually works this time.</p><a href="/services/meta-ads" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Retargeting</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Gently re-engages people who showed interest but did not take action. Behavioral messaging brings them back at the right moment, without pressure.</p><a href="/services/retargeting" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">AI-optimized social profiles</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Your social profiles are a visibility asset. We structure every relevant platform for AI visibility so your brand shows up consistently wherever AI search engines are looking for signals about businesses like yours.</p><a href="/services/social-profiles" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-dark"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">AI-authority social posting</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Consistent, on-brand content that builds AI authority. Written in your voice and structured to signal credibility to both your audience and the engines recommending businesses like yours.</p><a href="/services/social-posting" class="drw-learn">Learn more &#8594;</a></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 2 — BE CHOSEN -->
-<section class="sl" id="svc-chosen">
-  <div class="si">
-    <div class="svc-header">
-      <div class="rv">
-        <span class="svc-badge badge-blue">Software with a Service</span>
-        <div class="svc-title">Be Chosen</div>
-        <div class="svc-sub">Always-on AI that captures every lead, books every appointment, and handles the admin that used to eat your day.</div>
-        <p class="svc-body">Most AI tools give you a login and walk away. We build, train, and maintain your AI agents for you. White-glove onboarding, team training, quarterly optimization, and 24/7/365 support. Not software. A managed system with humans behind it.</p>
-        <div class="svc-strip">
-          <span class="svc-strip-item">Tech setup call</span>
-          <span class="svc-strip-item">Team training</span>
-          <span class="svc-strip-item">AI launch and training call</span>
-          <span class="svc-strip-item">Quarterly optimization calls</span>
-          <span class="svc-strip-item">24/7/365 support</span>
-        </div>
-        <a href="/services/ai-agents" class="svc-learn">Learn more about AI Agents &#8594;</a>
-      </div>
-      <div class="drawers rv rv-d1">
-        <div class="drw drw-light"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Voice AI agent</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Answers every call 24/7, books appointments, qualifies inquiries, and handles common questions in a natural, human-sounding conversation. No missed calls. No lost voicemails. No after-hours gaps.</p><a href="/services/voice-ai" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-light"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Conversational AI</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Handles texts, website chat, Facebook Messenger, and Instagram DMs like a trained team member. Responds instantly at any hour, qualifies leads, and books appointments without your team lifting a finger.</p><a href="/services/conversational-ai" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-light"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Intelligent website</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Turns your static brochure into a live conversational experience, trained on your brand, tone, and services. Visitors can get their questions answered and take the next step 24/7.</p><a href="/services/intelligent-website" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-light"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Reviews AI</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Automates asking for reviews, responds to feedback automatically, and builds the steady stream of 5-star signals that help new people feel confident choosing you.</p><a href="/services/reviews-ai" class="drw-learn">Learn more &#8594;</a></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 3 — BE REMEMBERED -->
-<section class="sd" id="svc-remembered">
-  <div class="si">
-    <div class="svc-header">
-      <div class="rv">
-        <span class="svc-badge badge-teal">Automated AI + Human Strategy</span>
-        <div class="svc-title">Be Remembered</div>
-        <div class="svc-sub">Most agencies generate leads and dump them in your lap. We build the behavioral system that turns those leads into booked appointments and those clients into advocates.</div>
-        <p class="svc-body">When you run ads or drive traffic, leads need more than a single touchpoint before they take action. Most businesses lose those leads not because they were not interested, but because the follow-up was too slow, too generic, or never happened at all. Our Behavioral Nurture System changes that. Automated AI with human strategy behind it, built around how people actually make decisions.</p>
-        <a href="/services/behavioral-nurture" class="svc-learn">Learn more about Behavioral Nurture &#8594;</a>
-      </div>
-      <div class="drawers rv rv-d1">
-        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Behavioral follow-up sequences</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Email and SMS sequences designed around decision science, not just drip timing. The right message, the right channel, at the right moment in someone's journey toward taking action.</p><a href="/services/behavioral-followup" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">AI agent text and voice follow-up</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Automated AI that reaches out, answers questions, and guides leads toward booking, without it ever feeling robotic or pushy.</p><a href="/services/ai-followup" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Voicemail drops</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Personalized voicemail outreach that feels human and lands at exactly the right moment.</p><a href="/services/voicemail-drops" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Lead scoring</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Intelligent prioritization so your team focuses on the leads most likely to convert, not whoever happens to be at the top of the list.</p><a href="/services/lead-scoring" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Behavioral funnel design</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>Funnels built around how your specific audience makes decisions. Not generic templates. Strategy grounded in the psychology of your buyers.</p><a href="/services/funnel-design" class="drw-learn">Learn more &#8594;</a></div></div>
-        <div class="drw drw-teal"><div class="drw-hd" onclick="tog(this)"><span class="drw-name">Re-engagement</span><span class="drw-chev">&#9660;</span></div><div class="drw-bd"><p>A gentle, empathetic outreach to people who expressed interest but never took the first step. Not pressure. Just a well-timed reminder that you are still there.</p><a href="/services/re-engagement" class="drw-learn">Learn more &#8594;</a></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FLYWHEEL -->
-<div class="fw-band">
-  <div class="si rv" style="text-align:center;">
-    <div class="eyebrow" style="justify-content:center;margin-bottom:16px;"><div class="eyebrow-line" style="background:var(--t1)"></div><span style="color:var(--t1)">The system compounds over time</span></div>
-    <div class="fw-headline">Be found. Be chosen. <em>Be remembered.</em></div>
-    <p class="fw-body">Every part of the system feeds the next. AI agents capture more leads. Behavioral nurture converts more of them. Happy clients leave reviews. Reviews feed AI search visibility. Better visibility brings more of the right people. The flywheel turns faster over time.</p>
-    <div class="fw-nodes">
-      <div class="fw-node"><span class="fw-lbl">Be Found</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Be Chosen</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Convert</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Nurture</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Retain</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Reviews</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Referrals</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Reputation</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Authority</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">Visibility</span><span class="fw-arr">&#8594;</span></div>
-      <div class="fw-node"><span class="fw-lbl">More of the right people</span><span class="fw-arr">&#8635;</span></div>
-    </div>
-  </div>
-</div>
 
 <!-- HOW WE WORK -->
-<section class="sl" id="how">
+<section class="sd-alt" id="how-it-works">
   <div class="si">
     <div class="eyebrow rv"><div class="eyebrow-line"></div>How We Work</div>
-    <h2 class="sh2 sh2-lg rv">We don't hand you software.<br>We <em>run the system</em> for you.</h2>
-    <p class="ssub rv">You do not need to be technical. Our team handles everything from day one setup through ongoing optimization. The AI gets smarter over time because we stay in it with you.</p>
+    <h2 class="sh2 sh2-lg rv">We do not hand you software. We build and run the system with you.</h2>
+    <p class="ssub rv">You do not need to become technical. We handle setup, configuration, workflow design, testing, and ongoing optimization. The goal is not to add another tool to your practice. The goal is to create a patient access system that makes your practice easier to find, easier to reach, and easier to manage.</p>
     <div class="steps rv">
-      <div class="step"><div class="step-num">Step 01</div><h3>We build it</h3><p>Tech call, team training, AI agents configured and launched in days. Not months.</p></div>
-      <div class="step"><div class="step-num">Step 02</div><h3>We train it</h3><p>Three dedicated optimization calls post-launch. Every real interaction makes the system sharper.</p></div>
-      <div class="step"><div class="step-num">Step 03</div><h3>It learns from you</h3><p>Reinforcement Learning from Human Feedback. Your AI improves from your actual clients, not generic data.</p></div>
-      <div class="step"><div class="step-num">Ongoing</div><h3>We stay with you</h3><p>24/7 AI and human support. Proactive backend optimization. You never manage this alone.</p></div>
-    </div>
-    <div class="how-note rv">
-      <p>Most marketing agencies generate leads and walk away. Most AI companies hand you a login and disappear. <strong>We are behavioral AI architects. We build the system, run it, and stay in it with you.</strong> No technical knowledge required on your end. Ever.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONVERSION -->
-<section class="sd" id="demo">
-  <div class="si">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>Find Your Friction. Free It.</div>
-    <h2 class="sh2 sh2-lg rv">Free. 45 minutes.<br><em>No pitch deck. No pressure.</em></h2>
-    <div class="conv-grid">
-      <div class="rv">
-        <div class="conv-vid">
-          <div class="conv-vid-lbl">Coming Soon</div>
-          <div class="conv-vid-title">A message from Cary</div>
-          <p class="conv-vid-hint">Video coming soon.</p>
-        </div>
+      <div class="step">
+        <div class="step-num">Step 01</div>
+        <h3>We map the patient access journey</h3>
+        <p>Identify where prospective patients are finding friction, from search and website experience to calls, booking, intake, and follow-up.</p>
       </div>
-      <div class="form-card rv rv-d1">
-        <h3>Book your free AI Audit</h3>
-        <p>We audit your current funnel and deliver a prioritized 90-day action plan. A clear picture of where you are losing revenue and exactly what to do about it.</p>
-        <div class="f-field"><label>Your name</label><input type="text" placeholder="Jane Smith" /></div>
-        <div class="f-field">
-          <label>Business type</label>
-          <select>
-            <option value="">Select your business type</option>
-            <option>Healthcare / Medical Practice</option>
-            <option>Mental Health Practice</option>
-            <option>Wellness / Coaching</option>
-            <option>Home Services</option>
-            <option>Legal / Professional Services</option>
-            <option>Fitness / Studio</option>
-            <option>Salon / Med Spa</option>
-            <option>Other Service Business</option>
-          </select>
-        </div>
-        <div class="f-field"><label>Email address</label><input type="email" placeholder="jane@yourpractice.com" /></div>
-        <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-form">
-          <img src="https://actionpotential.ai/CaryProfilePic.jpeg" alt="Cary" class="av" />
-          Book your free AI Audit
-        </a>
-        <p class="form-note">No long-term contracts &nbsp;&#183;&nbsp; No sales pressure &nbsp;&#183;&nbsp; Action plan within 48 hours</p>
+      <div class="step">
+        <div class="step-num">Step 02</div>
+        <h3>We build the system</h3>
+        <p>Configure the AI receptionist, website assistant, booking workflows, missed-call recovery, CRM, reporting, and visibility systems.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 03</div>
+        <h3>We launch and monitor</h3>
+        <p>Test the workflows, review patient-facing communication, and make sure the system is functioning before relying on it.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">Step 04</div>
+        <h3>We optimize continuously</h3>
+        <p>Review performance, identify bottlenecks, and prioritize improvements each month.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="sl" id="results">
-  <div class="si">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>Real Results</div>
-    <h2 class="sh2 sh2-lg rv">Hear it from the people<br><em>running the system.</em></h2>
-    <p class="ssub rv">Faster response, stronger conversion, and revenue from leads they thought were gone.</p>
-    <div class="test-grid">
-      <div class="test-card rv">
+<!-- WHY THIS IS DIFFERENT -->
+<section class="sd" id="our-approach">
+  <div class="si sec-center">
+    <div class="eyebrow rv"><div class="eyebrow-line"></div>Why This Is Different</div>
+    <h2 class="sh2 sh2-lg rv">Built for the realities of psychiatric care.</h2>
+    <p class="ssub rv">Most agencies approach psychiatry like any other local service business. We do not. The Patient Access Optimization System is built around stigma, hesitation, patient decision-making, responsiveness, and the administrative realities of private practice psychiatry.</p>
+    <div class="why-grid">
+      <div class="why-card rv">
+        <h3>Behavioral Science Foundation</h3>
+        <p>Graduate training in experimental psychology and user experience design informs how messaging, decision-making, and follow-through are approached.</p>
+      </div>
+      <div class="why-card rv rv-d1">
+        <h3>Clinical and Healthcare Experience</h3>
+        <p>Experience in neuropsychological research, psychiatric case management, and digital health operations shapes how the system is designed and implemented.</p>
+      </div>
+      <div class="why-card rv rv-d2">
+        <h3>Human-Centered AI</h3>
+        <p>AI supports access, communication, and administrative workflows. It does not provide therapy, diagnosis, treatment, or clinical advice.</p>
+      </div>
+      <div class="why-card rv rv-d3">
+        <h3>Active Psychiatry Implementation</h3>
+        <p>The system is currently being implemented in a real psychiatry practice with AI voice reception, appointment scheduling, FAQ automation, emergency escalation workflows, Google Business Profile optimization, review management, and an AI-powered website assistant.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS / TESTIMONIALS -->
+<section class="sd-alt" id="results">
+  <div class="si sec-center">
+    <div class="eyebrow rv"><div class="eyebrow-line"></div>Results</div>
+    <h2 class="sh2 sh2-lg rv">Early proof from healthcare and service-based systems.</h2>
+    <p class="ssub rv">Client feedback reflects our ability to build reliable systems, improve responsiveness, and reduce missed opportunities. Psychiatry-specific proof will be featured as new implementations mature.</p>
+
+    <p class="test-label rv">Client feedback from healthcare and service-based implementations</p>
+    <div class="test-grid test-grid--single rv">
+      <div class="test-card">
         <div class="test-vid">
-          <!-- PLACEHOLDER: <img class="poster" src="./poster-mauro.jpg" /><video src="./Mauro Testimonial.MP4"></video> -->
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--ls)"><span class="test-ph">Placeholder: Mauro video</span></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--d7)"><span class="test-ph">Placeholder: Dr. Wong video</span></div>
           <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
         </div>
-        <div class="test-info"><div class="test-name">Mauro Clerici</div><div class="test-biz">Vesping Around</div></div>
+        <div class="test-info"><div class="test-name">Daniel G. Wong, M.D.</div><div class="test-biz">Child Psychiatrist &middot; Private Practice</div></div>
       </div>
-      <div class="test-card rv rv-d1">
+    </div>
+
+    <p class="test-label rv">Additional service-based implementation feedback</p>
+    <div class="test-grid rv">
+      <div class="test-card">
         <div class="test-vid">
-          <!-- PLACEHOLDER: <img class="poster" src="./poster-dan.jpg" /><video src="./Dan-Testimonial.mp4"></video> -->
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--ls)"><span class="test-ph">Placeholder: Dr. Wong video</span></div>
-          <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        </div>
-        <div class="test-info"><div class="test-name">Daniel G. Wong, M.D.</div><div class="test-biz">Child Psychiatrist · Private Practice</div></div>
-      </div>
-      <div class="test-card rv rv-d2">
-        <div class="test-vid">
-          <!-- PLACEHOLDER: <img class="poster" src="./poster-jai.jpg" /><video src="./jaiTest.mp4"></video> -->
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--ls)"><span class="test-ph">Placeholder: Jai video</span></div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--d7)"><span class="test-ph">Placeholder: Jai video</span></div>
           <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
         </div>
         <div class="test-info"><div class="test-name">Jai McPheron</div><div class="test-biz">Integrated Mindfulness Institute</div></div>
       </div>
+      <div class="test-card rv-d1">
+        <div class="test-vid">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--d7)"><span class="test-ph">Placeholder: Mauro video</span></div>
+          <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+        </div>
+        <div class="test-info"><div class="test-name">Mauro Clerici</div><div class="test-biz">Vesping Around</div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FOUNDER -->
+<!-- ABOUT -->
 <section class="sd" id="about">
   <div class="si">
     <div class="founder-grid">
       <div class="founder-img-wrap rv">
-        <!-- PLACEHOLDER: Replace with professional photo -->
         <img src="https://actionpotential.ai/CaryProfilePic.jpeg" alt="Cary Sears, Founder and CEO" />
       </div>
       <div class="rv rv-d1">
-        <div class="founder-lbl">Who's behind it</div>
+        <div class="founder-lbl">About</div>
         <div class="founder-name">Cary Sears</div>
         <div class="founder-title">Founder and CEO, ActionPotential.AI</div>
-        <p class="founder-bio">Cary spent his career studying why people make decisions, conducting clinical neuropsychological research at Cleveland Clinic, then building behavioral systems at scale at Noom and Neura Health. <strong>That background is not a credential on a slide.</strong> It is the foundation of how every system we build is designed: the messaging, the timing, the conversational design, the follow-up sequences, the UX of every interaction. When we say Behavioral AI, we mean it in a way nobody else can.</p>
+        <p class="founder-bio">Cary spent his career studying why people make decisions &mdash; conducting clinical neuropsychological research at Cleveland Clinic, working in psychiatric case management, and building behavioral systems at scale at Noom and Neura Health. <strong>That background shapes how patient access systems are designed:</strong> the messaging, the timing, the conversational design, and the follow-up workflows that help prospective patients move from search to appointment.</p>
         <div class="creds">
           <span class="cred cred-deg">M.A. Experimental Psychology</span>
           <span class="cred cred-deg">M.S. UX Design</span>
@@ -1152,76 +479,45 @@
 </section>
 
 <!-- CTA -->
-<section class="sl">
+<section class="sd-alt" id="audit">
   <div class="si">
     <div class="cta-card rv">
-      <h2>Find your friction.<br><em>Free your revenue.</em></h2>
-      <p>We audit your current system and deliver a prioritized 90-day action plan. No pitch deck. No pressure. Just a clear picture of where you are losing people and revenue, and exactly what to do about it.</p>
+      <h2>Start with a Patient Access Assessment.</h2>
+      <p>In 45 minutes, we will identify the biggest barriers preventing prospective patients from finding your practice, reaching you, and booking appointments.</p>
       <ul class="cta-list">
-        <li>Your top 3 conversion leaks and their likely revenue impact</li>
-        <li>Database reactivation opportunity, revenue from what you already own</li>
-        <li>A prioritized 90-day action plan across demand, response, and retention</li>
-        <li>Clear KPIs to track from week one</li>
-        <li>Action plan delivered within 48 hours</li>
+        <li>Your top patient access bottlenecks</li>
+        <li>Missed inquiry and responsiveness opportunities</li>
+        <li>Administrative burden reduction opportunities</li>
+        <li>Recommended automation and workflow improvements</li>
+        <li>A prioritized 90-day patient access roadmap</li>
       </ul>
       <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-primary" style="display:inline-flex;">
         <img src="https://actionpotential.ai/CaryProfilePic.jpeg" alt="Cary" class="av" />
-        Book your free AI Audit
+        Start Patient Access Assessment
       </a>
-      <p class="cta-note">No long-term contracts. No sales pressure. Built for service businesses ready to stop losing revenue they have already earned.</p>
+      <p class="cta-note">No pressure. No generic AI demo. Just a clear view of where patient access is breaking down and what to fix first.</p>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <div id="footer-placeholder"></div>
 
 <script>
-  // CURSOR
   var cur=document.getElementById('cur');
-  var curMoved = false;
-  document.addEventListener('mousemove', function(e) {
-    cur.style.left = e.clientX - 5 + 'px';
-    cur.style.top = e.clientY - 5 + 'px';
-    if (!curMoved) {
-      cur.style.opacity = '1';
-      cur.style.visibility = 'visible';
-      curMoved = true;
-    }
+  var curMoved=false;
+  document.addEventListener('mousemove',function(e){
+    cur.style.left=e.clientX-5+'px';
+    cur.style.top=e.clientY-5+'px';
+    if(!curMoved){cur.style.opacity='1';cur.style.visibility='visible';curMoved=true}
   });
-  document.addEventListener('mouseleave', function() {
-    cur.style.opacity = '0';
-    cur.style.visibility = 'hidden';
-    curMoved = false;
-  });
+  document.addEventListener('mouseleave',function(){cur.style.opacity='0';cur.style.visibility='hidden';curMoved=false});
+  document.addEventListener('mouseenter',function(){if(curMoved){cur.style.opacity='1';cur.style.visibility='visible'}});
 
-  document.addEventListener('mouseenter', function() {
-    if (curMoved) {
-      cur.style.opacity = '1';
-      cur.style.visibility = 'visible';
-    }
-  });
-  document.querySelectorAll('a,button,.relate-card,.drw-hd,.test-card,.def-card,.fw-lbl').forEach(function(el){
-  });
-
-  // DRAWER
-  function tog(hd){
-    var bd=hd.parentElement.querySelector('.drw-bd');
-    var ch=hd.querySelector('.drw-chev');
-    var open=bd.classList.contains('open');
-    bd.classList.toggle('open',!open);
-    ch.classList.toggle('open',!open);
-  }
-
-  // SCROLL REVEAL
   var obs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}});
   },{threshold:0.05,rootMargin:'0px 0px -20px 0px'});
-  document.querySelectorAll('.rv').forEach(function(el){
-    obs.observe(el);
-  });
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
 
-  // VIDEO PLAY
   document.querySelectorAll('.test-vid').forEach(function(w){
     w.addEventListener('click',function(){
       var v=w.querySelector('video');
@@ -1229,288 +525,124 @@
       if(v){v.play();if(o)o.style.opacity='0'}
     });
   });
-  // Count-up animation for stats
-  function animateCount(el){
-    var target = parseInt(el.getAttribute('data-target'));
-    if(!target) return;
-    var start = 0;
-    var duration = 1800;
-    var startTime = null;
-    function step(timestamp){
-      if(!startTime) startTime = timestamp;
-      var progress = Math.min((timestamp - startTime) / duration, 1);
-      var ease = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.floor(ease * target) + '%';
-      if(progress < 1) requestAnimationFrame(step);
-      else el.textContent = target + '%';
-    }
-    requestAnimationFrame(step);
-  }
 
-  var statObs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        var el = e.target;
-        el.classList.add('counted');
-        animateCount(el);
-        statObs.unobserve(el);
-      }
-    });
-  },{threshold:0.5});
-
-  document.querySelectorAll('.stat-num[data-target]').forEach(function(el){
-    statObs.observe(el);
-  });
-
-  // Mobile tap for question cards
-  document.querySelectorAll('.q-card').forEach(function(card){
-    card.addEventListener('click', function(){
-      if(window.innerWidth <= 1024){
-        card.classList.toggle('tapped');
-      }
-    });
-  });
-
-  // HERO DIAGNOSTIC STATE
-  var bookingUrl = 'https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm';
-  var heroStepMount = document.getElementById('heroDiagnosticStep');
-  var stepOneOptions = [
-    'Not enough demand',
-    'Leads are not converting',
-    'We miss calls or inquiries',
-    'Follow-up is too slow',
-    'Our team is overloaded'
+  var bookingUrl='https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm';
+  var heroStepMount=document.getElementById('heroDiagnosticStep');
+  var stepOneOptions=[
+    'Not enough of the right new patient inquiries',
+    'Missed calls or slow responses',
+    'Too much administrative burden',
+    'Prospective patients do not complete the booking process',
+    'Cancellations or no-shows'
   ];
-  var stepTwoMap = {
-    'Not enough demand': {
-      question: 'How many new inquiries do you get per month?',
-      options: ['0–20', '20–50', '50–100', '100+']
-    },
-    'Leads are not converting': {
-      question: 'Roughly what percentage of leads become customers?',
-      options: ['Under 10%', '10–20%', '20–40%', '40%+']
-    },
-    'We miss calls or inquiries': {
-      question: 'About how many inquiries go unanswered?',
-      options: ['Almost none', 'A few each week', 'Several per day', 'We miss a lot']
-    },
-    'Follow-up is too slow': {
-      question: 'How quickly do you typically respond to new inquiries?',
-      options: ['Within 5 minutes', 'Within 1 hour', 'Same day', 'Next day or later']
-    },
-    'Our team is overloaded': {
-      question: 'How often are leads delayed or dropped because your team is stretched too thin?',
-      options: ['Rarely', 'Sometimes', 'Often', 'Constantly']
-    }
-  };
-  var resultExplanationMap = {
-    'Not enough demand': 'You may be losing revenue because not enough qualified people are finding you consistently.',
-    'Leads are not converting': 'You may be losing revenue because too many of the leads you already have are slipping away before they book.',
-    'We miss calls or inquiries': 'You may be losing revenue because every missed inquiry is a chance for someone to choose a competitor instead.',
-    'Follow-up is too slow': 'You may be losing revenue because response speed has a major impact on whether people choose you or move on.',
-    'Our team is overloaded': 'You may be losing revenue because demand is outpacing your ability to respond and follow through consistently.'
-  };
-  var heroDiagnosticState = {
-    step: 'step1',
-    step1Answer: null,
-    step2Answer: null
-  };
-  function formatLossValue(value){
-    return '~$' + Math.round(value).toLocaleString() + '/month';
-  }
-  function getLossAmount(step1Answer, step2Answer){
-    var defaultLeadVolume = 50;
-    var defaultCloseRate = 0.25;
-    var defaultCustomerValue = 500;
-    if(step1Answer === 'Not enough demand'){
-      var inquiryVolumeMap = {
-        '0–20': 10,
-        '20–50': 35,
-        '50–100': 75,
-        '100+': 120
-      };
-      return inquiryVolumeMap[step2Answer] * defaultCloseRate * defaultCustomerValue * 0.30;
-    }
-    if(step1Answer === 'Leads are not converting'){
-      var closeRateMap = {
-        'Under 10%': 0.08,
-        '10–20%': 0.15,
-        '20–40%': 0.30,
-        '40%+': 0.45
-      };
-      var baselineCloseRate = 0.30;
-      var selectedCloseRate = closeRateMap[step2Answer];
-      var lostRate = Math.max(0, baselineCloseRate - selectedCloseRate);
-      return defaultLeadVolume * defaultCustomerValue * lostRate;
-    }
-    if(step1Answer === 'We miss calls or inquiries'){
-      var missRateMap = {
-        'Almost none': 0.05,
-        'A few each week': 0.15,
-        'Several per day': 0.30,
-        'We miss a lot': 0.45
-      };
-      return defaultLeadVolume * defaultCloseRate * defaultCustomerValue * missRateMap[step2Answer];
-    }
-    if(step1Answer === 'Follow-up is too slow'){
-      var delayPenaltyMap = {
-        'Within 5 minutes': 0.05,
-        'Within 1 hour': 0.20,
-        'Same day': 0.35,
-        'Next day or later': 0.50
-      };
-      return defaultLeadVolume * defaultCloseRate * defaultCustomerValue * delayPenaltyMap[step2Answer];
-    }
-    var overloadPenaltyMap = {
-      'Rarely': 0.10,
-      'Sometimes': 0.20,
-      'Often': 0.35,
-      'Constantly': 0.50
-    };
-    return defaultLeadVolume * defaultCloseRate * defaultCustomerValue * overloadPenaltyMap[step2Answer];
-  }
+  var stepTwoOptions=[
+    'More qualified patient inquiries',
+    'Faster response to prospective patients',
+    'Less administrative workload',
+    'More booked appointments',
+    'A clearer patient access system'
+  ];
+  var heroDiagnosticState={step:'step1',step1Answer:null,step2Answer:null};
+
   function renderHeroDiagnostic(){
     if(!heroStepMount) return;
-    if(heroDiagnosticState.step === 'step1'){
-      heroStepMount.innerHTML =
-        '<p class="hero-question">What&rsquo;s the biggest issue right now?</p>' +
-        '<div class="hero-options" role="radiogroup" aria-label="What&rsquo;s the biggest issue right now?">' +
+    if(heroDiagnosticState.step==='step1'){
+      heroStepMount.innerHTML=
+        '<p class="hero-question">What is the biggest patient access bottleneck right now?</p>'+
+        '<div class="hero-options" role="radiogroup" aria-label="What is the biggest patient access bottleneck right now?">'+
           stepOneOptions.map(function(option){
-            var selected = heroDiagnosticState.step1Answer === option;
-            return '<button type="button" class="diag-option' + (selected ? ' selected' : '') + '" data-step1="' + option + '" role="radio" aria-checked="' + (selected ? 'true' : 'false') + '">' + option + '</button>';
-          }).join('') +
-        '</div>' +
-        '<div class="hero-step-actions">' +
-          '<button type="button" class="hero-continue" id="heroStep1Next" ' + (heroDiagnosticState.step1Answer ? '' : 'disabled') + '>Next</button>' +
+            var selected=heroDiagnosticState.step1Answer===option;
+            return '<button type="button" class="diag-option'+(selected?' selected':'')+'" data-step1="'+option+'" role="radio" aria-checked="'+(selected?'true':'false')+'">'+option+'</button>';
+          }).join('')+
+        '</div>'+
+        '<div class="hero-step-actions">'+
+          '<button type="button" class="hero-continue" id="heroStep1Next" '+(heroDiagnosticState.step1Answer?'':'disabled')+'>Next</button>'+
         '</div>';
       heroStepMount.querySelectorAll('[data-step1]').forEach(function(button){
-        button.addEventListener('click', function(){
-          heroDiagnosticState.step1Answer = button.getAttribute('data-step1');
-          if(!heroDiagnosticState.step2Answer || stepTwoMap[heroDiagnosticState.step1Answer].options.indexOf(heroDiagnosticState.step2Answer) === -1){
-            heroDiagnosticState.step2Answer = null;
-          }
+        button.addEventListener('click',function(){
+          heroDiagnosticState.step1Answer=button.getAttribute('data-step1');
           renderHeroDiagnostic();
         });
       });
-      var step1Next = document.getElementById('heroStep1Next');
+      var step1Next=document.getElementById('heroStep1Next');
       if(step1Next){
-        step1Next.addEventListener('click', function(){
+        step1Next.addEventListener('click',function(){
           if(heroDiagnosticState.step1Answer){
-            heroDiagnosticState.step = 'step2';
+            heroDiagnosticState.step='step2';
             renderHeroDiagnostic();
           }
         });
       }
       return;
     }
-    if(heroDiagnosticState.step === 'step2'){
-      var step2Config = stepTwoMap[heroDiagnosticState.step1Answer];
-      heroStepMount.innerHTML =
-        '<p class="hero-question">' + step2Config.question + '</p>' +
-        '<div class="hero-options" role="radiogroup" aria-label="' + step2Config.question + '">' +
-          step2Config.options.map(function(option){
-            var selected = heroDiagnosticState.step2Answer === option;
-            return '<button type="button" class="diag-option' + (selected ? ' selected' : '') + '" data-step2="' + option + '" role="radio" aria-checked="' + (selected ? 'true' : 'false') + '">' + option + '</button>';
-          }).join('') +
-        '</div>' +
-        '<div class="hero-step-actions">' +
-          '<button type="button" class="hero-continue" id="heroStep2Next" ' + (heroDiagnosticState.step2Answer ? '' : 'disabled') + '>See My Estimate</button>' +
-          '<button type="button" class="hero-back" id="heroStep2Back">Back</button>' +
+    if(heroDiagnosticState.step==='step2'){
+      heroStepMount.innerHTML=
+        '<p class="hero-question">What would be most valuable over the next 90 days?</p>'+
+        '<div class="hero-options" role="radiogroup" aria-label="What would be most valuable over the next 90 days?">'+
+          stepTwoOptions.map(function(option){
+            var selected=heroDiagnosticState.step2Answer===option;
+            return '<button type="button" class="diag-option'+(selected?' selected':'')+'" data-step2="'+option+'" role="radio" aria-checked="'+(selected?'true':'false')+'">'+option+'</button>';
+          }).join('')+
+        '</div>'+
+        '<div class="hero-step-actions">'+
+          '<button type="button" class="hero-continue" id="heroStep2Next" '+(heroDiagnosticState.step2Answer?'':'disabled')+'>Continue Assessment</button>'+
+          '<button type="button" class="hero-back" id="heroStep2Back">Back</button>'+
         '</div>';
       heroStepMount.querySelectorAll('[data-step2]').forEach(function(button){
-        button.addEventListener('click', function(){
-          heroDiagnosticState.step2Answer = button.getAttribute('data-step2');
+        button.addEventListener('click',function(){
+          heroDiagnosticState.step2Answer=button.getAttribute('data-step2');
           renderHeroDiagnostic();
         });
       });
-      var step2Back = document.getElementById('heroStep2Back');
+      var step2Back=document.getElementById('heroStep2Back');
       if(step2Back){
-        step2Back.addEventListener('click', function(){
-          heroDiagnosticState.step = 'step1';
+        step2Back.addEventListener('click',function(){
+          heroDiagnosticState.step='step1';
           renderHeroDiagnostic();
         });
       }
-      var step2Next = document.getElementById('heroStep2Next');
+      var step2Next=document.getElementById('heroStep2Next');
       if(step2Next){
-        step2Next.addEventListener('click', function(){
+        step2Next.addEventListener('click',function(){
           if(heroDiagnosticState.step2Answer){
-            heroDiagnosticState.step = 'result';
+            heroDiagnosticState.step='calendar';
             renderHeroDiagnostic();
           }
         });
       }
       return;
     }
-    if(heroDiagnosticState.step === 'result'){
-      var lossAmount = formatLossValue(getLossAmount(heroDiagnosticState.step1Answer, heroDiagnosticState.step2Answer));
-      heroStepMount.innerHTML =
-        '<p class="hero-result-heading">This could be costing you ' + lossAmount + ' in lost revenue</p>' +
-        '<p class="hero-result-copy">Most businesses in your position lose revenue through missed opportunities, slow response, inconsistent follow-up, or capacity bottlenecks.</p>' +
-        '<p class="hero-result-copy">' + resultExplanationMap[heroDiagnosticState.step1Answer] + '</p>' +
-        '<p class="hero-result-copy">The full Behavioral Revenue Audit will show you exactly where this is happening and what to fix first.</p>' +
-        '<div class="hero-step-actions">' +
-          '<button type="button" class="hero-continue" id="heroResultNext">See My Full Audit</button>' +
-          '<p class="hero-card-caption">No pressure. Just clarity.</p>' +
-          '<button type="button" class="hero-back" id="heroResultBack">Back</button>' +
-        '</div>';
-      var resultBack = document.getElementById('heroResultBack');
-      if(resultBack){
-        resultBack.addEventListener('click', function(){
-          heroDiagnosticState.step = 'step2';
-          renderHeroDiagnostic();
-        });
-      }
-      var resultNext = document.getElementById('heroResultNext');
-      if(resultNext){
-        resultNext.addEventListener('click', function(){
-          heroDiagnosticState.step = 'calendar';
-          renderHeroDiagnostic();
-        });
-      }
-      return;
-    }
-    heroStepMount.innerHTML =
-      '<p class="hero-result-heading">Book your Behavioral Revenue Audit</p>' +
-      '<p class="hero-result-copy">Choose a time that works for you and we&rsquo;ll walk through where opportunities are being lost and what to fix first.</p>' +
-      '<iframe src="' + bookingUrl + '" class="hero-calendar-frame" title="Book your Behavioral Revenue Audit" scrolling="yes"></iframe>' +
+    heroStepMount.innerHTML=
+      '<p class="hero-result-heading">Book your Patient Access Assessment</p>'+
+      '<p class="hero-result-copy">Choose a time that works for you. In 45 minutes, we&rsquo;ll identify the biggest barriers preventing prospective patients from finding your practice, reaching you, and booking appointments.</p>'+
+      '<iframe src="'+bookingUrl+'" class="hero-calendar-frame" title="Book your Patient Access Assessment" scrolling="yes"></iframe>'+
       '<button type="button" class="hero-back" id="heroCalendarBack">Back</button>';
-    var calendarBack = document.getElementById('heroCalendarBack');
+    var calendarBack=document.getElementById('heroCalendarBack');
     if(calendarBack){
-      calendarBack.addEventListener('click', function(){
-        heroDiagnosticState.step = 'result';
+      calendarBack.addEventListener('click',function(){
+        heroDiagnosticState.step='step2';
         renderHeroDiagnostic();
       });
     }
   }
   renderHeroDiagnostic();
 
-  (function initMarquee(){
-    var track = document.querySelector('.mq-track');
-    var set = track && track.querySelector('.mq-set');
-    if(!track || !set) return;
-    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    var clone = set.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    clone.querySelectorAll('img').forEach(function(img){ img.alt = ''; });
-    clone.querySelectorAll('[aria-label]').forEach(function(el){ el.removeAttribute('aria-label'); });
-    track.appendChild(clone);
-
-    function syncDuration(){
-      var width = set.offsetWidth;
-      if(width > 0) track.style.setProperty('--mq-duration', (width / 40) + 's');
-    }
-
-    syncDuration();
-    window.addEventListener('resize', syncDuration);
-    window.addEventListener('load', syncDuration);
-    if(document.fonts && document.fonts.ready) document.fonts.ready.then(syncDuration);
-    track.querySelectorAll('img').forEach(function(img){
-      if(img.complete) return;
-      img.addEventListener('load', syncDuration, { once: true });
-    });
-  })();
-
+  var navWired=false;
+  var navObserver;
+  function wireNav(){
+    if(navWired) return;
+    var nav=document.getElementById('nav');
+    if(!nav) return;
+    navWired=true;
+    var btn=nav.querySelector('.nav-btn');
+    if(btn){btn.setAttribute('href',bookingUrl)}
+    var mob=nav.querySelector('.nav-mobile-cta');
+    if(mob){mob.setAttribute('href',bookingUrl)}
+    if(navObserver) navObserver.disconnect();
+  }
+  navObserver=new MutationObserver(wireNav);
+  navObserver.observe(document.getElementById('nav-placeholder'),{childList:true});
+  setTimeout(wireNav,200);
 </script>
 <script src="/includes.js"></script>
 </body>
