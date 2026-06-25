@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Patient Access Optimization for Private Psychiatry Practices — ActionPotential.AI</title>
-  <meta name="description" content="ActionPotential.AI helps private psychiatry practices optimize patient access — helping the right patients find you, connect with you, and book appointments while reducing administrative burden." />
+  <meta name="description" content="ActionPotential.AI helps private psychiatry practices optimize patient access. Helping prospective patients find you, connect with you, and book appointments while reducing administrative burden." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cabinet+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -28,7 +28,6 @@
 
     .cur{width:10px;height:10px;background:var(--t1);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform .1s;opacity:0;visibility:hidden}
 
-    /* HERO */
     .hero{min-height:100vh;background:var(--d9);display:flex;align-items:center;padding:132px 48px 72px}
     .hero-layout{width:100%;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,500px);gap:80px;align-items:center}
     .hero-left{display:flex;flex-direction:column;align-items:flex-start;max-width:640px}
@@ -46,7 +45,6 @@
     .hero-secondary-cta .arr-c{width:22px;height:22px;border:1px solid currentColor;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px}
     .hero-micro{font-size:12px;font-weight:300;line-height:1.65;color:rgba(255,255,255,.62);max-width:580px}
     .hero-card{background:rgba(12,21,32,.75);border:1px solid rgba(255,255,255,.03);border-radius:var(--rlg);padding:36px;box-shadow:0 6px 16px rgba(0,0,0,.14);display:flex;flex-direction:column;gap:16px}
-    .hero-card-eyebrow{font-size:10px;font-weight:500;letter-spacing:.03em;color:rgba(121,197,199,.95)}
     .hero-card-title{font-family:var(--fd);font-size:30px;font-weight:300;line-height:1.16;color:white}
     .hero-card-copy{font-size:15px;font-weight:300;line-height:1.72;color:rgba(255,255,255,.68)}
     .hero-question{font-size:12px;font-weight:500;letter-spacing:.03em;color:rgba(255,255,255,.8)}
@@ -59,82 +57,47 @@
     .hero-continue:hover:not(:disabled){background:var(--bl)}
     .hero-continue:focus-visible{outline:2px solid rgba(121,197,199,.9);outline-offset:2px}
     .hero-continue:disabled{opacity:.3;cursor:not-allowed}
-    .hero-card-caption{font-size:12px;font-weight:300;color:rgba(255,255,255,.52);text-align:center}
     .hero-card-step{display:flex;flex-direction:column;gap:14px;min-height:360px}
     .hero-step-actions{display:flex;flex-direction:column;gap:10px;margin-top:4px}
     .hero-back{align-self:flex-start;font-size:12px;font-weight:500;letter-spacing:.02em;color:rgba(255,255,255,.68);padding:4px 0}
     .hero-back:hover{color:rgba(255,255,255,.9)}
-    .hero-back:focus-visible{outline:2px solid rgba(121,197,199,.82);outline-offset:2px;border-radius:4px}
-    .hero-result-heading{font-family:var(--fd);font-size:28px;font-weight:300;line-height:1.2;color:white}
+    .hero-result-heading{font-family:var(--fd);font-size:26px;font-weight:300;line-height:1.2;color:white}
     .hero-result-copy{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.76)}
-    .hero-calendar-frame{width:100%;min-height:520px;border:1px solid rgba(255,255,255,.08);border-radius:var(--rmd);background:rgba(12,21,32,.86)}
 
     .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:13px 26px;border-radius:50px;transition:opacity .2s,transform .2s}
     .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
     .btn-primary .av{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,255,255,.3)}
 
-    /* SECTION SYSTEM */
     .sd{background:var(--d8);color:white;padding:96px 48px}
     .sd-alt{background:var(--d7);color:white;padding:96px 48px}
     .si{max-width:1200px;margin:0 auto}
     .sec-center{text-align:center}
-    .sec-center .eyebrow{justify-content:center}
     .sec-center .ssub{margin-left:auto;margin-right:auto}
-    .eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--t1)}
-    .eyebrow-line{width:22px;height:1px;flex-shrink:0;background:var(--t1)}
     .sh2{font-family:var(--fd);font-weight:300;line-height:1.1;letter-spacing:-.5px;margin-bottom:16px;color:white}
     .sh2-xl{font-size:52px}
     .sh2-lg{font-size:42px}
-    .sh2 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     .ssub{font-size:17px;font-weight:300;line-height:1.72;max-width:640px;color:var(--w7)}
+    .ssub + .ssub{margin-top:16px}
+    .problem-body{max-width:720px;text-align:left}
+    .problem-list{list-style:none;margin-top:32px;display:flex;flex-direction:column;gap:12px;text-align:left;max-width:720px}
+    .problem-list li{font-size:15px;font-weight:300;color:var(--w7);line-height:1.65;padding-left:18px;position:relative}
+    .problem-list li::before{content:'';position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--t1);opacity:.8}
 
-    /* CREDIBILITY BAR */
-    .cred-bar{background:var(--d7);border-top:1px solid rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.045);padding:52px 48px}
-    .cred-bar-inner{max-width:1200px;margin:0 auto;text-align:center}
-    .cred-bar-headline{font-family:var(--fd);font-size:22px;font-weight:300;color:rgba(255,255,255,.88);margin-bottom:28px;line-height:1.4}
-    .cred-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
-    .cred-pill{font-size:12px;font-weight:400;color:var(--w7);padding:8px 18px;border:1px solid rgba(255,255,255,.08);border-radius:50px;background:rgba(255,255,255,.02);transition:border-color .2s,color .2s}
-    .cred-pill:hover{border-color:rgba(121,197,199,.28);color:var(--t1)}
-
-    /* PAIN SECTION */
-    .pain-intro{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;margin-bottom:56px;text-align:left}
-    .quote-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);border-radius:var(--rlg);overflow:hidden}
-    .quote-card{background:var(--d8);padding:28px 24px;transition:background .25s}
-    .quote-card:hover{background:var(--d6)}
-    .quote-card p{font-family:var(--fd);font-size:17px;font-weight:400;font-style:italic;color:rgba(255,255,255,.88);line-height:1.45}
-
-    /* SYSTEM SECTION */
     .system-visual{max-width:1100px;margin:48px auto 0;border-radius:var(--rlg);overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.28)}
     .system-visual img{width:100%;height:auto;display:block}
-    .system-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:56px;text-align:left}
+    .system-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px;text-align:left}
     .system-card{background:var(--d6);border:1px solid rgba(255,255,255,.06);border-radius:var(--rlg);padding:32px 28px;transition:border-color .2s,transform .15s}
     .system-card:hover{border-color:rgba(121,197,199,.18);transform:translateY(-2px)}
-    .system-card-num{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:12px}
     .system-card h3{font-family:var(--fd);font-size:26px;font-weight:400;color:white;margin-bottom:10px}
     .system-card-desc{font-size:14px;font-weight:300;color:var(--w7);line-height:1.65;margin-bottom:16px}
     .system-card ul{list-style:none;display:flex;flex-direction:column;gap:8px}
     .system-card li{font-size:13px;font-weight:300;color:rgba(255,255,255,.62);padding-left:14px;position:relative;line-height:1.5}
     .system-card li::before{content:'';position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--t1);opacity:.7}
 
-    /* STEPS */
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;border:1px solid rgba(255,255,255,.07);border-radius:var(--rlg);overflow:hidden;text-align:left}
-    .step{padding:38px 30px;background:var(--d6);border-right:1px solid rgba(255,255,255,.07);transition:background .2s}
-    .step:last-child{border-right:none}
-    .step:hover{background:var(--d7)}
-    .step-num{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:14px}
-    .step h3{font-family:var(--fd);font-size:22px;font-weight:400;color:white;margin-bottom:10px}
-    .step p{font-size:13px;font-weight:300;color:var(--w7);line-height:1.65}
-    .how-note{margin-top:36px;padding:36px 40px;background:rgba(121,197,199,.04);border:1px solid rgba(121,197,199,.12);border-radius:var(--rlg);border-left:3px solid var(--t2);text-align:left}
-    .how-note p{font-size:16px;font-weight:300;color:var(--w7);line-height:1.8;max-width:860px}
+    .why-body{max-width:720px;margin:0 auto;text-align:left}
+    .why-body p{font-size:17px;font-weight:300;line-height:1.75;color:var(--w7);margin-bottom:20px}
+    .why-body p:last-child{margin-bottom:0}
 
-    /* WHY DIFFERENT */
-    .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:52px;text-align:left}
-    .why-card{background:var(--d6);border:1px solid rgba(255,255,255,.06);border-radius:var(--rlg);padding:32px 28px;transition:border-color .2s}
-    .why-card:hover{border-color:rgba(121,197,199,.15)}
-    .why-card h3{font-size:14px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--t1);margin-bottom:14px}
-    .why-card p{font-size:15px;font-weight:300;line-height:1.75;color:var(--w7)}
-
-    /* TESTIMONIALS */
     .test-label{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-top:48px;margin-bottom:16px;text-align:left}
     .test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:24px}
     .test-grid--single{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
@@ -152,26 +115,17 @@
     .test-name{font-size:14px;font-weight:500;color:white;margin-bottom:2px}
     .test-biz{font-size:12px;font-weight:400;color:var(--t3)}
 
-    /* FOUNDER */
     .founder-grid{display:grid;grid-template-columns:400px 1fr;gap:80px;align-items:center;text-align:left}
     .founder-img-wrap{position:relative}
     .founder-img-wrap img{width:100%;border-radius:var(--rlg);filter:grayscale(15%);transition:filter .3s}
     .founder-img-wrap:hover img{filter:grayscale(0)}
     .founder-img-wrap::after{content:'';position:absolute;bottom:-1px;left:20px;right:20px;height:3px;background:var(--grad);border-radius:0 0 var(--rlg) var(--rlg)}
-    .founder-lbl{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--t1);margin-bottom:14px}
     .founder-name{font-family:var(--fd);font-size:46px;font-weight:300;color:white;line-height:1.0;margin-bottom:4px}
     .founder-title{font-size:14px;font-weight:300;color:var(--t1);margin-bottom:26px}
     .founder-bio{font-size:16px;font-weight:300;line-height:1.82;color:var(--w7);margin-bottom:28px}
-    .founder-bio strong{color:white;font-weight:500}
     .creds{display:flex;flex-wrap:wrap;gap:8px}
-    .cred{font-size:12px;font-weight:400;padding:7px 18px;border-radius:50px;letter-spacing:.02em;display:inline-flex;align-items:center;gap:6px}
-    .cred::before{content:'';width:6px;height:6px;border-radius:50%;flex-shrink:0}
-    .cred-deg{color:var(--t2);background:rgba(46,166,212,.07);border:1px solid rgba(46,166,212,.16)}
-    .cred-deg::before{background:var(--t2)}
-    .cred-org{color:var(--t1);background:rgba(121,197,199,.07);border:1px solid rgba(121,197,199,.16)}
-    .cred-org::before{background:var(--t1)}
+    .cred{font-size:12px;font-weight:400;padding:7px 18px;border-radius:50px;letter-spacing:.02em;display:inline-flex;align-items:center;gap:6px;color:var(--t2);background:rgba(46,166,212,.07);border:1px solid rgba(46,166,212,.16)}
 
-    /* CTA */
     .cta-card{background:var(--d6);border:1px solid rgba(255,255,255,.06);border-radius:var(--rxl);padding:80px;text-align:center;position:relative;overflow:hidden}
     .cta-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
     .cta-card::after{content:'';position:absolute;top:-40%;left:-20%;width:140%;height:140%;background:radial-gradient(ellipse at 50% 50%,rgba(46,166,212,.055) 0%,transparent 60%);pointer-events:none}
@@ -182,7 +136,6 @@
     .cta-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--t1);flex-shrink:0;margin-top:.45em}
     .cta-note{font-size:12px;color:var(--w4);margin-top:14px;position:relative;z-index:1;max-width:520px;margin-left:auto;margin-right:auto}
 
-    /* SCROLL REVEAL */
     .rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
     .rv.vis{opacity:1;transform:translateY(0)}
     .rv-d1{transition-delay:.1s}
@@ -193,13 +146,7 @@
       .hero{min-height:auto;padding:112px 32px 56px}
       .hero-layout{grid-template-columns:1fr;gap:40px}
       .hero-h1{font-size:48px}
-      .pain-intro{grid-template-columns:1fr;gap:32px}
-      .quote-grid{grid-template-columns:repeat(2,1fr)}
       .system-cards{grid-template-columns:1fr}
-      .steps{grid-template-columns:repeat(2,1fr)}
-      .step:nth-child(2){border-right:none}
-      .step:nth-child(1),.step:nth-child(2){border-bottom:1px solid rgba(255,255,255,.07)}
-      .why-grid{grid-template-columns:1fr}
       .founder-grid{grid-template-columns:1fr}
       .founder-img-wrap{max-width:320px}
       .cta-card{padding:48px 32px}
@@ -211,13 +158,7 @@
       .hero-card{padding:24px 20px}
       .hero-card-title{font-size:26px}
       .hero-card-step{min-height:0}
-      .hero-calendar-frame{min-height:500px}
-      .sd,.sd-alt,.cred-bar{padding:64px 20px}
-      .cred-bar{padding:40px 20px}
-      .quote-grid{grid-template-columns:1fr}
-      .steps{grid-template-columns:1fr}
-      .step{border-right:none!important;border-bottom:1px solid rgba(255,255,255,.07)}
-      .step:last-child{border-bottom:none}
+      .sd,.sd-alt{padding:64px 20px}
       .test-grid{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto}
       .sh2-xl{font-size:36px}
       .sh2-lg{font-size:28px}
@@ -231,18 +172,18 @@
 <div class="cur" id="cur"></div>
 <div id="nav-placeholder"></div>
 
-<!-- HERO -->
+<!-- 1. HERO -->
 <section class="hero">
   <div class="hero-layout">
     <div class="hero-left">
       <p class="hero-eyebrow">Behavioral Science + Intelligent Automation for Psychiatry Practices</p>
       <h1 class="hero-h1">Patient Access Optimization for <span class="hero-h1-accent">Private Psychiatry Practices</span></h1>
-      <p class="hero-body">Helping the right patients find you, connect with you, and book appointments while reducing the administrative burden on your practice.</p>
+      <p class="hero-body">Helping prospective patients find you, connect with you, and book appointments while reducing the administrative burden on your practice.</p>
       <div class="hero-ctas">
         <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="hero-primary-cta">Start Patient Access Assessment</a>
         <a href="#the-system" class="hero-secondary-cta">See How It Works <span class="arr-c">&#8595;</span></a>
       </div>
-      <p class="hero-micro">In 45 minutes, we&rsquo;ll identify the biggest barriers preventing prospective patients from finding your practice, reaching you, and booking appointments.</p>
+      <p class="hero-micro">Complete the assessment in under 3 minutes. Receive a personalized Patient Access Report and recommended next steps.</p>
     </div>
 
     <aside class="hero-card" aria-label="Patient Access Assessment">
@@ -253,62 +194,48 @@
   </div>
 </section>
 
-<!-- CREDIBILITY BAR -->
-<div class="cred-bar">
-  <div class="cred-bar-inner rv">
-    <p class="cred-bar-headline">Built from psychology, healthcare operations, UX, and behavioral science.</p>
-    <div class="cred-pills">
-      <span class="cred-pill">M.A. Experimental Psychology</span>
-      <span class="cred-pill">M.S. User Experience Design</span>
-      <span class="cred-pill">Cleveland Clinic neuropsychology research</span>
-      <span class="cred-pill">Psychiatric case management experience</span>
-      <span class="cred-pill">Digital health operations experience</span>
-      <span class="cred-pill">Active psychiatry practice implementation</span>
-    </div>
-  </div>
-</div>
-
-<!-- PAIN SECTION -->
-<section class="sd-alt" id="relate">
+<!-- 2. THE PROBLEM -->
+<section class="sd-alt" id="problem">
   <div class="si">
-    <div class="pain-intro">
-      <div class="rv">
-        <div class="eyebrow"><div class="eyebrow-line"></div>Maybe you can relate</div>
-        <h2 class="sh2 sh2-xl">Patient access is harder than it should be, and you can <em>feel</em> it.</h2>
-      </div>
-      <div class="rv rv-d1">
-        <p class="ssub">Your clinical work may be excellent, but prospective patients still fall through the cracks before care begins. They search and find another practice. They call and reach voicemail. They intend to book but never complete the process. Meanwhile, you or your staff spend valuable time returning calls, answering repetitive questions, and managing intake friction.</p>
-      </div>
-    </div>
-    <div class="quote-grid rv">
-      <div class="quote-card"><p>&ldquo;Patients call, but I cannot always respond quickly.&rdquo;</p></div>
-      <div class="quote-card"><p>&ldquo;After-hours inquiries sit until the next business day.&rdquo;</p></div>
-      <div class="quote-card"><p>&ldquo;I do not want more admin work just to improve access.&rdquo;</p></div>
-      <div class="quote-card"><p>&ldquo;We rely on referrals, but people still need to find and contact us.&rdquo;</p></div>
-      <div class="quote-card"><p>&ldquo;Prospective patients ask the same questions over and over.&rdquo;</p></div>
-      <div class="quote-card"><p>&ldquo;The website does not really guide people to the next step.&rdquo;</p></div>
-      <div class="quote-card"><p>&ldquo;I know AI could help, but I need it handled carefully.&rdquo;</p></div>
-      <div class="quote-card"><p>&ldquo;Growth should not mean more chaos.&rdquo;</p></div>
-      <div class="quote-card"><p>&ldquo;I want the right patients, not just more inquiries.&rdquo;</p></div>
-      <div class="quote-card"><p>&ldquo;Small barriers are keeping people from care.&rdquo;</p></div>
+    <h2 class="sh2 sh2-lg rv">Better patient access does not happen by accident.</h2>
+    <div class="problem-body rv">
+      <p class="ssub">Prospective patients do not simply become patients.</p>
+      <p class="ssub">They first need to discover your practice, understand whether you are a good fit, connect with your office, receive timely answers, complete scheduling, and ultimately arrive for care.</p>
+      <p class="ssub">Friction at any point in that journey creates unnecessary administrative work and can prevent patients from accessing the care they need.</p>
+      <p class="ssub" style="margin-top:24px">Common challenges include:</p>
+      <ul class="problem-list">
+        <li>Heavy reliance on referrals or Psychology Today</li>
+        <li>Limited visibility on Google and emerging AI search</li>
+        <li>Missed calls and delayed responses</li>
+        <li>Prospective patients abandoning the scheduling process</li>
+        <li>Administrative work consuming valuable clinical time</li>
+        <li>Uncertainty about how to market ethically and professionally</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- SYSTEM SECTION -->
+<!-- 3. THE PATIENT ACCESS OPTIMIZATION SYSTEM -->
 <section class="sd sec-center" id="the-system">
   <div class="si">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>Patient Access Optimization System</div>
-    <h2 class="sh2 sh2-lg rv">One system. Four connected parts.</h2>
-    <p class="ssub rv">Patient access is not one isolated problem. It is the full journey from first search to first appointment, supported by systems that also reduce administrative burden.</p>
+    <h2 class="sh2 sh2-lg rv">Introducing the Patient Access Optimization System</h2>
+    <p class="ssub rv">Patient access is not one problem.</p>
+    <p class="ssub rv">It is an interconnected system.</p>
+    <p class="ssub rv">Our framework improves four critical areas that influence whether prospective patients ultimately become patients.</p>
     <div class="system-visual rv">
       <img src="/APAI-cards-no-footer.png" alt="Patient Access Optimization System: Discoverability, Responsiveness, Patient Journey Optimization, Continuous Optimization" width="2400" height="1200" loading="lazy" />
     </div>
+  </div>
+</section>
+
+<!-- 4. FOUR COMPONENTS -->
+<section class="sd-alt sec-center" id="four-components">
+  <div class="si">
+    <h2 class="sh2 sh2-lg rv">One system. Four connected parts.</h2>
     <div class="system-cards">
       <div class="system-card rv">
-        <div class="system-card-num">01</div>
         <h3>Discoverability</h3>
-        <p class="system-card-desc">Help the right patients find and trust your practice.</p>
+        <p class="system-card-desc">Help prospective patients find your practice through local search, Google Business Profile optimization, AI search, SEO, and authority-building content.</p>
         <ul>
           <li>Local search visibility</li>
           <li>Google Business Profile optimization</li>
@@ -318,9 +245,8 @@
         </ul>
       </div>
       <div class="system-card rv rv-d1">
-        <div class="system-card-num">02</div>
         <h3>Responsiveness</h3>
-        <p class="system-card-desc">Make it easier for prospective patients to connect with your practice.</p>
+        <p class="system-card-desc">Help prospective patients connect with your practice through intelligent call handling, website assistance, appointment automation, and timely follow-up.</p>
         <ul>
           <li>AI voice receptionist</li>
           <li>Conversational website assistant</li>
@@ -330,9 +256,8 @@
         </ul>
       </div>
       <div class="system-card rv rv-d2">
-        <div class="system-card-num">03</div>
         <h3>Patient Journey Optimization</h3>
-        <p class="system-card-desc">Use behavioral science and patient-centered communication to reduce friction before the first appointment.</p>
+        <p class="system-card-desc">Reduce friction between first contact and the first appointment using behavioral science and patient-centered communication.</p>
         <ul>
           <li>Patient-centered communication</li>
           <li>Stigma-aware messaging</li>
@@ -343,9 +268,8 @@
         </ul>
       </div>
       <div class="system-card rv rv-d3">
-        <div class="system-card-num">04</div>
         <h3>Continuous Optimization</h3>
-        <p class="system-card-desc">Continuously identify and remove barriers that prevent prospective patients from accessing care.</p>
+        <p class="system-card-desc">Measure performance, identify bottlenecks, and continuously improve patient access over time.</p>
         <ul>
           <li>Monthly strategy reviews</li>
           <li>Workflow analysis</li>
@@ -358,72 +282,25 @@
   </div>
 </section>
 
-<!-- HOW WE WORK -->
-<section class="sd-alt" id="how-it-works">
-  <div class="si">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>How We Work</div>
-    <h2 class="sh2 sh2-lg rv">We do not hand you software. We build and run the system with you.</h2>
-    <p class="ssub rv">You do not need to become technical. We handle setup, configuration, workflow design, testing, and ongoing optimization. The goal is not to add another tool to your practice. The goal is to create a patient access system that makes your practice easier to find, easier to reach, and easier to manage.</p>
-    <div class="steps rv">
-      <div class="step">
-        <div class="step-num">Step 01</div>
-        <h3>We map the patient access journey</h3>
-        <p>Identify where prospective patients are finding friction, from search and website experience to calls, booking, intake, and follow-up.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">Step 02</div>
-        <h3>We build the system</h3>
-        <p>Configure the AI receptionist, website assistant, booking workflows, missed-call recovery, CRM, reporting, and visibility systems.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">Step 03</div>
-        <h3>We launch and monitor</h3>
-        <p>Test the workflows, review patient-facing communication, and make sure the system is functioning before relying on it.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">Step 04</div>
-        <h3>We optimize continuously</h3>
-        <p>Review performance, identify bottlenecks, and prioritize improvements each month.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY THIS IS DIFFERENT -->
-<section class="sd" id="our-approach">
+<!-- 5. WHY ACTIONPOTENTIAL.AI -->
+<section class="sd" id="why">
   <div class="si sec-center">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>Why This Is Different</div>
-    <h2 class="sh2 sh2-lg rv">Built for the realities of psychiatric care.</h2>
-    <p class="ssub rv">Most agencies approach psychiatry like any other local service business. We do not. The Patient Access Optimization System is built around stigma, hesitation, patient decision-making, responsiveness, and the administrative realities of private practice psychiatry.</p>
-    <div class="why-grid">
-      <div class="why-card rv">
-        <h3>Behavioral Science Foundation</h3>
-        <p>Graduate training in experimental psychology and user experience design informs how messaging, decision-making, and follow-through are approached.</p>
-      </div>
-      <div class="why-card rv rv-d1">
-        <h3>Clinical and Healthcare Experience</h3>
-        <p>Experience in neuropsychological research, psychiatric case management, and digital health operations shapes how the system is designed and implemented.</p>
-      </div>
-      <div class="why-card rv rv-d2">
-        <h3>Human-Centered AI</h3>
-        <p>AI supports access, communication, and administrative workflows. It does not provide therapy, diagnosis, treatment, or clinical advice.</p>
-      </div>
-      <div class="why-card rv rv-d3">
-        <h3>Active Psychiatry Implementation</h3>
-        <p>The system is currently being implemented in a real psychiatry practice with AI voice reception, appointment scheduling, FAQ automation, emergency escalation workflows, Google Business Profile optimization, review management, and an AI-powered website assistant.</p>
-      </div>
+    <h2 class="sh2 sh2-lg rv">Built specifically for behavioral healthcare.</h2>
+    <div class="why-body rv">
+      <p>Unlike traditional marketing agencies, we do not focus on isolated marketing tactics.</p>
+      <p>We optimize the complete patient access system, from how prospective patients discover your practice to how they connect, schedule, and ultimately access care.</p>
+      <p>Our approach combines behavioral science, healthcare experience, user experience design, and intelligent automation to improve patient access while reducing administrative burden.</p>
     </div>
   </div>
 </section>
 
-<!-- RESULTS / TESTIMONIALS -->
+<!-- 6. RESULTS / TESTIMONIALS -->
 <section class="sd-alt" id="results">
   <div class="si sec-center">
-    <div class="eyebrow rv"><div class="eyebrow-line"></div>Results</div>
-    <h2 class="sh2 sh2-lg rv">Early proof from healthcare and service-based systems.</h2>
-    <p class="ssub rv">Client feedback reflects our ability to build reliable systems, improve responsiveness, and reduce missed opportunities. Psychiatry-specific proof will be featured as new implementations mature.</p>
+    <h2 class="sh2 sh2-lg rv">Trusted by healthcare and service organizations.</h2>
+    <p class="ssub rv">Client feedback reflects our ability to build reliable systems, improve responsiveness, and reduce missed opportunities.</p>
 
-    <p class="test-label rv">Client feedback from healthcare and service-based implementations</p>
+    <p class="test-label rv">Psychiatry practice implementation feedback</p>
     <div class="test-grid test-grid--single rv">
       <div class="test-card">
         <div class="test-vid">
@@ -454,7 +331,7 @@
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- 7. ABOUT CARY -->
 <section class="sd" id="about">
   <div class="si">
     <div class="founder-grid">
@@ -462,34 +339,38 @@
         <img src="https://actionpotential.ai/CaryProfilePic.jpeg" alt="Cary Sears, Founder and CEO" />
       </div>
       <div class="rv rv-d1">
-        <div class="founder-lbl">About</div>
-        <div class="founder-name">Cary Sears</div>
+        <div class="founder-name">About Cary Sears</div>
         <div class="founder-title">Founder and CEO, ActionPotential.AI</div>
-        <p class="founder-bio">Cary spent his career studying why people make decisions &mdash; conducting clinical neuropsychological research at Cleveland Clinic, working in psychiatric case management, and building behavioral systems at scale at Noom and Neura Health. <strong>That background shapes how patient access systems are designed:</strong> the messaging, the timing, the conversational design, and the follow-up workflows that help prospective patients move from search to appointment.</p>
+        <p class="founder-bio">My career has focused on one question: how do people make decisions and follow through?</p>
+        <p class="founder-bio">That work has taken me from graduate research in experimental psychology, to neuropsychological research at Cleveland Clinic, psychiatric case management, digital health leadership, and behavior change at Noom.</p>
+        <p class="founder-bio">Today, I apply those experiences to one challenge: helping private psychiatry practices improve patient access through behavioral science, thoughtful workflow design, and intelligent automation.</p>
+        <p class="founder-bio">The Patient Access Optimization System is not based on generic marketing tactics. It is informed by years of experience studying behavior, working in healthcare, and building systems that help people take action.</p>
         <div class="creds">
-          <span class="cred cred-deg">M.A. Experimental Psychology</span>
-          <span class="cred cred-deg">M.S. UX Design</span>
-          <span class="cred cred-org">Cleveland Clinic</span>
-          <span class="cred cred-org">Noom</span>
-          <span class="cred cred-org">Neura Health</span>
+          <span class="cred">M.A. Experimental Psychology</span>
+          <span class="cred">M.S. User Experience Design</span>
+          <span class="cred">Cleveland Clinic</span>
+          <span class="cred">Psychiatric Case Management</span>
+          <span class="cred">Noom</span>
+          <span class="cred">Neura Health</span>
+          <span class="cred">Active Psychiatry Implementation</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- 8. FINAL CTA -->
 <section class="sd-alt" id="audit">
   <div class="si">
     <div class="cta-card rv">
       <h2>Start with a Patient Access Assessment.</h2>
-      <p>In 45 minutes, we will identify the biggest barriers preventing prospective patients from finding your practice, reaching you, and booking appointments.</p>
+      <p>Complete the assessment in under 3 minutes. We will identify the biggest barriers preventing prospective patients from finding your practice, connecting with your office, and booking appointments.</p>
       <ul class="cta-list">
         <li>Your top patient access bottlenecks</li>
         <li>Missed inquiry and responsiveness opportunities</li>
         <li>Administrative burden reduction opportunities</li>
         <li>Recommended automation and workflow improvements</li>
-        <li>A prioritized 90-day patient access roadmap</li>
+        <li>A prioritized patient access roadmap</li>
       </ul>
       <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-primary" style="display:inline-flex;">
         <img src="https://actionpotential.ai/CaryProfilePic.jpeg" alt="Cary" class="av" />
@@ -535,14 +416,7 @@
     'Prospective patients do not complete the booking process',
     'Cancellations or no-shows'
   ];
-  var stepTwoOptions=[
-    'More qualified patient inquiries',
-    'Faster response to prospective patients',
-    'Less administrative workload',
-    'More booked appointments',
-    'A clearer patient access system'
-  ];
-  var heroDiagnosticState={step:'step1',step1Answer:null,step2Answer:null};
+  var heroDiagnosticState={step:'step1',step1Answer:null};
 
   function renderHeroDiagnostic(){
     if(!heroStepMount) return;
@@ -568,44 +442,7 @@
       if(step1Next){
         step1Next.addEventListener('click',function(){
           if(heroDiagnosticState.step1Answer){
-            heroDiagnosticState.step='step2';
-            renderHeroDiagnostic();
-          }
-        });
-      }
-      return;
-    }
-    if(heroDiagnosticState.step==='step2'){
-      heroStepMount.innerHTML=
-        '<p class="hero-question">What would be most valuable over the next 90 days?</p>'+
-        '<div class="hero-options" role="radiogroup" aria-label="What would be most valuable over the next 90 days?">'+
-          stepTwoOptions.map(function(option){
-            var selected=heroDiagnosticState.step2Answer===option;
-            return '<button type="button" class="diag-option'+(selected?' selected':'')+'" data-step2="'+option+'" role="radio" aria-checked="'+(selected?'true':'false')+'">'+option+'</button>';
-          }).join('')+
-        '</div>'+
-        '<div class="hero-step-actions">'+
-          '<button type="button" class="hero-continue" id="heroStep2Next" '+(heroDiagnosticState.step2Answer?'':'disabled')+'>Continue Assessment</button>'+
-          '<button type="button" class="hero-back" id="heroStep2Back">Back</button>'+
-        '</div>';
-      heroStepMount.querySelectorAll('[data-step2]').forEach(function(button){
-        button.addEventListener('click',function(){
-          heroDiagnosticState.step2Answer=button.getAttribute('data-step2');
-          renderHeroDiagnostic();
-        });
-      });
-      var step2Back=document.getElementById('heroStep2Back');
-      if(step2Back){
-        step2Back.addEventListener('click',function(){
-          heroDiagnosticState.step='step1';
-          renderHeroDiagnostic();
-        });
-      }
-      var step2Next=document.getElementById('heroStep2Next');
-      if(step2Next){
-        step2Next.addEventListener('click',function(){
-          if(heroDiagnosticState.step2Answer){
-            heroDiagnosticState.step='calendar';
+            heroDiagnosticState.step='complete';
             renderHeroDiagnostic();
           }
         });
@@ -613,36 +450,21 @@
       return;
     }
     heroStepMount.innerHTML=
-      '<p class="hero-result-heading">Book your Patient Access Assessment</p>'+
-      '<p class="hero-result-copy">Choose a time that works for you. In 45 minutes, we&rsquo;ll identify the biggest barriers preventing prospective patients from finding your practice, reaching you, and booking appointments.</p>'+
-      '<iframe src="'+bookingUrl+'" class="hero-calendar-frame" title="Book your Patient Access Assessment" scrolling="yes"></iframe>'+
-      '<button type="button" class="hero-back" id="heroCalendarBack">Back</button>';
-    var calendarBack=document.getElementById('heroCalendarBack');
-    if(calendarBack){
-      calendarBack.addEventListener('click',function(){
-        heroDiagnosticState.step='step2';
+      '<p class="hero-result-heading">Your Patient Access Report is ready</p>'+
+      '<p class="hero-result-copy">Complete the assessment in under 3 minutes. Receive a personalized Patient Access Report and recommended next steps.</p>'+
+      '<div class="hero-step-actions">'+
+        '<a href="'+bookingUrl+'" class="hero-continue" style="display:flex;align-items:center;justify-content:center;text-align:center">Start Patient Access Assessment</a>'+
+        '<button type="button" class="hero-back" id="heroCompleteBack">Back</button>'+
+      '</div>';
+    var completeBack=document.getElementById('heroCompleteBack');
+    if(completeBack){
+      completeBack.addEventListener('click',function(){
+        heroDiagnosticState.step='step1';
         renderHeroDiagnostic();
       });
     }
   }
   renderHeroDiagnostic();
-
-  var navWired=false;
-  var navObserver;
-  function wireNav(){
-    if(navWired) return;
-    var nav=document.getElementById('nav');
-    if(!nav) return;
-    navWired=true;
-    var btn=nav.querySelector('.nav-btn');
-    if(btn){btn.setAttribute('href',bookingUrl)}
-    var mob=nav.querySelector('.nav-mobile-cta');
-    if(mob){mob.setAttribute('href',bookingUrl)}
-    if(navObserver) navObserver.disconnect();
-  }
-  navObserver=new MutationObserver(wireNav);
-  navObserver.observe(document.getElementById('nav-placeholder'),{childList:true});
-  setTimeout(wireNav,200);
 </script>
 <script src="/includes.js"></script>
 </body>
