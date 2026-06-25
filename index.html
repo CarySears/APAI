@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cabinet+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/nav.css" />
+  <link rel="stylesheet" href="/footer.css" />
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:auto;background:var(--page-bg)}
@@ -164,9 +165,6 @@
     .cta-list li{display:flex;align-items:flex-start;gap:12px;font-size:14px;font-weight:300;color:var(--w7);line-height:1.5}
     .cta-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--t1);flex-shrink:0;margin-top:.45em}
     .cta-note{font-size:12px;color:var(--w4);margin-top:14px;position:relative;z-index:1;max-width:520px;margin-left:auto;margin-right:auto}
-
-    footer{border-top:none;position:relative}
-    footer .footer-tag em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 
     .rv{opacity:1;transform:none;transition:none}
 
@@ -438,7 +436,22 @@
   </div>
 </section>
 
-<div id="footer-placeholder"></div>
+<div id="footer-placeholder">
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-tag">Patient Access Optimization for <em>Private Psychiatry Practices</em></div>
+      <div class="footer-nav">
+        <a href="#the-system">Patient Access System</a><span>&#183;</span>
+        <a href="#why">How We Help</a><span>&#183;</span>
+        <a href="#results">Results</a><span>&#183;</span>
+        <a href="#about">About</a><span>&#183;</span>
+        <a href="#audit">Start Assessment</a><span>&#183;</span>
+        <a href="mailto:hello@actionpotential.ai">hello@actionpotential.ai</a>
+      </div>
+      <p class="footer-copy">ActionPotential.AI &nbsp;&#183;&nbsp; Helping prospective patients find you, connect with you, and book appointments while reducing administrative burden.</p>
+    </div>
+  </footer>
+</div>
 
 <script>
   document.querySelectorAll('.test-vid').forEach(function(w){

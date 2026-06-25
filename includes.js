@@ -1,4 +1,12 @@
 (function(){
+  function ensureStylesheet(href){
+    if(document.querySelector('link[href="'+href+'"]')) return;
+    var link=document.createElement('link');
+    link.rel='stylesheet';
+    link.href=href;
+    document.head.appendChild(link);
+  }
+
   function loadHTML(selector, file, callback){
     var el = document.querySelector(selector);
     if(!el) return;
@@ -36,7 +44,10 @@
     }
   });
 
-  loadHTML('#footer-placeholder', '/footer.html');
+  ensureStylesheet('/footer.css');
+  if(!document.querySelector('footer')){
+    loadHTML('#footer-placeholder', '/footer.html');
+  }
 
   window.addEventListener('load', function(){
     if(document.querySelector('script[data-widget-id="692e35e1885ff875a3542ddb"]')) return;

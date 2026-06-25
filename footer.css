@@ -1,0 +1,13 @@
+footer{background:var(--page-bg,#0c1520);border-top:1px solid rgba(255,255,255,.06);padding:44px 48px 28px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-tag{font-family:'Cormorant Garamond',Georgia,serif;font-size:21px;font-weight:300;font-style:italic;color:rgba(255,255,255,.38);text-align:center;margin-bottom:28px}
+.footer-tag em{font-style:normal;background:linear-gradient(90deg,#f97316 0%,#ec4899 25%,#a855f7 50%,#2EA6D4 75%,#00A79D 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.footer-nav{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.footer-nav a{font-family:'Cabinet Grotesk',-apple-system,sans-serif;font-size:12px;font-weight:300;color:rgba(255,255,255,.38);transition:color .2s}
+.footer-nav a:hover{color:#79C5C7}
+.footer-nav span{color:rgba(255,255,255,.18);font-size:11px}
+.footer-copy{font-family:'Cabinet Grotesk',-apple-system,sans-serif;font-size:11px;font-weight:300;color:rgba(255,255,255,.38);text-align:center;letter-spacing:.04em}
+
+@media(max-width:768px){
+  footer{padding:36px 20px 24px}
+}
