@@ -109,6 +109,13 @@
     .system-card li{font-size:13px;font-weight:300;color:rgba(255,255,255,.62);padding-left:14px;position:relative;line-height:1.5}
     .system-card li::before{content:'';position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--t1);opacity:.7}
 
+    .serve-body{max-width:900px;margin:0 auto;text-align:left}
+    .serve-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}
+    .serve-item{font-size:14px;font-weight:300;color:var(--w7);line-height:1.5;padding:14px 18px;background:var(--d6);border:1px solid rgba(255,255,255,.06);border-radius:var(--rmd)}
+    .serve-divider{height:1px;background:rgba(255,255,255,.08);margin:48px 0}
+    .serve-subhead{font-family:var(--fd);font-size:28px;font-weight:400;color:white;margin-bottom:12px}
+    .serve-close{margin-top:32px;font-size:15px;font-weight:300;color:var(--w7);line-height:1.72;max-width:720px}
+
     .why-body{max-width:720px;margin:0 auto;text-align:left}
     .why-body p{font-size:17px;font-weight:300;line-height:1.75;color:var(--w7);margin-bottom:20px}
     .why-body p:last-child{margin-bottom:0}
@@ -162,6 +169,7 @@
       .hero-layout{grid-template-columns:1fr;gap:40px}
       .hero-h1{font-size:48px}
       .system-cards{grid-template-columns:1fr}
+      .serve-grid{grid-template-columns:1fr}
       .founder-grid{grid-template-columns:1fr}
       .founder-img-wrap{max-width:320px}
       .cta-card{padding:48px 32px}
@@ -289,6 +297,40 @@
           <li>Routine audits and conversion reviews</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="sd" id="who-we-serve">
+  <div class="si">
+    <h2 class="sh2 sh2-lg rv">Who We Serve</h2>
+    <div class="serve-body rv">
+      <p class="ssub">The Patient Access Optimization System was built specifically for outpatient psychiatry practices, including:</p>
+      <div class="serve-grid">
+        <div class="serve-item">General Psychiatry</div>
+        <div class="serve-item">Child &amp; Adolescent Psychiatry</div>
+        <div class="serve-item">Psychiatric Nurse Practitioner Practices</div>
+        <div class="serve-item">Interventional Psychiatry (TMS, Spravato, Ketamine)</div>
+        <div class="serve-item">Integrative Psychiatry</div>
+        <div class="serve-item">Group Psychiatry Practices</div>
+        <div class="serve-item">Concierge &amp; Private Pay Psychiatry Practices</div>
+      </div>
+
+      <div class="serve-divider"></div>
+
+      <h3 class="serve-subhead">Also a Good Fit For</h3>
+      <p class="ssub">While our primary focus is private psychiatry, many of the patient access challenges we solve are shared by other outpatient mental health practices, including:</p>
+      <div class="serve-grid">
+        <div class="serve-item">Psychology Practices</div>
+        <div class="serve-item">Clinical Social Workers</div>
+        <div class="serve-item">Licensed Mental Health Counselors</div>
+        <div class="serve-item">Professional Counselors</div>
+        <div class="serve-item">Marriage &amp; Family Therapists</div>
+        <div class="serve-item">Group Therapy Practices</div>
+      </div>
+
+      <p class="serve-close">If you&rsquo;re unsure whether the Patient Access Optimization System is a good fit for your practice, we can discuss your specific situation during a Patient Access Review.</p>
     </div>
   </div>
 </section>
