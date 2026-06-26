@@ -152,6 +152,18 @@
     .test-label{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-top:48px;margin-bottom:16px;text-align:left}
     .test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:24px}
     .test-grid--single{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+    .test-carousel{max-width:560px;margin:48px auto 0;position:relative}
+    .test-carousel-shell{display:flex;align-items:center;gap:16px}
+    .test-carousel-viewport{flex:1;min-width:0;overflow:hidden}
+    .test-carousel-track{display:flex;transition:transform .35s ease}
+    .test-carousel-slide{flex:0 0 100%;min-width:0}
+    .test-carousel-btn{flex-shrink:0;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.12);background:var(--d6);color:var(--t1);display:flex;align-items:center;justify-content:center;transition:opacity .2s,border-color .2s,transform .2s}
+    .test-carousel-btn:hover:not(:disabled){border-color:rgba(121,197,199,.28);transform:translateY(-1px)}
+    .test-carousel-btn:disabled{opacity:.35;cursor:not-allowed}
+    .test-carousel-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .test-carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:20px}
+    .test-carousel-dot{width:8px;height:8px;border-radius:50%;padding:0;border:none;background:rgba(255,255,255,.24);cursor:pointer;transition:background .2s,transform .2s}
+    .test-carousel-dot.is-active{background:var(--t1);transform:scale(1.1)}
     .test-card{background:var(--d6);border:1px solid rgba(255,255,255,.07);border-radius:var(--rlg);overflow:hidden;transition:transform .2s,box-shadow .2s;position:relative}
     .test-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);opacity:.75;z-index:3}
     .test-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.2)}
@@ -222,6 +234,8 @@
       .sd,.sd-alt{padding:64px 20px}
       #problem{padding-bottom:40px}
       #the-system{padding-top:30px}
+      .test-carousel-shell{gap:10px}
+      .test-carousel-btn{width:38px;height:38px}
       .test-grid{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto}
       .sh2-xl{font-size:36px}
       .sh2-lg{font-size:28px}
@@ -400,7 +414,58 @@
   </div>
 </section>
 
-<!-- 5. WHY ACTIONPOTENTIAL.AI -->
+<!-- 5. WHAT CLIENTS SAY -->
+<section class="sd-alt sec-center" id="results">
+  <div class="si">
+    <h2 class="sh2 sh2-lg rv">What Clients Say</h2>
+    <p class="ssub rv">A few words from organizations we&rsquo;ve helped improve patient or customer access, responsiveness, and operational efficiency.</p>
+
+    <div class="test-carousel rv" aria-roledescription="carousel" aria-label="Client testimonials">
+      <div class="test-carousel-shell">
+        <button type="button" class="test-carousel-btn test-carousel-prev" aria-label="Previous testimonial">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="test-carousel-viewport">
+          <div class="test-carousel-track">
+            <div class="test-carousel-slide" aria-roledescription="slide" aria-label="1 of 3">
+              <div class="test-card">
+                <div class="test-vid">
+                  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--d7)"><span class="test-ph">Placeholder: Dr. Wong video</span></div>
+                  <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+                </div>
+                <div class="test-info"><div class="test-name">Daniel G. Wong, M.D.</div><div class="test-biz">Child Psychiatrist &middot; Private Practice</div></div>
+              </div>
+            </div>
+            <div class="test-carousel-slide" aria-roledescription="slide" aria-label="2 of 3">
+              <div class="test-card">
+                <div class="test-vid">
+                  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--d7)"><span class="test-ph">Placeholder: Jai video</span></div>
+                  <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+                </div>
+                <div class="test-info"><div class="test-name">Jai McPheron</div><div class="test-biz">Integrated Mindfulness Institute</div></div>
+              </div>
+            </div>
+            <div class="test-carousel-slide" aria-roledescription="slide" aria-label="3 of 3">
+              <div class="test-card">
+                <div class="test-vid">
+                  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--d7)"><span class="test-ph">Placeholder: Mauro video</span></div>
+                  <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+                </div>
+                <div class="test-info"><div class="test-name">Mauro Clerici</div><div class="test-biz">Vesping Around</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="test-carousel-btn test-carousel-next" aria-label="Next testimonial">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+      <div class="test-carousel-dots" role="tablist" aria-label="Choose testimonial"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. WHY ACTIONPOTENTIAL.AI -->
 <section class="sd" id="why">
   <div class="si sec-center">
     <h2 class="sh2 sh2-lg rv">A Different Kind of Partner</h2>
@@ -408,43 +473,6 @@
       <p>We&rsquo;re not a traditional marketing agency or software vendor.</p>
       <p>We combine behavioral science, user experience design, healthcare operations experience, and intelligent automation to improve how prospective patients discover your practice, connect with your practice, schedule appointments, and ultimately access care.</p>
       <p>Rather than selling disconnected marketing tactics or software tools, we partner with psychiatry practices to design, implement, and continuously optimize an integrated Patient Access Optimization System&mdash;reducing friction at every touchpoint in the mental health patient journey through aligned, stigma-reducing, trauma-informed communications.</p>
-    </div>
-  </div>
-</section>
-
-<!-- 6. RESULTS / TESTIMONIALS -->
-<section class="sd-alt" id="results">
-  <div class="si sec-center">
-    <h2 class="sh2 sh2-lg rv">Trusted by healthcare and service organizations.</h2>
-    <p class="ssub rv">Client feedback reflects our ability to build reliable systems, improve responsiveness, and reduce missed opportunities.</p>
-
-    <p class="test-label rv">Psychiatry practice implementation feedback</p>
-    <div class="test-grid test-grid--single rv">
-      <div class="test-card">
-        <div class="test-vid">
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--d7)"><span class="test-ph">Placeholder: Dr. Wong video</span></div>
-          <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        </div>
-        <div class="test-info"><div class="test-name">Daniel G. Wong, M.D.</div><div class="test-biz">Child Psychiatrist &middot; Private Practice</div></div>
-      </div>
-    </div>
-
-    <p class="test-label rv">Additional service-based implementation feedback</p>
-    <div class="test-grid rv">
-      <div class="test-card">
-        <div class="test-vid">
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--d7)"><span class="test-ph">Placeholder: Jai video</span></div>
-          <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        </div>
-        <div class="test-info"><div class="test-name">Jai McPheron</div><div class="test-biz">Integrated Mindfulness Institute</div></div>
-      </div>
-      <div class="test-card rv-d1">
-        <div class="test-vid">
-          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:var(--d7)"><span class="test-ph">Placeholder: Mauro video</span></div>
-          <div class="test-overlay"><div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        </div>
-        <div class="test-info"><div class="test-name">Mauro Clerici</div><div class="test-biz">Vesping Around</div></div>
-      </div>
     </div>
   </div>
 </section>
@@ -516,6 +544,49 @@
       if(v){v.play();if(o)o.style.opacity='0'}
     });
   });
+
+  (function(){
+    var carousel=document.querySelector('.test-carousel');
+    if(!carousel)return;
+    var track=carousel.querySelector('.test-carousel-track');
+    var slides=carousel.querySelectorAll('.test-carousel-slide');
+    var prevBtn=carousel.querySelector('.test-carousel-prev');
+    var nextBtn=carousel.querySelector('.test-carousel-next');
+    var dotsWrap=carousel.querySelector('.test-carousel-dots');
+    var index=0;
+
+    slides.forEach(function(_,i){
+      var dot=document.createElement('button');
+      dot.type='button';
+      dot.className='test-carousel-dot'+(i===0?' is-active':'');
+      dot.setAttribute('role','tab');
+      dot.setAttribute('aria-label','Show testimonial '+(i+1));
+      dot.addEventListener('click',function(){goTo(i)});
+      dotsWrap.appendChild(dot);
+    });
+
+    function update(){
+      track.style.transform='translateX(-'+index*100+'%)';
+      prevBtn.disabled=index===0;
+      nextBtn.disabled=index===slides.length-1;
+      dotsWrap.querySelectorAll('.test-carousel-dot').forEach(function(dot,i){
+        dot.classList.toggle('is-active',i===index);
+        dot.setAttribute('aria-selected',i===index?'true':'false');
+      });
+      slides.forEach(function(slide,i){
+        slide.setAttribute('aria-hidden',i===index?'false':'true');
+      });
+    }
+
+    function goTo(i){
+      index=Math.max(0,Math.min(slides.length-1,i));
+      update();
+    }
+
+    prevBtn.addEventListener('click',function(){goTo(index-1)});
+    nextBtn.addEventListener('click',function(){goTo(index+1)});
+    update();
+  })();
 
   var bookingUrl='https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm';
   var heroStepMount=document.getElementById('heroDiagnosticStep');
