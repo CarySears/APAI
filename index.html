@@ -193,7 +193,18 @@
     .founder-title{font-size:14px;font-weight:300;color:var(--t1);margin-bottom:26px}
     .founder-bio{font-size:16px;font-weight:300;line-height:1.82;color:var(--w7);margin-bottom:28px}
     .creds{display:flex;flex-wrap:wrap;gap:8px}
+    .creds-row{margin-bottom:8px}
+    .creds-row:last-child{margin-bottom:0}
     .cred{font-size:12px;font-weight:400;padding:7px 18px;border-radius:50px;letter-spacing:.02em;display:inline-flex;align-items:center;gap:6px;color:var(--t2);background:rgba(46,166,212,.07);border:1px solid rgba(46,166,212,.16)}
+    .founder-details{margin-top:64px;background:var(--d6);border:1px solid rgba(255,255,255,.06);border-radius:var(--rlg);padding:40px 48px;text-align:left}
+    .founder-details-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+    .founder-detail-head{font-family:var(--fd);font-size:24px;font-weight:400;color:white;margin-bottom:20px}
+    .founder-detail-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+    .founder-detail-list li{font-size:15px;font-weight:300;color:var(--w7);line-height:1.65;padding-left:18px;position:relative}
+    .founder-detail-list li::before{content:'';position:absolute;left:0;top:.6em;width:6px;height:6px;border-radius:50%;background:var(--t1);opacity:.8}
+    .founder-cta{margin-top:32px;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:32px 40px;background:var(--d6);border:1px solid rgba(255,255,255,.06);border-radius:var(--rlg);text-align:left}
+    .founder-cta-copy h3{font-family:var(--fd);font-size:28px;font-weight:400;color:white;margin-bottom:8px}
+    .founder-cta-copy p{font-size:16px;font-weight:300;color:var(--w7);line-height:1.6;margin:0}
 
     .cta-card{background:var(--d6);border:1px solid rgba(255,255,255,.06);border-radius:var(--rxl);padding:80px;text-align:center;position:relative;overflow:hidden}
     .cta-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
@@ -226,6 +237,9 @@
       .serve-grid{grid-template-columns:1fr}
       .founder-grid{grid-template-columns:1fr}
       .founder-img-wrap{max-width:320px}
+      .founder-details{padding:32px 24px}
+      .founder-details-grid{grid-template-columns:1fr;gap:32px}
+      .founder-cta{flex-direction:column;align-items:flex-start;padding:28px 24px}
       .cta-card{padding:48px 32px}
     }
     @media(max-width:640px){
@@ -502,19 +516,52 @@
         <div class="founder-name">About Cary Sears</div>
         <div class="founder-title">Founder and CEO, ActionPotential.AI</div>
         <p class="founder-bio">My career has focused on one question: how do people make decisions and follow through?</p>
-        <p class="founder-bio">That work has taken me from graduate research in experimental psychology, to neuropsychological research at Cleveland Clinic, psychiatric case management, digital health leadership, and behavior change at Noom.</p>
+        <p class="founder-bio">That work has taken me from psychiatric case management to graduate research in experimental psychology and user experience design, to neuropsychological testing at Cleveland Clinic, digital health leadership, and behavior change at scale at Noom.</p>
         <p class="founder-bio">Today, I apply those experiences to one challenge: helping private psychiatry practices improve patient access through behavioral science, thoughtful workflow design, and intelligent automation.</p>
         <p class="founder-bio">The Patient Access Optimization System is not based on generic marketing tactics. It is informed by years of experience studying behavior, working in healthcare, and building systems that help people take action.</p>
-        <div class="creds">
+        <div class="creds creds-row">
           <span class="cred">M.A. Experimental Psychology</span>
           <span class="cred">M.S. User Experience Design</span>
+        </div>
+        <div class="creds creds-row">
           <span class="cred">Cleveland Clinic</span>
-          <span class="cred">Psychiatric Case Management</span>
           <span class="cred">Noom</span>
           <span class="cred">Neura Health</span>
-          <span class="cred">Active Psychiatry Implementation</span>
         </div>
       </div>
+    </div>
+
+    <div class="founder-details rv">
+      <div class="founder-details-grid">
+        <div>
+          <h3 class="founder-detail-head">Professional Background</h3>
+          <ul class="founder-detail-list">
+            <li>Founding Head of Care Coaching at a Digital Neurology Clinic</li>
+            <li>Former Psychiatric Case Manager</li>
+            <li>Led a team of 8+ behavioral health coach managers and more than 100 behavioral health coaches at Noom</li>
+            <li>Conducted clinical neuropsychological testing full-time at Cleveland Clinic</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="founder-detail-head">Education &amp; Certification</h3>
+          <ul class="founder-detail-list">
+            <li>M.A., Experimental Psychology</li>
+            <li>M.S., User Experience Design</li>
+            <li>National Board Certified Health &amp; Wellness Coach (NBC-HWC)</li>
+            <li>Certified Member of the Global Association of Applied Behavioural Scientists (GAABS)</li>
+            <li>Behavioral Economics Bootcamp Certificate</li>
+            <li>Behavioral Design for Health Specialization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="founder-cta rv">
+      <div class="founder-cta-copy">
+        <h3>See How This Applies to You</h3>
+        <p>Get a free patient access assessment.</p>
+      </div>
+      <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-primary">Book a 15-Minute Call</a>
     </div>
   </div>
 </section>
