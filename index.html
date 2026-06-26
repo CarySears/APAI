@@ -84,6 +84,14 @@
     .hero-booking-title{font-family:var(--fd);font-size:22px;font-weight:300;line-height:1.25;color:white;margin-bottom:10px}
     .hero-support{font-size:12px;font-weight:300;line-height:1.6;color:rgba(255,255,255,.52);text-align:center;margin-top:10px}
 
+    .trust-strip{background:var(--d6);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:36px 48px}
+    .trust-strip-inner{max-width:1200px;margin:0 auto}
+    .trust-strip-heading{font-family:var(--fd);font-size:22px;font-weight:300;color:var(--w7);text-align:center;margin-bottom:24px;letter-spacing:-.3px}
+    .trust-items{list-style:none;display:flex;flex-direction:column;gap:16px;margin:0;padding:0}
+    .trust-item{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:400;color:var(--w7);line-height:1.4}
+    .trust-icon{flex-shrink:0;width:20px;height:20px;color:var(--t1);display:flex;align-items:center;justify-content:center}
+    .trust-icon svg{width:18px;height:18px;display:block;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
     .btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gteal);color:white;font-size:14px;font-weight:500;padding:13px 26px;border-radius:50px;transition:opacity .2s,transform .2s}
     .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
     .btn-primary .av{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(255,255,255,.3)}
@@ -169,8 +177,12 @@
 
     .rv{opacity:1;transform:none;transition:none}
 
+    @media (min-width:641px){
+      .trust-items{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 32px}
+    }
     @media (min-width:1025px){
       .hero{min-height:calc(100vh - 88px)}
+      .trust-items{grid-template-columns:repeat(4,1fr);gap:24px}
     }
 
     @media (prefers-reduced-motion:reduce){
@@ -193,6 +205,7 @@
       .hero-card{padding:24px 20px}
       .hero-card-title{font-size:26px}
       .hero-card-step{min-height:0}
+      .trust-strip{padding:28px 20px}
       .sd,.sd-alt{padding:64px 20px}
       .test-grid{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto}
       .sh2-xl{font-size:36px}
@@ -224,6 +237,31 @@
       <p class="hero-card-copy">Answer a few quick questions to see where patient access may be breaking down in your practice before scheduling a review.</p>
       <div id="heroDiagnosticStep" class="hero-card-step" aria-live="polite"></div>
     </aside>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip" id="trust-strip" aria-label="Trust and compliance">
+  <div class="trust-strip-inner">
+    <h2 class="trust-strip-heading">Built for Private Psychiatry Practices</h2>
+    <ul class="trust-items">
+      <li class="trust-item">
+        <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <span class="trust-label">HIPAA-Compliant Infrastructure</span>
+      </li>
+      <li class="trust-item">
+        <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M19 11V8l-7-4-7 4v3"/><path d="M5 11v3c0 2.2 3.1 4 7 4s7-1.8 7-4v-3"/></svg></span>
+        <span class="trust-label">Secure AI-Powered Patient Communications</span>
+      </li>
+      <li class="trust-item">
+        <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg></span>
+        <span class="trust-label">Business Associate Agreements Available</span>
+      </li>
+      <li class="trust-item">
+        <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M6 21V9l6-4 6 4v12"/><path d="M10 21v-6h4v6"/></svg></span>
+        <span class="trust-label">Purpose-Built for Private Psychiatry Practices</span>
+      </li>
+    </ul>
   </div>
 </section>
 
