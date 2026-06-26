@@ -48,13 +48,4 @@
   if(!document.querySelector('footer')){
     loadHTML('#footer-placeholder', '/footer.html');
   }
-
-  window.addEventListener('load', function(){
-    if(document.querySelector('script[data-widget-id="692e35e1885ff875a3542ddb"]')) return;
-    var chat=document.createElement('script');
-    chat.src='https://beta.leadconnectorhq.com/loader.js';
-    chat.setAttribute('data-resources-url','https://beta.leadconnectorhq.com/chat-widget/loader.js');
-    chat.setAttribute('data-widget-id','692e35e1885ff875a3542ddb');
-    document.body.appendChild(chat);
-  });
 })();
