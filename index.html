@@ -167,8 +167,8 @@
     .test-card{background:var(--d6);border:1px solid rgba(255,255,255,.07);border-radius:var(--rlg);overflow:hidden;transition:transform .2s,box-shadow .2s;position:relative}
     .test-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);opacity:.75;z-index:3}
     .test-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.2)}
-    .test-vid{aspect-ratio:16/10;background:var(--d7);border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;cursor:pointer}
-    .test-vid video,.test-vid img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .test-vid{aspect-ratio:16/9;background:var(--d7);border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;cursor:pointer}
+    .test-vid video,.test-vid img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center center;background:var(--d7)}
     .test-vid.is-playing .test-overlay{opacity:0;pointer-events:none}
     .test-vid-expand{position:absolute;top:12px;right:12px;z-index:4;width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(12,21,32,.78);color:white;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s,transform .2s,border-color .2s}
     .test-vid-expand:hover{border-color:rgba(121,197,199,.35);transform:translateY(-1px)}
