@@ -83,6 +83,32 @@
     .hero-booking-cta::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-subtle);border-radius:1px}
     .hero-booking-title{font-family:var(--fd);font-size:22px;font-weight:300;line-height:1.25;color:white;margin-bottom:10px}
     .hero-support{font-size:12px;font-weight:300;line-height:1.6;color:rgba(255,255,255,.52);text-align:center;margin-top:10px}
+    .hero-right-col{display:flex;flex-direction:column;gap:20px;width:100%}
+    .hero-video-card{background:var(--d6);border:1px solid rgba(255,255,255,.06);border-radius:var(--rlg);position:relative;overflow:hidden}
+    .hero-video-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);z-index:2}
+    .hero-video{position:relative;width:100%;aspect-ratio:16/9;background:var(--d7)}
+    .hero-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+    .hero-video-cover{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px 28px;text-align:center;background:linear-gradient(180deg,var(--d6) 0%,var(--d8) 100%);border:none;cursor:pointer;transition:opacity .25s,visibility .25s}
+    .hero-video-cover::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+    .hero-video-cover:hover .hero-video-play{transform:scale(1.06)}
+    .hero-video-cover:focus-visible{outline:2px solid rgba(121,197,199,.9);outline-offset:-2px}
+    .hero-video-cover.is-hidden{opacity:0;pointer-events:none;visibility:hidden}
+    .hero-video-logo{height:36px;width:auto;object-fit:contain;margin-bottom:4px}
+    .hero-video-eyebrow{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1);display:inline-flex;align-items:center;gap:10px}
+    .hero-video-eyebrow::before{content:'';width:22px;height:1px;background:var(--t1)}
+    .hero-video-title{font-family:var(--fd);font-size:28px;font-weight:300;line-height:1.2;color:white;max-width:24ch}
+    .hero-video-tagline{font-size:14px;font-weight:300;line-height:1.65;color:rgba(255,255,255,.68);max-width:36ch}
+    .hero-video-play{width:56px;height:56px;border-radius:50%;background:var(--t2);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;margin-top:8px;transition:transform .2s,background .2s;box-shadow:0 8px 24px rgba(46,166,212,.22)}
+    .hero-video-cover:hover .hero-video-play{background:var(--bl)}
+    .hero-video-play svg{width:20px;height:20px;fill:white;margin-left:3px}
+    .hero-video-bridge{font-size:15px;font-weight:300;line-height:1.65;color:rgba(255,255,255,.62);text-align:center}
+    .hero-video-cta{width:100%;justify-content:center;text-align:center;padding:16px 24px;font-size:14px;line-height:1.4}
+    .assessment-relocate{padding:96px 48px}
+    .assessment-relocate .si{display:flex;flex-direction:column;align-items:center;gap:24px}
+    .assessment-relocate .hero-card{width:100%;max-width:500px}
+    .assessment-relocate-intro{text-align:center;max-width:640px}
+    .assessment-relocate-intro h2{font-family:var(--fd);font-weight:300;line-height:1.1;letter-spacing:-.5px;margin-bottom:16px;color:white;font-size:42px}
+    .assessment-relocate-intro p{font-size:17px;font-weight:300;line-height:1.72;color:var(--w7)}
 
     .trust-strip{background:var(--d6);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:18px 48px;position:relative}
     .trust-strip-inner{max-width:1200px;margin:0 auto}
@@ -237,6 +263,7 @@
       .founder-details{padding:32px 24px}
       .founder-details-grid{grid-template-columns:1fr;gap:32px}
       .cta-card{padding:48px 32px}
+      .assessment-relocate{padding:64px 32px}
     }
     @media(max-width:640px){
       .hero{padding:32px 20px 44px}
@@ -256,6 +283,10 @@
       .sh2-lg{font-size:28px}
       .cta-card{padding:36px 22px}
       .cta-card h2{font-size:30px}
+      .assessment-relocate{padding:64px 20px}
+      .assessment-relocate-intro h2{font-size:28px}
+      .hero-video-cover{padding:20px 16px}
+      .hero-video-title{font-size:22px}
     }
   </style>
 </head>
@@ -275,11 +306,22 @@
       <p class="hero-body">Helping prospective patients find you, connect with you, and book appointments while reducing the administrative burden on your practice.</p>
     </div>
 
-    <aside class="hero-card" aria-label="Patient Access Assessment">
-      <h2 class="hero-card-title">Patient Access Assessment</h2>
-      <p class="hero-card-copy">Answer a few quick questions to see where patient access may be breaking down in your practice before scheduling a review.</p>
-      <div id="heroDiagnosticStep" class="hero-card-step" aria-live="polite"></div>
-    </aside>
+    <div class="hero-right-col">
+      <div class="hero-video-card">
+        <div class="hero-video">
+          <iframe id="heroYoutubeEmbed" title="Patient Access Optimization System Overview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <button type="button" class="hero-video-cover" id="heroVideoCover" aria-label="Play Patient Access Optimization System overview">
+            <img src="/logo-cropped.png" alt="" class="hero-video-logo" width="120" height="36" />
+            <span class="hero-video-eyebrow">For Private Psychiatry Practices</span>
+            <span class="hero-video-title">Patient Access Optimization System</span>
+            <span class="hero-video-tagline">Improve patient access while reducing administrative burden.</span>
+            <span class="hero-video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+        </div>
+      </div>
+      <p class="hero-video-bridge">Ready to see how this could apply to your practice?</p>
+      <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-primary hero-video-cta">Schedule a 15-Minute Patient Access Consultation</a>
+    </div>
   </div>
 </section>
 
@@ -567,6 +609,20 @@
   </div>
 </section>
 
+<div class="assessment-relocate" id="patient-access-assessment">
+  <div class="si">
+    <div class="assessment-relocate-intro">
+      <h2>Not ready to schedule a consultation?</h2>
+      <p>Take the 2-minute Patient Access Assessment to identify where patient access may be creating unnecessary friction in your practice.</p>
+    </div>
+    <aside class="hero-card" aria-label="Patient Access Assessment">
+      <h2 class="hero-card-title">Patient Access Assessment</h2>
+      <p class="hero-card-copy">Answer a few quick questions to see where patient access may be breaking down in your practice before scheduling a review.</p>
+      <div id="heroDiagnosticStep" class="hero-card-step" aria-live="polite"></div>
+    </aside>
+  </div>
+</div>
+
 <div id="footer-placeholder">
   <footer>
     <div class="footer-inner">
@@ -689,6 +745,25 @@
   })();
 
   var bookingUrl='https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm';
+  var heroYoutubeEmbed=document.getElementById('heroYoutubeEmbed');
+  var heroVideoCover=document.getElementById('heroVideoCover');
+  var youtubeEmbedBase='https://www.youtube.com/embed/rD5iqYjEUls?rel=0&modestbranding=1&playsinline=1';
+  if(heroVideoCover&&heroYoutubeEmbed){
+    heroVideoCover.addEventListener('click',function(){
+      if(!heroYoutubeEmbed.src){
+        heroYoutubeEmbed.src=youtubeEmbedBase+'&autoplay=1';
+      }
+      heroVideoCover.classList.add('is-hidden');
+      heroVideoCover.setAttribute('aria-hidden','true');
+      heroYoutubeEmbed.focus();
+    });
+    heroVideoCover.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){
+        e.preventDefault();
+        heroVideoCover.click();
+      }
+    });
+  }
   var heroStepMount=document.getElementById('heroDiagnosticStep');
   var assessmentQuestions=[
     {
