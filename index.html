@@ -31,7 +31,7 @@
 
     .hero,.sd,.sd-alt,section,footer{background:var(--page-bg)}
     .hero{min-height:auto;display:flex;align-items:flex-start;padding:48px 48px 72px}
-    .hero-layout{width:100%;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,600px);gap:80px;align-items:center}
+    .hero-layout{width:100%;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,700px);gap:64px;align-items:center}
     .hero-left{display:flex;flex-direction:column;align-items:flex-start;max-width:700px;margin-top:-24px}
     .hero-positioning{font-family:var(--fd);font-size:27px;font-weight:300;font-style:italic;line-height:1.4;color:var(--t1);margin-bottom:0;max-width:52ch}
     .hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1);margin-bottom:24px;display:inline-flex;align-items:center;gap:10px}
@@ -83,24 +83,24 @@
     .hero-booking-cta::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad-subtle);border-radius:1px}
     .hero-booking-title{font-family:var(--fd);font-size:22px;font-weight:300;line-height:1.25;color:white;margin-bottom:10px}
     .hero-support{font-size:12px;font-weight:300;line-height:1.6;color:rgba(255,255,255,.52);text-align:center;margin-top:10px}
-    .hero-right-col{display:flex;flex-direction:column;gap:12px;width:100%}
+    .hero-right-col{display:flex;flex-direction:column;gap:8px;width:100%}
     .hero-video-card{background:var(--d6);border:1px solid rgba(255,255,255,.06);border-radius:var(--rlg);position:relative;overflow:hidden}
     .hero-video-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);z-index:2}
     .hero-video{position:relative;width:100%;aspect-ratio:16/9;background:var(--d7);overflow:hidden}
     .hero-video-frame{position:absolute;inset:0;overflow:hidden}
     .hero-video-frame iframe{position:absolute;top:50%;left:50%;width:1920px;height:1080px;border:0;display:block;transform:translate(-50%,-50%) scale(var(--hero-video-scale,1));transform-origin:center center}
-    .hero-video-cover{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:28px 32px;text-align:center;background:linear-gradient(180deg,var(--d6) 0%,var(--d8) 100%);border:none;cursor:pointer;transition:opacity .25s,visibility .25s}
+    .hero-video-cover{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:36px 40px;text-align:center;background:linear-gradient(180deg,var(--d6) 0%,var(--d8) 100%);border:none;cursor:pointer;transition:opacity .25s,visibility .25s}
     .hero-video-cover::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
-    .hero-video-cover:hover .hero-video-play,.hero-video-cover:focus-visible .hero-video-play{transform:scale(1.05);background:var(--bl)}
+    .hero-video-cover:hover .hero-video-play,.hero-video-cover:focus-visible .hero-video-play{transform:scale(1.04);background:var(--bl)}
     .hero-video-cover:focus-visible{outline:2px solid rgba(121,197,199,.9);outline-offset:-2px}
     .hero-video-cover.is-hidden{opacity:0;pointer-events:none;visibility:hidden}
-    .hero-video-eyebrow{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
+    .hero-video-eyebrow{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--t1);display:inline-flex;align-items:center;gap:10px;margin-bottom:20px}
     .hero-video-eyebrow::before{content:'';width:22px;height:1px;background:var(--t1)}
-    .hero-video-title{font-family:var(--fd);font-size:32px;font-weight:300;line-height:1.18;color:white;max-width:28ch;margin-bottom:12px}
-    .hero-video-tagline{font-size:14px;font-weight:300;line-height:1.65;color:rgba(255,255,255,.62);max-width:38ch;margin-bottom:20px}
-    .hero-video-play-group{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:4px}
-    .hero-video-play{width:76px;height:76px;border-radius:50%;background:var(--t2);border:1px solid rgba(255,255,255,.24);display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s;box-shadow:0 10px 28px rgba(46,166,212,.28)}
-    .hero-video-play svg{width:30px;height:30px;fill:white;margin-left:4px}
+    .hero-video-title{font-family:var(--fd);font-size:34px;font-weight:300;line-height:1.14;color:white;max-width:22ch;margin-bottom:18px}
+    .hero-video-tagline{font-size:14px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.58);max-width:42ch;margin-bottom:28px}
+    .hero-video-play-group{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:6px}
+    .hero-video-play{width:84px;height:84px;border-radius:50%;background:var(--t2);border:1px solid rgba(255,255,255,.24);display:flex;align-items:center;justify-content:center;transition:transform .2s,background .2s;box-shadow:0 10px 28px rgba(46,166,212,.28)}
+    .hero-video-play svg{width:32px;height:32px;fill:white;margin-left:4px}
     .hero-video-play-label{font-size:14px;font-weight:500;letter-spacing:.02em;color:var(--t1)}
     .hero-video-bridge{font-size:15px;font-weight:300;line-height:1.65;color:rgba(255,255,255,.62);text-align:center}
     .hero-video-cta{width:100%;justify-content:center;text-align:center;padding:16px 24px;font-size:14px;line-height:1.4}
@@ -286,11 +286,11 @@
       .cta-card h2{font-size:30px}
       .assessment-relocate{padding:64px 20px}
       .assessment-relocate-intro h2{font-size:28px}
-      .hero-video-cover{padding:22px 18px}
-      .hero-video-title{font-size:24px;max-width:100%}
+      .hero-video-cover{padding:24px 18px}
+      .hero-video-title{font-size:26px;max-width:100%}
       .hero-video-tagline{font-size:13px;max-width:100%}
-      .hero-video-play{width:68px;height:68px}
-      .hero-video-play svg{width:26px;height:26px}
+      .hero-video-play{width:76px;height:76px}
+      .hero-video-play svg{width:28px;height:28px}
     }
   </style>
 </head>
@@ -317,12 +317,12 @@
             <iframe id="heroYoutubeEmbed" width="1920" height="1080" title="Patient Access Optimization System Overview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
           <button type="button" class="hero-video-cover" id="heroVideoCover" aria-label="Play Patient Access Optimization System overview">
-            <span class="hero-video-eyebrow">3-Minute Video Overview</span>
-            <span class="hero-video-title">See How the Patient Access Optimization System Works</span>
-            <span class="hero-video-tagline">For private psychiatry practices looking to improve patient access and reduce administrative burden.</span>
+            <span class="hero-video-eyebrow">3½-Minute Overview</span>
+            <span class="hero-video-title">How Private Psychiatry Practices Improve Patient Access</span>
+            <span class="hero-video-tagline">Learn how the Patient Access Optimization System helps practices become easier to find, easier to contact, and easier to schedule with&mdash;while reducing administrative burden.</span>
             <span class="hero-video-play-group">
               <span class="hero-video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
-              <span class="hero-video-play-label">Watch the 3-Minute Overview</span>
+              <span class="hero-video-play-label">Watch the Overview</span>
             </span>
           </button>
         </div>
