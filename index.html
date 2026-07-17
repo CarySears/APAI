@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Patient Access Optimization for Private Psychiatry Practices — ActionPotential.AI</title>
-  <meta name="description" content="ActionPotential.AI helps private psychiatry practices optimize patient access. Helping prospective patients find you, connect with you, and book appointments while reducing administrative burden." />
+  <title>Patient Access Optimization for Private Mental Health Practices — ActionPotential.AI</title>
+  <meta name="description" content="ActionPotential.AI helps private outpatient mental health practices improve patient access. Making it easier for prospective patients to find you, connect with you, and book appointments while reducing administrative burden." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cabinet+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
@@ -146,6 +146,11 @@
     .system-card ul{list-style:none;display:flex;flex-direction:column;gap:8px}
     .system-card li{font-size:13px;font-weight:300;color:rgba(255,255,255,.62);padding-left:14px;position:relative;line-height:1.5}
     .system-card li::before{content:'';position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--t1);opacity:.7}
+    .system-card-label{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:12px}
+    .system-card-cta{margin-top:24px;display:inline-flex}
+    #problem .challenge-cards{text-align:left;margin-top:40px}
+    #problem .challenge-cards .system-card h3{font-size:22px}
+    #two-paths .system-cards{margin-top:40px;text-align:left}
 
     .serve-body{max-width:900px;margin:0 auto;text-align:left}
     .serve-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}
@@ -157,6 +162,8 @@
 
     #who-we-serve > .si > .sh2,
     #who-we-serve .serve-subhead{max-width:900px;margin-left:auto;margin-right:auto}
+    #who-we-serve .serve-group{margin-top:40px}
+    #who-we-serve .serve-group:first-of-type{margin-top:24px}
 
     .why-body{max-width:720px;margin:0 auto;text-align:left}
     .why-body p{font-size:17px;font-weight:300;line-height:1.75;color:var(--w7);margin-bottom:20px}
@@ -285,14 +292,30 @@
   <a href="/" class="nav-logo">
     <img src="/logo-cropped.png" alt="ActionPotential.AI" />
   </a>
+  <div class="nav-menu" id="navMenu" role="list">
+    <a href="/" class="nav-link" role="listitem">Home</a>
+    <a href="#the-system" class="nav-link" role="listitem">How We Help</a>
+    <a href="/patient-growth/" class="nav-link" role="listitem">Patient Growth</a>
+    <a href="/practice-efficiency/" class="nav-link" role="listitem">Practice Efficiency</a>
+    <a href="#who-we-serve" class="nav-link" role="listitem">Who We Serve</a>
+    <a href="#about" class="nav-link" role="listitem">About</a>
+    <a href="#results" class="nav-link" role="listitem">Results</a>
+    <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="nav-link nav-mobile-cta" role="listitem">Schedule Consultation</a>
+  </div>
+  <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="nav-btn">Schedule Consultation</a>
+  <button class="nav-mob-btn" id="navMobBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu">&#9776;</button>
 </nav>
 
 <!-- 1. HERO -->
 <section class="hero" id="hero">
   <div class="hero-layout">
     <div class="hero-left">
-      <h1 class="hero-h1">Patient Access Optimization for <span class="hero-h1-accent">Psychiatry Practices</span></h1>
-      <p class="hero-body">Helping prospective patients find you, connect with you, and book appointments while reducing the administrative burden on your practice.</p>
+      <h1 class="hero-h1">We Help Private Outpatient Mental Health Practices Improve Patient Access</h1>
+      <p class="hero-body">Making it easier for prospective patients to find you, connect with you, and book appointments while reducing administrative burden.</p>
+      <p class="hero-micro" style="margin-bottom:32px">Serving private psychiatry, psychology, therapy, and multi-specialty mental health practices.</p>
+      <div class="hero-ctas">
+        <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-primary">Schedule a 15-Minute Patient Access Consultation</a>
+      </div>
     </div>
 
     <div class="hero-right-col">
@@ -303,7 +326,6 @@
           </div>
         </div>
       </div>
-      <a href="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" class="btn-primary hero-video-cta">Schedule a 15-Minute Patient Access Consultation</a>
     </div>
   </div>
 </section>
@@ -332,23 +354,70 @@
   </div>
 </section>
 
-<!-- Future: Who We Serve section -->
-
-<!-- 2. THE PROBLEM -->
+<!-- 2. GREAT CLINICAL CARE & CHALLENGES -->
 <section class="sd-alt sec-center" id="problem">
   <div class="si">
-    <h2 class="sh2 sh2-lg rv">Great clinical care deserves an equally great patient access experience.</h2>
-    <p class="ssub rv">Before patients can benefit from outstanding clinical care, they first need to find your practice, receive timely responses, and schedule an appointment. For many psychiatry practices, improving patient access is one of the greatest opportunities to better connect patients with the care they need.</p>
-    <div class="problem-body rv" style="margin-left:auto;margin-right:auto">
-      <h3 class="serve-subhead">Common patient access challenges include:</h3>
-      <ul class="problem-list">
-        <li>Heavy reliance on referrals or Psychology Today</li>
-        <li>Limited visibility on Google and emerging AI search</li>
-        <li>Missed calls and delayed responses</li>
-        <li>Prospective patients abandoning the scheduling process</li>
-        <li>Administrative work consuming valuable clinical time</li>
-        <li>Uncertainty about how to market ethically and professionally</li>
-      </ul>
+    <h2 class="sh2 sh2-lg rv">Great Clinical Care Deserves an Equally Great Patient Access Experience</h2>
+    <p class="ssub rv">Before prospective patients can benefit from outstanding clinical care, they first need to discover your practice, connect with your team, get the information they need, and successfully schedule an appointment.</p>
+    <p class="ssub rv">Every unnecessary obstacle along that journey can prevent someone from accessing care.</p>
+    <h3 class="serve-subhead rv" style="margin-top:48px">Common Patient Access Challenges</h3>
+    <div class="system-cards challenge-cards rv">
+      <div class="system-card">
+        <h3>Patient Growth Challenges</h3>
+        <ul>
+          <li>Overreliance on referrals, Psychology Today, and other directories for new patients</li>
+          <li>Limited visibility in Google search</li>
+          <li>Limited visibility in AI search and AI-generated answers, including Google AI Overviews, ChatGPT, Gemini, Claude, and similar platforms</li>
+          <li>An unclaimed or poorly optimized Google Business Profile</li>
+          <li>A website that is not attracting enough qualified prospective patients</li>
+          <li>Uncertainty about how to market ethically and professionally</li>
+        </ul>
+      </div>
+      <div class="system-card">
+        <h3>Practice Efficiency Challenges</h3>
+        <ul>
+          <li>Missed calls and delayed responses</li>
+          <li>Prospective patients struggling to get answers</li>
+          <li>Confusing or difficult appointment booking</li>
+          <li>Prospective patients abandoning the scheduling process</li>
+          <li>Administrative work consuming valuable clinical time</li>
+          <li>Website accessibility issues that create barriers to care</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TWO PATHS -->
+<section class="sd sec-center" id="two-paths">
+  <div class="si">
+    <h2 class="sh2 sh2-lg rv">Two Ways We Improve Patient Access</h2>
+    <div class="system-cards">
+      <div class="system-card rv">
+        <h3>Patient Growth</h3>
+        <p class="system-card-desc">Help more qualified prospective patients discover your practice through Google search, local search, AI-generated answers, and a stronger online presence.</p>
+        <div class="system-card-label">Could Include</div>
+        <ul>
+          <li>Search Engine Optimization (SEO)</li>
+          <li>AI Visibility (GEO)</li>
+          <li>Google Business Profile Optimization</li>
+          <li>Website Optimization</li>
+        </ul>
+        <a href="/patient-growth/" class="btn-primary system-card-cta">Learn More</a>
+      </div>
+      <div class="system-card rv rv-d1">
+        <h3>Practice Efficiency</h3>
+        <p class="system-card-desc">Reduce administrative burden while making it easier for prospective patients to connect with your practice, get answers, and schedule appointments.</p>
+        <div class="system-card-label">Could Include</div>
+        <ul>
+          <li>AI Phone Receptionist</li>
+          <li>AI Website Assistant</li>
+          <li>Automated Appointment Booking</li>
+          <li>Missed Call Recovery</li>
+          <li>After-Hours Coverage</li>
+        </ul>
+        <a href="/practice-efficiency/" class="btn-primary system-card-cta">Learn More</a>
+      </div>
     </div>
   </div>
 </section>
@@ -425,31 +494,38 @@
   <div class="si">
     <h2 class="sh2 sh2-lg rv">Who We Serve</h2>
     <div class="serve-body rv">
-      <p class="ssub">The Patient Access Optimization System was built specifically for outpatient psychiatry practices, including:</p>
-      <div class="serve-grid">
-        <div class="serve-item">General Psychiatry</div>
-        <div class="serve-item">Child &amp; Adolescent Psychiatry</div>
-        <div class="serve-item">Psychiatric Nurse Practitioner Practices</div>
-        <div class="serve-item">Interventional Psychiatry (TMS, Spravato, Ketamine)</div>
-        <div class="serve-item">Integrative Psychiatry</div>
-        <div class="serve-item">Group Psychiatry Practices</div>
-        <div class="serve-item">Concierge &amp; Private Pay Psychiatry Practices</div>
+      <p class="ssub">The Patient Access Optimization System is designed for private outpatient mental health practices, including:</p>
+
+      <div class="serve-group">
+        <h3 class="serve-subhead">Psychiatry Practices</h3>
+        <ul class="problem-list">
+          <li>General Psychiatry</li>
+          <li>Child and Adolescent Psychiatry</li>
+          <li>Psychiatric Nurse Practitioner Practices</li>
+          <li>Interventional Psychiatry, including TMS, Spravato, and Ketamine</li>
+          <li>Integrative Psychiatry</li>
+          <li>Group Psychiatry Practices</li>
+          <li>Concierge and Private-Pay Psychiatry Practices</li>
+        </ul>
       </div>
 
-      <div class="serve-divider"></div>
-
-      <h3 class="serve-subhead">Also a Good Fit For</h3>
-      <p class="ssub">While our primary focus is private psychiatry, many of the patient access challenges we solve are shared by other outpatient mental health practices, including:</p>
-      <div class="serve-grid">
-        <div class="serve-item">Psychology Practices</div>
-        <div class="serve-item">Clinical Social Workers</div>
-        <div class="serve-item">Licensed Mental Health Counselors</div>
-        <div class="serve-item">Professional Counselors</div>
-        <div class="serve-item">Marriage &amp; Family Therapists</div>
-        <div class="serve-item">Group Therapy Practices</div>
+      <div class="serve-group">
+        <h3 class="serve-subhead">Psychology and Therapy Practices</h3>
+        <ul class="problem-list">
+          <li>Psychology Practices</li>
+          <li>Neuropsychology</li>
+          <li>Clinical Social Workers</li>
+          <li>Licensed Mental Health Counselors</li>
+          <li>Professional Counselors</li>
+          <li>Marriage and Family Therapists</li>
+          <li>Group Therapy Practices</li>
+        </ul>
       </div>
 
-      <p class="serve-close">If you&rsquo;re unsure whether the Patient Access Optimization System is a good fit for your practice, we can discuss your specific situation during a Patient Access Review.</p>
+      <div class="serve-group">
+        <h3 class="serve-subhead">Multi-Specialty Mental Health Practices</h3>
+        <p class="ssub">Practices that combine psychiatry, psychology, therapy, neuropsychology, or other mental health specialties within one organization.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -623,6 +699,26 @@
 </div>
 
 <script>
+  (function(){
+    var mobBtn=document.getElementById('navMobBtn');
+    var menu=document.getElementById('navMenu');
+    if(mobBtn&&menu){
+      mobBtn.addEventListener('click',function(e){
+        e.stopPropagation();
+        var isOpen=menu.classList.toggle('mob-open');
+        mobBtn.setAttribute('aria-expanded',isOpen?'true':'false');
+        mobBtn.setAttribute('aria-label',isOpen?'Close navigation menu':'Open navigation menu');
+      });
+      menu.querySelectorAll('a.nav-link').forEach(function(link){
+        link.addEventListener('click',function(){
+          menu.classList.remove('mob-open');
+          mobBtn.setAttribute('aria-expanded','false');
+          mobBtn.setAttribute('aria-label','Open navigation menu');
+        });
+      });
+    }
+  })();
+
   document.querySelectorAll('.test-vid').forEach(function(w){
     var v=w.querySelector('video');
     var o=w.querySelector('.test-overlay');
